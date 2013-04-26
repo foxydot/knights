@@ -1,0 +1,2 @@
+Homepage Dashboard placeholder
+<?php

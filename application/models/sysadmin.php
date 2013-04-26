@@ -1,0 +1,685 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+/*
+ * Class for installation and updates
+ */
+Class Sysadmin extends CI_Model {
+	public $db_version = '0.1.7';
+	function __construct()
+	    {
+	        // Call the Model constructor
+	        parent::__construct();
+			$this->load->dbforge();
+	    }
+	/*
+	 * Installation script installs primary tables and initial data if needed.
+	 */
+	function install()
+	{
+		/*
+		 * Create system info table
+		 */
+		$fields = array(
+			'sysinfo_id' => array(
+				'type' => 'INT',
+				'constraint' => 6,
+				'auto_increment' => TRUE
+			),
+			'sysinfo_key' => array(
+				'type' => 'VARCHAR',
+				'constraint' => 255
+			),
+			'sysinfo_value' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('sysinfo_id', TRUE);
+		$this->dbforge->create_table('system_info',TRUE);
+		/*
+		 * Create user table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'email' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'password' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'firstname' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+			),
+			'lastname' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+			),
+			'accesslevel' => array(
+				'type' => 'INT',
+				'constraint' => '11',
+			),
+			'group_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'resetkey' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+			),
+			'dateadded' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'dateremoved' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'notes' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('user',TRUE);
+		/*
+		 * Add groups table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'name' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'accesslevel' => array(
+				'type' => 'INT',
+				'constraint' => '11',
+				'null' => FALSE,
+			),
+			'dateadded' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'dateremoved' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'notes' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('user_group',TRUE);
+		/*
+		 * Add project table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'name' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'dateadded' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),		
+			'dateremoved' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'notes' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('project',TRUE);
+		/*
+		 * Add story table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'title' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'slug' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'password' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+			'author_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'lastedit' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),	
+			'datepresented' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),	
+			'dateadded' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),		
+			'datepublished' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),		
+			'dateremoved' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+			'notes' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('story',TRUE);
+		/*
+		 * Add a project/story match table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'project_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'null' => FALSE,
+			),
+			'story_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'null' => FALSE,
+			),
+			'notes' => array(
+				'type' => 'TEXT'
+			)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('story2project',TRUE);
+		/*
+		 * Add section types table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'type' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('section_type',TRUE);
+		/*
+		 * Add section table
+		 */
+		$fields = array(
+			'ID' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'auto_increment' => TRUE,
+			),
+			'story_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'story_section' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'story_subsection' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'section_type' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+			),
+			'content' => array(
+				'type' => 'TEXT'
+			),
+			'lastedit' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),	
+			'dateadded' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),	
+			'dateremoved' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
+			),
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('section',TRUE);
+		/*
+		 * Add initial installation data
+		 */
+		// add administration group (pros)
+		$db_data = array(
+			'name' => 'Administrators',
+			'accesslevel' => 1,
+			'dateadded' => time()
+		);
+		$this->db->insert('user_group',$db_data);
+		$admin_group_id = $this->db->insert_id();
+		// add a god-level user
+		$db_data = array(
+			'email' => $_POST['user_email'],
+			'password' => md5($_POST['user_pwd']),
+			'firstname' => $_POST['user_fname'],
+			'lastname' => $_POST['user_lname'],
+			'accesslevel' => 1,
+			'group_id' => $admin_group_id,
+			'dateadded' => time(),
+			'notes' => 'Initial user added with installation.'
+		);
+		$this->db->insert('user',$db_data);
+		/*
+		 * Create array of levels
+		 */
+		$levels = array();
+		$levels[1] = 'super-administrators';
+		$levels[10] = 'administrators';
+		$levels[20] = 'editors';
+		$levels[100] = 'users';
+
+		$db_data = array(
+			'sysinfo_key' => 'access_levels',
+			'sysinfo_value' => serialize($levels)
+		);
+		$this->db->insert('system_info',$db_data);
+		/*
+		 * Finally set the versions and install data
+		 */
+		//set version
+		$db_data = array(
+			'sysinfo_key' => 'version',
+			'sysinfo_value' => '0.1'
+		);
+		$this->db->insert('system_info',$db_data);
+		$db_data = array(
+			'sysinfo_key' => 'install_date',
+			'sysinfo_value' => time()
+		);
+		$this->db->insert('system_info',$db_data);
+		$db_data = array(
+			'sysinfo_key' => 'last_update',
+			'sysinfo_value' => time()
+		);
+		$this->db->insert('system_info',$db_data);
+
+
+		//should we do the initial data import?
+		if(!empty($_POST['installdata'])){
+			$this->installdata(true);
+		}
+
+		//now do any upgrades
+		$this->upgrade();
+
+		//redirect to home page
+		$this->load->helper('url');
+		redirect('/login');
+
+	}
+
+	/*
+	 * Install data grabs sql file and installs it.
+	 */
+	function installdata($initial_install = false, $location = 'application/assets/uploads/sql/initial_data.sql'){
+		if($this->session->userdata['ID'] == 1 || $initial_install == true){
+			//read the file
+			$file = $this->load->file($location, true);
+
+			//explode it in an array
+			if(preg_match('/local/i',$_SERVER['SERVER_NAME'])){
+				$split = ";\n";
+			} else {
+				$split = ";\r";
+			}
+			$file_array = explode($split, $file);
+
+			//execute the exploded text content
+			foreach($file_array as $query){
+				$query = trim($query);
+				if(!empty($query)){
+			    	$this->db->query($query);
+				}
+			}
+		}
+	}
+
+
+	/*
+	 * Uninstall for quick rebuilds
+	 */
+	function uninstall(){
+		$tables = $this->db->list_tables();
+
+		foreach ($tables as $table)
+		{
+			$this->dbforge->drop_table($table);
+		}
+	}
+
+	/*
+	 * Upgrade script, add new tables here.
+	 */
+	function upgrade()
+	{
+		//get system version
+		if($this->db->table_exists('system_info')){
+			$this->db->where('sysinfo_key','version');
+			$query = $this->db->get('system_info',1);
+			if ($query->num_rows() > 0){
+				foreach ($query->result() as $row){
+					$version = $row->sysinfo_value;
+				}
+			} else {
+				exit('Error: version cannot be read!');
+			}
+		} else {
+			$version = '0.1';
+		}
+
+		//if we are already at the current version, escape
+		//should never happen
+		if($version == $this->db_version){
+			print 'Database is already at the most recent revision.';
+		}
+
+		//get the db forge
+		$this->load->dbforge();
+		//run updates
+		switch($version){
+			case '0.1':
+				/*
+				 * Create table for attachments
+				 */
+				$fields = array(
+					'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+					),
+					'attachment_url' => array(
+						'type' => 'TEXT',
+					),
+					'attachment_type' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+					),
+					'modal' => array(
+						'type' => 'TINYINT',
+						'constraint' => '1',
+					),
+					'lastedit' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),	
+					'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),	
+					'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),
+				);
+				$this->dbforge->add_field($fields);
+				$this->dbforge->add_key('ID',TRUE);
+				$this->dbforge->create_table('attachment',TRUE);
+				
+				/*
+				 * Add a attachment/section match table
+				 */
+				$fields = array(
+					'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+					),
+					'attachment_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+					),
+					'section_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+					),
+					'notes' => array(
+						'type' => 'TEXT'
+					)
+				);
+				$this->dbforge->add_field($fields);
+				$this->dbforge->add_key('ID',TRUE);
+				$this->dbforge->create_table('attachment2section',TRUE);
+
+				/*
+				 * Add attachment types table
+				 */
+				$fields = array(
+					'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+					),
+					'type' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => FALSE,
+					),
+				);
+				$this->dbforge->add_field($fields);
+				$this->dbforge->add_key('ID',TRUE);
+				$this->dbforge->create_table('attachment_type',TRUE);
+				/*
+				 * Create the attachment types
+				 */
+				$this->db->insert('attachment_type',array('type'=>'image'));
+				$this->db->insert('attachment_type',array('type'=>'document'));
+				$this->db->insert('attachment_type',array('type'=>'video'));
+				//set version
+				$this->set_version('0.1.1');
+			case '0.1.1':
+				//set version
+				$this->set_version('0.1.2');
+			case '0.1.2':
+				// Alter table attachment to add title field
+				$fields = array(
+					'title' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => TRUE,
+					),
+				);
+				$this->dbforge->add_column('attachment',$fields,'attachment_type');
+				//set version
+				$this->set_version('0.1.3');
+			case '0.1.3':
+				// Alter table user add image url field
+				$fields = array(
+					'avatar' => array(
+						'type' => 'TEXT',
+					),
+				);
+				$this->dbforge->add_column('user',$fields,'lastname');
+				// Alter table story add image url fields for banner and logo
+				$fields = array(
+					'banner_url' => array(
+						'type' => 'TEXT',
+						'null' => TRUE,
+					),
+					'logo_url' => array(
+						'type' => 'TEXT',
+						'null' => TRUE,
+					),
+				);
+				$this->dbforge->add_column('story',$fields,'author_id');
+				//set version
+				$this->set_version('0.1.4');
+			case '0.1.4':
+				// Alter table attachment2section add dateadded/removed fields
+				$fields = array(
+					'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),	
+					'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),
+				);
+				$this->dbforge->add_column('attachment2section',$fields,'section_id');
+				//set version
+				$this->set_version('0.1.5');
+			case '0.1.5':
+				// Add history table
+				$fields = array(
+					'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+					),
+					'story_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+					),
+					'user_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+					),
+					'data' => array(
+						'type' => 'text',
+					),
+					'timestamp' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),
+				);
+				$this->dbforge->add_field($fields);
+				$this->dbforge->add_key('ID',TRUE);
+				$this->dbforge->create_table('history',TRUE);
+				//set version
+				$this->set_version('0.1.6');
+			case '0.1.6':
+				// Edit history table
+				$fields = array(
+					'restored' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+					),
+				);
+				$this->dbforge->add_column('history',$fields,'timestamp');
+				//set version
+				$this->set_version('0.1.7');
+			default:
+				//redirect to home page
+				$this->load->helper('url');
+				redirect('/login');
+				die();
+		}
+	}
+
+	private function set_version($version){
+		$this->db->where('sysinfo_key','version');
+		$db_data = array(
+			'sysinfo_key' => 'version',
+			'sysinfo_value' => $version
+		);
+		$this->db->update('system_info',$db_data);
+		$this->db->where('sysinfo_key','last_update');
+		$db_data = array(
+			'sysinfo_key' => 'last_update',
+			'sysinfo_value' => time()
+		);
+		$this->db->update('system_info',$db_data);
+	}
+	
+	public function get_update_version(){
+		return $this->db_version;
+	}
+
+	public function backup_db(){	
+		// Load the DB utility class
+		$this->load->dbutil();
+		
+		// Backup your entire database and assign it to a variable
+		$backup =& $this->dbutil->backup();
+				
+		// Load the download helper and send the file to your desktop
+		$this->load->helper('download');
+		$filename = 'thrivewire_'.date('Ymdhis').'.gz';
+		force_download($filename, $backup); 
+	}
+}
+
+/* End of file install.php */
+/* Location: ./application/models/install.php */
