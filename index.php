@@ -24,6 +24,7 @@
 		break;
 	case 'knights.msdlab.com':
 	case 'knights.msdlab2.com':
+	case 'knights.msdlab3.com':
 		define('ENVIRONMENT', 'testing');
 		break;
 	default:

@@ -83,9 +83,9 @@ $db['development']['stricton'] = FALSE;
 
 
 $db['testing']['hostname'] = 'localhost';
-$db['testing']['username'] = 'msdlabtw_knights';
+$db['testing']['username'] = 'msdlabth_knights';
 $db['testing']['password'] = 'm&g$TG@;$yr)';
-$db['testing']['database'] = 'msdlabtw_knights';
+$db['testing']['database'] = 'msdlabth_knights';
 $db['testing']['dbdriver'] = 'mysql';
 $db['testing']['dbprefix'] = '';
 $db['testing']['pconnect'] = TRUE;
