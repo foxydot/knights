@@ -1,4 +1,4 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /*
  * A useful troubleshooting function. Displays arrays in an easy to follow format in a textarea.
 */
