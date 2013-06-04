@@ -62,6 +62,9 @@ Class Sysadmin extends CI_Model {
 				'type' => 'VARCHAR',
 				'constraint' => '255',
 			),
+			'avatar' => array(
+				'type' => 'TEXT',
+			),
 			'accesslevel' => array(
 				'type' => 'INT',
 				'constraint' => '11',
@@ -73,6 +76,11 @@ Class Sysadmin extends CI_Model {
 			'resetkey' => array(
 				'type' => 'VARCHAR',
 				'constraint' => '255',
+			),
+			'terms_accepted' => array(
+				'type' => 'BIGINT',
+				'constraint' => 12,
+				'null' => FALSE,
 			),
 			'dateadded' => array(
 				'type' => 'BIGINT',
@@ -93,42 +101,42 @@ Class Sysadmin extends CI_Model {
 		$this->dbforge->create_table('user',TRUE);
 		/*
 		 * Add groups table
-		 */
+		*/
 		$fields = array(
-			'ID' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-				'auto_increment' => TRUE,
-			),
-			'name' => array(
-				'type' => 'VARCHAR',
-				'constraint' => '255',
-				'null' => FALSE,
-			),
-			'accesslevel' => array(
-				'type' => 'INT',
-				'constraint' => '11',
-				'null' => FALSE,
-			),
-			'dateadded' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),
-			'dateremoved' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),
-			'notes' => array(
-				'type' => 'TEXT'
-			)
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'name' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => FALSE,
+				),
+				'accesslevel' => array(
+						'type' => 'INT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
 		$this->dbforge->create_table('user_group',TRUE);
 		/*
-		 * Add project table
+		 * Create organization table
 		 */
 		$fields = array(
 			'ID' => array(
@@ -140,6 +148,14 @@ Class Sysadmin extends CI_Model {
 				'type' => 'VARCHAR',
 				'constraint' => '255',
 				'null' => FALSE,
+			),
+			'slug' => array(
+					'type' => 'VARCHAR',
+					'constraint' => '255',
+					'null' => FALSE,
+			),
+			'description' => array(
+					'type' => 'TEXT'
 			),
 			'dateadded' => array(
 				'type' => 'BIGINT',
@@ -157,9 +173,186 @@ Class Sysadmin extends CI_Model {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('project',TRUE);
+		$this->dbforge->create_table('organization',TRUE);
 		/*
-		 * Add story table
+		 * Create org_meta table
+		 */
+		$fields = array(
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'org_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'meta_key' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => FALSE,
+				),
+				'meta_value' => array(
+						'type' => 'TEXT'
+				),
+				'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('org_meta',TRUE);
+		/*
+		 * Create user2org table
+		 */
+		$fields = array(
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'user_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'org_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'accesslevel' => array(
+						'type' => 'INT',
+						'constraint' => '11',
+				),
+				'terms_accepted' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateadded' => array(
+					'type' => 'BIGINT',
+					'constraint' => 12,
+					'null' => FALSE,
+				),		
+				'dateapproved' => array(
+					'type' => 'BIGINT',
+					'constraint' => 12,
+					'null' => FALSE,
+				),	
+				'approval_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+					'type' => 'BIGINT',
+					'constraint' => 12,
+					'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('user2org',TRUE);
+		/*
+		 * Create category table
+		 */
+		$fields = array(
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'title' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => FALSE,
+				),
+				'slug' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => FALSE,
+				),
+				'description' => array(
+						'type' => 'TEXT'
+				),
+				'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('story',TRUE);
+		/*
+		 * Create cat2org table
+		*/
+		$fields = array(
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'cat_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'parent_cat_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'org_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'allows' => array(
+						'type' => 'TEXT'
+				),
+				'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('cat2org',TRUE);
+		/*
+		 * Create post table
 		 */
 		$fields = array(
 			'ID' => array(
@@ -177,25 +370,18 @@ Class Sysadmin extends CI_Model {
 				'constraint' => '255',
 				'null' => FALSE,
 			),
-			'password' => array(
-				'type' => 'VARCHAR',
-				'constraint' => '255',
-				'null' => FALSE,
-			),
 			'author_id' => array(
 				'type' => 'BIGINT',
 				'constraint' => '11',
+			),
+			'content' => array(
+				'type' => 'TEXT'
 			),
 			'lastedit' => array(
 				'type' => 'BIGINT',
 				'constraint' => 12,
 				'null' => FALSE,
-			),	
-			'datepresented' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),	
+			),
 			'dateadded' => array(
 				'type' => 'BIGINT',
 				'constraint' => 12,
@@ -217,9 +403,10 @@ Class Sysadmin extends CI_Model {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('story',TRUE);
+		$this->dbforge->create_table('post',TRUE);
 		/*
-		 * Add a project/story match table
+		 * Create post2cat table
+		 * Use the cat2org id to restrain the post to a given org. 
 		 */
 		$fields = array(
 			'ID' => array(
@@ -227,12 +414,17 @@ Class Sysadmin extends CI_Model {
 				'constraint' => '11',
 				'auto_increment' => TRUE,
 			),
-			'project_id' => array(
+			'post_id' => array(
 				'type' => 'BIGINT',
 				'constraint' => '11',
 				'null' => FALSE,
 			),
-			'story_id' => array(
+			'cat_id' => array(
+				'type' => 'BIGINT',
+				'constraint' => '11',
+				'null' => FALSE,
+			),
+			'orgcat_id' => array(
 				'type' => 'BIGINT',
 				'constraint' => '11',
 				'null' => FALSE,
@@ -243,76 +435,122 @@ Class Sysadmin extends CI_Model {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('story2project',TRUE);
+		$this->dbforge->create_table('post2org',TRUE);
 		/*
-		 * Add section types table
-		 */
+		 * Create attachment table
+		*/
 		$fields = array(
-			'ID' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-				'auto_increment' => TRUE,
-			),
-			'type' => array(
-				'type' => 'VARCHAR',
-				'constraint' => '255',
-				'null' => FALSE,
-			),
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'attachment_url' => array(
+						'type' => 'TEXT',
+				),
+				'attachment_type' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+				),
+				'title' => array(
+						'type' => 'VARCHAR',
+						'constraint' => '255',
+						'null' => TRUE,
+				),
+				'lastedit' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateadded' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'dateremoved' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('section_type',TRUE);
+		$this->dbforge->create_table('attachment',TRUE);
+		
 		/*
-		 * Add section table
-		 */
+		 * Create attachment2post match table
+		*/
 		$fields = array(
-			'ID' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-				'auto_increment' => TRUE,
-			),
-			'story_id' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-			),
-			'story_section' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-			),
-			'story_subsection' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-			),
-			'section_type' => array(
-				'type' => 'BIGINT',
-				'constraint' => '11',
-			),
-			'content' => array(
-				'type' => 'TEXT'
-			),
-			'lastedit' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),	
-			'dateadded' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),	
-			'dateremoved' => array(
-				'type' => 'BIGINT',
-				'constraint' => 12,
-				'null' => FALSE,
-			),
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'attachment_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'post_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'null' => FALSE,
+				),
+				'dateadded' => array(
+					'type' => 'BIGINT',
+					'constraint' => 12,
+					'null' => FALSE,
+				),	
+				'dateremoved' => array(
+					'type' => 'BIGINT',
+					'constraint' => 12,
+					'null' => FALSE,
+				),
+				'notes' => array(
+						'type' => 'TEXT'
+				)
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('section',TRUE);
+		$this->dbforge->create_table('attachment2post',TRUE);
+		/*
+		 * Create histroy table
+		 */
+		$fields = array(
+				'ID' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+						'auto_increment' => TRUE,
+				),
+				'story_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+				),
+				'user_id' => array(
+						'type' => 'BIGINT',
+						'constraint' => '11',
+				),
+				'data' => array(
+						'type' => 'text',
+				),
+				'timestamp' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+				'restored' => array(
+						'type' => 'BIGINT',
+						'constraint' => 12,
+						'null' => FALSE,
+				),
+		);
+		$this->dbforge->add_field($fields);
+		$this->dbforge->add_key('ID',TRUE);
+		$this->dbforge->create_table('history',TRUE);
 		/*
 		 * Add initial installation data
 		 */
-		// add administration group (pros)
+		// add administration org (pros)
 		$db_data = array(
 			'name' => 'Administrators',
 			'accesslevel' => 1,
@@ -339,6 +577,7 @@ Class Sysadmin extends CI_Model {
 		$levels[1] = 'super-administrators';
 		$levels[10] = 'administrators';
 		$levels[20] = 'editors';
+		$levels[50] = 'authors';
 		$levels[100] = 'users';
 
 		$db_data = array(
@@ -346,6 +585,20 @@ Class Sysadmin extends CI_Model {
 			'sysinfo_value' => serialize($levels)
 		);
 		$this->db->insert('system_info',$db_data);
+		/*
+		 * Create array of attachment types
+		*/
+		$attachments = array();
+		$attachments[10] = 'image';
+		$attachments[20] = 'document';
+		$attachments[30] = 'video';
+		
+		$db_data = array(
+				'sysinfo_key' => 'attachment_types',
+				'sysinfo_value' => serialize($levels)
+		);
+		$this->db->insert('system_info',$db_data);
+		
 		/*
 		 * Finally set the versions and install data
 		 */
@@ -451,195 +704,8 @@ Class Sysadmin extends CI_Model {
 		//run updates
 		switch($version){
 			case '0.1':
-				/*
-				 * Create table for attachments
-				 */
-				$fields = array(
-					'ID' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'auto_increment' => TRUE,
-					),
-					'attachment_url' => array(
-						'type' => 'TEXT',
-					),
-					'attachment_type' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-					),
-					'modal' => array(
-						'type' => 'TINYINT',
-						'constraint' => '1',
-					),
-					'lastedit' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),	
-					'dateadded' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),	
-					'dateremoved' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),
-				);
-				$this->dbforge->add_field($fields);
-				$this->dbforge->add_key('ID',TRUE);
-				$this->dbforge->create_table('attachment',TRUE);
-				
-				/*
-				 * Add a attachment/section match table
-				 */
-				$fields = array(
-					'ID' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'auto_increment' => TRUE,
-					),
-					'attachment_id' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'null' => FALSE,
-					),
-					'section_id' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'null' => FALSE,
-					),
-					'notes' => array(
-						'type' => 'TEXT'
-					)
-				);
-				$this->dbforge->add_field($fields);
-				$this->dbforge->add_key('ID',TRUE);
-				$this->dbforge->create_table('attachment2section',TRUE);
-
-				/*
-				 * Add attachment types table
-				 */
-				$fields = array(
-					'ID' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'auto_increment' => TRUE,
-					),
-					'type' => array(
-						'type' => 'VARCHAR',
-						'constraint' => '255',
-						'null' => FALSE,
-					),
-				);
-				$this->dbforge->add_field($fields);
-				$this->dbforge->add_key('ID',TRUE);
-				$this->dbforge->create_table('attachment_type',TRUE);
-				/*
-				 * Create the attachment types
-				 */
-				$this->db->insert('attachment_type',array('type'=>'image'));
-				$this->db->insert('attachment_type',array('type'=>'document'));
-				$this->db->insert('attachment_type',array('type'=>'video'));
 				//set version
-				$this->set_version('0.1.1');
-			case '0.1.1':
-				//set version
-				$this->set_version('0.1.2');
-			case '0.1.2':
-				// Alter table attachment to add title field
-				$fields = array(
-					'title' => array(
-						'type' => 'VARCHAR',
-						'constraint' => '255',
-						'null' => TRUE,
-					),
-				);
-				$this->dbforge->add_column('attachment',$fields,'attachment_type');
-				//set version
-				$this->set_version('0.1.3');
-			case '0.1.3':
-				// Alter table user add image url field
-				$fields = array(
-					'avatar' => array(
-						'type' => 'TEXT',
-					),
-				);
-				$this->dbforge->add_column('user',$fields,'lastname');
-				// Alter table story add image url fields for banner and logo
-				$fields = array(
-					'banner_url' => array(
-						'type' => 'TEXT',
-						'null' => TRUE,
-					),
-					'logo_url' => array(
-						'type' => 'TEXT',
-						'null' => TRUE,
-					),
-				);
-				$this->dbforge->add_column('story',$fields,'author_id');
-				//set version
-				$this->set_version('0.1.4');
-			case '0.1.4':
-				// Alter table attachment2section add dateadded/removed fields
-				$fields = array(
-					'dateadded' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),	
-					'dateremoved' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),
-				);
-				$this->dbforge->add_column('attachment2section',$fields,'section_id');
-				//set version
-				$this->set_version('0.1.5');
-			case '0.1.5':
-				// Add history table
-				$fields = array(
-					'ID' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-						'auto_increment' => TRUE,
-					),
-					'story_id' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-					),
-					'user_id' => array(
-						'type' => 'BIGINT',
-						'constraint' => '11',
-					),
-					'data' => array(
-						'type' => 'text',
-					),
-					'timestamp' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),
-				);
-				$this->dbforge->add_field($fields);
-				$this->dbforge->add_key('ID',TRUE);
-				$this->dbforge->create_table('history',TRUE);
-				//set version
-				$this->set_version('0.1.6');
-			case '0.1.6':
-				// Edit history table
-				$fields = array(
-					'restored' => array(
-						'type' => 'BIGINT',
-						'constraint' => 12,
-						'null' => FALSE,
-					),
-				);
-				$this->dbforge->add_column('history',$fields,'timestamp');
-				//set version
-				$this->set_version('0.1.7');
+				//$this->set_version('0.2');
 			default:
 				//redirect to home page
 				$this->load->helper('url');
@@ -676,7 +742,7 @@ Class Sysadmin extends CI_Model {
 				
 		// Load the download helper and send the file to your desktop
 		$this->load->helper('download');
-		$filename = 'thrivewire_'.date('Ymdhis').'.gz';
+		$filename = SITENAME.'_'.date('Ymdhis').'.gz';
 		force_download($filename, $backup); 
 	}
 }
