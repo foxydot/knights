@@ -18,7 +18,7 @@ class Admin extends CI_Controller {
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',
 				'user' => $this->session->userdata,
-				'projects' => $this->Admin->get_projects_and_stories(),
+				'posts' => $this->Admin->get_cats_and_posts('all'),
 				'archive' => FALSE,
 			);
 			$data['footer_js'][] = 'jquery/index';

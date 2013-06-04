@@ -306,7 +306,7 @@ Class Sysadmin extends CI_Model {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('story',TRUE);
+		$this->dbforge->create_table('category',TRUE);
 		/*
 		 * Create cat2org table
 		*/

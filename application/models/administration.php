@@ -10,12 +10,36 @@ Class Administration extends CI_Model {
 	        parent::__construct();
 	        $this->cookie_domain = $_SERVER['SERVER_NAME'];
 	    }
-	    
-	function get_projects($archive = FALSE){
-		$this->db->from('project');
+	
+	private function make_org_array($orgs){
+		if(!is_array($orgs)){
+			if($this->authenticate->check_auth() && $orgs =='all'){
+				$org_data = $this->get_orgs();
+				foreach($org_data AS $od){
+					$orgs[] = $od->ID;
+				}
+			} else {
+				return FALSE;
+			}
+		}
+		return $orgs;
+	}
+	function get_orgs($archive = FALSE){
+		$this->db->from('oranization');
 		if(!$archive){
 			$this->db->where('dateremoved <=',0);
 		} 
+		$query = $this->db->get();
+		$result = $query->result();
+		return $result;
+	}
+	
+	function get_cats($orgs = array(),$archive = FALSE){
+		$orgs = $this->make_org_array($orgs);
+		$this->db->from('category');
+		if(!$archive){
+			$this->db->where('dateremoved <=',0);
+		}
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result;
@@ -36,14 +60,15 @@ Class Administration extends CI_Model {
 		return $result;
 	}
 	
-	function get_projects_and_stories($archive = FALSE){
-		$projects = $this->get_projects($archive);
+	function get_cats_and_posts($orgs = array(),$archive = FALSE){
+		$orgs = $this->make_org_array($orgs);
+		$cats = $this->get_cats($orgs);
 		$i = 0;
-		foreach($projects AS $project){
-			$projects[$i]->stories = $this->get_stories($project->ID,$archive);
+		foreach($cats AS $cat){
+			$cat[$i]->post = $this->get_posts($cat->ID,$archive);
 			$i++;
 		}
-		return $projects;
+		return $cats;
 	}
 
 	function get_project($ID){
