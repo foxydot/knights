@@ -2,7 +2,7 @@
 
 	<div class="header row">
 	
-		<a href="/admin"><img id="logo" src="/assets/admin/img/logos/thrive.png" alt="Thrive Wire" /></a>
+		<a href="/admin"><img id="logo" src="<?php print ADMIN_THEME_URL ?>/img/logo.png" alt="<?php print SITENAME; ?>" /></a>
 		<h5>Welcome back, <?php print $user['firstname']; ?></h5>
 		
 		<input id="search" type="search" />

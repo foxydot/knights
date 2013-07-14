@@ -30,7 +30,7 @@
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 <?php print isset($page_css)?page_css($page_css):''; ?>
   <!-- Modernizr which enables HTML5 elements & feature detects -->
-  <script src="/assets/admin/js/modernizr.js"></script>
+  <script src="/assets/js/modernizr.js"></script>
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
   
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
