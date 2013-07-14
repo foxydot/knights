@@ -32,7 +32,7 @@ define('ADMIN_THEME_URL','/themes/wireframes');
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="/themes/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/style.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -42,7 +42,7 @@ define('ADMIN_THEME_URL','/themes/wireframes');
 
   <!-- scripts concatenated and minified via ant build script-->
   <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="/themes/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="<?php echo ADMIN_THEME_URL; ?>/js/scripts.js"></script>
 
   <!-- end scripts-->

@@ -28,7 +28,7 @@
 	    <![endif]-->
 	    
   <!-- CSS: implied media="all" -->	    
-  <link href="/themes/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="<?php echo THEME_URL ?>/css/style.css" rel="stylesheet">
   <!--[if IE]>
 	<link href="<?php echo THEME_URL ?>/css/ie.css" rel="stylesheet">
