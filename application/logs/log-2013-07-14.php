@@ -780,3 +780,44 @@ DEBUG - 2013-07-14 18:37:47 --> UTF-8 Support Enabled
 DEBUG - 2013-07-14 18:37:47 --> URI Class Initialized
 DEBUG - 2013-07-14 18:37:47 --> Router Class Initialized
 ERROR - 2013-07-14 18:37:47 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 18:40:53 --> Config Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Hooks Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 18:40:53 --> URI Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Router Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Output Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Security Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Input Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 18:40:53 --> Language Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Loader Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 18:40:53 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 18:40:53 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Session Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Session routines successfully run
+DEBUG - 2013-07-14 18:40:53 --> Model Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Model Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Model Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Controller Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Model Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Model Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 18:40:53 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 18:40:53 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 18:40:53 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 18:40:53 --> Final output sent to browser
+DEBUG - 2013-07-14 18:40:53 --> Total execution time: 0.1207
+DEBUG - 2013-07-14 18:40:53 --> Config Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Hooks Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 18:40:53 --> URI Class Initialized
+DEBUG - 2013-07-14 18:40:53 --> Router Class Initialized
+ERROR - 2013-07-14 18:40:53 --> 404 Page Not Found --> assets
