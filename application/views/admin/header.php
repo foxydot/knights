@@ -26,7 +26,7 @@
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/style.css">
-  <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/custom-theme/jquery-ui-1.8.20.custom.css">
+  <?php include_once(SITEPATH.ADMIN_THEME_URL.'/inc/css.php'); ?>
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->

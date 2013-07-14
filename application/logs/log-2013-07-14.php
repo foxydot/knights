@@ -821,3 +821,665 @@ DEBUG - 2013-07-14 18:40:53 --> UTF-8 Support Enabled
 DEBUG - 2013-07-14 18:40:53 --> URI Class Initialized
 DEBUG - 2013-07-14 18:40:53 --> Router Class Initialized
 ERROR - 2013-07-14 18:40:53 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 18:51:35 --> Config Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Hooks Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 18:51:35 --> URI Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Router Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> No URI present. Default controller set.
+DEBUG - 2013-07-14 18:51:35 --> Output Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Security Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Input Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 18:51:35 --> Language Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Loader Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 18:51:35 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Session Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Session routines successfully run
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Controller Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Config Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Hooks Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 18:51:35 --> URI Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Router Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Output Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Security Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Input Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 18:51:35 --> Language Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Loader Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 18:51:35 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 18:51:35 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Session Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Session routines successfully run
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Controller Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Model Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 18:51:35 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 18:51:35 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 18:51:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 18:51:35 --> Final output sent to browser
+DEBUG - 2013-07-14 18:51:35 --> Total execution time: 0.0487
+DEBUG - 2013-07-14 18:51:35 --> Config Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Hooks Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 18:51:35 --> URI Class Initialized
+DEBUG - 2013-07-14 18:51:35 --> Router Class Initialized
+ERROR - 2013-07-14 18:51:35 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:04:58 --> Config Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:04:58 --> URI Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Router Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Output Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Security Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Input Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:04:58 --> Language Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:04:58 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:04:58 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Session Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Session routines successfully run
+DEBUG - 2013-07-14 19:04:58 --> Model Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Model Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Model Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Model Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Model Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:04:58 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:04:58 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:04:58 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:04:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:04:58 --> Final output sent to browser
+DEBUG - 2013-07-14 19:04:58 --> Total execution time: 0.1005
+DEBUG - 2013-07-14 19:04:58 --> Config Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:04:58 --> URI Class Initialized
+DEBUG - 2013-07-14 19:04:58 --> Router Class Initialized
+ERROR - 2013-07-14 19:04:58 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:05:47 --> Config Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:05:47 --> URI Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Router Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Output Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Security Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Input Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:05:47 --> Language Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:05:47 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:05:47 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Session Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Session routines successfully run
+DEBUG - 2013-07-14 19:05:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:05:47 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:05:47 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:05:47 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:05:47 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:05:47 --> Final output sent to browser
+DEBUG - 2013-07-14 19:05:47 --> Total execution time: 0.1014
+DEBUG - 2013-07-14 19:05:47 --> Config Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:05:47 --> URI Class Initialized
+DEBUG - 2013-07-14 19:05:47 --> Router Class Initialized
+ERROR - 2013-07-14 19:05:47 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:09:23 --> Config Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:09:23 --> URI Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Router Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Output Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Security Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Input Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:09:23 --> Language Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:09:23 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:09:23 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Session Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Session routines successfully run
+DEBUG - 2013-07-14 19:09:23 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:09:23 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:09:23 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:09:23 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:09:23 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:09:23 --> Final output sent to browser
+DEBUG - 2013-07-14 19:09:23 --> Total execution time: 0.0697
+DEBUG - 2013-07-14 19:09:23 --> Config Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:09:23 --> URI Class Initialized
+DEBUG - 2013-07-14 19:09:23 --> Router Class Initialized
+ERROR - 2013-07-14 19:09:23 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:09:35 --> Config Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:09:35 --> URI Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Router Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Output Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Security Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Input Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:09:35 --> Language Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:09:35 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:09:35 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Session Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Session routines successfully run
+DEBUG - 2013-07-14 19:09:36 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Model Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:09:36 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:09:36 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:09:36 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:09:36 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:09:36 --> Final output sent to browser
+DEBUG - 2013-07-14 19:09:36 --> Total execution time: 0.0999
+DEBUG - 2013-07-14 19:09:36 --> Config Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:09:36 --> URI Class Initialized
+DEBUG - 2013-07-14 19:09:36 --> Router Class Initialized
+ERROR - 2013-07-14 19:09:36 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:10:05 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:05 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Router Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Output Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Security Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Input Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:10:05 --> Language Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:10:05 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:10:05 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Session Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Session routines successfully run
+DEBUG - 2013-07-14 19:10:05 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:10:05 --> File loaded: application/views/admin/users.php
+DEBUG - 2013-07-14 19:10:05 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:10:05 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:10:05 --> Final output sent to browser
+DEBUG - 2013-07-14 19:10:05 --> Total execution time: 0.0964
+DEBUG - 2013-07-14 19:10:05 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:05 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:05 --> Router Class Initialized
+ERROR - 2013-07-14 19:10:05 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:10:25 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:25 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Router Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Output Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Security Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Input Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:10:25 --> Language Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:10:25 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:10:25 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Session Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Session routines successfully run
+DEBUG - 2013-07-14 19:10:25 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:10:25 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:10:25 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:10:25 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:10:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:10:25 --> Final output sent to browser
+DEBUG - 2013-07-14 19:10:25 --> Total execution time: 0.1032
+DEBUG - 2013-07-14 19:10:25 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:25 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:25 --> Router Class Initialized
+ERROR - 2013-07-14 19:10:25 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:10:32 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:32 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Router Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Output Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Security Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Input Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:10:32 --> Language Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:10:32 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:10:32 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Session Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Session routines successfully run
+DEBUG - 2013-07-14 19:10:32 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:32 --> Controller Class Initialized
+ERROR - 2013-07-14 19:10:32 --> 404 Page Not Found --> post/view_archive
+DEBUG - 2013-07-14 19:10:34 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:34 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Router Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Output Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Security Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Input Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:10:34 --> Language Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:10:34 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:10:34 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Session Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Session routines successfully run
+DEBUG - 2013-07-14 19:10:34 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Model Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:10:34 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:10:34 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:10:34 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:10:34 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:10:34 --> Final output sent to browser
+DEBUG - 2013-07-14 19:10:34 --> Total execution time: 0.1052
+DEBUG - 2013-07-14 19:10:34 --> Config Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:10:34 --> URI Class Initialized
+DEBUG - 2013-07-14 19:10:34 --> Router Class Initialized
+ERROR - 2013-07-14 19:10:34 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:11:33 --> Config Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:11:33 --> URI Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Router Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Output Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Security Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Input Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:11:33 --> Language Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:11:33 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:11:33 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Session Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Session routines successfully run
+DEBUG - 2013-07-14 19:11:33 --> Model Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Model Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Model Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Model Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> Model Class Initialized
+DEBUG - 2013-07-14 19:11:33 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:11:33 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:11:33 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:11:33 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:11:33 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:11:33 --> Final output sent to browser
+DEBUG - 2013-07-14 19:11:33 --> Total execution time: 0.3184
+DEBUG - 2013-07-14 19:11:34 --> Config Class Initialized
+DEBUG - 2013-07-14 19:11:34 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:11:34 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:11:34 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:11:34 --> URI Class Initialized
+DEBUG - 2013-07-14 19:11:34 --> Router Class Initialized
+ERROR - 2013-07-14 19:11:34 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:16:01 --> Config Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:16:01 --> URI Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Router Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Output Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Security Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Input Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:16:01 --> Language Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:16:01 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:16:01 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Session Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Session routines successfully run
+DEBUG - 2013-07-14 19:16:01 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:16:01 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:16:01 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:16:01 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:16:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:16:01 --> Final output sent to browser
+DEBUG - 2013-07-14 19:16:01 --> Total execution time: 0.1769
+DEBUG - 2013-07-14 19:16:01 --> Config Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:16:01 --> URI Class Initialized
+DEBUG - 2013-07-14 19:16:01 --> Router Class Initialized
+ERROR - 2013-07-14 19:16:01 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:16:16 --> Config Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:16:16 --> URI Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Router Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Output Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Security Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Input Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:16:16 --> Language Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:16:16 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:16:16 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Session Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Session routines successfully run
+DEBUG - 2013-07-14 19:16:16 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Model Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:16:16 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:16:16 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:16:16 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:16:16 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:16:16 --> Final output sent to browser
+DEBUG - 2013-07-14 19:16:16 --> Total execution time: 0.0987
+DEBUG - 2013-07-14 19:16:16 --> Config Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:16:16 --> URI Class Initialized
+DEBUG - 2013-07-14 19:16:16 --> Router Class Initialized
+ERROR - 2013-07-14 19:16:16 --> 404 Page Not Found --> assets
+DEBUG - 2013-07-14 19:17:47 --> Config Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:17:47 --> URI Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Router Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Output Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Security Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Input Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:17:47 --> Language Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:17:47 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:17:47 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Session Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Session routines successfully run
+DEBUG - 2013-07-14 19:17:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Model Class Initialized
+DEBUG - 2013-07-14 19:17:47 --> Model Class Initialized
+ERROR - 2013-07-14 19:17:47 --> Severity: Notice  --> Use of undefined constant ADMIN_THEME_PATH - assumed 'ADMIN_THEME_PATH' /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:17:47 --> Severity: Warning  --> include_once(ADMIN_THEME_PATH/inc/css.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:17:47 --> Severity: Warning  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening 'ADMIN_THEME_PATH/inc/css.php' for inclusion (include_path='.:/Applications/MAMP/bin/php/php5.3.14/lib/php') /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+DEBUG - 2013-07-14 19:17:47 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:17:47 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:17:47 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:17:47 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:17:47 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:17:47 --> Final output sent to browser
+DEBUG - 2013-07-14 19:17:47 --> Total execution time: 0.0667
+DEBUG - 2013-07-14 19:18:14 --> Config Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:18:14 --> URI Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Router Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Output Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Security Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Input Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:18:14 --> Language Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:18:14 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:18:14 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Session Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Session routines successfully run
+DEBUG - 2013-07-14 19:18:14 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:14 --> Model Class Initialized
+ERROR - 2013-07-14 19:18:14 --> Severity: Notice  --> Use of undefined constant ADMIN_THEME - assumed 'ADMIN_THEME' /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:18:14 --> Severity: Warning  --> include_once(/Users/cmos/Dropbox/__htdocs/__RO/knights/ADMIN_THEME/inc/css.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:18:14 --> Severity: Warning  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening '/Users/cmos/Dropbox/__htdocs/__RO/knights/ADMIN_THEME/inc/css.php' for inclusion (include_path='.:/Applications/MAMP/bin/php/php5.3.14/lib/php') /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+DEBUG - 2013-07-14 19:18:14 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:18:14 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:18:14 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:18:14 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:18:14 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:18:14 --> Final output sent to browser
+DEBUG - 2013-07-14 19:18:14 --> Total execution time: 0.1495
+DEBUG - 2013-07-14 19:18:17 --> Config Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:18:17 --> URI Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Router Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Output Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Security Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Input Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:18:17 --> Language Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:18:17 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:18:17 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Session Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Session routines successfully run
+DEBUG - 2013-07-14 19:18:17 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:17 --> Model Class Initialized
+ERROR - 2013-07-14 19:18:17 --> Severity: Notice  --> Use of undefined constant ADMIN_THEME - assumed 'ADMIN_THEME' /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:18:17 --> Severity: Warning  --> include_once(/Users/cmos/Dropbox/__htdocs/__RO/knights/ADMIN_THEME/inc/css.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+ERROR - 2013-07-14 19:18:17 --> Severity: Warning  --> include_once() [<a href='function.include'>function.include</a>]: Failed opening '/Users/cmos/Dropbox/__htdocs/__RO/knights/ADMIN_THEME/inc/css.php' for inclusion (include_path='.:/Applications/MAMP/bin/php/php5.3.14/lib/php') /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/header.php 29
+DEBUG - 2013-07-14 19:18:17 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:18:17 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:18:17 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:18:17 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:18:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:18:17 --> Final output sent to browser
+DEBUG - 2013-07-14 19:18:17 --> Total execution time: 0.0533
+DEBUG - 2013-07-14 19:18:29 --> Config Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:18:29 --> URI Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Router Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Output Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Security Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Input Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:18:29 --> Language Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:18:29 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:18:29 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Session Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Session routines successfully run
+DEBUG - 2013-07-14 19:18:29 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> Model Class Initialized
+DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:18:29 --> Final output sent to browser
+DEBUG - 2013-07-14 19:18:29 --> Total execution time: 0.1049

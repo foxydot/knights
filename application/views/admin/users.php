@@ -86,8 +86,7 @@
 		<ul class="opt2">
 
 			<li><a href="/admin">Dashboard</a></li>
-			<li><a href="javascript:void(0);" id="adduser">+ New User</a></li>
-		
+			<li><a data-toggle="modal" data-target="#modal" href="/user/add/<?php print $user['ID']; ?>" class="add adduser">New User</a></li>		
 		</ul><!-- end opt2 -->
 	
 	</div><!-- end footer -->

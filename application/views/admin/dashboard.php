@@ -127,24 +127,6 @@
 		endif;
 		} //end projects ?>
 		<div id="footer" class="row">
-	
-		
-		<ul class="opt2">
-		
-			<li><a data-toggle="modal" data-target="#modal" href="/admin/add">+ New Project</a></li>
-			
-			
-			<?php if($archive){ ?>
-			<li><a href="/admin">Project List</a></li>
-			<?php } else { ?>
-			<li><a href="/admin/listarchive">Review Archived</a></li>
-			<?php } ?>
-			
-			<li><a data-toggle="modal" data-target="#modal" href="/user/edit/<?php print $user['ID']; ?>" class="edituser">Author Settings</a></li>
-			
-			<li><a href="/user">Users</a></li>
-		
-		</ul><!-- end opt2 -->
-	
+		<?php if(isset($nav)){ $this->load->view($nav); } else { $this->load->view('admin/nav'); } ?>
 	</div><!-- end footer -->
 </div><!-- end container -->
