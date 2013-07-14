@@ -18,7 +18,7 @@ class Admin extends CI_Controller {
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',
 				'user' => $this->session->userdata,
-				'posts' => $this->Admin->get_cats_and_posts('all'),
+				'catsposts' => $this->Admin->get_cats_and_posts('all'),
 				'archive' => FALSE,
 			);
 			$data['footer_js'][] = 'jquery/index';
@@ -26,12 +26,6 @@ class Admin extends CI_Controller {
 		}
 		
 	function edit($ID){
-		$quote_ribbons = $this->Admin->get_quotes($ID);
-		//rearrange quotes to make testing easier
-		$quotes = array();
-		foreach($quote_ribbons AS $qr){
-			$quotes[$qr->after_section][$qr->after_subsection] = $qr;
-		}
 		$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'projectList',
@@ -178,38 +172,31 @@ class Admin extends CI_Controller {
 		$this->load->model('Users');
 		$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
-				'body_class' => 'projectList',
+				'body_class' => 'addPost',
 				'user' => $this->session->userdata,
-				'author_options' => $this->Users->get_users_by_level('administrators'),
-				'dashboard' => 'admin/add',
+				'dashboard' => 'admin/post',
 				'action' => 'admin/add/',
 				'is_edit' => FALSE,
 			);
 		$data['footer_js'][] = 'jquery/add';	
 		if($this->input->post()){
-			if(!$this->input->post('project_id')){
-				//check project name against exisiting
-				$result = $this->Admin->get_project_by_name($this->input->post('name'));
-				if($result){
-					$project_id = $result->ID;
-				} else {
-				//if not exist, add, get id.
-					$db_data = array(
-						'name' => $this->input->post('name'),
-					);
-					$project_id = $this->Admin->add_project($db_data);
-				}
-			} else {
-				$project_id = $this->input->post('project_id');
-			}
 			//add story info, get id
 			$db_data = array(
 				'title' => $this->input->post('title'),
-				'password' => $this->input->post('password'),
 				'author_id' => $this->input->post('author_id'),
-				'datepresented' => $this->input->post('datepresented'),
+				'content' => $this->input->post('content'),
+				'cost' => $this->input->post('cost'),
 			);
-			$story_id = $this->Admin->add_story($db_data);
+			$post_id = $this->Admin->add_post($db_data);
+			
+			
+			/****************************************
+			*****************************************
+			****************************************/
+			
+			
+			
+			
 			//add project/story info
 			$db_data = array(
 				'project_id' => $project_id,
@@ -403,6 +390,7 @@ class Admin extends CI_Controller {
 		$this->load->helper('url');
 		redirect('/admin/edit/'.$story_id);		
 	}
+	
 	
 	function listarchive()
 		{

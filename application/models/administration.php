@@ -9,31 +9,20 @@ Class Administration extends CI_Model {
 	        // Call the Model constructor
 	        parent::__construct();
 	        $this->cookie_domain = $_SERVER['SERVER_NAME'];
+	        $this->load->model('Organizations','Orgs');
 	    }
 	
 	private function make_org_array($orgs){
 		if(!is_array($orgs)){
 			if($this->authenticate->check_auth() && $orgs =='all'){
-				$org_data = $this->get_orgs();
-				foreach($org_data AS $od){
-					$orgs[] = $od->ID;
-				}
+				$orgs = $this->Orgs->get_orgs();
 			} else {
 				return FALSE;
 			}
 		}
 		return $orgs;
 	}
-	function get_orgs($archive = FALSE){
-		$this->db->from('oranization');
-		if(!$archive){
-			$this->db->where('dateremoved <=',0);
-		} 
-		$query = $this->db->get();
-		$result = $query->result();
-		return $result;
-	}
-	
+		
 	function get_cats($orgs = array(),$archive = FALSE){
 		$orgs = $this->make_org_array($orgs);
 		$this->db->from('category');
@@ -44,22 +33,7 @@ Class Administration extends CI_Model {
 		$result = $query->result();
 		return $result;
 	}
-	
-	function get_stories($project_id,$archive = FALSE){
-		$this->db->from('story2project');
-		$this->db->join('story','story2project.story_id = story.ID');
-		$this->db->join('user','story.author_id = user.ID');
-		$this->db->where('story2project.project_id',$project_id);
-		if(!$archive){
-			$this->db->where('story.dateremoved <=',0);
-		} elseif ($archive == 'only'){
-			$this->db->where('story.dateremoved >',0);
-		}
-		$query = $this->db->get();
-		$result = $query->result();
-		return $result;
-	}
-	
+		
 	function get_cats_and_posts($orgs = array(),$archive = FALSE){
 		$orgs = $this->make_org_array($orgs);
 		$cats = $this->get_cats($orgs);
@@ -70,157 +44,36 @@ Class Administration extends CI_Model {
 		}
 		return $cats;
 	}
-
-	function get_project($ID){
-		
-	}
 	
-	function get_project_by_name($name){
-		$query = $this->db->get_where('project', array('name' => $name), 1);
-		$result = $query->result();
-		if(isset($result[0])){
-			return $result[0];
-		} else {
-			return FALSE;
-		}
-	}
-	
-	function add_project($data){
+	function add_post($data){
+		$slug = $this->increment_slug(post_slug($data['title']),'post');
 		$db_data = array(
-			'name' => $data['name'],
-			'dateadded' => time(),
+				'title' => $data['title'],
+				'slug' => $slug,
+				'author_id' => $data['author_id'],
+				'cost' => $data['cost'],
+				'content' => $data['content'],
+				'lastedit' => time(),
+				'dateadded' => time(),
 		);
-		$this->db->insert('project',$db_data);
+		$this->db->insert('post',$db_data);
 		return $this->db->insert_id();
 	}
 	
-	function edit_project($ID,$data){
-		$db_data = $data;
-		$this->db->where('ID', $ID);
-		$this->db->update('project',$db_data);
-	}
-	
-	function get_story($ID){
-		$this->db->select('title,slug,password,author_id,logo_url,banner_url,story.lastedit AS lastedit,datepresented,story.dateadded AS dateadded,datepublished,story.dateremoved AS dateremoved,project_id,story_id,name');
-		$this->db->from('story');
-		$this->db->join('story2project','story2project.story_id = story.ID');
-		$this->db->join('project','story2project.project_id = project.ID');
-		$this->db->where('story.ID',$ID);
-		$query = $this->db->get();
-		$result = $query->result();
-		return $result[0];
-	}
-	
-	function add_story($data){
-		$slug = $this->increment_slug(post_slug($data['title'].'_'.date('m-d',$data['datepresented'])));
-		$db_data = array(
-			'title' => $data['title'],
-			'password' => $data['password'],
-			'slug' => $slug,
-			'author_id' => $data['author_id'],
-			'lastedit' => time(),
-			'datepresented' => $data['datepresented'],
-			'dateadded' => time(),
-		);
-		$this->db->insert('story',$db_data);
-		return $this->db->insert_id();
-	}
-	
-	function story_section_boilerplate($story_id){
-		//fill in basic sections as placeholders.
-		$insert_batch = array();
-		for($i=1;$i<=3;$i++){
-			$insert_data = array(
-				'story_id' => $story_id,
-				'story_section' => $i,
-				'story_subsection' => 0,
-				'section_type' => 1,
-				'content' => '',
-				'lastedit' => time(),	
-				'dateadded' => time(),	
-				'dateremoved' => 0,
-			);
-			$insert_batch[] = $insert_data;
-			//do main section stuff
-			for($j=1;$j<=3;$j++){
-				for($k=2;$k<=4;$k++){
-					//do subsection stuff
-					$insert_data = array(
-						'story_id' => $story_id,
-						'story_section' => $i,
-						'story_subsection' => $j,
-						'section_type' => $k,
-						'content' => '',
-						'lastedit' => time(),	
-						'dateadded' => time(),	
-						'dateremoved' => 0,
-					);
-					$insert_batch[] = $insert_data;
-				}
-			}
-		}
-		$this->db->insert_batch('section', $insert_batch);
-	}
-	
-	function clone_story($original_story_id){
-		$old_story = $this->get_story($original_story_id);
-		//create new story with old data
-		$slug = $this->increment_slug($old_story->slug);
-		$data = array(
-			'title' => $old_story->title.' Copy',
-			'slug' => $slug,
-			'password' => $old_story->password,
-			'author_id' => $old_story->author_id,
-			'logo_url' => $old_story->logo_url,
-			'banner_url' => $old_story->banner_url,
-			'datepresented' => $old_story->datepresented,
-		);
-		$new_story_id = $this->add_story($data);
-		//connect to the original project
-		$data = array(
-				'project_id' => $old_story->project_id,
-				'story_id' => $new_story_id,
-			);
-		$this->story_to_project($data);
-		//get all the sections and clone them
-		$old_story_sections = $this->get_sections($original_story_id);
-		foreach($old_story_sections AS $old_section){
-			$data = array(
-				'story_id' => $new_story_id,
-				'story_section' => $old_section->story_section,
-				'story_subsection' => $old_section->story_subsection,
-				'section_type' => $old_section->section_type,
-				'content' => $old_section->content,
-			);
-			$new_section_id = $this->add_subsection_for_clone($data);
-			//get the old section's attachemnts and attach to the new section	
-			$old_attachments = $this->get_attachments($old_section->section_id);
-			foreach($old_attachments AS $old_attachment_typegrp){
-				foreach($old_attachment_typegrp AS $old_attachment){
-					$data = array(
-						'attachment_id' => $old_attachment->ID,
-						'section_id' => $new_section_id,
-					);
-					$this->attachment_to_section($data);
-				}
-			}
-		}	
-	}
-	
-	function increment_slug($test_slug){
-		if(!$this->slug_exists($test_slug)){
+	function increment_slug($test_slug,$table){
+		if(!$this->slug_exists($test_slug,$table)){
 			return $test_slug;
 		}
 		$i = 0;
 		do {
 			$new_slug = $test_slug.'-'.$i;
 			$i++;
-		} while($this->slug_exists($new_slug));
+		} while($this->slug_exists($new_slug,$table));
 		return $new_slug;
 	}
 	
-	function slug_exists($test_slug){
-		$query = $this->db->get_where('story',array('slug'=>$test_slug));
+	function slug_exists($test_slug,$table){
+		$query = $this->db->get_where($table,array('slug'=>$test_slug));
 		if($query->num_rows()>0){
 			return TRUE;
 		} else {
@@ -260,7 +113,7 @@ Class Administration extends CI_Model {
 	
 	function edit_story($ID,$data){
 		$db_data = $data;
-		$db_data['slug'] = $this->increment_slug(post_slug($data['title'].'_'.date('m-d',$data['datepresented'])));
+		$db_data['slug'] = $this->increment_slug(post_slug($data['title'].'_'.date('m-d',$data['datepresented'])),'story');
 		$db_data['lastedit'] = time();
 		
 		$this->db->where('ID', $ID);
@@ -512,180 +365,6 @@ Class Administration extends CI_Model {
 		$db_data['datepublished'] = NULL;
 		$this->db->where('ID', $ID);
 		$this->db->update('story',$db_data);	
-	}
-	
-	function unpublish_subsection($data){
-		$db_data['lastedit'] = time();
-		$db_data['dateremoved'] = time();
-		$this->db->where('story_id',$data['story_id']);
-		$this->db->where('story_section',$data['story_section']);
-		if($data['story_subsection'] != 0){
-			$this->db->where('story_subsection',$data['story_subsection']);
-		} 
-		if($this->db->update('section',$db_data)){
-			$this->set_updated_time_on_story($data['story_id']);
-			print "TRUE";
-		} else {
-			print "FALSE";
-		}
-	}
-	
-	function create_subsection($data){
-		for($k=2;$k<=4;$k++){
-			//do subsection stuff
-			$insert_data = array(
-				'story_id' => $data['story_id'],
-				'story_section' => $data['story_section'],
-				'story_subsection' => $data['story_subsection']+1,
-				'section_type' => $k,
-				'content' => '',
-				'lastedit' => time(),	
-				'dateadded' => time(),	
-				'dateremoved' => 0,
-			);
-			$insert_batch[] = $insert_data;
-		}
-		if($this->db->insert_batch('section', $insert_batch)){
-			$this->set_updated_time_on_story($data['story_id']);
-			print "TRUE";
-		} else {
-			print "FALSE";
-		}
-	}
-	
-	function add_subsection_for_clone($data){
-		//do subsection stuff
-			$insert_data = array(
-				'story_id' => $data['story_id'],
-				'story_section' => $data['story_section'],
-				'story_subsection' => $data['story_subsection'],
-				'section_type' => $data['section_type'],
-				'content' => $data['content'],
-				'lastedit' => time(),	
-				'dateadded' => time(),	
-				'dateremoved' => 0,
-		);
-	
-		if($this->db->insert('section', $insert_data)){
-			return $this->db->insert_id();
-		} 
-	}
-	
-	function renumber_down($data){
-		$update_batch = array();
-		$this->db->select('ID,story_subsection');
-		$this->db->from('section');
-		$this->db->where('story_id',$data['story_id']);
-		$this->db->where('story_section',$data['story_section']);
-		$this->db->where('story_subsection > ',$data['story_subsection']);
-		$this->db->where('dateremoved <=',0);
-		$query = $this->db->get();
-		$result = $query->result();
-		foreach($result AS $item){
-			$update_data = array(
-				'ID' => $item->ID,
-				'story_subsection' => $item->story_subsection-1,
-			);
-			$update_batch[] = $update_data;
-		}
-		if(count($update_batch)==0){
-			print "TRUE";
-			return TRUE;
-		}
-		$this->db->update_batch('section', $update_batch, 'ID');
-		if($this->db->affected_rows()>0){
-			print "TRUE";
-			return TRUE;
-		} else {
-			print $this->db->last_query();
-			return FALSE;
-		}
-	}	
-	
-	function renumber_up($data){
-		$update_batch = array();
-		$this->db->select('ID,story_subsection');
-		$this->db->from('section');
-		$this->db->where('story_id',$data['story_id']);
-		$this->db->where('story_section',$data['story_section']);
-		$this->db->where('story_subsection > ',$data['story_subsection']);
-		$this->db->where('dateremoved <=',0);
-		$query = $this->db->get();
-		$result = $query->result();
-		foreach($result AS $item){
-			$update_data = array(
-				'ID' => $item->ID,
-				'story_subsection' => $item->story_subsection+1,
-			);
-			$update_batch[] = $update_data;
-		}
-	if(count($update_batch)==0){
-			print "TRUE";
-			return TRUE;
-		}
-		$this->db->update_batch('section', $update_batch, 'ID');
-		if($this->db->affected_rows()>0){
-			print "TRUE";
-			return TRUE;
-		} else {
-			print $this->db->last_query();
-			return FALSE;
-		}
-	}	
-	
-	function renumber_for_drag($data){
-		$story_id = $data['story_id'][0];
-		$this->create_history($story_id);
-		if(isset($data['quote_id'])){
-			$neworder = $data['neworder'];
-			$quote = 'quote'.$data['quote_id'][0];
-			$key = array_search($quote, $neworder);
-			$after_subsection = (int) preg_replace('/subsection/i','',$neworder[$key-1]);
-			$this->db->where('ID',$data['quote_id'][0]);
-			$update_data = array(
-				'after_subsection' => $after_subsection
-			);
-			$this->db->update('quote_ribbon',$update_data);
-		} else {
-			$update_batch = array();
-			foreach($data['neworder'] AS $k => $v){
-				if(strpos($v,'quote')!==FALSE){
-					continue;
-				}
-				$key = $k + 1;
-				$val = (int) preg_replace('/subsection/i','',$v);
-				print $key.' '.$val;
-				if($key != $val){
-					$this->db->select('ID');
-					$this->db->from('section');
-					$this->db->where('story_id',$story_id);
-					$this->db->where('story_section',$data['story_section'][0]);
-					$this->db->where('story_subsection',$val);
-					$query = $this->db->get();
-					$result = $query->result();
-					foreach($result AS $item){
-						$update_data = array(
-							'ID' => $item->ID,
-							'story_subsection' => $key
-						);
-						$update_batch[] = $update_data;
-					}
-				}
-			}
-			if(count($update_batch)==0){
-				print "TRUE";
-				return TRUE;
-			}
-			$this->db->update_batch('section', $update_batch, 'ID');
-		}
-		if($this->db->affected_rows()>0){
-			$this->set_updated_time_on_story($story_id);
-			print "TRUE";
-			return TRUE;
-		} else {
-			print $this->db->last_query();
-			return FALSE;
-		}
 	}
 	
 	function create_history($story_id){

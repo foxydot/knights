@@ -374,6 +374,11 @@ Class Sysadmin extends CI_Model {
 				'type' => 'BIGINT',
 				'constraint' => '11',
 			),
+			'cost' => array(
+				'type' => 'VARCHAR',
+				'constraint' => '255',
+				'null' => FALSE,
+			),
 			'content' => array(
 				'type' => 'TEXT'
 			),

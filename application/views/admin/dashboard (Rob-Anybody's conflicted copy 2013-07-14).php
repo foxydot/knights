@@ -131,7 +131,7 @@
 		
 		<ul class="opt2">
 		
-			<li><a data-toggle="modal" data-target="#modal" href="/admin/add">+ New Project</a></li>
+			<li><a class="modal-loader" title="Add new post" data-toggle="modal" data-target="#modal" href="/admin/add">+ New post</a></li>
 			
 			
 			<?php if($archive){ ?>
@@ -140,10 +140,12 @@
 			<li><a href="/admin/listarchive">Review Archived</a></li>
 			<?php } ?>
 			
-			<li><a data-toggle="modal" data-target="#modal" href="/user/edit/<?php print $user['ID']; ?>" class="edituser">Author Settings</a></li>
+			<li><a class="modal-loader" title="Edit author" data-toggle="modal" data-target="#modal" href="/user/edit/<?php print $user['ID']; ?>" class="edituser">Author Settings</a></li>
 			
+			<?php if($this->authenticate->check_auth()){ ?>
 			<li><a href="/user">Users</a></li>
-		
+			<li><a href="/organizations">Organizations</a></li>
+			<?php } ?>
 		</ul><!-- end opt2 -->
 	
 	</div><!-- end footer -->
