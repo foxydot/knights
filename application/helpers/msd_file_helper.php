@@ -13,10 +13,10 @@ if(!function_exists('page_css'))
 			{
 				foreach($page_css AS $css)
 				{
-					$ret .= '<link rel="stylesheet" href="'.THEME_URL.'/css/'.$css.'.css" type="text/css" />'."\n";
+					$ret .= '<link rel="stylesheet" href="/admin/css/'.$css.'.css" type="text/css" />'."\n";
 				}
 			} else {
-		 	$ret = '<link rel="stylesheet" href="'.THEME_URL.'/css/'.$page_css.'.css" type="text/css" />'."\n";
+		 	$ret = '<link rel="stylesheet" href="/admin/css/'.$page_css.'.css" type="text/css" />'."\n";
 			}
 			return $ret;
 		} else {
@@ -38,10 +38,10 @@ if(!function_exists('page_js'))
 			{
 				foreach($page_js AS $js)
 				{
-					$ret .= '<script src="'.THEME_URL.'/js/'.$js.'.js"></script>'."\n";
+					$ret .= '<script src="/assets/js/'.$js.'.js"></script>'."\n";
 				}
 			} else {
-		 	$ret = '<script src="'.THEME_URL.'/js/'.$page_js.'.js"></script>'."\n";
+		 	$ret = '<script src="/assets/js/'.$page_js.'.js"></script>'."\n";
 			}
 			return $ret;
 		} else {
