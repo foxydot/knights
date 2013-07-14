@@ -1483,3 +1483,38 @@ DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin/footer.php
 DEBUG - 2013-07-14 19:18:29 --> File loaded: application/views/admin.tpl.php
 DEBUG - 2013-07-14 19:18:29 --> Final output sent to browser
 DEBUG - 2013-07-14 19:18:29 --> Total execution time: 0.1049
+DEBUG - 2013-07-14 19:20:12 --> Config Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Hooks Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Utf8 Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> UTF-8 Support Enabled
+DEBUG - 2013-07-14 19:20:12 --> URI Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Router Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Output Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Security Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Input Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-07-14 19:20:12 --> Language Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Loader Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: url_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: form_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: string_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: msd_dev_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: msd_display_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: msd_file_helper
+DEBUG - 2013-07-14 19:20:12 --> Helper loaded: msd_string_helper
+DEBUG - 2013-07-14 19:20:12 --> Database Driver Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Session Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Session routines successfully run
+DEBUG - 2013-07-14 19:20:12 --> Model Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Model Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Model Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Controller Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Model Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> Model Class Initialized
+DEBUG - 2013-07-14 19:20:12 --> File loaded: application/views/admin/header.php
+DEBUG - 2013-07-14 19:20:12 --> File loaded: application/views/admin/nav.php
+DEBUG - 2013-07-14 19:20:12 --> File loaded: application/views/admin/dashboard.php
+DEBUG - 2013-07-14 19:20:12 --> File loaded: application/views/admin/footer.php
+DEBUG - 2013-07-14 19:20:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-14 19:20:12 --> Final output sent to browser
+DEBUG - 2013-07-14 19:20:12 --> Total execution time: 0.1018
