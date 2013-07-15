@@ -23,7 +23,7 @@ class Orgs extends CI_Controller {
 			);
 			//$data['footer_js'][] = 'jquery/userindex';
 			
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	
 		
@@ -63,7 +63,7 @@ class Orgs extends CI_Controller {
 			);
 			$data['is_edit'] = empty($org_id)?FALSE:TRUE;
 			$data['organization'] = empty($org_id)?NULL:$this->Admin->get_org_by_id($org_id);
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 		*/
 		
@@ -130,7 +130,7 @@ class Orgs extends CI_Controller {
 				$this->load->helper('url');
 				redirect('/user');	
 			}
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	
 	function add()
@@ -160,7 +160,7 @@ class Orgs extends CI_Controller {
 				redirect('/user');	
 			}
 			
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 		
 }

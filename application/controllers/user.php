@@ -23,7 +23,7 @@ class User extends CI_Controller {
 			);
 			$data['footer_js'][] = 'jquery/userindex';
 			
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	
 	function edit($ID)
@@ -88,7 +88,7 @@ class User extends CI_Controller {
 				$this->load->helper('url');
 				redirect('/user');	
 			}
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	
 	function add()
@@ -118,7 +118,7 @@ class User extends CI_Controller {
 				redirect('/user');	
 			}
 			
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 		
 }

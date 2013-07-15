@@ -12,7 +12,7 @@ class Install extends CI_Controller {
 				'form' => 'admin/install',
 				'dashboard' => 'login/dashboard',
 			);
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		} else {
 			if($_POST['user_pwd'] != $_POST['user_pwd_chk']){
 			$data = array(
@@ -20,7 +20,7 @@ class Install extends CI_Controller {
 				'msg' => 'passwords do not match',
 				'dashboard' => 'login/dashboard',
 			);
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 			} else {
 				$this->load->model('sysadmin');
 				$this->sysadmin->install();
@@ -34,7 +34,7 @@ class Install extends CI_Controller {
 			$data['form'] = 'admin/uninstall';
 			$data['dashboard'] = 'login/dashboard';
 			if(empty($_POST)){
-				$this->load->view('admin.tpl.php',$data);
+				$this->load->view('default.tpl.php',$data);
 			} else {
 				$this->load->model('sysadmin');
 				$this->sysadmin->uninstall();
@@ -53,7 +53,7 @@ class Install extends CI_Controller {
 			$data['form'] = 'admin/maintenance';
 			$data['dashboard'] = 'login/dashboard';
 			if(empty($_POST)){
-				$this->load->view('admin.tpl.php',$data);
+				$this->load->view('default.tpl.php',$data);
 			} else {
 				$this->sysadmin->upgrade();
 			}

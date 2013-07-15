@@ -32,7 +32,7 @@ DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 10:33:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 10:33:01 --> Final output sent to browser
 DEBUG - 2013-07-13 10:33:01 --> Total execution time: 3.6210
 DEBUG - 2013-07-13 10:33:01 --> Config Class Initialized
@@ -114,7 +114,7 @@ DEBUG - 2013-07-13 10:33:38 --> Model Class Initialized
 DEBUG - 2013-07-13 10:33:38 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 10:33:38 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 10:33:38 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 10:33:38 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 10:33:38 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 10:33:38 --> Final output sent to browser
 DEBUG - 2013-07-13 10:33:38 --> Total execution time: 0.1207
 DEBUG - 2013-07-13 10:33:38 --> Config Class Initialized
@@ -168,7 +168,7 @@ DEBUG - 2013-07-13 10:34:32 --> Model Class Initialized
 DEBUG - 2013-07-13 10:34:32 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 10:34:32 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 10:34:32 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 10:34:32 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 10:34:32 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 10:34:32 --> Final output sent to browser
 DEBUG - 2013-07-13 10:34:32 --> Total execution time: 0.1764
 DEBUG - 2013-07-13 10:34:32 --> Config Class Initialized
@@ -224,7 +224,7 @@ DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 13:56:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 13:56:00 --> Final output sent to browser
 DEBUG - 2013-07-13 13:56:00 --> Total execution time: 0.2346
 DEBUG - 2013-07-13 13:56:00 --> Config Class Initialized
@@ -306,7 +306,7 @@ DEBUG - 2013-07-13 13:56:10 --> Model Class Initialized
 DEBUG - 2013-07-13 13:56:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 13:56:10 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 13:56:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 13:56:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 13:56:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 13:56:10 --> Final output sent to browser
 DEBUG - 2013-07-13 13:56:10 --> Total execution time: 0.0504
 DEBUG - 2013-07-13 13:56:10 --> Config Class Initialized
@@ -360,7 +360,7 @@ DEBUG - 2013-07-13 13:56:25 --> Model Class Initialized
 DEBUG - 2013-07-13 13:56:25 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 13:56:25 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 13:56:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 13:56:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 13:56:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 13:56:25 --> Final output sent to browser
 DEBUG - 2013-07-13 13:56:25 --> Total execution time: 0.1013
 DEBUG - 2013-07-13 13:56:25 --> Config Class Initialized
@@ -415,7 +415,7 @@ DEBUG - 2013-07-13 14:00:14 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:00:14 --> Severity: Notice  --> Use of undefined constant LOGO_URL - assumed 'LOGO_URL' /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/users.php 5
 DEBUG - 2013-07-13 14:00:14 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 14:00:14 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:00:14 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:00:14 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:00:14 --> Final output sent to browser
 DEBUG - 2013-07-13 14:00:14 --> Total execution time: 0.1021
 DEBUG - 2013-07-13 14:00:14 --> Config Class Initialized
@@ -469,7 +469,7 @@ ERROR - 2013-07-13 14:02:06 --> Severity: Notice  --> Undefined variable: logo_u
 ERROR - 2013-07-13 14:02:06 --> Severity: Notice  --> Undefined variable: school_name /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/users.php 5
 DEBUG - 2013-07-13 14:02:06 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 14:02:06 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:02:06 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:02:06 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:02:06 --> Final output sent to browser
 DEBUG - 2013-07-13 14:02:06 --> Total execution time: 0.1037
 DEBUG - 2013-07-13 14:02:06 --> Config Class Initialized
@@ -523,7 +523,7 @@ ERROR - 2013-07-13 14:05:35 --> Severity: Notice  --> Undefined variable: logo_u
 ERROR - 2013-07-13 14:05:35 --> Severity: Notice  --> Undefined variable: school_name /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/users.php 5
 DEBUG - 2013-07-13 14:05:35 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 14:05:35 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:05:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:05:35 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:05:35 --> Final output sent to browser
 DEBUG - 2013-07-13 14:05:35 --> Total execution time: 0.0957
 DEBUG - 2013-07-13 14:05:35 --> Config Class Initialized
@@ -602,7 +602,7 @@ DEBUG - 2013-07-13 14:06:29 --> Model Class Initialized
 DEBUG - 2013-07-13 14:06:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:06:29 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:06:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:06:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:06:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:06:29 --> Final output sent to browser
 DEBUG - 2013-07-13 14:06:29 --> Total execution time: 0.0447
 DEBUG - 2013-07-13 14:06:29 --> Config Class Initialized
@@ -642,7 +642,7 @@ DEBUG - 2013-07-13 14:07:11 --> Model Class Initialized
 DEBUG - 2013-07-13 14:07:11 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:07:11 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:07:11 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:07:11 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:07:11 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:07:11 --> Final output sent to browser
 DEBUG - 2013-07-13 14:07:11 --> Total execution time: 0.3771
 DEBUG - 2013-07-13 14:07:11 --> Config Class Initialized
@@ -682,7 +682,7 @@ DEBUG - 2013-07-13 14:11:46 --> Model Class Initialized
 DEBUG - 2013-07-13 14:11:46 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:11:46 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:11:46 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:11:46 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:11:46 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:11:46 --> Final output sent to browser
 DEBUG - 2013-07-13 14:11:46 --> Total execution time: 0.1052
 DEBUG - 2013-07-13 14:11:46 --> Config Class Initialized
@@ -722,7 +722,7 @@ DEBUG - 2013-07-13 14:11:52 --> Model Class Initialized
 DEBUG - 2013-07-13 14:11:52 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:11:52 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:11:52 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:11:52 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:11:52 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:11:52 --> Final output sent to browser
 DEBUG - 2013-07-13 14:11:52 --> Total execution time: 0.0980
 DEBUG - 2013-07-13 14:11:52 --> Config Class Initialized
@@ -762,7 +762,7 @@ DEBUG - 2013-07-13 14:12:01 --> Model Class Initialized
 DEBUG - 2013-07-13 14:12:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:12:01 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:12:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:12:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:12:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:12:01 --> Final output sent to browser
 DEBUG - 2013-07-13 14:12:01 --> Total execution time: 0.1005
 DEBUG - 2013-07-13 14:12:02 --> Config Class Initialized
@@ -802,7 +802,7 @@ DEBUG - 2013-07-13 14:19:08 --> Model Class Initialized
 DEBUG - 2013-07-13 14:19:08 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:19:08 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:19:08 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:19:08 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:19:08 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:19:08 --> Final output sent to browser
 DEBUG - 2013-07-13 14:19:08 --> Total execution time: 0.1008
 DEBUG - 2013-07-13 14:19:40 --> Config Class Initialized
@@ -835,7 +835,7 @@ DEBUG - 2013-07-13 14:19:40 --> Model Class Initialized
 DEBUG - 2013-07-13 14:19:40 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:19:40 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:19:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:19:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:19:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:19:40 --> Final output sent to browser
 DEBUG - 2013-07-13 14:19:40 --> Total execution time: 0.1019
 DEBUG - 2013-07-13 14:21:44 --> Config Class Initialized
@@ -868,7 +868,7 @@ DEBUG - 2013-07-13 14:21:44 --> Model Class Initialized
 DEBUG - 2013-07-13 14:21:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:21:44 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:21:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:21:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:21:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:21:44 --> Final output sent to browser
 DEBUG - 2013-07-13 14:21:44 --> Total execution time: 0.1000
 DEBUG - 2013-07-13 14:24:05 --> Config Class Initialized
@@ -901,7 +901,7 @@ DEBUG - 2013-07-13 14:24:05 --> Model Class Initialized
 DEBUG - 2013-07-13 14:24:05 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:24:05 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:24:05 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:24:05 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:24:05 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:24:05 --> Final output sent to browser
 DEBUG - 2013-07-13 14:24:05 --> Total execution time: 0.0952
 DEBUG - 2013-07-13 14:24:08 --> Config Class Initialized
@@ -936,7 +936,7 @@ DEBUG - 2013-07-13 14:24:08 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:24:08 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:24:08 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:24:08 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:24:08 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:24:08 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:24:08 --> Final output sent to browser
 DEBUG - 2013-07-13 14:24:08 --> Total execution time: 0.0476
 DEBUG - 2013-07-13 14:25:00 --> Config Class Initialized
@@ -969,7 +969,7 @@ DEBUG - 2013-07-13 14:25:01 --> Model Class Initialized
 DEBUG - 2013-07-13 14:25:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:25:01 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:25:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:01 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:01 --> Total execution time: 0.0985
 DEBUG - 2013-07-13 14:25:03 --> Config Class Initialized
@@ -1004,7 +1004,7 @@ DEBUG - 2013-07-13 14:25:03 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:25:03 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:25:03 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:25:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:03 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:03 --> Total execution time: 0.0469
 DEBUG - 2013-07-13 14:25:06 --> Config Class Initialized
@@ -1037,7 +1037,7 @@ DEBUG - 2013-07-13 14:25:06 --> Model Class Initialized
 DEBUG - 2013-07-13 14:25:06 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:25:06 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 14:25:06 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:06 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:06 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:06 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:06 --> Total execution time: 0.0917
 DEBUG - 2013-07-13 14:25:11 --> Config Class Initialized
@@ -1070,7 +1070,7 @@ DEBUG - 2013-07-13 14:25:11 --> Model Class Initialized
 DEBUG - 2013-07-13 14:25:11 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:25:11 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:25:11 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:11 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:11 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:11 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:11 --> Total execution time: 0.0977
 DEBUG - 2013-07-13 14:25:16 --> Config Class Initialized
@@ -1130,7 +1130,7 @@ DEBUG - 2013-07-13 14:25:19 --> Model Class Initialized
 DEBUG - 2013-07-13 14:25:19 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:25:19 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:25:19 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:19 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:19 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:19 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:19 --> Total execution time: 0.1304
 DEBUG - 2013-07-13 14:25:21 --> Config Class Initialized
@@ -1165,7 +1165,7 @@ DEBUG - 2013-07-13 14:25:21 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:25:21 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:25:21 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:25:21 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:25:21 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:25:21 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:25:21 --> Final output sent to browser
 DEBUG - 2013-07-13 14:25:21 --> Total execution time: 0.0460
 DEBUG - 2013-07-13 14:26:18 --> Config Class Initialized
@@ -1198,7 +1198,7 @@ DEBUG - 2013-07-13 14:26:18 --> Model Class Initialized
 DEBUG - 2013-07-13 14:26:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:26:18 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:26:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:26:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:26:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:26:18 --> Final output sent to browser
 DEBUG - 2013-07-13 14:26:18 --> Total execution time: 0.0961
 DEBUG - 2013-07-13 14:26:20 --> Config Class Initialized
@@ -1233,7 +1233,7 @@ DEBUG - 2013-07-13 14:26:20 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:26:20 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:26:20 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:26:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:26:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:26:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:26:20 --> Final output sent to browser
 DEBUG - 2013-07-13 14:26:20 --> Total execution time: 0.0919
 DEBUG - 2013-07-13 14:26:39 --> Config Class Initialized
@@ -1266,7 +1266,7 @@ DEBUG - 2013-07-13 14:26:39 --> Model Class Initialized
 DEBUG - 2013-07-13 14:26:39 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:26:39 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:26:39 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:26:39 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:26:39 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:26:39 --> Final output sent to browser
 DEBUG - 2013-07-13 14:26:39 --> Total execution time: 0.0440
 DEBUG - 2013-07-13 14:26:41 --> Config Class Initialized
@@ -1301,7 +1301,7 @@ DEBUG - 2013-07-13 14:26:41 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:26:41 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:26:41 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:26:41 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:26:41 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:26:41 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:26:41 --> Final output sent to browser
 DEBUG - 2013-07-13 14:26:41 --> Total execution time: 0.0959
 DEBUG - 2013-07-13 14:29:38 --> Config Class Initialized
@@ -1334,7 +1334,7 @@ DEBUG - 2013-07-13 14:29:38 --> Model Class Initialized
 DEBUG - 2013-07-13 14:29:38 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:29:38 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:29:38 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:29:38 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:29:38 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:29:38 --> Final output sent to browser
 DEBUG - 2013-07-13 14:29:38 --> Total execution time: 0.0997
 DEBUG - 2013-07-13 14:29:40 --> Config Class Initialized
@@ -1369,7 +1369,7 @@ DEBUG - 2013-07-13 14:29:40 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:29:40 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:29:40 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:29:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:29:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:29:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:29:40 --> Final output sent to browser
 DEBUG - 2013-07-13 14:29:40 --> Total execution time: 0.0454
 DEBUG - 2013-07-13 14:29:58 --> Config Class Initialized
@@ -1402,7 +1402,7 @@ DEBUG - 2013-07-13 14:29:58 --> Model Class Initialized
 DEBUG - 2013-07-13 14:29:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:29:58 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:29:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:29:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:29:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:29:58 --> Final output sent to browser
 DEBUG - 2013-07-13 14:29:58 --> Total execution time: 0.1025
 DEBUG - 2013-07-13 14:30:01 --> Config Class Initialized
@@ -1437,7 +1437,7 @@ DEBUG - 2013-07-13 14:30:01 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:30:01 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:30:01 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:30:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:30:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:30:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:30:01 --> Final output sent to browser
 DEBUG - 2013-07-13 14:30:01 --> Total execution time: 0.2034
 DEBUG - 2013-07-13 14:30:55 --> Config Class Initialized
@@ -1470,7 +1470,7 @@ DEBUG - 2013-07-13 14:30:55 --> Model Class Initialized
 DEBUG - 2013-07-13 14:30:55 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:30:55 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:30:55 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:30:55 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:30:55 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:30:55 --> Final output sent to browser
 DEBUG - 2013-07-13 14:30:55 --> Total execution time: 0.1039
 DEBUG - 2013-07-13 14:30:58 --> Config Class Initialized
@@ -1505,7 +1505,7 @@ DEBUG - 2013-07-13 14:30:58 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:30:58 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:30:58 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:30:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:30:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:30:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:30:58 --> Final output sent to browser
 DEBUG - 2013-07-13 14:30:58 --> Total execution time: 0.0995
 DEBUG - 2013-07-13 14:33:27 --> Config Class Initialized
@@ -1538,7 +1538,7 @@ DEBUG - 2013-07-13 14:33:27 --> Model Class Initialized
 DEBUG - 2013-07-13 14:33:27 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:33:27 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:33:27 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:33:27 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:33:27 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:33:27 --> Final output sent to browser
 DEBUG - 2013-07-13 14:33:27 --> Total execution time: 0.2142
 DEBUG - 2013-07-13 14:33:27 --> Config Class Initialized
@@ -1592,7 +1592,7 @@ DEBUG - 2013-07-13 14:48:00 --> Model Class Initialized
 DEBUG - 2013-07-13 14:48:00 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 14:48:00 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 14:48:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:48:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:48:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:48:00 --> Final output sent to browser
 DEBUG - 2013-07-13 14:48:00 --> Total execution time: 0.0988
 DEBUG - 2013-07-13 14:48:00 --> Config Class Initialized
@@ -1641,7 +1641,7 @@ DEBUG - 2013-07-13 14:48:03 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 14:48:03 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 14:48:03 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 14:48:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 14:48:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 14:48:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 14:48:03 --> Final output sent to browser
 DEBUG - 2013-07-13 14:48:03 --> Total execution time: 0.0510
 DEBUG - 2013-07-13 15:13:01 --> Config Class Initialized
@@ -1674,7 +1674,7 @@ DEBUG - 2013-07-13 15:13:02 --> Model Class Initialized
 DEBUG - 2013-07-13 15:13:02 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:13:02 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:13:02 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:13:02 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:13:02 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:13:02 --> Final output sent to browser
 DEBUG - 2013-07-13 15:13:02 --> Total execution time: 0.0998
 DEBUG - 2013-07-13 15:13:02 --> Config Class Initialized
@@ -1721,7 +1721,7 @@ DEBUG - 2013-07-13 15:19:58 --> Model Class Initialized
 DEBUG - 2013-07-13 15:19:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:19:58 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:19:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:19:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:19:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:19:58 --> Final output sent to browser
 DEBUG - 2013-07-13 15:19:58 --> Total execution time: 0.0932
 DEBUG - 2013-07-13 15:20:00 --> Config Class Initialized
@@ -1756,7 +1756,7 @@ DEBUG - 2013-07-13 15:20:00 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:20:00 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:20:00 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:20:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:20:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:20:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:20:00 --> Final output sent to browser
 DEBUG - 2013-07-13 15:20:00 --> Total execution time: 0.0442
 DEBUG - 2013-07-13 15:23:12 --> Config Class Initialized
@@ -1789,7 +1789,7 @@ DEBUG - 2013-07-13 15:23:13 --> Model Class Initialized
 DEBUG - 2013-07-13 15:23:13 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:23:13 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:23:13 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:23:13 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:23:13 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:23:13 --> Final output sent to browser
 DEBUG - 2013-07-13 15:23:13 --> Total execution time: 0.1048
 DEBUG - 2013-07-13 15:23:15 --> Config Class Initialized
@@ -1824,7 +1824,7 @@ DEBUG - 2013-07-13 15:23:15 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:23:15 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:23:15 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:23:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:23:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:23:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:23:15 --> Final output sent to browser
 DEBUG - 2013-07-13 15:23:15 --> Total execution time: 0.0504
 DEBUG - 2013-07-13 15:23:54 --> Config Class Initialized
@@ -1857,7 +1857,7 @@ DEBUG - 2013-07-13 15:23:54 --> Model Class Initialized
 DEBUG - 2013-07-13 15:23:54 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:23:54 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:23:54 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:23:54 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:23:54 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:23:54 --> Final output sent to browser
 DEBUG - 2013-07-13 15:23:54 --> Total execution time: 0.0995
 DEBUG - 2013-07-13 15:23:57 --> Config Class Initialized
@@ -1892,7 +1892,7 @@ DEBUG - 2013-07-13 15:23:57 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:23:57 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:23:57 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:23:57 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:23:57 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:23:57 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:23:57 --> Final output sent to browser
 DEBUG - 2013-07-13 15:23:57 --> Total execution time: 0.0469
 DEBUG - 2013-07-13 15:25:21 --> Config Class Initialized
@@ -1925,7 +1925,7 @@ DEBUG - 2013-07-13 15:25:21 --> Model Class Initialized
 DEBUG - 2013-07-13 15:25:21 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:25:21 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:25:21 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:25:21 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:25:21 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:25:21 --> Final output sent to browser
 DEBUG - 2013-07-13 15:25:21 --> Total execution time: 0.0961
 DEBUG - 2013-07-13 15:25:24 --> Config Class Initialized
@@ -1960,7 +1960,7 @@ DEBUG - 2013-07-13 15:25:24 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:25:24 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:25:24 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:25:24 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:25:24 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:25:24 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:25:24 --> Final output sent to browser
 DEBUG - 2013-07-13 15:25:24 --> Total execution time: 0.1002
 DEBUG - 2013-07-13 15:26:03 --> Config Class Initialized
@@ -1993,7 +1993,7 @@ DEBUG - 2013-07-13 15:26:03 --> Model Class Initialized
 DEBUG - 2013-07-13 15:26:03 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:26:03 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:26:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:26:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:26:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:26:03 --> Final output sent to browser
 DEBUG - 2013-07-13 15:26:03 --> Total execution time: 0.0927
 DEBUG - 2013-07-13 15:26:07 --> Config Class Initialized
@@ -2028,7 +2028,7 @@ DEBUG - 2013-07-13 15:26:07 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:26:07 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:26:07 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:26:07 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:26:07 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:26:07 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:26:07 --> Final output sent to browser
 DEBUG - 2013-07-13 15:26:07 --> Total execution time: 0.0957
 DEBUG - 2013-07-13 15:35:07 --> Config Class Initialized
@@ -2061,7 +2061,7 @@ DEBUG - 2013-07-13 15:35:07 --> Model Class Initialized
 DEBUG - 2013-07-13 15:35:07 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:35:07 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:35:07 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:35:07 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:35:07 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:35:07 --> Final output sent to browser
 DEBUG - 2013-07-13 15:35:07 --> Total execution time: 0.0992
 DEBUG - 2013-07-13 15:35:10 --> Config Class Initialized
@@ -2096,7 +2096,7 @@ DEBUG - 2013-07-13 15:35:10 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:35:10 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:35:10 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:35:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:35:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:35:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:35:10 --> Final output sent to browser
 DEBUG - 2013-07-13 15:35:10 --> Total execution time: 0.2000
 DEBUG - 2013-07-13 15:36:09 --> Config Class Initialized
@@ -2131,7 +2131,7 @@ ERROR - 2013-07-13 15:36:10 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:36:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:36:10 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:36:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:36:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:36:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:36:10 --> Final output sent to browser
 DEBUG - 2013-07-13 15:36:10 --> Total execution time: 0.1006
 DEBUG - 2013-07-13 15:36:52 --> Config Class Initialized
@@ -2166,7 +2166,7 @@ ERROR - 2013-07-13 15:36:52 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:36:52 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:36:52 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:36:52 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:36:52 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:36:52 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:36:52 --> Final output sent to browser
 DEBUG - 2013-07-13 15:36:52 --> Total execution time: 0.0980
 DEBUG - 2013-07-13 15:36:54 --> Config Class Initialized
@@ -2201,7 +2201,7 @@ ERROR - 2013-07-13 15:36:54 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:36:54 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:36:54 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:36:54 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:36:54 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:36:54 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:36:54 --> Final output sent to browser
 DEBUG - 2013-07-13 15:36:54 --> Total execution time: 0.0933
 DEBUG - 2013-07-13 15:37:26 --> Config Class Initialized
@@ -2236,7 +2236,7 @@ ERROR - 2013-07-13 15:37:26 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:37:26 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:37:26 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:37:26 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:37:26 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:37:26 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:37:26 --> Final output sent to browser
 DEBUG - 2013-07-13 15:37:26 --> Total execution time: 0.1035
 DEBUG - 2013-07-13 15:37:29 --> Config Class Initialized
@@ -2272,7 +2272,7 @@ DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:37:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:37:29 --> Final output sent to browser
 DEBUG - 2013-07-13 15:37:29 --> Total execution time: 0.0931
 DEBUG - 2013-07-13 15:37:29 --> Config Class Initialized
@@ -2334,7 +2334,7 @@ DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:37:30 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:37:30 --> Final output sent to browser
 DEBUG - 2013-07-13 15:37:30 --> Total execution time: 0.0423
 DEBUG - 2013-07-13 15:38:11 --> Config Class Initialized
@@ -2397,7 +2397,7 @@ ERROR - 2013-07-13 15:38:12 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:38:12 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:38:12 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:38:12 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:38:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:38:12 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:38:12 --> Final output sent to browser
 DEBUG - 2013-07-13 15:38:12 --> Total execution time: 0.0468
 DEBUG - 2013-07-13 15:38:29 --> Config Class Initialized
@@ -2434,7 +2434,7 @@ DEBUG - 2013-07-13 15:38:29 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:38:29 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:38:29 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:38:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:38:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:38:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:38:29 --> Final output sent to browser
 DEBUG - 2013-07-13 15:38:29 --> Total execution time: 0.1014
 DEBUG - 2013-07-13 15:38:59 --> Config Class Initialized
@@ -2470,7 +2470,7 @@ ERROR - 2013-07-13 15:38:59 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:38:59 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:38:59 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:38:59 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:38:59 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:38:59 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:38:59 --> Final output sent to browser
 DEBUG - 2013-07-13 15:38:59 --> Total execution time: 0.1018
 DEBUG - 2013-07-13 15:39:56 --> Config Class Initialized
@@ -2506,7 +2506,7 @@ ERROR - 2013-07-13 15:39:56 --> Severity: Warning  --> include_once() [<a href='
 DEBUG - 2013-07-13 15:39:56 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:39:56 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:39:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:39:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:39:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:39:56 --> Final output sent to browser
 DEBUG - 2013-07-13 15:39:56 --> Total execution time: 0.1104
 DEBUG - 2013-07-13 15:40:10 --> Config Class Initialized
@@ -2539,7 +2539,7 @@ DEBUG - 2013-07-13 15:40:10 --> Model Class Initialized
 DEBUG - 2013-07-13 15:40:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:40:10 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:40:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:40:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:40:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:40:10 --> Final output sent to browser
 DEBUG - 2013-07-13 15:40:10 --> Total execution time: 0.0934
 DEBUG - 2013-07-13 15:40:15 --> Config Class Initialized
@@ -2574,7 +2574,7 @@ DEBUG - 2013-07-13 15:40:15 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:40:15 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:40:15 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:40:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:40:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:40:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:40:15 --> Final output sent to browser
 DEBUG - 2013-07-13 15:40:15 --> Total execution time: 0.1010
 DEBUG - 2013-07-13 15:42:26 --> Config Class Initialized
@@ -2607,7 +2607,7 @@ DEBUG - 2013-07-13 15:42:26 --> Model Class Initialized
 DEBUG - 2013-07-13 15:42:26 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 15:42:26 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 15:42:26 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:42:26 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:42:26 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:42:26 --> Final output sent to browser
 DEBUG - 2013-07-13 15:42:26 --> Total execution time: 0.0940
 DEBUG - 2013-07-13 15:42:28 --> Config Class Initialized
@@ -2642,7 +2642,7 @@ DEBUG - 2013-07-13 15:42:28 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 15:42:28 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 15:42:28 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 15:42:28 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 15:42:28 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 15:42:28 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 15:42:28 --> Final output sent to browser
 DEBUG - 2013-07-13 15:42:28 --> Total execution time: 0.1028
 DEBUG - 2013-07-13 16:03:58 --> Config Class Initialized
@@ -2675,7 +2675,7 @@ DEBUG - 2013-07-13 16:03:58 --> Model Class Initialized
 DEBUG - 2013-07-13 16:03:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:03:58 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:03:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:03:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:03:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:03:58 --> Final output sent to browser
 DEBUG - 2013-07-13 16:03:58 --> Total execution time: 0.3734
 DEBUG - 2013-07-13 16:04:01 --> Config Class Initialized
@@ -2710,7 +2710,7 @@ DEBUG - 2013-07-13 16:04:01 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:04:01 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:04:01 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:04:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:04:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:04:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:04:01 --> Final output sent to browser
 DEBUG - 2013-07-13 16:04:01 --> Total execution time: 0.0451
 DEBUG - 2013-07-13 16:09:34 --> Config Class Initialized
@@ -2743,7 +2743,7 @@ DEBUG - 2013-07-13 16:09:35 --> Model Class Initialized
 DEBUG - 2013-07-13 16:09:35 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:09:35 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:09:35 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:09:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:09:35 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:09:35 --> Final output sent to browser
 DEBUG - 2013-07-13 16:09:35 --> Total execution time: 0.3791
 DEBUG - 2013-07-13 16:09:40 --> Config Class Initialized
@@ -2778,7 +2778,7 @@ DEBUG - 2013-07-13 16:09:40 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:09:40 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:09:40 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:09:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:09:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:09:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:09:40 --> Final output sent to browser
 DEBUG - 2013-07-13 16:09:40 --> Total execution time: 0.0947
 DEBUG - 2013-07-13 16:10:43 --> Config Class Initialized
@@ -2811,7 +2811,7 @@ DEBUG - 2013-07-13 16:10:43 --> Model Class Initialized
 DEBUG - 2013-07-13 16:10:43 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:10:43 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:10:43 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:10:43 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:10:43 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:10:43 --> Final output sent to browser
 DEBUG - 2013-07-13 16:10:43 --> Total execution time: 0.0999
 DEBUG - 2013-07-13 16:10:46 --> Config Class Initialized
@@ -2846,7 +2846,7 @@ DEBUG - 2013-07-13 16:10:46 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:10:46 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:10:46 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:10:46 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:10:46 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:10:46 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:10:46 --> Final output sent to browser
 DEBUG - 2013-07-13 16:10:46 --> Total execution time: 0.0972
 DEBUG - 2013-07-13 16:12:28 --> Config Class Initialized
@@ -2879,7 +2879,7 @@ DEBUG - 2013-07-13 16:12:29 --> Model Class Initialized
 DEBUG - 2013-07-13 16:12:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:12:29 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:12:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:12:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:12:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:12:29 --> Final output sent to browser
 DEBUG - 2013-07-13 16:12:29 --> Total execution time: 0.0972
 DEBUG - 2013-07-13 16:12:31 --> Config Class Initialized
@@ -2914,7 +2914,7 @@ DEBUG - 2013-07-13 16:12:31 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:12:31 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:12:31 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:12:31 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:12:31 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:12:31 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:12:31 --> Final output sent to browser
 DEBUG - 2013-07-13 16:12:31 --> Total execution time: 0.0567
 DEBUG - 2013-07-13 16:16:16 --> Config Class Initialized
@@ -2947,7 +2947,7 @@ DEBUG - 2013-07-13 16:16:16 --> Model Class Initialized
 DEBUG - 2013-07-13 16:16:16 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:16:16 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:16:16 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:16:16 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:16:16 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:16:16 --> Final output sent to browser
 DEBUG - 2013-07-13 16:16:16 --> Total execution time: 0.1031
 DEBUG - 2013-07-13 16:16:19 --> Config Class Initialized
@@ -2982,7 +2982,7 @@ DEBUG - 2013-07-13 16:16:19 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:16:19 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:16:19 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:16:19 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:16:19 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:16:19 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:16:19 --> Final output sent to browser
 DEBUG - 2013-07-13 16:16:19 --> Total execution time: 0.0461
 DEBUG - 2013-07-13 16:16:27 --> Config Class Initialized
@@ -3015,7 +3015,7 @@ DEBUG - 2013-07-13 16:16:27 --> Model Class Initialized
 DEBUG - 2013-07-13 16:16:27 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:16:27 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:16:27 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:16:27 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:16:27 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:16:27 --> Final output sent to browser
 DEBUG - 2013-07-13 16:16:27 --> Total execution time: 0.0935
 DEBUG - 2013-07-13 16:16:30 --> Config Class Initialized
@@ -3050,7 +3050,7 @@ DEBUG - 2013-07-13 16:16:30 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:16:30 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:16:30 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:16:30 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:16:30 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:16:30 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:16:30 --> Final output sent to browser
 DEBUG - 2013-07-13 16:16:30 --> Total execution time: 0.0969
 DEBUG - 2013-07-13 16:17:53 --> Config Class Initialized
@@ -3083,7 +3083,7 @@ DEBUG - 2013-07-13 16:17:53 --> Model Class Initialized
 DEBUG - 2013-07-13 16:17:53 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:17:53 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:17:53 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:17:53 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:17:53 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:17:53 --> Final output sent to browser
 DEBUG - 2013-07-13 16:17:53 --> Total execution time: 0.0991
 DEBUG - 2013-07-13 16:17:56 --> Config Class Initialized
@@ -3118,7 +3118,7 @@ DEBUG - 2013-07-13 16:17:56 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:17:56 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:17:56 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:17:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:17:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:17:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:17:56 --> Final output sent to browser
 DEBUG - 2013-07-13 16:17:56 --> Total execution time: 0.0498
 DEBUG - 2013-07-13 16:18:31 --> Config Class Initialized
@@ -3151,7 +3151,7 @@ DEBUG - 2013-07-13 16:18:31 --> Model Class Initialized
 DEBUG - 2013-07-13 16:18:31 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:18:31 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:18:31 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:18:31 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:18:31 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:18:31 --> Final output sent to browser
 DEBUG - 2013-07-13 16:18:31 --> Total execution time: 0.4052
 DEBUG - 2013-07-13 16:18:34 --> Config Class Initialized
@@ -3186,7 +3186,7 @@ DEBUG - 2013-07-13 16:18:34 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:18:34 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:18:34 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:18:34 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:18:34 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:18:34 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:18:34 --> Final output sent to browser
 DEBUG - 2013-07-13 16:18:34 --> Total execution time: 0.0992
 DEBUG - 2013-07-13 16:19:12 --> Config Class Initialized
@@ -3219,7 +3219,7 @@ DEBUG - 2013-07-13 16:19:12 --> Model Class Initialized
 DEBUG - 2013-07-13 16:19:12 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:19:12 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:19:12 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:19:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:19:12 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:19:12 --> Final output sent to browser
 DEBUG - 2013-07-13 16:19:12 --> Total execution time: 0.0995
 DEBUG - 2013-07-13 16:19:15 --> Config Class Initialized
@@ -3254,7 +3254,7 @@ DEBUG - 2013-07-13 16:19:15 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:19:15 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:19:15 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:19:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:19:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:19:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:19:15 --> Final output sent to browser
 DEBUG - 2013-07-13 16:19:15 --> Total execution time: 0.0452
 DEBUG - 2013-07-13 16:19:28 --> Config Class Initialized
@@ -3287,7 +3287,7 @@ DEBUG - 2013-07-13 16:19:28 --> Model Class Initialized
 DEBUG - 2013-07-13 16:19:28 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:19:28 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:19:28 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:19:28 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:19:28 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:19:28 --> Final output sent to browser
 DEBUG - 2013-07-13 16:19:28 --> Total execution time: 0.0984
 DEBUG - 2013-07-13 16:19:30 --> Config Class Initialized
@@ -3322,7 +3322,7 @@ DEBUG - 2013-07-13 16:19:30 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:19:30 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:19:30 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:19:30 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:19:30 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:19:30 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:19:30 --> Final output sent to browser
 DEBUG - 2013-07-13 16:19:30 --> Total execution time: 0.0922
 DEBUG - 2013-07-13 16:22:11 --> Config Class Initialized
@@ -3355,7 +3355,7 @@ DEBUG - 2013-07-13 16:22:11 --> Model Class Initialized
 DEBUG - 2013-07-13 16:22:11 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 16:22:11 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 16:22:11 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:22:11 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:22:11 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:22:11 --> Final output sent to browser
 DEBUG - 2013-07-13 16:22:11 --> Total execution time: 0.0901
 DEBUG - 2013-07-13 16:22:14 --> Config Class Initialized
@@ -3390,7 +3390,7 @@ DEBUG - 2013-07-13 16:22:14 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 16:22:14 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 16:22:14 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 16:22:14 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 16:22:14 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 16:22:14 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 16:22:14 --> Final output sent to browser
 DEBUG - 2013-07-13 16:22:14 --> Total execution time: 0.0471
 DEBUG - 2013-07-13 17:13:23 --> Config Class Initialized
@@ -3423,7 +3423,7 @@ DEBUG - 2013-07-13 17:13:23 --> Model Class Initialized
 DEBUG - 2013-07-13 17:13:23 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:13:23 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:13:23 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:13:23 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:13:23 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:13:23 --> Final output sent to browser
 DEBUG - 2013-07-13 17:13:23 --> Total execution time: 0.0936
 DEBUG - 2013-07-13 17:13:33 --> Config Class Initialized
@@ -3484,7 +3484,7 @@ DEBUG - 2013-07-13 17:14:09 --> Model Class Initialized
 DEBUG - 2013-07-13 17:14:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:14:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:14:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:14:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:14:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:14:09 --> Final output sent to browser
 DEBUG - 2013-07-13 17:14:09 --> Total execution time: 0.1017
 DEBUG - 2013-07-13 17:14:11 --> Config Class Initialized
@@ -3546,7 +3546,7 @@ DEBUG - 2013-07-13 17:21:30 --> Model Class Initialized
 DEBUG - 2013-07-13 17:21:30 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:21:30 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:21:30 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:21:30 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:21:30 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:21:30 --> Final output sent to browser
 DEBUG - 2013-07-13 17:21:30 --> Total execution time: 0.0984
 DEBUG - 2013-07-13 17:21:33 --> Config Class Initialized
@@ -3612,7 +3612,7 @@ DEBUG - 2013-07-13 17:22:04 --> Model Class Initialized
 DEBUG - 2013-07-13 17:22:04 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:22:04 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:22:04 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:22:04 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:22:04 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:22:04 --> Final output sent to browser
 DEBUG - 2013-07-13 17:22:04 --> Total execution time: 0.0912
 DEBUG - 2013-07-13 17:22:06 --> Config Class Initialized
@@ -3675,7 +3675,7 @@ DEBUG - 2013-07-13 17:23:11 --> Model Class Initialized
 DEBUG - 2013-07-13 17:23:11 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:23:11 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:23:11 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:23:11 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:23:11 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:23:11 --> Final output sent to browser
 DEBUG - 2013-07-13 17:23:11 --> Total execution time: 0.3333
 DEBUG - 2013-07-13 17:23:17 --> Config Class Initialized
@@ -3710,7 +3710,7 @@ DEBUG - 2013-07-13 17:23:17 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 17:23:17 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 17:23:17 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 17:23:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:23:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:23:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:23:17 --> Final output sent to browser
 DEBUG - 2013-07-13 17:23:17 --> Total execution time: 0.0988
 DEBUG - 2013-07-13 17:23:26 --> Config Class Initialized
@@ -3743,7 +3743,7 @@ DEBUG - 2013-07-13 17:23:26 --> Model Class Initialized
 DEBUG - 2013-07-13 17:23:26 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:23:26 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:23:26 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:23:26 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:23:26 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:23:26 --> Final output sent to browser
 DEBUG - 2013-07-13 17:23:26 --> Total execution time: 0.0961
 DEBUG - 2013-07-13 17:23:28 --> Config Class Initialized
@@ -3806,7 +3806,7 @@ DEBUG - 2013-07-13 17:25:07 --> Model Class Initialized
 DEBUG - 2013-07-13 17:25:07 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:25:07 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:25:07 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:25:07 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:25:07 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:25:07 --> Final output sent to browser
 DEBUG - 2013-07-13 17:25:07 --> Total execution time: 0.1050
 DEBUG - 2013-07-13 17:25:12 --> Config Class Initialized
@@ -3869,7 +3869,7 @@ DEBUG - 2013-07-13 17:26:09 --> Model Class Initialized
 DEBUG - 2013-07-13 17:26:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:26:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:26:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:26:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:26:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:26:09 --> Final output sent to browser
 DEBUG - 2013-07-13 17:26:09 --> Total execution time: 0.1031
 DEBUG - 2013-07-13 17:26:12 --> Config Class Initialized
@@ -3931,7 +3931,7 @@ DEBUG - 2013-07-13 17:34:18 --> Model Class Initialized
 DEBUG - 2013-07-13 17:34:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:34:18 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:34:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:34:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:34:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:34:18 --> Final output sent to browser
 DEBUG - 2013-07-13 17:34:18 --> Total execution time: 0.0987
 DEBUG - 2013-07-13 17:34:20 --> Config Class Initialized
@@ -3964,7 +3964,7 @@ DEBUG - 2013-07-13 17:34:20 --> Model Class Initialized
 DEBUG - 2013-07-13 17:34:20 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:34:20 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:34:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:34:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:34:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:34:20 --> Final output sent to browser
 DEBUG - 2013-07-13 17:34:20 --> Total execution time: 0.0989
 DEBUG - 2013-07-13 17:34:21 --> Config Class Initialized
@@ -3999,7 +3999,7 @@ ERROR - 2013-07-13 17:34:22 --> Severity: Notice  --> Undefined variable: author
 ERROR - 2013-07-13 17:34:22 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organization.php 10
 DEBUG - 2013-07-13 17:34:22 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:34:22 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:34:22 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:34:22 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:34:22 --> Final output sent to browser
 DEBUG - 2013-07-13 17:34:22 --> Total execution time: 0.1229
 DEBUG - 2013-07-13 17:37:13 --> Config Class Initialized
@@ -4032,7 +4032,7 @@ DEBUG - 2013-07-13 17:37:13 --> Model Class Initialized
 DEBUG - 2013-07-13 17:37:13 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:37:13 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:37:13 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:37:13 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:37:13 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:37:13 --> Final output sent to browser
 DEBUG - 2013-07-13 17:37:13 --> Total execution time: 0.0991
 DEBUG - 2013-07-13 17:37:16 --> Config Class Initialized
@@ -4065,7 +4065,7 @@ DEBUG - 2013-07-13 17:37:16 --> Model Class Initialized
 DEBUG - 2013-07-13 17:37:16 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:37:16 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:37:16 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:37:16 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:37:16 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:37:16 --> Final output sent to browser
 DEBUG - 2013-07-13 17:37:16 --> Total execution time: 0.1008
 DEBUG - 2013-07-13 17:37:43 --> Config Class Initialized
@@ -4098,7 +4098,7 @@ DEBUG - 2013-07-13 17:37:43 --> Model Class Initialized
 DEBUG - 2013-07-13 17:37:43 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:37:43 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:37:43 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:37:43 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:37:43 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:37:43 --> Final output sent to browser
 DEBUG - 2013-07-13 17:37:43 --> Total execution time: 0.1023
 DEBUG - 2013-07-13 17:37:46 --> Config Class Initialized
@@ -4131,7 +4131,7 @@ DEBUG - 2013-07-13 17:37:46 --> Model Class Initialized
 DEBUG - 2013-07-13 17:37:46 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:37:46 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:37:46 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:37:46 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:37:46 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:37:46 --> Final output sent to browser
 DEBUG - 2013-07-13 17:37:46 --> Total execution time: 0.0989
 DEBUG - 2013-07-13 17:39:40 --> Config Class Initialized
@@ -4164,7 +4164,7 @@ DEBUG - 2013-07-13 17:39:40 --> Model Class Initialized
 DEBUG - 2013-07-13 17:39:40 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:39:40 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:39:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:39:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:39:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:39:40 --> Final output sent to browser
 DEBUG - 2013-07-13 17:39:40 --> Total execution time: 0.1035
 DEBUG - 2013-07-13 17:39:43 --> Config Class Initialized
@@ -4197,7 +4197,7 @@ DEBUG - 2013-07-13 17:39:43 --> Model Class Initialized
 DEBUG - 2013-07-13 17:39:43 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:39:43 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:39:43 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:39:43 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:39:43 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:39:43 --> Final output sent to browser
 DEBUG - 2013-07-13 17:39:43 --> Total execution time: 0.0911
 DEBUG - 2013-07-13 17:41:09 --> Config Class Initialized
@@ -4230,7 +4230,7 @@ DEBUG - 2013-07-13 17:41:09 --> Model Class Initialized
 DEBUG - 2013-07-13 17:41:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:41:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:41:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:41:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:41:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:41:09 --> Final output sent to browser
 DEBUG - 2013-07-13 17:41:09 --> Total execution time: 0.0977
 DEBUG - 2013-07-13 17:41:12 --> Config Class Initialized
@@ -4263,7 +4263,7 @@ DEBUG - 2013-07-13 17:41:12 --> Model Class Initialized
 DEBUG - 2013-07-13 17:41:12 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:41:12 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:41:12 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:41:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:41:12 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:41:12 --> Final output sent to browser
 DEBUG - 2013-07-13 17:41:12 --> Total execution time: 0.0908
 DEBUG - 2013-07-13 17:42:20 --> Config Class Initialized
@@ -4296,7 +4296,7 @@ DEBUG - 2013-07-13 17:42:20 --> Model Class Initialized
 DEBUG - 2013-07-13 17:42:20 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:42:20 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:42:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:42:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:42:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:42:20 --> Final output sent to browser
 DEBUG - 2013-07-13 17:42:20 --> Total execution time: 0.0942
 DEBUG - 2013-07-13 17:42:23 --> Config Class Initialized
@@ -4329,7 +4329,7 @@ DEBUG - 2013-07-13 17:42:23 --> Model Class Initialized
 DEBUG - 2013-07-13 17:42:23 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:42:23 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:42:23 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:42:23 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:42:23 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:42:23 --> Final output sent to browser
 DEBUG - 2013-07-13 17:42:23 --> Total execution time: 0.0494
 DEBUG - 2013-07-13 17:42:53 --> Config Class Initialized
@@ -4362,7 +4362,7 @@ DEBUG - 2013-07-13 17:42:53 --> Model Class Initialized
 DEBUG - 2013-07-13 17:42:53 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:42:53 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:42:53 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:42:53 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:42:53 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:42:53 --> Final output sent to browser
 DEBUG - 2013-07-13 17:42:53 --> Total execution time: 0.1684
 DEBUG - 2013-07-13 17:42:56 --> Config Class Initialized
@@ -4395,7 +4395,7 @@ DEBUG - 2013-07-13 17:42:56 --> Model Class Initialized
 DEBUG - 2013-07-13 17:42:56 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:42:56 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:42:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:42:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:42:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:42:56 --> Final output sent to browser
 DEBUG - 2013-07-13 17:42:56 --> Total execution time: 0.0973
 DEBUG - 2013-07-13 17:43:16 --> Config Class Initialized
@@ -4491,7 +4491,7 @@ DEBUG - 2013-07-13 17:47:38 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 17:47:38 --> Severity: Notice  --> Undefined property: stdClass::$desc /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organization.php 5
 DEBUG - 2013-07-13 17:47:38 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:47:38 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:47:38 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:47:38 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:47:38 --> Final output sent to browser
 DEBUG - 2013-07-13 17:47:38 --> Total execution time: 0.1047
 DEBUG - 2013-07-13 17:47:51 --> Config Class Initialized
@@ -4580,7 +4580,7 @@ ERROR - 2013-07-13 17:49:20 --> Severity: Notice  --> Object of class stdClass t
 DEBUG - 2013-07-13 17:49:20 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:49:20 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:49:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:49:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:49:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:49:20 --> Final output sent to browser
 DEBUG - 2013-07-13 17:49:20 --> Total execution time: 0.1006
 DEBUG - 2013-07-13 17:49:54 --> Config Class Initialized
@@ -4615,7 +4615,7 @@ ERROR - 2013-07-13 17:49:54 --> Severity: Warning  --> Attempt to modify propert
 DEBUG - 2013-07-13 17:49:54 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:49:54 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:49:54 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:49:54 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:49:54 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:49:54 --> Final output sent to browser
 DEBUG - 2013-07-13 17:49:54 --> Total execution time: 0.0994
 DEBUG - 2013-07-13 17:50:17 --> Config Class Initialized
@@ -4650,7 +4650,7 @@ ERROR - 2013-07-13 17:50:17 --> Severity: Notice  --> Object of class stdClass t
 DEBUG - 2013-07-13 17:50:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:50:17 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:50:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:50:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:50:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:50:17 --> Final output sent to browser
 DEBUG - 2013-07-13 17:50:17 --> Total execution time: 0.1029
 DEBUG - 2013-07-13 17:50:50 --> Config Class Initialized
@@ -4683,7 +4683,7 @@ DEBUG - 2013-07-13 17:50:50 --> Model Class Initialized
 DEBUG - 2013-07-13 17:50:50 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:50:50 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:50:50 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:50:50 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:50:50 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:50:50 --> Final output sent to browser
 DEBUG - 2013-07-13 17:50:50 --> Total execution time: 0.0948
 DEBUG - 2013-07-13 17:51:43 --> Config Class Initialized
@@ -4716,7 +4716,7 @@ DEBUG - 2013-07-13 17:51:44 --> Model Class Initialized
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:51:44 --> Final output sent to browser
 DEBUG - 2013-07-13 17:51:44 --> Total execution time: 0.0980
 DEBUG - 2013-07-13 17:51:44 --> Config Class Initialized
@@ -4749,7 +4749,7 @@ DEBUG - 2013-07-13 17:51:44 --> Model Class Initialized
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:51:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:51:44 --> Final output sent to browser
 DEBUG - 2013-07-13 17:51:44 --> Total execution time: 0.0464
 DEBUG - 2013-07-13 17:53:14 --> Config Class Initialized
@@ -4782,7 +4782,7 @@ DEBUG - 2013-07-13 17:53:14 --> Model Class Initialized
 DEBUG - 2013-07-13 17:53:14 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:53:14 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:53:14 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:53:14 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:53:14 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:53:14 --> Final output sent to browser
 DEBUG - 2013-07-13 17:53:14 --> Total execution time: 0.1036
 DEBUG - 2013-07-13 17:53:17 --> Config Class Initialized
@@ -4815,7 +4815,7 @@ DEBUG - 2013-07-13 17:53:17 --> Model Class Initialized
 DEBUG - 2013-07-13 17:53:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:53:17 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:53:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:53:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:53:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:53:17 --> Final output sent to browser
 DEBUG - 2013-07-13 17:53:17 --> Total execution time: 0.0458
 DEBUG - 2013-07-13 17:53:40 --> Config Class Initialized
@@ -4910,7 +4910,7 @@ DEBUG - 2013-07-13 17:54:37 --> Model Class Initialized
 DEBUG - 2013-07-13 17:54:37 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:54:37 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:54:37 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:54:37 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:54:37 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:54:37 --> Final output sent to browser
 DEBUG - 2013-07-13 17:54:37 --> Total execution time: 0.0943
 DEBUG - 2013-07-13 17:54:41 --> Config Class Initialized
@@ -4943,7 +4943,7 @@ DEBUG - 2013-07-13 17:54:41 --> Model Class Initialized
 DEBUG - 2013-07-13 17:54:41 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:54:41 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:54:41 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:54:41 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:54:41 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:54:41 --> Final output sent to browser
 DEBUG - 2013-07-13 17:54:41 --> Total execution time: 0.0992
 DEBUG - 2013-07-13 17:54:50 --> Config Class Initialized
@@ -5007,7 +5007,7 @@ DEBUG - 2013-07-13 17:56:58 --> Model Class Initialized
 DEBUG - 2013-07-13 17:56:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:56:58 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:56:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:56:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:56:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:56:58 --> Final output sent to browser
 DEBUG - 2013-07-13 17:56:58 --> Total execution time: 0.0966
 DEBUG - 2013-07-13 17:57:00 --> Config Class Initialized
@@ -5040,7 +5040,7 @@ DEBUG - 2013-07-13 17:57:01 --> Model Class Initialized
 DEBUG - 2013-07-13 17:57:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:57:01 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:57:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:57:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:57:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:57:01 --> Final output sent to browser
 DEBUG - 2013-07-13 17:57:01 --> Total execution time: 0.0441
 DEBUG - 2013-07-13 17:57:18 --> Config Class Initialized
@@ -5135,7 +5135,7 @@ DEBUG - 2013-07-13 17:57:59 --> Model Class Initialized
 DEBUG - 2013-07-13 17:57:59 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:57:59 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:57:59 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:57:59 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:57:59 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:57:59 --> Final output sent to browser
 DEBUG - 2013-07-13 17:57:59 --> Total execution time: 0.0953
 DEBUG - 2013-07-13 17:58:02 --> Config Class Initialized
@@ -5168,7 +5168,7 @@ DEBUG - 2013-07-13 17:58:02 --> Model Class Initialized
 DEBUG - 2013-07-13 17:58:02 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:58:02 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:58:02 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:58:02 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:58:02 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:58:02 --> Final output sent to browser
 DEBUG - 2013-07-13 17:58:02 --> Total execution time: 0.0973
 DEBUG - 2013-07-13 17:58:59 --> Config Class Initialized
@@ -5201,7 +5201,7 @@ DEBUG - 2013-07-13 17:58:59 --> Model Class Initialized
 DEBUG - 2013-07-13 17:58:59 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:58:59 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 17:58:59 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:58:59 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:58:59 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:58:59 --> Final output sent to browser
 DEBUG - 2013-07-13 17:58:59 --> Total execution time: 0.1035
 DEBUG - 2013-07-13 17:59:02 --> Config Class Initialized
@@ -5234,7 +5234,7 @@ DEBUG - 2013-07-13 17:59:02 --> Model Class Initialized
 DEBUG - 2013-07-13 17:59:02 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 17:59:02 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:59:02 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:59:02 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:59:02 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:59:02 --> Final output sent to browser
 DEBUG - 2013-07-13 17:59:02 --> Total execution time: 0.0460
 DEBUG - 2013-07-13 17:59:09 --> Config Class Initialized
@@ -5299,7 +5299,7 @@ DEBUG - 2013-07-13 17:59:44 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 17:59:44 --> Severity: Notice  --> Undefined property: stdClass::$desc /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organization.php 5
 DEBUG - 2013-07-13 17:59:44 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 17:59:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 17:59:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 17:59:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 17:59:44 --> Final output sent to browser
 DEBUG - 2013-07-13 17:59:44 --> Total execution time: 0.1041
 DEBUG - 2013-07-13 17:59:52 --> Config Class Initialized
@@ -5363,7 +5363,7 @@ DEBUG - 2013-07-13 18:01:39 --> Model Class Initialized
 DEBUG - 2013-07-13 18:01:39 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:01:39 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 18:01:39 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:01:39 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:01:39 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:01:39 --> Final output sent to browser
 DEBUG - 2013-07-13 18:01:39 --> Total execution time: 0.1086
 DEBUG - 2013-07-13 18:01:41 --> Config Class Initialized
@@ -5396,7 +5396,7 @@ DEBUG - 2013-07-13 18:01:41 --> Model Class Initialized
 DEBUG - 2013-07-13 18:01:41 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:01:41 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 18:01:41 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:01:41 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:01:41 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:01:41 --> Final output sent to browser
 DEBUG - 2013-07-13 18:01:41 --> Total execution time: 0.1234
 DEBUG - 2013-07-13 18:04:53 --> Config Class Initialized
@@ -5429,7 +5429,7 @@ DEBUG - 2013-07-13 18:04:53 --> Model Class Initialized
 DEBUG - 2013-07-13 18:04:53 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:04:53 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 18:04:53 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:04:53 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:04:53 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:04:53 --> Final output sent to browser
 DEBUG - 2013-07-13 18:04:53 --> Total execution time: 0.0953
 DEBUG - 2013-07-13 18:05:10 --> Config Class Initialized
@@ -5462,7 +5462,7 @@ DEBUG - 2013-07-13 18:05:10 --> Model Class Initialized
 DEBUG - 2013-07-13 18:05:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:05:10 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 18:05:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:05:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:05:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:05:10 --> Final output sent to browser
 DEBUG - 2013-07-13 18:05:10 --> Total execution time: 0.0945
 DEBUG - 2013-07-13 18:05:20 --> Config Class Initialized
@@ -5496,7 +5496,7 @@ DEBUG - 2013-07-13 18:05:20 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 18:05:20 --> Severity: Notice  --> Undefined property: stdClass::$desc /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organization.php 5
 DEBUG - 2013-07-13 18:05:20 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 18:05:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:05:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:05:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:05:20 --> Final output sent to browser
 DEBUG - 2013-07-13 18:05:20 --> Total execution time: 0.0449
 DEBUG - 2013-07-13 18:05:52 --> Config Class Initialized
@@ -5560,7 +5560,7 @@ DEBUG - 2013-07-13 18:05:56 --> Model Class Initialized
 DEBUG - 2013-07-13 18:05:56 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:05:56 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 18:05:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:05:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:05:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:05:56 --> Final output sent to browser
 DEBUG - 2013-07-13 18:05:56 --> Total execution time: 0.1007
 DEBUG - 2013-07-13 18:05:59 --> Config Class Initialized
@@ -5593,7 +5593,7 @@ DEBUG - 2013-07-13 18:05:59 --> Model Class Initialized
 DEBUG - 2013-07-13 18:05:59 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 18:05:59 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 18:05:59 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:05:59 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:05:59 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:05:59 --> Final output sent to browser
 DEBUG - 2013-07-13 18:05:59 --> Total execution time: 0.1502
 DEBUG - 2013-07-13 18:06:17 --> Config Class Initialized
@@ -5627,7 +5627,7 @@ DEBUG - 2013-07-13 18:06:17 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 18:06:17 --> Severity: Notice  --> Undefined property: stdClass::$desc /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organization.php 6
 DEBUG - 2013-07-13 18:06:17 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 18:06:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 18:06:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 18:06:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 18:06:17 --> Final output sent to browser
 DEBUG - 2013-07-13 18:06:17 --> Total execution time: 0.0494
 DEBUG - 2013-07-13 21:26:05 --> Config Class Initialized
@@ -5687,7 +5687,7 @@ DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:26:05 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:26:05 --> Final output sent to browser
 DEBUG - 2013-07-13 21:26:05 --> Total execution time: 0.0447
 DEBUG - 2013-07-13 21:26:05 --> Config Class Initialized
@@ -5746,7 +5746,7 @@ DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:26:06 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:26:06 --> Final output sent to browser
 DEBUG - 2013-07-13 21:26:06 --> Total execution time: 0.0379
 DEBUG - 2013-07-13 21:26:17 --> Config Class Initialized
@@ -5807,7 +5807,7 @@ DEBUG - 2013-07-13 21:26:17 --> Model Class Initialized
 DEBUG - 2013-07-13 21:26:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:26:17 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:26:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:26:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:26:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:26:17 --> Final output sent to browser
 DEBUG - 2013-07-13 21:26:17 --> Total execution time: 0.0459
 DEBUG - 2013-07-13 21:26:29 --> Config Class Initialized
@@ -5840,7 +5840,7 @@ DEBUG - 2013-07-13 21:26:29 --> Model Class Initialized
 DEBUG - 2013-07-13 21:26:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:26:29 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 21:26:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:26:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:26:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:26:29 --> Final output sent to browser
 DEBUG - 2013-07-13 21:26:29 --> Total execution time: 0.0941
 DEBUG - 2013-07-13 21:27:58 --> Config Class Initialized
@@ -5873,7 +5873,7 @@ DEBUG - 2013-07-13 21:27:58 --> Model Class Initialized
 DEBUG - 2013-07-13 21:27:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:27:58 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:27:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:27:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:27:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:27:58 --> Final output sent to browser
 DEBUG - 2013-07-13 21:27:58 --> Total execution time: 0.1003
 DEBUG - 2013-07-13 21:28:03 --> Config Class Initialized
@@ -5906,7 +5906,7 @@ DEBUG - 2013-07-13 21:28:03 --> Model Class Initialized
 DEBUG - 2013-07-13 21:28:03 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:28:03 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 21:28:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:28:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:28:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:28:03 --> Final output sent to browser
 DEBUG - 2013-07-13 21:28:03 --> Total execution time: 0.0894
 DEBUG - 2013-07-13 21:28:45 --> Config Class Initialized
@@ -5939,7 +5939,7 @@ DEBUG - 2013-07-13 21:28:45 --> Model Class Initialized
 DEBUG - 2013-07-13 21:28:45 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:28:45 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:28:45 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:28:45 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:28:45 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:28:45 --> Final output sent to browser
 DEBUG - 2013-07-13 21:28:45 --> Total execution time: 0.1032
 DEBUG - 2013-07-13 21:28:47 --> Config Class Initialized
@@ -5972,7 +5972,7 @@ DEBUG - 2013-07-13 21:28:47 --> Model Class Initialized
 DEBUG - 2013-07-13 21:28:47 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:28:47 --> File loaded: application/views/admin/organization.php
 DEBUG - 2013-07-13 21:28:47 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:28:47 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:28:47 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:28:47 --> Final output sent to browser
 DEBUG - 2013-07-13 21:28:47 --> Total execution time: 0.0984
 DEBUG - 2013-07-13 21:29:00 --> Config Class Initialized
@@ -6005,7 +6005,7 @@ DEBUG - 2013-07-13 21:29:00 --> Model Class Initialized
 DEBUG - 2013-07-13 21:29:00 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:29:00 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:29:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:29:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:29:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:29:00 --> Final output sent to browser
 DEBUG - 2013-07-13 21:29:00 --> Total execution time: 0.0982
 DEBUG - 2013-07-13 21:29:47 --> Config Class Initialized
@@ -6038,7 +6038,7 @@ DEBUG - 2013-07-13 21:29:47 --> Model Class Initialized
 DEBUG - 2013-07-13 21:29:47 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:29:47 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:29:47 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:29:47 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:29:47 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:29:47 --> Final output sent to browser
 DEBUG - 2013-07-13 21:29:47 --> Total execution time: 0.0970
 DEBUG - 2013-07-13 21:29:48 --> Config Class Initialized
@@ -6073,7 +6073,7 @@ DEBUG - 2013-07-13 21:29:48 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 21:29:48 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 21:29:48 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 21:29:48 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:29:48 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:29:48 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:29:48 --> Final output sent to browser
 DEBUG - 2013-07-13 21:29:48 --> Total execution time: 0.1017
 DEBUG - 2013-07-13 21:30:18 --> Config Class Initialized
@@ -6106,7 +6106,7 @@ DEBUG - 2013-07-13 21:30:18 --> Model Class Initialized
 DEBUG - 2013-07-13 21:30:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:30:18 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:30:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:30:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:30:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:30:18 --> Final output sent to browser
 DEBUG - 2013-07-13 21:30:18 --> Total execution time: 0.3766
 DEBUG - 2013-07-13 21:30:20 --> Config Class Initialized
@@ -6141,7 +6141,7 @@ DEBUG - 2013-07-13 21:30:20 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 21:30:20 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 21:30:20 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 21:30:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:30:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:30:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:30:20 --> Final output sent to browser
 DEBUG - 2013-07-13 21:30:20 --> Total execution time: 0.1022
 DEBUG - 2013-07-13 21:30:40 --> Config Class Initialized
@@ -6174,7 +6174,7 @@ DEBUG - 2013-07-13 21:30:41 --> Model Class Initialized
 DEBUG - 2013-07-13 21:30:41 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:30:41 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:30:41 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:30:41 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:30:41 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:30:41 --> Final output sent to browser
 DEBUG - 2013-07-13 21:30:41 --> Total execution time: 0.3803
 DEBUG - 2013-07-13 21:30:44 --> Config Class Initialized
@@ -6209,7 +6209,7 @@ DEBUG - 2013-07-13 21:30:44 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 21:30:44 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 21:30:44 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 21:30:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:30:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:30:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:30:44 --> Final output sent to browser
 DEBUG - 2013-07-13 21:30:44 --> Total execution time: 0.0480
 DEBUG - 2013-07-13 21:31:19 --> Config Class Initialized
@@ -6242,7 +6242,7 @@ DEBUG - 2013-07-13 21:31:19 --> Model Class Initialized
 DEBUG - 2013-07-13 21:31:19 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:31:19 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-07-13 21:31:19 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:31:19 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:31:19 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:31:19 --> Final output sent to browser
 DEBUG - 2013-07-13 21:31:19 --> Total execution time: 0.0943
 DEBUG - 2013-07-13 21:36:20 --> Config Class Initialized
@@ -6275,7 +6275,7 @@ DEBUG - 2013-07-13 21:36:20 --> Model Class Initialized
 DEBUG - 2013-07-13 21:36:20 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:36:20 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 21:36:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:36:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:36:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:36:20 --> Final output sent to browser
 DEBUG - 2013-07-13 21:36:20 --> Total execution time: 0.0933
 DEBUG - 2013-07-13 21:36:23 --> Config Class Initialized
@@ -6462,7 +6462,7 @@ ERROR - 2013-07-13 21:44:06 --> Severity: Notice  --> Undefined variable: users 
 ERROR - 2013-07-13 21:44:06 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organizations.php 53
 DEBUG - 2013-07-13 21:44:06 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:44:06 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:44:06 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:44:06 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:44:06 --> Final output sent to browser
 DEBUG - 2013-07-13 21:44:06 --> Total execution time: 0.1596
 DEBUG - 2013-07-13 21:49:00 --> Config Class Initialized
@@ -6498,7 +6498,7 @@ ERROR - 2013-07-13 21:49:00 --> Severity: Notice  --> Undefined variable: users 
 ERROR - 2013-07-13 21:49:00 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organizations.php 54
 DEBUG - 2013-07-13 21:49:00 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:49:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:49:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:49:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:49:00 --> Final output sent to browser
 DEBUG - 2013-07-13 21:49:00 --> Total execution time: 0.1014
 DEBUG - 2013-07-13 21:49:17 --> Config Class Initialized
@@ -6533,7 +6533,7 @@ ERROR - 2013-07-13 21:49:17 --> Severity: Notice  --> Undefined variable: users 
 ERROR - 2013-07-13 21:49:17 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organizations.php 54
 DEBUG - 2013-07-13 21:49:17 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:49:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:49:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:49:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:49:17 --> Final output sent to browser
 DEBUG - 2013-07-13 21:49:17 --> Total execution time: 0.1007
 DEBUG - 2013-07-13 21:53:46 --> Config Class Initialized
@@ -6574,7 +6574,7 @@ ERROR - 2013-07-13 21:53:46 --> Severity: Notice  --> Trying to get property of 
 ERROR - 2013-07-13 21:53:46 --> Severity: Notice  --> Trying to get property of non-object /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/organizations.php 48
 DEBUG - 2013-07-13 21:53:46 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:53:46 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:53:46 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:53:46 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:53:46 --> Final output sent to browser
 DEBUG - 2013-07-13 21:53:46 --> Total execution time: 0.1017
 DEBUG - 2013-07-13 21:54:25 --> Config Class Initialized
@@ -6607,7 +6607,7 @@ DEBUG - 2013-07-13 21:54:25 --> Model Class Initialized
 DEBUG - 2013-07-13 21:54:25 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:54:25 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:54:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:54:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:54:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:54:25 --> Final output sent to browser
 DEBUG - 2013-07-13 21:54:25 --> Total execution time: 0.0912
 DEBUG - 2013-07-13 21:56:45 --> Config Class Initialized
@@ -6640,7 +6640,7 @@ DEBUG - 2013-07-13 21:56:46 --> Model Class Initialized
 DEBUG - 2013-07-13 21:56:46 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:56:46 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:56:46 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:56:46 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:56:46 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:56:46 --> Final output sent to browser
 DEBUG - 2013-07-13 21:56:46 --> Total execution time: 0.0998
 DEBUG - 2013-07-13 21:57:13 --> Config Class Initialized
@@ -6673,7 +6673,7 @@ DEBUG - 2013-07-13 21:57:13 --> Model Class Initialized
 DEBUG - 2013-07-13 21:57:13 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:57:13 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:57:13 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:57:13 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:57:13 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:57:13 --> Final output sent to browser
 DEBUG - 2013-07-13 21:57:13 --> Total execution time: 0.1517
 DEBUG - 2013-07-13 21:57:17 --> Config Class Initialized
@@ -6713,7 +6713,7 @@ DEBUG - 2013-07-13 21:57:59 --> Model Class Initialized
 DEBUG - 2013-07-13 21:57:59 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:57:59 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:57:59 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:57:59 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:57:59 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:57:59 --> Final output sent to browser
 DEBUG - 2013-07-13 21:57:59 --> Total execution time: 0.0948
 DEBUG - 2013-07-13 21:58:37 --> Config Class Initialized
@@ -6746,7 +6746,7 @@ DEBUG - 2013-07-13 21:58:37 --> Model Class Initialized
 DEBUG - 2013-07-13 21:58:37 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 21:58:37 --> File loaded: application/views/admin/organizations.php
 DEBUG - 2013-07-13 21:58:37 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 21:58:37 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 21:58:37 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 21:58:37 --> Final output sent to browser
 DEBUG - 2013-07-13 21:58:37 --> Total execution time: 0.0922
 DEBUG - 2013-07-13 21:58:40 --> Config Class Initialized
@@ -6842,7 +6842,7 @@ DEBUG - 2013-07-13 22:15:29 --> Model Class Initialized
 DEBUG - 2013-07-13 22:15:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:15:29 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:15:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:15:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:15:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:15:29 --> Final output sent to browser
 DEBUG - 2013-07-13 22:15:29 --> Total execution time: 0.0957
 DEBUG - 2013-07-13 22:15:57 --> Config Class Initialized
@@ -6878,7 +6878,7 @@ DEBUG - 2013-07-13 22:15:58 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 22:15:58 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-07-13 22:15:58 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-07-13 22:15:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:15:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:15:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:15:58 --> Final output sent to browser
 DEBUG - 2013-07-13 22:15:58 --> Total execution time: 0.3807
 DEBUG - 2013-07-13 22:27:58 --> Config Class Initialized
@@ -6911,7 +6911,7 @@ DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/admin/uninstall.php
 DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:27:58 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:27:58 --> Final output sent to browser
 DEBUG - 2013-07-13 22:27:58 --> Total execution time: 0.0881
 DEBUG - 2013-07-13 22:28:01 --> Config Class Initialized
@@ -6973,7 +6973,7 @@ DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/admin/install.php
 DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:28:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:28:01 --> Final output sent to browser
 DEBUG - 2013-07-13 22:28:01 --> Total execution time: 0.0465
 DEBUG - 2013-07-13 22:28:24 --> Config Class Initialized
@@ -7035,7 +7035,7 @@ DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:28:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:28:25 --> Final output sent to browser
 DEBUG - 2013-07-13 22:28:25 --> Total execution time: 0.0447
 DEBUG - 2013-07-13 22:28:25 --> Config Class Initialized
@@ -7094,7 +7094,7 @@ DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/login/login.php
 DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:28:26 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:28:26 --> Final output sent to browser
 DEBUG - 2013-07-13 22:28:26 --> Total execution time: 0.0439
 DEBUG - 2013-07-13 22:28:32 --> Config Class Initialized
@@ -7156,7 +7156,7 @@ DEBUG - 2013-07-13 22:28:33 --> Model Class Initialized
 DEBUG - 2013-07-13 22:28:33 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:28:33 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:28:33 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:28:33 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:28:33 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:28:33 --> Final output sent to browser
 DEBUG - 2013-07-13 22:28:33 --> Total execution time: 0.0498
 DEBUG - 2013-07-13 22:37:27 --> Config Class Initialized
@@ -7190,7 +7190,7 @@ DEBUG - 2013-07-13 22:37:27 --> Model Class Initialized
 DEBUG - 2013-07-13 22:37:27 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:37:27 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:37:27 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:37:27 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:37:27 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:37:27 --> Final output sent to browser
 DEBUG - 2013-07-13 22:37:27 --> Total execution time: 0.1017
 DEBUG - 2013-07-13 22:37:29 --> Config Class Initialized
@@ -7254,7 +7254,7 @@ DEBUG - 2013-07-13 22:47:00 --> Model Class Initialized
 DEBUG - 2013-07-13 22:47:00 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:47:00 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:47:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:47:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:47:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:47:00 --> Final output sent to browser
 DEBUG - 2013-07-13 22:47:00 --> Total execution time: 0.1043
 DEBUG - 2013-07-13 22:47:03 --> Config Class Initialized
@@ -7290,7 +7290,7 @@ DEBUG - 2013-07-13 22:47:03 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 22:47:03 --> Severity: Notice  --> Trying to get property of non-object /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/post.php 5
 DEBUG - 2013-07-13 22:47:03 --> File loaded: application/views/admin/post.php
 DEBUG - 2013-07-13 22:47:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:47:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:47:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:47:03 --> Final output sent to browser
 DEBUG - 2013-07-13 22:47:03 --> Total execution time: 0.1014
 DEBUG - 2013-07-13 22:48:35 --> Config Class Initialized
@@ -7324,7 +7324,7 @@ DEBUG - 2013-07-13 22:48:35 --> Model Class Initialized
 DEBUG - 2013-07-13 22:48:35 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:48:35 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:48:35 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:48:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:48:35 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:48:35 --> Final output sent to browser
 DEBUG - 2013-07-13 22:48:35 --> Total execution time: 0.0967
 DEBUG - 2013-07-13 22:48:37 --> Config Class Initialized
@@ -7360,7 +7360,7 @@ DEBUG - 2013-07-13 22:48:37 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 22:48:37 --> Severity: Notice  --> Trying to get property of non-object /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/post.php 5
 DEBUG - 2013-07-13 22:48:37 --> File loaded: application/views/admin/post.php
 DEBUG - 2013-07-13 22:48:37 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:48:37 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:48:37 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:48:37 --> Final output sent to browser
 DEBUG - 2013-07-13 22:48:37 --> Total execution time: 0.0957
 DEBUG - 2013-07-13 22:49:27 --> Config Class Initialized
@@ -7394,7 +7394,7 @@ DEBUG - 2013-07-13 22:49:27 --> Model Class Initialized
 DEBUG - 2013-07-13 22:49:27 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:49:27 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:49:27 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:49:27 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:49:27 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:49:27 --> Final output sent to browser
 DEBUG - 2013-07-13 22:49:27 --> Total execution time: 0.0955
 DEBUG - 2013-07-13 22:49:29 --> Config Class Initialized
@@ -7430,7 +7430,7 @@ DEBUG - 2013-07-13 22:49:29 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 22:49:29 --> Severity: Notice  --> Trying to get property of non-object /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/post.php 6
 DEBUG - 2013-07-13 22:49:29 --> File loaded: application/views/admin/post.php
 DEBUG - 2013-07-13 22:49:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:49:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:49:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:49:29 --> Final output sent to browser
 DEBUG - 2013-07-13 22:49:29 --> Total execution time: 0.0616
 DEBUG - 2013-07-13 22:50:13 --> Config Class Initialized
@@ -7464,7 +7464,7 @@ DEBUG - 2013-07-13 22:50:13 --> Model Class Initialized
 DEBUG - 2013-07-13 22:50:13 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:50:13 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:50:13 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:50:13 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:50:13 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:50:13 --> Final output sent to browser
 DEBUG - 2013-07-13 22:50:13 --> Total execution time: 0.1000
 DEBUG - 2013-07-13 22:50:15 --> Config Class Initialized
@@ -7500,7 +7500,7 @@ DEBUG - 2013-07-13 22:50:15 --> File loaded: application/views/admin/header.php
 ERROR - 2013-07-13 22:50:15 --> Severity: Notice  --> Trying to get property of non-object /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/post.php 6
 DEBUG - 2013-07-13 22:50:15 --> File loaded: application/views/admin/post.php
 DEBUG - 2013-07-13 22:50:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:50:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:50:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:50:15 --> Final output sent to browser
 DEBUG - 2013-07-13 22:50:15 --> Total execution time: 0.0953
 DEBUG - 2013-07-13 22:50:38 --> Config Class Initialized
@@ -7534,7 +7534,7 @@ DEBUG - 2013-07-13 22:50:38 --> Model Class Initialized
 DEBUG - 2013-07-13 22:50:39 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:50:39 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-07-13 22:50:39 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:50:39 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:50:39 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:50:39 --> Final output sent to browser
 DEBUG - 2013-07-13 22:50:39 --> Total execution time: 0.0945
 DEBUG - 2013-07-13 22:50:48 --> Config Class Initialized
@@ -7569,7 +7569,7 @@ DEBUG - 2013-07-13 22:50:48 --> Model Class Initialized
 DEBUG - 2013-07-13 22:50:48 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-07-13 22:50:48 --> File loaded: application/views/admin/post.php
 DEBUG - 2013-07-13 22:50:48 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-07-13 22:50:48 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-07-13 22:50:48 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-07-13 22:50:48 --> Final output sent to browser
 DEBUG - 2013-07-13 22:50:48 --> Total execution time: 0.0898
 DEBUG - 2013-07-13 22:51:24 --> Config Class Initialized

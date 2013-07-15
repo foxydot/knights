@@ -32,7 +32,7 @@ DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/login/login.php
 DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-05-07 14:43:52 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-05-07 14:43:52 --> Final output sent to browser
 DEBUG - 2013-05-07 14:43:52 --> Total execution time: 0.9868
 DEBUG - 2013-05-07 14:43:52 --> Config Class Initialized

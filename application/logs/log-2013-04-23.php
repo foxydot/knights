@@ -309,7 +309,7 @@ DEBUG - 2013-04-23 15:22:24 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:22:24 --> File loaded: application/views/admin/install.php
 DEBUG - 2013-04-23 15:22:24 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:22:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:22:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:22:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:22:25 --> Final output sent to browser
 DEBUG - 2013-04-23 15:22:25 --> Total execution time: 0.1421
 DEBUG - 2013-04-23 15:22:25 --> Config Class Initialized
@@ -404,7 +404,7 @@ DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/admin/install.php
 DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:22:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:22:44 --> Final output sent to browser
 DEBUG - 2013-04-23 15:22:44 --> Total execution time: 0.0420
 DEBUG - 2013-04-23 15:22:44 --> Config Class Initialized
@@ -555,7 +555,7 @@ DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:23:34 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:23:34 --> Final output sent to browser
 DEBUG - 2013-04-23 15:23:34 --> Total execution time: 0.0807
 DEBUG - 2013-04-23 15:23:34 --> Config Class Initialized
@@ -677,7 +677,7 @@ DEBUG - 2013-04-23 15:23:44 --> Model Class Initialized
 DEBUG - 2013-04-23 15:23:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:23:44 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:23:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:23:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:23:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:23:44 --> Final output sent to browser
 DEBUG - 2013-04-23 15:23:44 --> Total execution time: 0.0661
 DEBUG - 2013-04-23 15:23:44 --> Config Class Initialized
@@ -786,7 +786,7 @@ DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/admin/uninstall.php
 DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:23:53 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:23:53 --> Final output sent to browser
 DEBUG - 2013-04-23 15:23:53 --> Total execution time: 0.1398
 DEBUG - 2013-04-23 15:23:53 --> Config Class Initialized
@@ -909,7 +909,7 @@ DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/admin/install.php
 DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:23:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:23:56 --> Final output sent to browser
 DEBUG - 2013-04-23 15:23:56 --> Total execution time: 0.0399
 DEBUG - 2013-04-23 15:23:56 --> Config Class Initialized
@@ -1032,7 +1032,7 @@ DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:25:55 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:25:55 --> Final output sent to browser
 DEBUG - 2013-04-23 15:25:55 --> Total execution time: 0.0945
 DEBUG - 2013-04-23 15:25:55 --> Config Class Initialized
@@ -1154,7 +1154,7 @@ DEBUG - 2013-04-23 15:26:04 --> Model Class Initialized
 DEBUG - 2013-04-23 15:26:04 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:26:04 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:26:04 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:26:04 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:26:04 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:26:04 --> Final output sent to browser
 DEBUG - 2013-04-23 15:26:04 --> Total execution time: 0.0483
 DEBUG - 2013-04-23 15:26:05 --> Config Class Initialized
@@ -1270,7 +1270,7 @@ DEBUG - 2013-04-23 15:36:56 --> Model Class Initialized
 DEBUG - 2013-04-23 15:36:56 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:36:56 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:36:56 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:36:56 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:36:56 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:36:56 --> Final output sent to browser
 DEBUG - 2013-04-23 15:36:56 --> Total execution time: 0.0534
 DEBUG - 2013-04-23 15:36:56 --> Config Class Initialized
@@ -1379,7 +1379,7 @@ DEBUG - 2013-04-23 15:37:10 --> Model Class Initialized
 DEBUG - 2013-04-23 15:37:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:37:10 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:37:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:37:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:37:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:37:10 --> Final output sent to browser
 DEBUG - 2013-04-23 15:37:10 --> Total execution time: 0.1203
 DEBUG - 2013-04-23 15:37:10 --> Config Class Initialized
@@ -1500,7 +1500,7 @@ ERROR - 2013-04-23 15:39:18 --> Severity: Notice  --> Use of undefined constant 
 DEBUG - 2013-04-23 15:39:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:39:18 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:39:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:39:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:39:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:39:18 --> Final output sent to browser
 DEBUG - 2013-04-23 15:39:18 --> Total execution time: 0.0555
 DEBUG - 2013-04-23 15:39:18 --> Config Class Initialized
@@ -1613,7 +1613,7 @@ DEBUG - 2013-04-23 15:40:42 --> Model Class Initialized
 DEBUG - 2013-04-23 15:40:42 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:40:42 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:40:42 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:40:42 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:40:42 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:40:42 --> Final output sent to browser
 DEBUG - 2013-04-23 15:40:42 --> Total execution time: 0.0502
 DEBUG - 2013-04-23 15:40:42 --> Config Class Initialized
@@ -1736,7 +1736,7 @@ DEBUG - 2013-04-23 15:43:44 --> Model Class Initialized
 DEBUG - 2013-04-23 15:43:44 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:43:44 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:43:44 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:43:44 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:43:44 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:43:44 --> Final output sent to browser
 DEBUG - 2013-04-23 15:43:44 --> Total execution time: 0.0582
 DEBUG - 2013-04-23 15:43:44 --> Config Class Initialized
@@ -1852,7 +1852,7 @@ DEBUG - 2013-04-23 15:45:24 --> Model Class Initialized
 DEBUG - 2013-04-23 15:45:24 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:45:24 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:45:24 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:45:24 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:45:24 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:45:24 --> Final output sent to browser
 DEBUG - 2013-04-23 15:45:24 --> Total execution time: 0.0570
 DEBUG - 2013-04-23 15:45:24 --> Config Class Initialized
@@ -1962,7 +1962,7 @@ DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:45:30 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:45:30 --> Final output sent to browser
 DEBUG - 2013-04-23 15:45:30 --> Total execution time: 0.0409
 DEBUG - 2013-04-23 15:45:30 --> Config Class Initialized
@@ -2066,7 +2066,7 @@ DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:46:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:46:17 --> Final output sent to browser
 DEBUG - 2013-04-23 15:46:17 --> Total execution time: 0.0486
 DEBUG - 2013-04-23 15:46:17 --> Config Class Initialized
@@ -2163,7 +2163,7 @@ DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:47:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:47:15 --> Final output sent to browser
 DEBUG - 2013-04-23 15:47:15 --> Total execution time: 0.0637
 DEBUG - 2013-04-23 15:47:15 --> Config Class Initialized
@@ -2313,7 +2313,7 @@ DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:48:23 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:48:23 --> Final output sent to browser
 DEBUG - 2013-04-23 15:48:23 --> Total execution time: 0.0406
 DEBUG - 2013-04-23 15:48:23 --> Config Class Initialized
@@ -2443,7 +2443,7 @@ DEBUG - 2013-04-23 15:48:36 --> Model Class Initialized
 DEBUG - 2013-04-23 15:48:36 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:48:36 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:48:36 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:48:36 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:48:36 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:48:36 --> Final output sent to browser
 DEBUG - 2013-04-23 15:48:36 --> Total execution time: 0.0569
 DEBUG - 2013-04-23 15:48:37 --> Config Class Initialized
@@ -2552,7 +2552,7 @@ DEBUG - 2013-04-23 15:56:19 --> Model Class Initialized
 DEBUG - 2013-04-23 15:56:19 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:56:19 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:56:19 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:56:19 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:56:19 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:56:19 --> Final output sent to browser
 DEBUG - 2013-04-23 15:56:19 --> Total execution time: 0.2424
 DEBUG - 2013-04-23 15:56:19 --> Config Class Initialized
@@ -2661,7 +2661,7 @@ DEBUG - 2013-04-23 15:56:23 --> Model Class Initialized
 DEBUG - 2013-04-23 15:56:23 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:56:23 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:56:23 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:56:23 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:56:23 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:56:23 --> Final output sent to browser
 DEBUG - 2013-04-23 15:56:23 --> Total execution time: 0.0620
 DEBUG - 2013-04-23 15:56:23 --> Config Class Initialized
@@ -2770,7 +2770,7 @@ DEBUG - 2013-04-23 15:57:24 --> Model Class Initialized
 DEBUG - 2013-04-23 15:57:24 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:57:24 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:57:24 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:57:24 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:57:24 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:57:24 --> Final output sent to browser
 DEBUG - 2013-04-23 15:57:24 --> Total execution time: 0.9384
 DEBUG - 2013-04-23 15:57:25 --> Config Class Initialized
@@ -2879,7 +2879,7 @@ DEBUG - 2013-04-23 15:58:09 --> Model Class Initialized
 DEBUG - 2013-04-23 15:58:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:58:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 15:58:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:58:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:58:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:58:09 --> Final output sent to browser
 DEBUG - 2013-04-23 15:58:09 --> Total execution time: 0.0686
 DEBUG - 2013-04-23 15:58:09 --> Config Class Initialized
@@ -2989,7 +2989,7 @@ DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:58:16 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:58:16 --> Final output sent to browser
 DEBUG - 2013-04-23 15:58:16 --> Total execution time: 0.0421
 DEBUG - 2013-04-23 15:58:16 --> Config Class Initialized
@@ -3086,7 +3086,7 @@ DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 15:59:21 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 15:59:21 --> Final output sent to browser
 DEBUG - 2013-04-23 15:59:21 --> Total execution time: 0.0441
 DEBUG - 2013-04-23 15:59:21 --> Config Class Initialized
@@ -3183,7 +3183,7 @@ DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:01:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:01:17 --> Final output sent to browser
 DEBUG - 2013-04-23 16:01:17 --> Total execution time: 0.0404
 DEBUG - 2013-04-23 16:01:17 --> Config Class Initialized
@@ -3280,7 +3280,7 @@ DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:02:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:02:25 --> Final output sent to browser
 DEBUG - 2013-04-23 16:02:25 --> Total execution time: 0.0427
 DEBUG - 2013-04-23 16:02:25 --> Config Class Initialized
@@ -3377,7 +3377,7 @@ DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:07:34 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:07:34 --> Final output sent to browser
 DEBUG - 2013-04-23 16:07:34 --> Total execution time: 0.0416
 DEBUG - 2013-04-23 16:07:34 --> Config Class Initialized
@@ -3481,7 +3481,7 @@ DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:11:33 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:11:33 --> Final output sent to browser
 DEBUG - 2013-04-23 16:11:33 --> Total execution time: 0.0500
 DEBUG - 2013-04-23 16:11:33 --> Config Class Initialized
@@ -3583,7 +3583,7 @@ DEBUG - 2013-04-23 16:19:33 --> Model Class Initialized
 DEBUG - 2013-04-23 16:19:33 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:19:33 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 16:19:33 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:19:33 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:19:33 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:19:33 --> Final output sent to browser
 DEBUG - 2013-04-23 16:19:33 --> Total execution time: 0.0805
 DEBUG - 2013-04-23 16:19:33 --> Config Class Initialized
@@ -3664,7 +3664,7 @@ DEBUG - 2013-04-23 16:19:45 --> Model Class Initialized
 DEBUG - 2013-04-23 16:19:45 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:19:45 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-04-23 16:19:45 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:19:45 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:19:45 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:19:45 --> Final output sent to browser
 DEBUG - 2013-04-23 16:19:45 --> Total execution time: 0.0466
 DEBUG - 2013-04-23 16:19:45 --> Config Class Initialized
@@ -3745,7 +3745,7 @@ DEBUG - 2013-04-23 16:20:01 --> Model Class Initialized
 DEBUG - 2013-04-23 16:20:01 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 16:20:01 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 16:20:01 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 16:20:01 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 16:20:01 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 16:20:01 --> Final output sent to browser
 DEBUG - 2013-04-23 16:20:01 --> Total execution time: 0.0506
 DEBUG - 2013-04-23 16:20:01 --> Config Class Initialized
@@ -3828,7 +3828,7 @@ DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 18:44:12 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 18:44:12 --> Final output sent to browser
 DEBUG - 2013-04-23 18:44:12 --> Total execution time: 0.0674
 DEBUG - 2013-04-23 18:44:13 --> Config Class Initialized
@@ -3896,7 +3896,7 @@ DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:33:45 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:33:45 --> Final output sent to browser
 DEBUG - 2013-04-23 20:33:45 --> Total execution time: 0.0555
 DEBUG - 2013-04-23 20:33:46 --> Config Class Initialized
@@ -3950,7 +3950,7 @@ DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:49:39 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:49:39 --> Final output sent to browser
 DEBUG - 2013-04-23 20:49:39 --> Total execution time: 0.0473
 DEBUG - 2013-04-23 20:49:39 --> Config Class Initialized
@@ -4011,7 +4011,7 @@ DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:50:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:50:40 --> Final output sent to browser
 DEBUG - 2013-04-23 20:50:40 --> Total execution time: 0.0655
 DEBUG - 2013-04-23 20:50:40 --> Config Class Initialized
@@ -4072,7 +4072,7 @@ DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:52:10 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:52:10 --> Final output sent to browser
 DEBUG - 2013-04-23 20:52:10 --> Total execution time: 0.0537
 DEBUG - 2013-04-23 20:52:10 --> Config Class Initialized
@@ -4133,7 +4133,7 @@ DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:52:41 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:52:41 --> Final output sent to browser
 DEBUG - 2013-04-23 20:52:41 --> Total execution time: 0.0520
 DEBUG - 2013-04-23 20:52:41 --> Config Class Initialized
@@ -4187,7 +4187,7 @@ DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 20:55:05 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 20:55:05 --> Final output sent to browser
 DEBUG - 2013-04-23 20:55:05 --> Total execution time: 0.0488
 DEBUG - 2013-04-23 20:55:06 --> Config Class Initialized
@@ -4241,7 +4241,7 @@ DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:07:08 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:07:08 --> Final output sent to browser
 DEBUG - 2013-04-23 21:07:08 --> Total execution time: 0.0577
 DEBUG - 2013-04-23 21:07:08 --> Config Class Initialized
@@ -4295,7 +4295,7 @@ DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:08:15 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:08:15 --> Final output sent to browser
 DEBUG - 2013-04-23 21:08:15 --> Total execution time: 0.0505
 DEBUG - 2013-04-23 21:08:15 --> Config Class Initialized
@@ -4349,7 +4349,7 @@ DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:08:37 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:08:37 --> Final output sent to browser
 DEBUG - 2013-04-23 21:08:37 --> Total execution time: 0.0595
 DEBUG - 2013-04-23 21:08:37 --> Config Class Initialized
@@ -4403,7 +4403,7 @@ DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:09:40 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:09:40 --> Final output sent to browser
 DEBUG - 2013-04-23 21:09:40 --> Total execution time: 0.0796
 DEBUG - 2013-04-23 21:09:41 --> Config Class Initialized
@@ -4457,7 +4457,7 @@ DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:10:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:10:18 --> Final output sent to browser
 DEBUG - 2013-04-23 21:10:18 --> Total execution time: 0.0466
 DEBUG - 2013-04-23 21:10:18 --> Config Class Initialized
@@ -4511,7 +4511,7 @@ DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:11:03 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:11:03 --> Final output sent to browser
 DEBUG - 2013-04-23 21:11:03 --> Total execution time: 0.0493
 DEBUG - 2013-04-23 21:11:03 --> Config Class Initialized
@@ -4565,7 +4565,7 @@ DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:12:00 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:12:00 --> Final output sent to browser
 DEBUG - 2013-04-23 21:12:00 --> Total execution time: 0.0551
 DEBUG - 2013-04-23 21:12:00 --> Config Class Initialized
@@ -4619,7 +4619,7 @@ DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:13:16 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:13:16 --> Final output sent to browser
 DEBUG - 2013-04-23 21:13:16 --> Total execution time: 0.0570
 DEBUG - 2013-04-23 21:13:17 --> Config Class Initialized
@@ -4673,7 +4673,7 @@ DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:14:22 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:14:22 --> Final output sent to browser
 DEBUG - 2013-04-23 21:14:22 --> Total execution time: 0.0455
 DEBUG - 2013-04-23 21:14:22 --> Config Class Initialized
@@ -4727,7 +4727,7 @@ DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/login/login.php
 DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/login/dashboard.php
 DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:15:57 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:15:57 --> Final output sent to browser
 DEBUG - 2013-04-23 21:15:57 --> Total execution time: 0.0519
 DEBUG - 2013-04-23 21:15:57 --> Config Class Initialized
@@ -4807,7 +4807,7 @@ DEBUG - 2013-04-23 21:16:29 --> Model Class Initialized
 DEBUG - 2013-04-23 21:16:29 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:16:29 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:16:29 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:16:29 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:16:29 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:16:29 --> Final output sent to browser
 DEBUG - 2013-04-23 21:16:29 --> Total execution time: 0.0863
 DEBUG - 2013-04-23 21:16:30 --> Config Class Initialized
@@ -4874,7 +4874,7 @@ DEBUG - 2013-04-23 21:24:18 --> Model Class Initialized
 DEBUG - 2013-04-23 21:24:18 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:24:18 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:24:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:24:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:24:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:24:18 --> Final output sent to browser
 DEBUG - 2013-04-23 21:24:18 --> Total execution time: 0.0510
 DEBUG - 2013-04-23 21:24:18 --> Config Class Initialized
@@ -4941,7 +4941,7 @@ DEBUG - 2013-04-23 21:28:20 --> Model Class Initialized
 DEBUG - 2013-04-23 21:28:20 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:28:20 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:28:20 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:28:20 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:28:20 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:28:20 --> Final output sent to browser
 DEBUG - 2013-04-23 21:28:20 --> Total execution time: 0.0511
 DEBUG - 2013-04-23 21:28:20 --> Config Class Initialized
@@ -5008,7 +5008,7 @@ DEBUG - 2013-04-23 21:30:09 --> Model Class Initialized
 DEBUG - 2013-04-23 21:30:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:30:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:30:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:30:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:30:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:30:09 --> Final output sent to browser
 DEBUG - 2013-04-23 21:30:09 --> Total execution time: 0.0628
 DEBUG - 2013-04-23 21:30:09 --> Config Class Initialized
@@ -5075,7 +5075,7 @@ DEBUG - 2013-04-23 21:31:34 --> Model Class Initialized
 DEBUG - 2013-04-23 21:31:34 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:31:34 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:31:34 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:31:34 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:31:34 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:31:34 --> Final output sent to browser
 DEBUG - 2013-04-23 21:31:34 --> Total execution time: 0.0527
 DEBUG - 2013-04-23 21:31:34 --> Config Class Initialized
@@ -5128,7 +5128,7 @@ DEBUG - 2013-04-23 21:33:13 --> Model Class Initialized
 DEBUG - 2013-04-23 21:33:13 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:33:13 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:33:13 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:33:13 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:33:13 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:33:13 --> Final output sent to browser
 DEBUG - 2013-04-23 21:33:13 --> Total execution time: 0.0599
 DEBUG - 2013-04-23 21:33:13 --> Config Class Initialized
@@ -5181,7 +5181,7 @@ DEBUG - 2013-04-23 21:34:09 --> Model Class Initialized
 DEBUG - 2013-04-23 21:34:09 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:34:09 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:34:09 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:34:09 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:34:09 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:34:09 --> Final output sent to browser
 DEBUG - 2013-04-23 21:34:09 --> Total execution time: 0.0603
 DEBUG - 2013-04-23 21:34:09 --> Config Class Initialized
@@ -5220,7 +5220,7 @@ DEBUG - 2013-04-23 21:35:35 --> Model Class Initialized
 DEBUG - 2013-04-23 21:35:35 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:35:35 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:35:35 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:35:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:35:35 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:35:35 --> Final output sent to browser
 DEBUG - 2013-04-23 21:35:35 --> Total execution time: 0.0627
 DEBUG - 2013-04-23 21:35:35 --> Config Class Initialized
@@ -5259,7 +5259,7 @@ DEBUG - 2013-04-23 21:35:38 --> Model Class Initialized
 DEBUG - 2013-04-23 21:35:38 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:35:38 --> File loaded: application/views/admin/users.php
 DEBUG - 2013-04-23 21:35:38 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:35:38 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:35:38 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:35:38 --> Final output sent to browser
 DEBUG - 2013-04-23 21:35:38 --> Total execution time: 0.0432
 DEBUG - 2013-04-23 21:35:38 --> Config Class Initialized
@@ -5312,7 +5312,7 @@ DEBUG - 2013-04-23 21:46:17 --> Model Class Initialized
 DEBUG - 2013-04-23 21:46:17 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:46:17 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:46:17 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:46:17 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:46:17 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:46:17 --> Final output sent to browser
 DEBUG - 2013-04-23 21:46:17 --> Total execution time: 0.0617
 DEBUG - 2013-04-23 21:46:17 --> Config Class Initialized
@@ -5351,7 +5351,7 @@ DEBUG - 2013-04-23 21:48:12 --> Model Class Initialized
 DEBUG - 2013-04-23 21:48:12 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:48:12 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:48:12 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:48:12 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:48:12 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:48:12 --> Final output sent to browser
 DEBUG - 2013-04-23 21:48:12 --> Total execution time: 0.0680
 DEBUG - 2013-04-23 21:48:13 --> Config Class Initialized
@@ -5390,7 +5390,7 @@ DEBUG - 2013-04-23 21:49:04 --> Model Class Initialized
 DEBUG - 2013-04-23 21:49:04 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:49:04 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:49:04 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:49:04 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:49:04 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:49:04 --> Final output sent to browser
 DEBUG - 2013-04-23 21:49:04 --> Total execution time: 0.0583
 DEBUG - 2013-04-23 21:49:04 --> Config Class Initialized
@@ -5429,7 +5429,7 @@ DEBUG - 2013-04-23 21:52:24 --> Model Class Initialized
 DEBUG - 2013-04-23 21:52:24 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:52:24 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:52:24 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:52:24 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:52:24 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:52:24 --> Final output sent to browser
 DEBUG - 2013-04-23 21:52:24 --> Total execution time: 0.0602
 DEBUG - 2013-04-23 21:52:24 --> Config Class Initialized
@@ -5468,7 +5468,7 @@ DEBUG - 2013-04-23 21:54:24 --> Model Class Initialized
 DEBUG - 2013-04-23 21:54:24 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:54:24 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:54:24 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:54:24 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:54:24 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:54:24 --> Final output sent to browser
 DEBUG - 2013-04-23 21:54:24 --> Total execution time: 0.0707
 DEBUG - 2013-04-23 21:54:24 --> Config Class Initialized
@@ -5507,7 +5507,7 @@ DEBUG - 2013-04-23 21:57:35 --> Model Class Initialized
 DEBUG - 2013-04-23 21:57:35 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:57:35 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:57:35 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:57:35 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:57:35 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:57:35 --> Final output sent to browser
 DEBUG - 2013-04-23 21:57:35 --> Total execution time: 0.0615
 DEBUG - 2013-04-23 21:57:35 --> Config Class Initialized
@@ -5546,7 +5546,7 @@ DEBUG - 2013-04-23 21:58:57 --> Model Class Initialized
 DEBUG - 2013-04-23 21:58:57 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 21:58:57 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 21:58:57 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 21:58:57 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 21:58:57 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 21:58:57 --> Final output sent to browser
 DEBUG - 2013-04-23 21:58:57 --> Total execution time: 0.0494
 DEBUG - 2013-04-23 21:58:57 --> Config Class Initialized
@@ -5585,7 +5585,7 @@ DEBUG - 2013-04-23 22:00:08 --> Model Class Initialized
 DEBUG - 2013-04-23 22:00:08 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 22:00:08 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 22:00:08 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 22:00:08 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 22:00:08 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 22:00:08 --> Final output sent to browser
 DEBUG - 2013-04-23 22:00:08 --> Total execution time: 0.0595
 DEBUG - 2013-04-23 22:00:08 --> Config Class Initialized
@@ -5626,7 +5626,7 @@ DEBUG - 2013-04-23 22:00:18 --> File loaded: application/views/admin/header.php
 ERROR - 2013-04-23 22:00:18 --> Severity: Warning  --> Invalid argument supplied for foreach() /Users/cmos/Dropbox/__htdocs/__RO/knights/application/views/admin/add.php 9
 DEBUG - 2013-04-23 22:00:18 --> File loaded: application/views/admin/add.php
 DEBUG - 2013-04-23 22:00:18 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 22:00:18 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 22:00:18 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 22:00:18 --> Final output sent to browser
 DEBUG - 2013-04-23 22:00:18 --> Total execution time: 0.1240
 DEBUG - 2013-04-23 22:00:18 --> Config Class Initialized
@@ -5728,7 +5728,7 @@ DEBUG - 2013-04-23 22:09:25 --> Model Class Initialized
 DEBUG - 2013-04-23 22:09:25 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 22:09:25 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 22:09:25 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 22:09:25 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 22:09:25 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 22:09:25 --> Final output sent to browser
 DEBUG - 2013-04-23 22:09:25 --> Total execution time: 0.0426
 DEBUG - 2013-04-23 22:09:25 --> Config Class Initialized
@@ -5793,7 +5793,7 @@ DEBUG - 2013-04-23 22:16:52 --> Model Class Initialized
 DEBUG - 2013-04-23 22:16:52 --> File loaded: application/views/admin/header.php
 DEBUG - 2013-04-23 22:16:52 --> File loaded: application/views/admin/dashboard.php
 DEBUG - 2013-04-23 22:16:52 --> File loaded: application/views/admin/footer.php
-DEBUG - 2013-04-23 22:16:52 --> File loaded: application/views/admin.tpl.php
+DEBUG - 2013-04-23 22:16:52 --> File loaded: application/views/default.tpl.php
 DEBUG - 2013-04-23 22:16:52 --> Final output sent to browser
 DEBUG - 2013-04-23 22:16:52 --> Total execution time: 0.0393
 DEBUG - 2013-04-23 22:16:52 --> Config Class Initialized

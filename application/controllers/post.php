@@ -97,7 +97,7 @@ class Post extends CI_Controller {
 			$this->load->helper('url');
 			redirect('/admin/');
 		}
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('default.tpl.php',$data);
 	}
 	
 	

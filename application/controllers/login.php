@@ -13,10 +13,9 @@ class Login extends CI_Controller {
 			redirect('/admin');
 		} else {
 			$data = array(
-				'dashboard' => 'login/dashboard',
 				'page_css' => 'login',
 			);
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('login/dashboard.php',$data);
 		}
 	}
 
@@ -30,12 +29,11 @@ class Login extends CI_Controller {
 			$this->form_validation->set_rules($rules);//Setting the validation rules inside the validation function
 			if($this->form_validation->run() == FALSE){ //Checks whether the form is properly sent
 				$data = array(
-					'dashboard' => 'login/dashboard',
 					'form' => 'login/login',
 					'error' => 'Please complete the login form properly',
 					'page_css' => 'login',
 				);
-				$this->load->view('admin.tpl.php',$data); //If validation fails load the login form again
+				$this->load->view('login/dashboard.php',$data); //If validation fails load the login form again
 			}else{
 				$userResult = $this->authenticate->login($this->input->post('email'),$this->input->post('password')); //If validation success then call the login function inside the common model and pass the arguments
 				if(is_object($userResult)){ //if admin access
@@ -47,32 +45,17 @@ class Login extends CI_Controller {
 					$login = true;
 				} else { // If validation fails.
 					$data = array(
-						'dashboard' => 'login/dashboard',
 						'form' => 'login/login',
 						'error' => $userResult,
 						'page_css' => 'login',
 					);
-					$this->load->view('admin.tpl.php',$data); //Load the login page and pass the error message
+					$this->load->view('login/dashboard.php',$data); //Load the login page and pass the error message
 					$login = false;
 				}
-				if($login)
-				{
-					//$redirectURL = $this->input->post('redirect')?$this->input->post('redirect'):'/';
-
-					if($this->session->userdata['accesslevel']<30)
-					{
-						redirect('/admin/index');
-					}
-					else
-					{
-						//redirect($redirectURL);
-						redirect('/');
-					}
-				}
+				redirect('/');
 			}
 		}else{
 			$data = array(
-				'dashboard' => 'login/dashboard',
 				'page_css' => 'login',
 			);
 			switch($msgarr){
@@ -82,23 +65,21 @@ class Login extends CI_Controller {
 				default:
 					break;
 			}
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('login/dashboard.php',$data);
 		}
 	}
 
 	function logout(){
 		$this->authenticate->logout();
 		$data = array(
-			'dashboard' => 'login/dashboard',
 			'message' => 'You have been logged out.',
 			'page_css' => 'login',
 		);
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('login/dashboard.php',$data);
 	}
 
 	function denied($msgarr=false){
 		$data = array(
-			'dashboard' => 'login/dashboard',
 			'page_css' => 'login',
 		);
 		switch($msgarr){
@@ -110,7 +91,7 @@ class Login extends CI_Controller {
 		}
 		$data['page_title'] = 'Permission Denied';
 		$data['form'] = 'login/denied';
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('login/dashboard.php',$data);
 	}
 
 
@@ -170,10 +151,9 @@ class Login extends CI_Controller {
 			}
 
 		}
-			$data['dashboard'] = 'login/dashboard';
 			$data['page_title'] = 'Reset Password';
 			$data['form'] = 'login/forgot';
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('login/dashboard.php',$data);
 	}
 
 
@@ -220,10 +200,9 @@ class Login extends CI_Controller {
 				$data['buttontxt'] = 'Return to Login';
 			}
 		}
-		$data['dashboard'] = 'login/dashboard';
 		$data['page_title'] = 'Reset Password';
 		$data['form'] = 'login/forgot';
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('login/dashboard.php',$data);
 	}
 	
 	public function register(){

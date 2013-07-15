@@ -127,6 +127,6 @@
 		endif;
 		} //end projects ?>
 		<div id="footer" class="row">
-		<?php if(isset($nav)){ $this->load->view($nav); } else { $this->load->view('admin/nav'); } ?>
+		<?php if(isset($nav)){ $this->load->view($nav); } else { $this->load->view('default/nav'); } ?>
 	</div><!-- end footer -->
 </div><!-- end container -->

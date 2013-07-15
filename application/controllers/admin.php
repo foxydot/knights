@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
 				'archive' => FALSE,
 			);
 			$data['footer_js'][] = 'jquery/index';
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 		
 	function edit($ID){
@@ -37,7 +37,7 @@ class Admin extends CI_Controller {
 			);
 		$data['footer_js'][] = 'jquery/index';	
 		$data['footer_js'][] = 'jquery/edit';	
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('default.tpl.php',$data);
 	}
 	
 	function edit_section($section_id,$story_id){
@@ -147,7 +147,7 @@ class Admin extends CI_Controller {
 			redirect('/admin/edit/'.$input['story_id'].'#id'.$input['section_id']);					
 			
 		} else {
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	}
 	
@@ -165,7 +165,7 @@ class Admin extends CI_Controller {
 			$db_data = $this->input->post(NULL, TRUE);
 			$this->Admin->edit_attachment($attachment_id,$db_data);
 		}		
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('default.tpl.php',$data);
 	}
 	
 	
@@ -257,7 +257,7 @@ class Admin extends CI_Controller {
 			$this->load->helper('url');
 			redirect('/admin/edit/'.$story_id);		
 		}
-		$this->load->view('admin.tpl.php',$data);
+		$this->load->view('default.tpl.php',$data);
 	}
 	
 	function clone_story($story_id){
@@ -283,7 +283,7 @@ class Admin extends CI_Controller {
 				'archive' => TRUE,
 			);
 			$data['footer_js'][] = 'jquery/index';
-			$this->load->view('admin.tpl.php',$data);
+			$this->load->view('default.tpl.php',$data);
 		}
 	function clean_url($url){
 		return preg_replace('/[^a-zA-Z0-9\_\-\?\&\+\.\/\:]/i','',$url);
