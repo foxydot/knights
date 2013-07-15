@@ -27,26 +27,7 @@ Class Administration extends CI_Model {
 		return $this->db->insert_id();
 	}
 	
-	function increment_slug($test_slug,$table){
-		if(!$this->slug_exists($test_slug,$table)){
-			return $test_slug;
-		}
-		$i = 0;
-		do {
-			$new_slug = $test_slug.'-'.$i;
-			$i++;
-		} while($this->slug_exists($new_slug,$table));
-		return $new_slug;
-	}
 	
-	function slug_exists($test_slug,$table){
-		$query = $this->db->get_where($table,array('slug'=>$test_slug));
-		if($query->num_rows()>0){
-			return TRUE;
-		} else {
-			return FALSE;
-		}
-	}
 	
 	/*
 	 * Gets all sections for a given story

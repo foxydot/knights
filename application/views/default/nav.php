@@ -15,10 +15,22 @@
 		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Administrate</a>
 			    	<ul class="dropdown-menu">
 			    		<?php if($this->authenticate->check_auth('super-administrators',true)){ ?>
-			    		<li><a href="/org">Organizations</a></li>
+			    		<li class="dropdown-submenu"><a href="/org">Organizations</a>
+			    			<ul class="dropdown-menu">
+			    				<li><a href="/org/add">Add New</a></li>
+			    			</ul>
+			    		</li>
 			    		<?php } ?>
-			    		<li><a href="/category">Categories</a></li>
-			    		<li><a href="/user">Users</a></li>
+			    		<li class="dropdown-submenu"><a href="/category">Categories</a>
+			    			<ul class="dropdown-menu">
+			    				<li><a href="/category/add">Add New</a></li>
+			    			</ul>
+			    		</li>
+			    		<li class="dropdown-submenu"><a href="/user">Users</a>
+			    			<ul class="dropdown-menu">
+			    				<li><a href="/user/add">Add New</a></li>
+			    			</ul>
+			    		</li>
 			    		
 			    	</ul>
 		    	</li>

@@ -92,6 +92,27 @@ Class Common extends CI_Model {
 			}
 			return preg_replace("/<\/?(?i:script|embed|object|frameset|frame|iframe|meta|link|style)(.|\\\n)*?>/i", "", $string); 
 		}
+		
+		function increment_slug($test_slug,$table){
+			if(!$this->slug_exists($test_slug,$table)){
+				return $test_slug;
+			}
+			$i = 0;
+			do {
+				$new_slug = $test_slug.'-'.$i;
+				$i++;
+			} while($this->slug_exists($new_slug,$table));
+			return $new_slug;
+		}
+		
+		function slug_exists($test_slug,$table){
+			$query = $this->db->get_where($table,array('slug'=>$test_slug));
+			if($query->num_rows()>0){
+				return TRUE;
+			} else {
+				return FALSE;
+			}
+		}
 
 		function get_story_by_slug($slug)
 		{

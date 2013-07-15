@@ -21,7 +21,7 @@ class User extends CI_Controller {
 				'users' => $this->Users->get_all_users(),
 				'dashboard' => 'default/user/list',
 			);
-			$data['footer_js'][] = 'jquery/userindex';
+			$data['footer_js'][] = 'jquery/list';
 			
 			$this->load->view('default.tpl.php',$data);
 		}
