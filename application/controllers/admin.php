@@ -17,6 +17,7 @@ class Admin extends CI_Controller {
 			$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',
+				'dashboard' => 'default/post/list',
 				'user' => $this->session->userdata,
 				'catsposts' => $this->Admin->get_cats_and_posts('all'),
 				'archive' => FALSE,

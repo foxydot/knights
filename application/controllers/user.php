@@ -19,7 +19,7 @@ class User extends CI_Controller {
 				'body_class' => 'list userlist',
 				'user' => $this->session->userdata,
 				'users' => $this->Users->get_all_users(),
-				'dashboard' => 'admin/users',
+				'dashboard' => 'default/user/list',
 			);
 			$data['footer_js'][] = 'jquery/userindex';
 			
@@ -35,7 +35,7 @@ class User extends CI_Controller {
 				'the_user' => $this->Users->get_user($ID),
 				'access' => $this->authenticate->get_levels(),
 				'groups' => $this->Users->get_all_user_groups(),
-				'dashboard' => 'admin/adduser',
+				'dashboard' => 'default/user/edit',
 				'action' => 'user/edit/'.$ID,
 				'is_edit' => TRUE,
 			);

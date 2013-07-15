@@ -58,3 +58,5 @@
 </head>
 
 <body<?php print isset($body_class)?body_class($body_class):''; ?>>
+<?php print $this->session->flashdata('err')?'<div class="alert alert-error">'.$this->session->flashdata('err').'</div>':''; ?>
+<?php print $this->session->flashdata('msg')?'<div class="alert alert-info message">'.$this->session->flashdata('msg').'</div>':''; ?>

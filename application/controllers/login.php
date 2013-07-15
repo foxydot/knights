@@ -15,7 +15,7 @@ class Login extends CI_Controller {
 			$data = array(
 				'page_css' => 'login',
 			);
-			$this->load->view('login/dashboard.php',$data);
+			$this->load->view('login/login.tpl.php',$data);
 		}
 	}
 
@@ -33,7 +33,7 @@ class Login extends CI_Controller {
 					'error' => 'Please complete the login form properly',
 					'page_css' => 'login',
 				);
-				$this->load->view('login/dashboard.php',$data); //If validation fails load the login form again
+				$this->load->view('login/login.tpl.php',$data); //If validation fails load the login form again
 			}else{
 				$userResult = $this->authenticate->login($this->input->post('email'),$this->input->post('password')); //If validation success then call the login function inside the common model and pass the arguments
 				if(is_object($userResult)){ //if admin access
@@ -49,7 +49,7 @@ class Login extends CI_Controller {
 						'error' => $userResult,
 						'page_css' => 'login',
 					);
-					$this->load->view('login/dashboard.php',$data); //Load the login page and pass the error message
+					$this->load->view('login/login.tpl.php',$data); //Load the login page and pass the error message
 					$login = false;
 				}
 				redirect('/');
@@ -65,7 +65,7 @@ class Login extends CI_Controller {
 				default:
 					break;
 			}
-			$this->load->view('login/dashboard.php',$data);
+			$this->load->view('login/login.tpl.php',$data);
 		}
 	}
 
@@ -75,7 +75,7 @@ class Login extends CI_Controller {
 			'message' => 'You have been logged out.',
 			'page_css' => 'login',
 		);
-		$this->load->view('login/dashboard.php',$data);
+		$this->load->view('login/login.tpl.php',$data);
 	}
 
 	function denied($msgarr=false){
@@ -91,7 +91,7 @@ class Login extends CI_Controller {
 		}
 		$data['page_title'] = 'Permission Denied';
 		$data['form'] = 'login/denied';
-		$this->load->view('login/dashboard.php',$data);
+		$this->load->view('login/login.tpl.php',$data);
 	}
 
 
@@ -153,7 +153,7 @@ class Login extends CI_Controller {
 		}
 			$data['page_title'] = 'Reset Password';
 			$data['form'] = 'login/forgot';
-			$this->load->view('login/dashboard.php',$data);
+			$this->load->view('login/login.tpl.php',$data);
 	}
 
 
@@ -202,7 +202,7 @@ class Login extends CI_Controller {
 		}
 		$data['page_title'] = 'Reset Password';
 		$data['form'] = 'login/forgot';
-		$this->load->view('login/dashboard.php',$data);
+		$this->load->view('login/login.tpl.php',$data);
 	}
 	
 	public function register(){

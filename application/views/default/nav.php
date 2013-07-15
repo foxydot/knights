@@ -11,7 +11,7 @@
 
 <?php */ ?>
 
-<div class="navbar">
+<div id="nav" class="navbar">
       <div class="navbar-inner">
         <div class="container-fluid">
           <div class="nav-collapse collapse">
@@ -20,11 +20,24 @@
             	<a id="logout" href="/login/logout">Log Out</a>
             </h5>
           <ul class="nav">
-		    <li><a href="/wireframes/list.php">All Postings</a></li>
-		    <li><a href="/wireframes/list-edit.php">Your Postings</a></li>
-		    <li><a href="/wireframes/edit-posting.php">New Posting</a></li>
-		    <li><a href="/wireframes/user.php">Account Settings</a></li>
-		    <li><a href="/wireframes/help.php">Help</a></li>
+		    <li><a href="/">All Postings</a></li>
+		    <li><a href="/post/user/<?php print $user['ID']; ?>">Your Postings</a></li>
+		    <li><a href="/post/add">New Posting</a></li>
+		    <?php if($this->authenticate->check_auth('administrators',true)){ ?>
+		    	<li class="dropdown">
+		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Administrate</a>
+			    	<ul class="dropdown-menu">
+			    		<?php if($this->authenticate->check_auth('super-administrators',true)){ ?>
+			    		<li><a href="/org">Organizations</a></li>
+			    		<?php } ?>
+			    		<li><a href="/category">Categories</a></li>
+			    		<li><a href="/user">Users</a></li>
+			    		
+			    	</ul>
+		    	</li>
+		    <?php } ?>
+		    <li><a href="/user/edit/<?php print $user['ID']; ?>">Account Settings</a></li>
+		    <li><a href="/help">Help</a></li>
 		    </ul>
           </div><!--/.nav-collapse -->
         </div>

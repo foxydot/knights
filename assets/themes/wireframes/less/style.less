@@ -76,22 +76,21 @@ body {
 input[type="submit"], a.button{
 	.button(@color1);
 }
-
-.logo {
-	margin:2em auto;
-	background: url(../img/logo.png) no-repeat center center;
-	width: 400px;
-	height: 100px;
+.logo-container{
+	padding: 1em auto;
+	#logo {
+		margin:2em auto;
+		background: url(../img/logo.png) no-repeat center center;
+		width: 400px;
+		height: 100px;
+		display: block;
+	}
 }
-/* Login page */
-.login{
-	form {
-	width: 50%;
-	margin: 30px auto;
-	padding: 30px;
-	background: @white;
-	.drop-shadow(0,0,12px,0.6);
-	text-align: center;
+
+#nav{
+	.dropdown-submenu > .dropdown-menu {
+		left: auto;
+		top:auto;
 	}
 }
 

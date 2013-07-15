@@ -13,10 +13,10 @@ if(!function_exists('page_css'))
 			{
 				foreach($page_css AS $css)
 				{
-					$ret .= '<link rel="stylesheet" href="/admin/css/'.$css.'.css" type="text/css" />'."\n";
+					$ret .= '<link rel="stylesheet" href="'.THEME_URL.'/css/'.$css.'.css" type="text/css" />'."\n";
 				}
 			} else {
-		 	$ret = '<link rel="stylesheet" href="/admin/css/'.$page_css.'.css" type="text/css" />'."\n";
+		 	$ret = '<link rel="stylesheet" href="'.THEME_URL.'/css/'.$page_css.'.css" type="text/css" />'."\n";
 			}
 			return $ret;
 		} else {
