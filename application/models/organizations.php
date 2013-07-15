@@ -10,6 +10,16 @@ Class Organizations extends CI_Model {
 	        parent::__construct();
 	    }
 	    
+	    function make_org_array($orgs){
+	    	if(!is_array($orgs)){
+	    		if($this->authenticate->check_auth() && $orgs =='all'){
+	    			$orgs = $this->get_orgs();
+	    		} else {
+	    			return FALSE;
+	    		}
+	    	}
+	    	return $orgs;
+	    }
 
 	    function get_orgs($archive = FALSE){
 	    	$this->db->from('organization');

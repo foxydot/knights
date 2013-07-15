@@ -10,7 +10,7 @@ class Login extends CI_Controller {
 		//check session existance and age
 		if($this->authenticate->check_auth('users')){
 			$this->load->helper('url');
-			redirect('/admin');
+			redirect('/post');
 		} else {
 			$data = array(
 				'page_css' => 'login',

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid list">
       <div class="header row-fluid">
         <div class="span3">
 			<h4>Title</h4>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 			<?php foreach($cat->posts AS $post){ ?>
-			<div class="stripe story row-fluid" href="/admin/edit/<?php print $post->story_id; ?>">
+			<div class="stripe post clicky row-fluid" href="/admin/edit/<?php print $post->story_id; ?>">
 				<div class="span3">
 					<h6 class="sub subheading"><?php print $post->title; ?></h6>
 				</div>

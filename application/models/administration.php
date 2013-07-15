@@ -12,39 +12,6 @@ Class Administration extends CI_Model {
 	        $this->load->model('Organizations','Orgs');
 	    }
 	
-	private function make_org_array($orgs){
-		if(!is_array($orgs)){
-			if($this->authenticate->check_auth() && $orgs =='all'){
-				$orgs = $this->Orgs->get_orgs();
-			} else {
-				return FALSE;
-			}
-		}
-		return $orgs;
-	}
-		
-	function get_cats($orgs = array(),$archive = FALSE){
-		$orgs = $this->make_org_array($orgs);
-		$this->db->from('category');
-		if(!$archive){
-			$this->db->where('dateremoved <=',0);
-		}
-		$query = $this->db->get();
-		$result = $query->result();
-		return $result;
-	}
-		
-	function get_cats_and_posts($orgs = array(),$archive = FALSE){
-		$orgs = $this->make_org_array($orgs);
-		$cats = $this->get_cats($orgs);
-		$i = 0;
-		foreach($cats AS $cat){
-			$cat[$i]->post = $this->get_posts($cat->ID,$archive);
-			$i++;
-		}
-		return $cats;
-	}
-	
 	function add_post($data){
 		$slug = $this->increment_slug(post_slug($data['title']),'post');
 		$db_data = array(

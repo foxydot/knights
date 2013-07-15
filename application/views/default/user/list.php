@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid list">
 	<div class="header row-fluid">
 		<div class="span2">
 			<h4>User</h4>
@@ -20,7 +20,7 @@
 		</div><!-- end span1 -->
 	</div><!-- end titleBar -->
 			<?php foreach($users AS $user){ ?>
-			<div class="stripe user row-fluid" href="/user/edit/<?php print $user->ID; ?>">
+			<div class="stripe user clicky row-fluid" href="/user/edit/<?php print $user->ID; ?>">
 				<div class="span2">
 					<h6 class="sub subheading"><?php print $user->firstname; ?> <?php print $user->lastname; ?></h6>
 				</div>

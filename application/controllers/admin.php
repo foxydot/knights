@@ -14,16 +14,7 @@ class Admin extends CI_Controller {
 	
 	function index()
 		{
-			$data = array(
-				'page_title' => 'Welcome to '.SITENAME,
-				'body_class' => 'list dashboard',
-				'dashboard' => 'default/post/list',
-				'user' => $this->session->userdata,
-				'catsposts' => $this->Admin->get_cats_and_posts('all'),
-				'archive' => FALSE,
-			);
-			$data['footer_js'][] = 'jquery/index';
-			$this->load->view('default.tpl.php',$data);
+			
 		}
 		
 	function edit($ID){
