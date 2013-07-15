@@ -440,7 +440,7 @@ Class Sysadmin extends CI_Model {
 		);
 		$this->dbforge->add_field($fields);
 		$this->dbforge->add_key('ID',TRUE);
-		$this->dbforge->create_table('post2org',TRUE);
+		$this->dbforge->create_table('post2cat',TRUE);
 		/*
 		 * Create attachment table
 		*/

@@ -35,6 +35,14 @@ Class Common extends CI_Model {
 		}
 	}
 	
+	function is_author($author_id,$element_author_id){
+		if($author_id==$element_author_id){
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+	
 	/*
 	 * Convert a timestamp into increments of ago.
 	 */

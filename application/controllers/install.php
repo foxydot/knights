@@ -9,18 +9,16 @@ class Install extends CI_Controller {
 		}
 		if(empty($_POST)){
 			$data = array(
-				'form' => 'admin/install',
-				'dashboard' => 'login/dashboard',
+				'form' => 'default/sysadmin/install',
 			);
-			$this->load->view('default.tpl.php',$data);
+			$this->load->view('login/login.tpl.php',$data);
 		} else {
 			if($_POST['user_pwd'] != $_POST['user_pwd_chk']){
 			$data = array(
-				'form' => 'admin/install',
+				'form' => 'default/sysadmin/install',
 				'msg' => 'passwords do not match',
-				'dashboard' => 'login/dashboard',
 			);
-			$this->load->view('default.tpl.php',$data);
+			$this->load->view('login/login.tpl.php',$data);
 			} else {
 				$this->load->model('sysadmin');
 				$this->sysadmin->install();
@@ -31,10 +29,9 @@ class Install extends CI_Controller {
 	public function uninstall(){
 		$this->authenticate->check_auth('administrators',true);
 		if($this->session->userdata['ID'] == 1){
-			$data['form'] = 'admin/uninstall';
-			$data['dashboard'] = 'login/dashboard';
+			$data['form'] = 'default/sysadmin/uninstall';
 			if(empty($_POST)){
-				$this->load->view('default.tpl.php',$data);
+				$this->load->view('login/login.tpl.php',$data);
 			} else {
 				$this->load->model('sysadmin');
 				$this->sysadmin->uninstall();
@@ -50,10 +47,9 @@ class Install extends CI_Controller {
 			$this->load->model('sysadmin');
 			$data['system_info'] = $this->common->getSystemInfo();
 			$data['update_database_version'] = $this->sysadmin->get_update_version();
-			$data['form'] = 'admin/maintenance';
-			$data['dashboard'] = 'login/dashboard';
+			$data['form'] = 'default/sysadmin/maintenance';
 			if(empty($_POST)){
-				$this->load->view('default.tpl.php',$data);
+				$this->load->view('login/login.tpl.php',$data);
 			} else {
 				$this->sysadmin->upgrade();
 			}

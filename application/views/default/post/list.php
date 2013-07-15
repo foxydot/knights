@@ -3,6 +3,9 @@
         <div class="span3">
 			<h4>Title</h4>
 		</div><!-- end span3 -->
+		<div class="span1">
+			<h4>Price</h4>
+		</div><!-- end span1 -->
 		<div class="span2">
 			<h4>Date Added</h4>
 		</div><!-- end span2 -->
@@ -10,10 +13,7 @@
 			<h4>Poster</h4>
 		</div><!-- end span2 -->
 		<div class="span1">
-			<h4>Published</h4>
-		</div><!-- end span1 -->
-		<div class="span1">
-			<h4>Archive</h4>
+			<h4></h4>
 		</div><!-- end span1 -->
       </div><!--/row-->
 	<?php 
@@ -22,28 +22,26 @@
 			?>
 		<div class="stripe row-fluid">
 			<div class="span12">
-				<h5 class="heading"><?php print $cat->name; ?></h5>
+				<h5 class="heading"><?php print $cat->title; ?></h5>
 			</div>
 		</div>
 			<?php foreach($cat->posts AS $post){ ?>
-			<div class="stripe post clicky row-fluid" href="/admin/edit/<?php print $post->story_id; ?>">
+			<div class="stripe post clicky row-fluid" href="/post/view/<?php print $post->post_id; ?>">
 				<div class="span3">
-					<h6 class="sub subheading"><?php print $post->title; ?></h6>
-				</div>
-				<div class="span2">
-					<h6 class="sub"><?php print date("F j, Y",$post->dateadded); ?></h6>
-				</div>
-				<div class="span2">
-					<h6 class="sub"><?php print $post->firstname.' '.$post->lastname; ?></h6>
+					<?php print $post->title; ?>
 				</div>
 				<div class="span1">
-					<h6 class="live"><a href="javascript:void(0);" class="<?php print $post->datepublished>0?'unpublish_link':'publish_link'; ?>" name="<?php print $post->ID; ?>"><?php print $post->datepublished>0?'published':'unpublished'; ?></a></h6>
+					<?php print $post->cost; ?>
+				</div>
+				<div class="span2">
+					<?php print date("F j, Y",$post->dateadded); ?>
+				</div>
+				<div class="span2">
+					<?php print $post->firstname.' '.$post->lastname; ?>
 				</div>
 				<div class="span1">
-					<?php if($archive){ ?>
-					<h6 class="sub"><a href="javascript:void(0);" class="unarchive_link" name="<?php print $post->ID; ?>">Unarchive</a></h6>
-					<?php } else { ?>
-					<h6 class="sub"><a href="javascript:void(0);" class="archive_link" name="<?php print $post->ID; ?>">Archive</a></h6>
+					<?php if($this->authenticate->check_auth('administrators')||$this->common->is_author($user['ID'],$post->author_id)){ ?>
+						<a href="/post/edit/<?php print $post->post_id; ?>" class="btn">Edit</a>
 					<?php } ?>
 				</div>
 			</div>

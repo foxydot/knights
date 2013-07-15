@@ -99,7 +99,7 @@ class User extends CI_Controller {
 				'user' => $this->session->userdata,
 				'access' => $this->authenticate->get_levels(),
 				'groups' => $this->Users->get_all_user_groups(),
-				'dashboard' => 'admin/adduser',
+				'dashboard' => 'default/user/edit',
 				'action' => 'user/add',
 				'is_edit' => FALSE,
 			);

@@ -10,11 +10,11 @@
 		    <li><a href="/">All Postings</a></li>
 		    <li><a href="/post/user/<?php print $user['ID']; ?>">Your Postings</a></li>
 		    <li><a href="/post/add">New Posting</a></li>
-		    <?php if($this->authenticate->check_auth('administrators',true)){ ?>
+		    <?php if($this->authenticate->check_auth('administrators')){ ?>
 		    	<li class="dropdown">
 		    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Administrate</a>
 			    	<ul class="dropdown-menu">
-			    		<?php if($this->authenticate->check_auth('super-administrators',true)){ ?>
+			    		<?php if($this->authenticate->check_auth('super-administrators')){ ?>
 			    		<li class="dropdown-submenu"><a href="/org">Organizations</a>
 			    			<ul class="dropdown-menu">
 			    				<li><a href="/org/add">Add New</a></li>

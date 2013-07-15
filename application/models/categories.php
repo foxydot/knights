@@ -47,4 +47,23 @@ Class Categories extends CI_Model {
 		$this->db->where('ID',$db_data['ID']);
 	 	$this->db->update('category',$db_data);
 	 }
+	 
+
+	 function get_post_cats($post_id){
+	 	$this->db->from('post2cat');
+	 	$this->db->join('category','post2cat.cat_id=category.ID');
+	 	$this->db->where('post2cat.post_id',$post_id);
+	 	$query = $this->db->get();
+	 	$result = $query->result();
+	 	return $result;
+	 }
+	 
+	 function get_post_cats_ids($post_id){
+	 	$postcats = $this->get_post_cats($post_id);
+	 	foreach($postcats AS $cat){
+	 		$ids[] = $cat->cat_id;
+	 	}
+	 	$postcats['ids'] = $ids;
+	 	return $postcats;
+	 }
 }

@@ -21,23 +21,22 @@ class Post extends CI_Controller {
 				'catsposts' => $this->Posts->get_cats_and_posts('all'),
 				'archive' => FALSE,
 		);
-		$data['footer_js'][] = 'jquery/index';
+		$data['footer_js'][] = 'jquery/list';
 		$this->load->view('default.tpl.php',$data);
 	}
-	
+
 	function add(){
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
 		$data = array(
-				'page_title' => 'Welcome to '.SITENAME,
-				'body_class' => 'addPost',
+				'page_title' => SITENAME.' Add Post',
+				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/add/',
 				'is_edit' => FALSE,
 		);
-		$data['footer_js'][] = 'jquery/add';
 		if($this->input->post()){
 			$db_data = array(
 					'title' => $this->input->post('title'),
@@ -45,14 +44,62 @@ class Post extends CI_Controller {
 					'content' => $this->input->post('content'),
 					'cost' => $this->input->post('cost'),
 			);
-			$post_id = $this->Admin->add_post($db_data);
-			foreach($this->input->post('categories') AS $cat_id){
-				
+			$post_id = $this->Posts->add_post($db_data);
+			foreach($this->input->post('cat') AS $cat_id){
+				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
 			}
+
+			$this->load->helper('url');
+			redirect('/post');
+		}
+		$this->load->view('default.tpl.php',$data);
+	}
+
+	function edit($ID){
+		$this->load->model('Categories','Cats');
+		$this->load->model('Users');
+		$data = array(
+				'page_title' => SITENAME.' Edit Post',
+				'body_class' => 'add post-add',
+				'user' => $this->session->userdata,
+				'post' => $this->Posts->get_post($ID),
+				'cats' => $this->Cats->get_cats(),
+				'dashboard' => 'default/post/edit',
+				'action' => 'post/edit/'.$ID,
+				'is_edit' => TRUE,
+		);
+		if($this->input->post()){
+			$db_data = array(
+					'title' => $this->input->post('title'),
+					'author_id' => $this->input->post('author_id'),
+					'content' => $this->input->post('content'),
+					'cost' => $this->input->post('cost'),
+			);
+			$post_id = $this->Posts->edit_post($db_data);
+			foreach($this->input->post('cat') AS $cat_id){
+				$this->Posts->edit_post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
+			}
+	
+			$this->load->helper('url');
+			redirect('/post');
 		}
 		$this->load->view('default.tpl.php',$data);
 	}
 	
+	function view($ID){
+		$this->load->model('Categories','Cats');
+		$this->load->model('Users');
+		$data = array(
+				'page_title' => SITENAME.' Edit Post',
+				'body_class' => 'add post-add',
+				'user' => $this->session->userdata,
+				'post' => $this->Posts->get_post($ID),
+				'cats' => $this->Cats->get_cats(),
+				'dashboard' => 'default/post/view',
+				'is_edit' => TRUE,
+		);
+		$this->load->view('default.tpl.php',$data);
+	}
 }
 
 /* End of file post.php */
