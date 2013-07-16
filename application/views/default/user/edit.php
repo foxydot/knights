@@ -37,9 +37,11 @@
 					<option value="<?php print $group->ID; ?>"<?php print $is_edit?($the_user->group_id==$group->ID?' selected = "selected"':''):''; ?>><?php print ucwords($group->name); ?></option>
 				<?php }	?>
 			</select>
+			<?php } elseif(!empty($the_user->group_id)) { ?>
+			<?php $group = $this->common->object_from_array($groups,'ID',$the_user->group_id);?>
+			<span><?php print ucwords($group->name); ?></span>
 			<?php } else { ?>
-			<?php ts_data($groups);?>
-			<span><?php print $the_user->group_id; ?></span>
+			No group assigned
 			<?php } ?>
 			</div>
 		</div>

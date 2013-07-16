@@ -121,38 +121,30 @@ Class Common extends CI_Model {
 				return FALSE;
 			}
 		}
-
-		function get_story_by_slug($slug)
-		{
-			$this->db->select('story.ID AS ID,title,lastedit,datepresented,datepublished,datearchived,project.ID AS project_id,name');
-			$this->db->from('story');
-			$this->db->join('project','story.project_id=project.ID','left');
-			$this->db->where('slug = \''.$slug.'\'');
-			$this->db->limit(1);
-			$query = $this->db->get();
-			if($query->num_rows() == 1){
-				$result = $query->result();
-				return $result[0];
-			}else{
-				return 'Project not found.';
-			}	
+	
+	function object_from_array($array_of_object,$key,$value,$unique = TRUE){
+		if($unique){
+			foreach($array_of_object AS $obj){
+				if($obj->$key == $value){
+					return $obj;
+				}
+			}
+			return FALSE;
+		} else {
+			foreach($array_of_object AS $obj){
+				if($obj->$key == $value){
+					$new_array[] = $obj;
+				}
+			}
+			if(!empty($new_array)){
+				return $new_array;
+			} else {
+				return FALSE;
+			}
 		}
 		
-		function get_story_by_id($id)
-		{
-			$this->db->select('title,slug,lastedit,datepresented,datepublished,datearchived,project.ID AS project_id,name');
-			$this->db->from('story');
-			$this->db->join('project','story.project_id=project.ID','left');
-			$this->db->where('ID = \''.$id.'\'');
-			$this->db->limit(1);
-			$query = $this->db->get();
-			if($query->num_rows() == 1){
-				$result = $query->result();
-				return $result[0];
-			}else{
-				return 'Project not found.';
-			}	
-		}		
+	}
+	
 }
 /* End of file common.php */
 /* Location: ./application/models/common.php */
