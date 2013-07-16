@@ -18,11 +18,24 @@ class Post extends CI_Controller {
 				'body_class' => 'list dashboard',
 				'dashboard' => 'default/post/list',
 				'user' => $this->session->userdata,
-				'catsposts' => $this->Posts->get_cats_and_posts('all'),
+				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => 'all')),
 				'archive' => FALSE,
 		);
 		$data['footer_js'][] = 'jquery/list';
 		$this->load->view('default.tpl.php',$data);
+	}
+	
+	function user($user_id){
+		$data = array(
+				'page_title' => 'Welcome to '.SITENAME,
+				'body_class' => 'list dashboard',
+				'dashboard' => 'default/post/list',
+				'user' => $this->session->userdata,
+				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => 'all','user_id'=>$user_id)),
+				'archive' => FALSE,
+		);
+		$data['footer_js'][] = 'jquery/list';
+		$this->load->view('default.tpl.php',$data);	
 	}
 
 	function add(){
@@ -38,12 +51,8 @@ class Post extends CI_Controller {
 				'is_edit' => FALSE,
 		);
 		if($this->input->post()){
-			$db_data = array(
-					'title' => $this->input->post('title'),
-					'author_id' => $this->input->post('author_id'),
-					'content' => $this->input->post('content'),
-					'cost' => $this->input->post('cost'),
-			);
+			$db_data = $this->input->post();
+			unset($db_data['cat']);
 			$post_id = $this->Posts->add_post($db_data);
 			foreach($this->input->post('cat') AS $cat_id){
 				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
@@ -69,15 +78,12 @@ class Post extends CI_Controller {
 				'is_edit' => TRUE,
 		);
 		if($this->input->post()){
-			$db_data = array(
-					'title' => $this->input->post('title'),
-					'author_id' => $this->input->post('author_id'),
-					'content' => $this->input->post('content'),
-					'cost' => $this->input->post('cost'),
-			);
-			$post_id = $this->Posts->edit_post($db_data);
+			$db_data = $this->input->post();
+			unset($db_data['cat']);
+			$this->Posts->edit_post($db_data);
+			$this->Posts->clear_post_to_cats($db_data['ID']);
 			foreach($this->input->post('cat') AS $cat_id){
-				$this->Posts->edit_post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
+				$this->Posts->post_to_cat(array('post_id' => $db_data['ID'],'cat_id' => $cat_id));
 			}
 	
 			$this->load->helper('url');

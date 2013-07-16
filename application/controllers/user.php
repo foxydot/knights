@@ -8,14 +8,14 @@ class User extends CI_Controller {
 				$this->load->helper('url');
 				redirect('/install');
 			}
-			$this->authenticate->check_auth('administrators',true);
 			$this->load->model('Users');
        }
 	
 	function index()
 		{
+			$this->authenticate->check_auth('administrators',true);
 			$data = array(
-				'page_title' => SITENAME.' Administrative users',
+				'page_title' => SITENAME.' All users',
 				'body_class' => 'list userlist',
 				'user' => $this->session->userdata,
 				'users' => $this->Users->get_all_users(),
@@ -28,6 +28,7 @@ class User extends CI_Controller {
 	
 	function edit($ID)
 		{
+			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){$this->authenticate->check_auth('administrators',true);}
 			$data = array(
 				'page_title' => SITENAME.' Administrative users',
 				'body_class' => 'list',
@@ -93,6 +94,7 @@ class User extends CI_Controller {
 	
 	function add()
 		{
+			$this->authenticate->check_auth('administrators',true);
 			$data = array(
 				'page_title' => SITENAME.' Administrative users',
 				'body_class' => 'list',
