@@ -31,18 +31,8 @@ textarea,
 .sticky,
 .taxonomy-description,
 .wp-caption {
-	background-color: @white;
-	border: 0px solid @medgrey;
 }
 
-input,
-select,
-textarea {
-	.box-shadow(inset 0 1px 5px @medgrey);
-	.rounded(6px);
-	font-size: 12px;
-	padding: 5px;
-}
 
 /* Hyperlinks
 ------------------------------------------------------------ */
@@ -83,6 +73,63 @@ body {
 
 /* Button
 ------------------------------------------------------------ */
-input[type="submit"]{
+input[type="submit"], a.button{
 	.button(@color1);
+}
+.logo-container{
+	padding: 1em auto;
+	#logo {
+		margin:2em auto;
+		background: url(../img/logo.png) no-repeat center center;
+		width: 400px;
+		height: 100px;
+		display: block;
+	}
+}
+
+
+.stripe.odd {background:@vltgrey;}
+
+.post-image-gallery{
+	.main {
+		background: @ltgrey;
+		width: 94%;
+		height: 300px;
+	}
+	.subs {
+		div {
+			float: left;
+			background: @ltgrey;
+			height: 70px;
+			width: 22%;
+			margin: 2% 2% 0 0;
+		}
+	}
+}
+.listing{
+	.subs {
+		div {
+			background: @ltgrey;
+			height: 48px;
+			width: 48px;
+			margin: 4px;
+		}
+	}}
+footer {margin: 30px;}
+
+/*Modal Forms */
+.modal-backdrop{opacity:0.4;}
+.modal-body{
+	.wrap{
+		min-width: auto;
+		width: auto;
+	}
+}
+form.popupform {
+	width: 500px;
+	input,
+	select,
+	textarea {
+		display: block;
+	}
 }
