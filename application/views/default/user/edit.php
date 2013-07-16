@@ -17,21 +17,30 @@
 		<div class="row-fluid">
 			<div class="span6">
 			<label>Access Level</label>
+			<?php if($this->authenticate->check_auth('administrators')){ ?>
 			<select name="accesslevel" id="accesslevel">
 				<option>Access Level</option>
 				<?php foreach($access AS $k=>$v){ ?>
 					<option value="<?php print $k; ?>"<?php print $is_edit?($the_user->accesslevel==$k?' selected = "selected"':''):''; ?>><?php print ucwords($v); ?></option>
 				<?php }	?>
 			</select>
+			<?php } else { ?>
+			<span><?php print ucwords($access[$the_user->accesslevel]); ?></span>
+			<?php } ?>
 			</div>
 			<div class="span6">
 			<label>User Group</label>
+			<?php if($this->authenticate->check_auth('administrators')){ ?>
 			<select name="group_id" id="group_id">
 				<option>User Group</option>
 				<?php foreach($groups AS $group){ ?>
 					<option value="<?php print $group->ID; ?>"<?php print $is_edit?($the_user->group_id==$group->ID?' selected = "selected"':''):''; ?>><?php print ucwords($group->name); ?></option>
 				<?php }	?>
 			</select>
+			<?php } else { ?>
+			<?php ts_data($groups);?>
+			<span><?php print $the_user->group_id; ?></span>
+			<?php } ?>
 			</div>
 		</div>
 		<div class="row-fluid">
