@@ -1,5 +1,5 @@
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy;<?php echo SITENAME; ?> 2013</p>
       </footer>
 
 <div id="modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
