@@ -102,6 +102,7 @@ class Post extends CI_Controller {
 				'post' => $this->Posts->get_post($ID),
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/view',
+				'action' => array('buy' => '','contact' => ''),
 				'is_edit' => TRUE,
 		);
 		$this->load->view('default.tpl.php',$data);
