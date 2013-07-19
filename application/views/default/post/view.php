@@ -1,5 +1,6 @@
 <div class="container-fluid post">
-	<div class="row-fluid span6 offset3">
+	<div class="row-fluid">
+		<div class="span6 offset3">
 		<h1><?php print $post->title; ?><?php if($this->authenticate->check_auth('administrators')||$this->common->is_author($user['ID'],$post->author_id)){ ?>
 						<a href="/post/edit/<?php print $post->post_id; ?>" class="btn pull-right">Edit</a>
 					<?php } ?></h1>
@@ -27,9 +28,11 @@
 			print implode(', ',$categories);
 		?></span>
 		</div>
+		</div>
 	</div>
 	
-	<div class="row-fluid span6 offset3">
+	<div class="row-fluid">
+		<div class="span6 offset3">
 		
 		<?php print form_open_multipart($action['contact'],array('id'=>'contact','class'=>'smallform')); ?>
 		<?php print form_fieldset(); ?>
@@ -44,5 +47,6 @@
 		print form_fieldset_close();
 		print form_close();
 		?>
+	</div>
 	</div>
 </div>

@@ -95,8 +95,9 @@ class Post extends CI_Controller {
 	function view($ID){
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
+		$post = $this->Posts->get_post($ID);
 		$data = array(
-				'page_title' => SITENAME.' Edit Post',
+				'page_title' => SITENAME.$post->title,
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'post' => $this->Posts->get_post($ID),
