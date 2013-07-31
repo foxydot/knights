@@ -1,12 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends CI_Controller {	
+	public function __construct()
+	{
+		parent::__construct();
+		if(!$this->common->checkinstallation()){
+			$this->load->helper('url');
+			redirect('/install');
+		}
+	}
+	
 	function index()
 	{
-		if(!$this->common->checkinstallation()){
-				$this->load->helper('url');
-				redirect('/install');
-			}
 		//check session existance and age
 		if($this->authenticate->check_auth('users')){
 			$this->load->helper('url');
@@ -99,9 +104,9 @@ class Login extends CI_Controller {
 		$data['infosent'] = false;
 		$data['form_inner'] = false;
 		$data['page_css'] = 'login';
-		if($_POST){
+		if($this->input->post('username')){
 			//see if the username is an email address or a birthdate
-			$username = $_POST['username'];
+			$username = $this->input->post('username');
 			$usertype = preg_match('/^[^@]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$/', $username)?'email':'invalid';
 			$data['infosent'] = true;
 			switch($usertype){
@@ -160,14 +165,14 @@ class Login extends CI_Controller {
 	public function resetpass(){
 		$data['infosent'] = false;
 		$data['page_css'] = 'login';
-		if($_POST){
-			if($_POST['user_password'] == $_POST['passwordValid']){
-				$this->db->where('resetkey',$_POST['reset_key']);
-				$this->db->where('email',$_POST['username']);
+		if($this->input->post('user_password')){
+			if($this->input->post('user_password') == $this->input->post('password_valid')){
+				$this->db->where('resetkey',$this->input->post('reset_key'));
+				$this->db->where('email',$this->input->post('username'));
 				$query = $this->db->get('user');
 				if($query->num_rows() == 1){
 					$password = md5(trim($this->input->post('user_password')));
-					$query = $this->db->query("UPDATE user SET password = '".$password."', resetkey = NULL WHERE email = '".$_POST['username']."' AND resetkey = '".$_POST['reset_key']."'");
+					$query = $this->db->query("UPDATE user SET password = '".$password."', resetkey = NULL WHERE email = '".$this->input->post('username')."' AND resetkey = '".$this->input->post('reset_key')."'");
 					$data['infosent'] = true;
 					$data['message'] = 'Your password has been updated!';
 					$data['buttontxt'] = 'Return to Login';
@@ -178,7 +183,7 @@ class Login extends CI_Controller {
 				}
 			} else {
 				//print "passmatchfail | ";
-				$this->db->where('resetkey',$_POST['reset_key']);
+				$this->db->where('resetkey',$this->input->post('reset_key'));
 				$query = $this->db->get('user');
 				$data['form_inner'] = 'reset';
 				$data['error'] = 'Passwords do not match.';
@@ -206,7 +211,76 @@ class Login extends CI_Controller {
 	}
 	
 	public function register(){
-		print "register a new account";
+		$org_id = 1;
+		$this->load->model('Organizations','Orgs');
+		$data = array(
+				'page_css' => 'login',
+				'form' => 'login/register',
+				'organization' => $this->Orgs->get_org($org_id),
+		);
+		if($this->input->post()){
+			$this->load->library('form_validation');//Loads the form_validation library class
+			$rules = array(
+			array('field'=>'firstname','label'=>'First Name','rules'=>'required|min_length[2]|max_length[20]'),
+			array('field'=>'lastname','label'=>'Last Name','rules'=>'required|min_length[2]|max_length[20]'),
+			array('field'=>'email','label'=>'Email','rules'=>'required|valid_email|is_unique[user.email]'),
+			array('field'=>'password','label'=>'Password','rules'=>'required|matches[passwordtest]'),
+			array('field'=>'passwordtest','label'=>'Password Confirmation','rules'=>'required'),
+			array('field'=>'studentfirstname','label'=>'Student First Name','rules'=>'required|min_length[2]|max_length[20]'),
+			array('field'=>'studentlastname','label'=>'Student Last Name','rules'=>'required|min_length[2]|max_length[20]'),						
+			);//validation rules
+			$this->form_validation->set_message('is_unique', '%s is already in use. Did you <a href="http://knights.local/login/forgot">forget your password?</a>');
+			$this->form_validation->set_rules($rules);//Setting the validation rules inside the validation function
+			if($this->form_validation->run() == FALSE){ //Checks whether the form is properly sent
+				$data['form'] = 'login/register';
+				$data['error'] = 'Please complete the registration form properly';
+				$data['values'] = $this->input->post();
+			} else {
+				$this->load->model('Users');
+				$db_data = $this->input->post();
+				$username = $db_data['firstname'].' '.$db_data['lastname'];
+				$student['firstname'] = $db_data['studentfirstname'];
+				$student['lastname'] = $db_data['studentlastname'];
+				unset($db_data['submit']);
+				unset($db_data['passwordtest']);
+				unset($db_data['studentfirstname']);
+				unset($db_data['studentlastname']);
+				$db_data['password'] = md5($db_data['password']);
+				$user_id = $this->Users->add_user($db_data);
+				$db_data = array(
+						'user_id' => $user_id,
+						'org_id' => $org_id,
+						'meta_key' => 'student',
+						'meta_value' => serialize($student),
+				);
+				$this->Users->add_user_meta($db_data);
+
+				$this->load->model('Administration','Admin');
+				$this->Admin->notify_admins(array('subject'=>'New User Registration','message'=>$username.' has registered with the eduBay system. Please review and approve this application.'));
+				
+				$data['form'] = 'login/register_complete';
+			}
+		} 
+		$this->load->view('login/login.tpl.php',$data);
+	}
+	
+	public function terms(){
+		$org_id = 1;
+		$this->load->model('Organizations','Orgs');
+		$this->load->model('Users');
+		$data = array(
+				'page_css' => 'login',
+				'form' => 'login/terms',
+				'organization' => $this->Orgs->get_org($org_id),
+		);
+		if($this->input->post('terms_accepted')=='true'){
+			$this->Users->edit_user($this->session->userdata['ID'],array('terms_accepted'=>1));
+			$this->authenticate->userdata_to_session($this->Users->get_user($this->session->userdata['ID']));
+			$login = true;
+			redirect('/');
+		}
+		$data['error'] = 'You must accept the terms of this site to participate.';
+		$this->load->view('login/login.tpl.php',$data);
 	}
 }
 

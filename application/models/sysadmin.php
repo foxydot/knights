@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Sysadmin extends CI_Model {
-	public $db_version = '0.1.7';
+	public $db_version = '0.3';
 	function __construct()
 	    {
 	        // Call the Model constructor
@@ -697,7 +697,6 @@ Class Sysadmin extends CI_Model {
 		} else {
 			$version = '0.1';
 		}
-
 		//if we are already at the current version, escape
 		//should never happen
 		if($version == $this->db_version){
@@ -709,8 +708,63 @@ Class Sysadmin extends CI_Model {
 		//run updates
 		switch($version){
 			case '0.1':
+				//add default content for organizations
+				$db_data = array(
+					'name' => 'Summit Country Day Knights',
+					'slug' => 'summit-country-day-knights',
+					'description' => '',
+					'dateadded' => time()
+				);
+				$this->db->insert('organization',$db_data);
 				//set version
-				//$this->set_version('0.2');
+				$this->set_version('0.2');
+			case '0.2':
+				/*
+				 * Create org_meta table
+				*/
+				$fields = array(
+						'ID' => array(
+								'type' => 'BIGINT',
+								'constraint' => '11',
+								'auto_increment' => TRUE,
+						),
+						'user_id' => array(
+								'type' => 'BIGINT',
+								'constraint' => '11',
+								'null' => FALSE,
+						),
+						'org_id' => array(
+								'type' => 'BIGINT',
+								'constraint' => '11',
+								'null' => FALSE,
+						),
+						'meta_key' => array(
+								'type' => 'VARCHAR',
+								'constraint' => '255',
+								'null' => FALSE,
+						),
+						'meta_value' => array(
+								'type' => 'TEXT'
+						),
+						'dateadded' => array(
+								'type' => 'BIGINT',
+								'constraint' => 12,
+								'null' => FALSE,
+						),
+						'dateremoved' => array(
+								'type' => 'BIGINT',
+								'constraint' => 12,
+								'null' => FALSE,
+						),
+						'notes' => array(
+								'type' => 'TEXT'
+						)
+				);
+				$this->dbforge->add_field($fields);
+				$this->dbforge->add_key('ID',TRUE);
+				$this->dbforge->create_table('user_meta',TRUE);
+				//set version
+				$this->set_version('0.2');
 			default:
 				//redirect to home page
 				$this->load->helper('url');

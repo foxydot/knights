@@ -1,6 +1,5 @@
 <?php $this->load->view('default/utility/head'); ?>
 <div class="loginContainer">
-
 	<img id="logo" src="<?php print ADMIN_THEME_URL ?>/img/logo.png" alt="<?php print SITENAME; ?>" />
 		<?php if(isset($message)||isset($error)){ ?>
 			<div id="message">

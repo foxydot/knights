@@ -12,22 +12,24 @@ Class Administration extends CI_Model {
 	        $this->load->model('Organizations','Orgs');
 	    }
 	
-	function add_post($data){
-		$slug = $this->increment_slug(post_slug($data['title']),'post');
-		$db_data = array(
-				'title' => $data['title'],
-				'slug' => $slug,
-				'author_id' => $data['author_id'],
-				'cost' => $data['cost'],
-				'content' => $data['content'],
-				'lastedit' => time(),
-				'dateadded' => time(),
-		);
-		$this->db->insert('post',$db_data);
-		return $this->db->insert_id();
+	/**
+	 * Send the site admins an email
+	 */
+	function notify_admins($message,$org=NULL,$superadmin=TRUE){
+		$this->load->model('Users');
+		if(is_array($message)){
+			extract($message);
+		} else {
+			$subject = "Message from eduBay System";
+		}
+		$users = $this->Users->get_users_by_level('administrator');
+		if($superadmin){
+			array_push($users, $this->Users->get_users_by_level(1));
+		} 
+		foreach($users AS $user){
+			mail($user->email,$subject,$message);
+		}
 	}
-	
-	
 	
 	/*
 	 * Gets all sections for a given story
@@ -216,104 +218,6 @@ Class Administration extends CI_Model {
 		}
 	}
 	
-	function add_quote($data){
-		$db_data = array(
-			'story_id' => $data['story_id'], 
-			'after_section' => $data['after_section'], 
-			'after_subsection'	=> $data['after_subsection'],
-			'content'	=> $data['content'],
-			'lastedit' => time(),	
-		);
-		if($data['quote_id']){
-			$this->db->where('ID',$data['quote_id']);
-			$this->db->update('quote_ribbon',$db_data);
-			$this->set_updated_time_on_story($data['story_id']);
-		} else {
-			$db_data['dateadded'] = time();
-			$db_data['dateremoved'] = 0;
-			$this->db->insert('quote_ribbon',$db_data);
-			$this->set_updated_time_on_story($data['story_id']);
-			return $this->db->insert_id();		
-		}
-	}
-	
-	function get_quote($quote_id){
-		$query = $this->db->get_where('quote_ribbon',array('ID'=>$quote_id,'dateremoved'=>0));
-		$result = $query->result();
-		return $result[0];
-	}
-	
-	function get_quotes($story_id){
-		$query = $this->db->get_where('quote_ribbon',array('story_id'=>$story_id,'dateremoved'=>0));
-		$result = $query->result();
-		return $result;
-	}
-	
-	function unpublish_quote($quote_id){
-		$db_data['lastedit'] = time();
-		$db_data['dateremoved'] = time();
-		$this->db->where('ID', $quote_id);
-		if($this->db->update('quote_ribbon',$db_data))
-			print TRUE;	
-	}
-	
-	function story_to_project($data){
-		$db_data = array(
-			'project_id' => $data['project_id'],
-			'story_id' => $data['story_id'],
-		);
-		$this->db->insert('story2project',$db_data);
-	}	
-	
-	function edit_story_to_project($data){
-		$db_data = array(
-			'project_id' => $data['project_id']
-		);
-		$this->db->where('story_id', $data['story_id']);
-		$this->db->update('story2project',$db_data);
-	}
-	
-	function getSuggestions($queryString){
-		$this->db->select('name');
-		$this->db->from('project');
-		$this->db->like('name',$queryString);
-		$this->db->limit(10);
-		$query = $this->db->get();
-		$result = $query->result();
-		return $result;
-	}
-	
-	function archive_story($ID,$data){	
-		$db_data = $data;	
-		$db_data['lastedit'] = time();
-		$db_data['dateremoved'] = time();
-		$this->db->where('ID', $ID);
-		$this->db->update('story',$db_data);	
-	}
-	
-	function unarchive_story($ID,$data){	
-		$db_data = $data;	
-		$db_data['lastedit'] = time();
-		$db_data['dateremoved'] = NULL;
-		$this->db->where('ID', $ID);
-		$this->db->update('story',$db_data);	
-	}
-	
-	function publish_story($ID,$data){	
-		$db_data = $data;	
-		$db_data['lastedit'] = time();
-		$db_data['datepublished'] = time();
-		$this->db->where('ID', $ID);
-		$this->db->update('story',$db_data);	
-	}
-	
-	function unpublish_story($ID,$data){	
-		$db_data = $data;	
-		$db_data['lastedit'] = time();
-		$db_data['datepublished'] = NULL;
-		$this->db->where('ID', $ID);
-		$this->db->update('story',$db_data);	
-	}
 	
 	function create_history($story_id){
 		//grab all pertinent story data

@@ -15,7 +15,7 @@ Class Authenticate extends CI_Model {
 	 * Login
 	 */
 	function login($uid,$pwd){
-		$this->db->select('user.ID AS ID,email,firstname,lastname,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
+		$this->db->select('user.ID AS ID,email,firstname,lastname,terms_accepted,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
 		$this->db->from('user');
 		$this->db->join('user_group','user.group_id=user_group.ID','left');
 		$this->db->where('user.email = \''.$uid.'\'');
@@ -69,7 +69,8 @@ Class Authenticate extends CI_Model {
 			'time'=>time(),
 			'accesslevel'=>$user->accesslevel,
 			'group'=>$user->group_name,
-			'group_accesslevel'=>$user->group_accesslevel
+			'group_accesslevel'=>$user->group_accesslevel,
+			'terms_accepted'=>$user->terms_accepted
 		)); //set the data into the session
 	}
 	
@@ -135,6 +136,15 @@ Class Authenticate extends CI_Model {
 			if(!empty($this->session->userdata['accesslevel'])){
 				$a = $access['id'];
 				$u = $this->session->userdata['accesslevel'];
+				$t = $this->session->userdata['terms_accepted'];
+				if(empty($t)){
+					if($redirect){
+						redirect('/login/terms/session');
+						return FALSE;  //user not allowed, redirect
+					} else {
+						return FALSE;  //user not allowed, no redirect
+					}
+				}
 				if ($u <= $a){
 					if($redirect){
 						return TRUE;  //user allowed, redirect

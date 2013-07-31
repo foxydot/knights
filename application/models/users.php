@@ -56,7 +56,7 @@ Class Users extends CI_Model {
 	 * Get user: identical to login except doesn't require a password.
 	 */
 	function get_user($uid){ 
-		$this->db->select('user.ID AS ID,email,firstname,lastname,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved, user.group_id AS group_id, user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
+		$this->db->select('user.ID AS ID,email,firstname,lastname,terms_accepted,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved, user.group_id AS group_id, user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
 		$this->db->from('user');
 		$this->db->join('user_group','user.group_id=user_group.ID','left');
 		$this->db->where('user.ID = \''.$uid.'\'');
@@ -75,7 +75,6 @@ Class Users extends CI_Model {
 	 function add_user($data){
 		$db_data = $data;
 		$db_data['dateadded'] = time();
-		
 		$this->db->insert('user',$db_data);
 		return $this->db->insert_id();
 	 }
@@ -90,6 +89,13 @@ Class Users extends CI_Model {
 	 	$query = $this->db->get('user_group');
 	 	$result = $query->result();
 	 	return $result;
+	 }
+	 
+	 function add_user_meta($data){
+		$db_data = $data;
+		$db_data['dateadded'] = time();
+		$this->db->insert('user_meta',$db_data);
+		return $this->db->insert_id();
 	 }
 }
 /* End of file users.php */
