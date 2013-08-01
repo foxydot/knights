@@ -575,6 +575,18 @@ Class Sysadmin extends CI_Model {
 			'notes' => 'Initial user added with installation.'
 		);
 		$this->db->insert('user',$db_data);
+		// add the client
+		$db_data = array(
+			'email' => 'mirja@aristogroup.com',
+			'password' => md5(testpass),
+			'firstname' => 'Mirja',
+			'lastname' => 'Zelistra',
+			'accesslevel' => 1,
+			'group_id' => $admin_group_id,
+			'dateadded' => time(),
+			'notes' => 'Secondary user added with installation.'
+		);
+		$this->db->insert('user',$db_data);
 		/*
 		 * Create array of levels
 		 */
