@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Sysadmin extends CI_Model {
-	public $db_version = '0.3';
+	public $db_version = '0.2';
 	function __construct()
 	    {
 	        // Call the Model constructor
