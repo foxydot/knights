@@ -28,14 +28,11 @@ Class Categories extends CI_Model {
 	function get_cat($cat_id){
 		$this->db->select('category.ID AS ID,title,slug,description,category.dateadded AS dateadded,parent_cat_id');
 		$this->db->from('category');
-		$this->db->join('cat2org','category.ID=cat2org.cat_id');
+		$this->db->join('cat2org','category.ID=cat2org.cat_id','left outer');
 		$this->db->where('category.ID',$cat_id);
 		$query = $this->db->get();
-		if($result = $query->result()):
-			return $result[0];
-		else:
-			return false;
-		endif;
+		$result = $query->result();
+		return $result[0];
 	}
 	
 	function add_cat($db_data){
