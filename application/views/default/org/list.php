@@ -11,7 +11,7 @@
 		</div><!-- end span1 -->
 	</div><!-- end titleBar -->
 		<?php foreach($orgs AS $org){ ?>
-			<div class="stripe org row-fluid" href="/org/edit/<?php print $org->ID; ?>" id="editorg-<?php print $org->ID; ?>" class="modal-loader editorg" title="Edit Organization <?php print $org->name; ?>" data-toggle="modal" data-target="#modal">
+			<div class="stripe org clicky row-fluid" href="/org/edit/<?php print $org->ID; ?>">
 				<div class="span2">
 					<h6 class="sub subheading"><?php print $org->name; ?></h6>
 				</div>
