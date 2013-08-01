@@ -14,9 +14,11 @@ Class Categories extends CI_Model {
 		
 	function get_cats($orgs = array(),$archive = FALSE){
 		$orgs = $this->Orgs->make_org_array($orgs);
+		$this->db->select('category.ID AS ID,title,slug,description,category.dateadded AS dateadded,parent_cat_id');
 		$this->db->from('category');
+		$this->db->join('cat2org','category.ID=cat2org.cat_id');
 		if(!$archive){
-			$this->db->where('dateremoved <=',0);
+			$this->db->where('category.dateremoved <=',0);
 		}
 		$query = $this->db->get();
 		$result = $query->result();
@@ -24,8 +26,10 @@ Class Categories extends CI_Model {
 	}
 	 
 	function get_cat($cat_id){
+		$this->db->select('category.ID AS ID,title,slug,description,category.dateadded AS dateadded,parent_cat_id');
 		$this->db->from('category');
-		$this->db->where('ID',$cat_id);
+		$this->db->join('cat2org','category.ID=cat2org.cat_id');
+		$this->db->where('category.ID',$cat_id);
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result[0];
@@ -65,5 +69,29 @@ Class Categories extends CI_Model {
 	 	}
 	 	$postcats['ids'] = $ids;
 	 	return $postcats;
+	 }
+
+	 function cat_to_org($db_data){
+	 	unset($db_data['submit']);
+	 	$this->db->insert('cat2org',$db_data);
+	 }
+	 	
+	 function clear_cat_to_org($cat_id){
+	 	$this->db->where('cat_id',$cat_id);
+	 	$this->db->delete('cat2org');
+	 }
+	 
+	 function group_cats_by_parent($cats){
+	 	foreach($cats AS $cat){
+	 		if($cat->parent_cat_id == 0){
+	 			$toplevel[$cat->ID] = $cat;
+	 		}
+	 	}
+	 	foreach($cats AS $cat){
+	 		if($cat->parent_cat_id != 0){
+	 			$toplevel[$cat->parent_cat_id]->children[] = $cat;
+	 		}
+	 	}
+	 	return $toplevel;
 	 }
 }
