@@ -16,7 +16,6 @@ class Category extends CI_Controller {
 		{
 			$org_id = 1;
 			$cats = $this->Cats->get_cats();
-			ts_data($cats);
 			$data = array(
 				'page_title' => SITENAME.' Categories',
 				'body_class' => 'list categorylist',

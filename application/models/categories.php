@@ -16,7 +16,7 @@ Class Categories extends CI_Model {
 		$orgs = $this->Orgs->make_org_array($orgs);
 		$this->db->select('category.ID AS ID,title,slug,description,category.dateadded AS dateadded,parent_cat_id');
 		$this->db->from('category');
-		$this->db->join('cat2org','category.ID=cat2org.cat_id');
+		$this->db->join('cat2org','category.ID=cat2org.cat_id','left outer');
 		if(!$archive){
 			$this->db->where('category.dateremoved <=',0);
 		}
@@ -82,7 +82,6 @@ Class Categories extends CI_Model {
 	 }
 	 
 	 function group_cats_by_parent($cats){
-	 	ts_data($cats);
 	 	foreach($cats AS $cat){
 	 		if($cat->parent_cat_id == 0){
 	 			$toplevel[$cat->ID] = $cat;
