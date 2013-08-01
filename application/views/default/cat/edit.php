@@ -8,10 +8,12 @@
 			<input class="span9" name="title" id="title" type="text" title="Category Name" placeholder="Category Name"<?php print $is_edit?'value="'.$cat->title.'"':''; ?> />
 			<select class="span3" name="parent_cat_id" id="parent_cat_id" autocomplete="off">
 				<option value="">Parent Category</option>
-				<?php foreach($cats AS $c){
+				<?php 
+				foreach($cats AS $c):
 					$selected = $c->ID==$cat->parent_cat_id?' selected="selected"':'';
 					print '<option value="'.$c->ID.'"'.$selected.'>'.$c->title.'</option>';
-				}?>
+				endforeach;
+				?>
 			</select>
 		</div>
 		<div class="row-fluid">
