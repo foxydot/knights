@@ -15,10 +15,8 @@
 		<div class="row-fluid">
 			<label>Categories</label>
 			<div class="columns-3">
-				<?php foreach($cats AS $cat){ ?>
-				<label class="checkbox">
-					<input type="checkbox" name="cat[<?php print $cat->ID; ?>]" id="cat-<?php print $cat->ID; ?>" class="pull-left" value="<?php print $cat->ID; ?>"<?php print $is_edit && in_array($cat->ID,$post->postcats['ids'])?' CHECKED':''; ?> /> <?php print $cat->title; ?>
-				</label>
+				<?php foreach($cats[0] AS $cat){ ?>
+				<?php print display_cat($cats,$cat)?>
 				<?php }?>
 			</div>
 		</div>
@@ -31,3 +29,19 @@
 		?>
 	</div>
 </div>
+
+
+<?php function display_cat($cats,$cat,$level=0){
+	global $is_edit,$post;
+	$selected = $is_edit && in_array($cat->ID,$post->postcats['ids'])?' CHECKED':'';
+	$display = '
+	<label class="checkbox level-'.$level.'">
+		<input type="checkbox" name="cat['.$cat->ID.']" id="cat-'.$cat->ID.'" class="pull-left" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
+	</label>';
+	if(isset($cats[$cat->ID])){
+		foreach($cats[$cat->ID] AS $c){
+			$display .= display_cat($cats,$c,$level+1);
+		}
+	}
+	return $display;
+}?>
