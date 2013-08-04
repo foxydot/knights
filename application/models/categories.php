@@ -83,15 +83,8 @@ Class Categories extends CI_Model {
 	 
 	 function group_cats_by_parent($cats){
 	 	foreach($cats AS $cat){
-	 		if($cat->parent_cat_id == 0){
-	 			$toplevel[$cat->ID] = $cat;
-	 		}
+	 		$allcats[$cat->parent_cat_id][$cat->ID] = $cat;
 	 	}
-	 	foreach($cats AS $cat){
-	 		if($cat->parent_cat_id != 0){
-	 			$toplevel[$cat->parent_cat_id]->children[] = $cat;
-	 		}
-	 	}
-	 	return $toplevel;
+	 	return $allcats;
 	 }
 }

@@ -30,11 +30,12 @@ class Category extends CI_Controller {
 	function add()
 		{
 			$org_id = 1;
+			$cats = $this->Cats->get_cats();
 			$data = array(
 					'page_title' => SITENAME.' Add Category',
 					'body_class' => 'add category-add',
 					'user' => $this->session->userdata,
-					'cats' => $this->Cats->get_cats(array($org_id)),
+					'cats' => $this->Cats->group_cats_by_parent($cats),
 					'dashboard' => 'default/cat/edit',
 					'action' => 'category/add',
 					'is_edit' => FALSE,
@@ -54,11 +55,12 @@ class Category extends CI_Controller {
 	function edit($ID)
 		{
 			$org_id = 1;
+			$cats = $this->Cats->get_cats();
 			$data = array(
 					'page_title' => SITENAME.' Edit Category',
 					'body_class' => 'edit category-edit',
 					'user' => $this->session->userdata,
-					'cats' => $this->Cats->get_cats(array($org_id)),
+					'cats' => $this->Cats->group_cats_by_parent($cats),
 					'cat' => $this->Cats->get_cat($ID),
 					'dashboard' => 'default/cat/edit',
 					'action' => 'category/edit/'.$ID,

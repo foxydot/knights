@@ -64,6 +64,14 @@ class Organizations extends CI_Model {
 	    	$this->db->where('ID',$db_data['ID']);
 	    	$this->db->update('organization',$db_data);
 	    }
+	    
+	    function add_org_meta($db_data){
+	    	$this->db->insert('org_meta',$db_data);
+	    	return $this->db->insert_id();
+	    }
+	    
+	    function edit_org_meta(){}
+	    
 }
 /* End of file organizations.php */
 /* Location: ./application/models/organizations.php */

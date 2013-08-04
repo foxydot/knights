@@ -9,9 +9,8 @@
 			<select class="span3" name="parent_cat_id" id="parent_cat_id" autocomplete="off">
 				<option value="">Parent Category</option>
 				<?php 
-				foreach($cats AS $c):
-					$selected = $c->ID==$cat->parent_cat_id?' selected="selected"':'';
-					print '<option value="'.$c->ID.'"'.$selected.'>'.$c->title.'</option>';
+				foreach($cats[0] AS $c):
+					print display_cat($cats,$c,0,$cat->parent_cat_id);
 				endforeach;
 				?>
 			</select>
@@ -29,3 +28,14 @@
 		?>
 	</div>
 </div>
+
+<?php function display_cat($cats,$cat,$level=0,$parent_id){
+	$selected = $cat->ID==$parent_id?' selected="selected"':'';
+	$display = '<option class="level-'.$level.'" value="'.$cat->ID.'"'.$selected.'>'.str_repeat("-",(int) $level).$cat->title.'</option>';
+	if(isset($cats[$cat->ID])){
+		foreach($cats[$cat->ID] AS $c){
+			$display .= display_cat($cats,$c,$level+1,$parent_id);
+		}
+	}
+	return $display;
+}?>
