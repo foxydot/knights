@@ -83,6 +83,8 @@ class Org extends CI_Controller {
 					$logo_url = $this->Admin->upload($db_data,'logo_url');
 				} 
 				unset($db_data['org']);
+				unset($db_data['logo_url']);
+				unset($db_data['logo_url']);
 				$this->Orgs->edit_org($db_data);
 				if($logo_url){
 					$db_data = array(
@@ -98,6 +100,20 @@ class Org extends CI_Controller {
 						$this->Orgs->edit_org_meta($db_data);
 					}
 				}
+				$db_data = array(
+						'org_id'=>$ID,
+						'meta_key'=>'logo_url',
+						'meta_value'=>$logo_url,
+						'date_added'=>time()
+						);
+				$this->Orgs->add_org_meta();
+				$db_data = array(
+						'org_id'=>$ID,
+						'meta_key'=>'logo_url',
+						'meta_value'=>$logo_url,
+						'date_added'=>time()
+						);
+				$this->Orgs->add_org_meta();
 				$this->load->helper('url');
 				redirect('/org');
 			}

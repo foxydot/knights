@@ -91,6 +91,22 @@ class Organizations extends CI_Model {
 	    	}
 	    }
 	    
+	    
+	    function add_org_meta($db_data){
+	    	$this->db->insert('org_meta',$db_data);
+	    	return $this->db->insert_id();
+	    }
+	    
+	    function edit_org_meta(){}
+	    
+	    
+	    function add_org_meta($db_data){
+	    	$this->db->insert('org_meta',$db_data);
+	    	return $this->db->insert_id();
+	    }
+	    
+	    function edit_org_meta(){}
+	    
 }
 /* End of file organizations.php */
 /* Location: ./application/models/organizations.php */
