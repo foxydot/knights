@@ -53,9 +53,7 @@ Class Administration extends CI_Model {
 
 		$this->load->library('upload', $config);
 
-
 		if ( ! $this->upload->do_upload($field)) {
-			ts_data($_FILES);
 			$this->session->set_flashdata('err', $this->upload->display_errors());
 			return false;
 		} else {

@@ -5,18 +5,23 @@
 		<?php print form_fieldset(); ?>
 		<div class="row-fluid">
 			<input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$post->post_id.'"':''; ?> />
+			<input name="org_id" id="org_id" type="hidden" value="1" />
 			<input class="span9" name="title" id="title" type="text" title="Post Title" placeholder="Post Title"<?php print $is_edit?'value="'.$post->title.'"':''; ?> />
 			<input class="span3" name="cost" id="cost" type="text" title="Price" placeholder="Price"<?php print $is_edit?'value="'.$post->cost.'"':''; ?> />
 		</div>
+		<?php if(isset($post->attachments)) {?>	
 		<div class="row-fluid img-display">
 			<label>Images</label>
+			<ul>
 			<?php foreach($post->attachments AS $attachment){ ?>
-				<div class="attachment">
+				<li class="attachment-view">
 					<img src="<?php print $attachment->attachment_url; ?>">
-					<a href="#" onClick="delete-attachment(<?php print $attachment->ID; ?>)" class="delete-attachment"><i class="icon-trash"></i></a>
-				</div>
+					<span class="attachment-delete" id="post_id:<?php print $post->post_id; ?>:attachment_id:<?php print $attachment->ID; ?>"><i class="icon-trash"></i><span>
+				</li>
 			<?php } ?>
+			</ul>
 		</div>
+		<?php } ?>
 		<div class="row-fluid img-upload">
 			<label>Add Image</label>
 			<input type="file" name="attachment_url" size="20" />
@@ -29,7 +34,7 @@
 			<label>Categories</label>
 			<div class="columns-3">
 				<?php foreach($cats[0] AS $cat){ ?>
-				<?php print display_cat($cats,$cat)?>
+				<?php print display_cat($cats,$cat,array('post'=>$post,'is_edit'=>$is_edit))?>
 				<?php }?>
 			</div>
 		</div>
@@ -44,8 +49,8 @@
 </div>
 
 
-<?php function display_cat($cats,$cat,$level=0){
-	global $is_edit,$post;
+<?php function display_cat($cats,$cat,$attr=array(),$level=0){
+	extract($attr);
 	$selected = $is_edit && in_array($cat->ID,$post->postcats['ids'])?' CHECKED':'';
 	$display = '
 	<label class="checkbox level-'.$level.'">
@@ -53,7 +58,7 @@
 	</label>';
 	if(isset($cats[$cat->ID])){
 		foreach($cats[$cat->ID] AS $c){
-			$display .= display_cat($cats,$c,$level+1);
+			$display .= display_cat($cats,$c,$attr,$level+1);
 		}
 	}
 	return $display;

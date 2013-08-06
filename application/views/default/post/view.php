@@ -19,6 +19,17 @@
 		</div>
 		<div class="author"><label>Posted by:</label> <span><?php print $post->firstname.' '.$post->lastname; ?></span></div>
 		<div class="content"><?php print $post->content; ?></div>
+		<?php if(isset($post->attachments)) {?>	
+		<div class="images">
+			<ul>
+			<?php foreach($post->attachments AS $attachment){ ?>
+				<li class="attachment-view">
+					<img src="<?php print $attachment->attachment_url; ?>">
+				</li>
+			<?php } ?>
+			</ul>
+		</div>
+		<?php } ?>
 		<div class="categories"><label>Categories</label><span><?php 
 			foreach($post->postcats AS $cat){
 				if(is_object($cat)){
