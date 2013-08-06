@@ -53,7 +53,7 @@
 
 <?php print isset($page_css)?page_css($page_css):''; ?>
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects --> 
-  <script src="<?php echo ADMIN_THEME_URL; ?>/js/modernizr.js"></script>
+  <script src="/assets/js/modernizr.js"></script>
 <?php print isset($page_js)?page_js($page_js):''; ?>
 </head>
 

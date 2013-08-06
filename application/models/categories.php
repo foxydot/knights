@@ -64,8 +64,11 @@ Class Categories extends CI_Model {
 	 
 	 function get_post_cats_ids($post_id){
 	 	$postcats = $this->get_post_cats($post_id);
-	 	foreach($postcats AS $cat){
-	 		$ids[] = $cat->cat_id;
+	 	$ids = array();
+	 	if($postcats){
+		 	foreach($postcats AS $cat){
+		 		$ids[] = $cat->cat_id;
+		 	}
 	 	}
 	 	$postcats['ids'] = $ids;
 	 	return $postcats;
@@ -82,8 +85,11 @@ Class Categories extends CI_Model {
 	 }
 	 
 	 function group_cats_by_parent($cats){
-	 	foreach($cats AS $cat){
-	 		$allcats[$cat->parent_cat_id][$cat->ID] = $cat;
+	 	$allcats = array();
+	 	if($cats){
+		 	foreach($cats AS $cat){
+		 		$allcats[$cat->parent_cat_id][$cat->ID] = $cat;
+		 	}
 	 	}
 	 	return $allcats;
 	 }

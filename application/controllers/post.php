@@ -67,6 +67,7 @@ class Post extends CI_Controller {
 	function edit($ID){
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
+		$this->load->model('Organizations','Orgs');
 		$data = array(
 				'page_title' => SITENAME.' Edit Post',
 				'body_class' => 'add post-add',
@@ -80,12 +81,35 @@ class Post extends CI_Controller {
 		if($this->input->post()){
 			$db_data = $this->input->post();
 			unset($db_data['cat']);
+			$db_data['org'] = $this->Orgs->get_org($ID);
+			if(isset($_FILES['attachment_url'])){
+				$this->load->model('Administration','Admin');
+				$attachment_url = $this->Admin->upload($db_data,'attachment_url');
+			}
+			unset($db_data['org']);
+			unset($db_data['attachment_url']);
 			$this->Posts->edit_post($db_data);
 			$this->Posts->clear_post_to_cats($db_data['ID']);
-			foreach($this->input->post('cat') AS $cat_id){
-				$this->Posts->post_to_cat(array('post_id' => $db_data['ID'],'cat_id' => $cat_id));
+			if($this->input->post('cat')){
+				foreach($this->input->post('cat') AS $cat_id){
+					$this->Posts->post_to_cat(array('post_id' => $db_data['ID'],'cat_id' => $cat_id));
+				}
 			}
-	
+			if($attachment_url){
+				$db_data = array(
+						'attachment_url'=>'attachment_url',
+						'title' => $this->input->post('title'),
+						'attachment_url'=>$attachment_url,
+						'dateadded'=>time()
+				);
+				$attachment_id = $this->Posts->add_attachment($db_data);
+				$db_data = array(
+						'attachment_id' => $attachment_id,
+						'post_id' => $ID,
+				);
+				$this->Posts->attachment_to_post($db_data);
+			}
+			
 			$this->load->helper('url');
 			redirect('/post');
 		}

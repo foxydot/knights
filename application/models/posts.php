@@ -71,6 +71,7 @@ Class Posts extends CI_Model {
 		$result = $query->result();
 		$result = $result[0];
 		$result->postcats = $this->Cats->get_post_cats_ids($post_id);
+		$result->attachments = $this->get_attachments($post_id);
 		return $result;
 	}
 	
@@ -102,4 +103,86 @@ Class Posts extends CI_Model {
 		$this->db->where('post_id',$post_id);
 		$this->db->delete('post2cat');
 	}
+	
+
+	function set_updated_time_on_post($ID){
+		$db_data['lastedit'] = time();
+		$this->db->where('ID', $ID);
+		$this->db->update('post',$db_data);
+	}
+	
+	function add_attachment($data){
+		$db_data = array(
+				'attachment_url' => $data['attachment_url'], ///check CI uploader function http://codeigniter.com/user_guide/libraries/file_uploading.html
+				'attachment_type' => 'image',
+				'title' => $data['title'],
+				'lastedit' => time(),
+				'dateadded' => time(),
+				'dateremoved' => 0,
+		);
+		$this->db->insert('attachment',$db_data);
+		return $this->db->insert_id();
+	}
+	
+	function edit_attachment($ID,$data){
+		$db_data = array(
+				'title' => $data['title'],
+				'modal'	=> $data['modal'],
+				'lastedit' => time(),
+		);
+		$this->db->where('ID',$ID);
+		$this->db->update('attachment',$db_data);
+	}
+	
+	function attachment_to_post($data){
+		$db_data = array(
+				'attachment_id' => $data['attachment_id'],
+				'post_id' => $data['post_id'],
+				'dateadded' => time(),
+				'dateremoved' => 0,
+		);
+		if($this->db->insert('attachment2post',$db_data)){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	function get_attachment($ID){
+		$this->db->select('attachment.ID AS ID, attachment_url, title');
+		$this->db->from('attachment2post');
+		$this->db->join('attachment','attachment.ID = attachment2section.attachment_id');
+		$this->db->where('attachment.ID',$ID);
+		$query = $this->db->get();
+		$result = $query->result();
+		return $result[0];
+	}
+	
+	function get_attachments($post_id){
+		$attachments = array();
+		$this->db->select('attachment.ID AS ID, attachment_url, title');
+		$this->db->from('attachment2post');
+		$this->db->join('attachment','attachment.ID = attachment2post.attachment_id');
+		$this->db->where('attachment2post.post_id',$post_id);
+		$this->db->where('attachment2post.dateremoved <=',0);
+		$this->db->where('attachment.dateremoved <=',0);
+		$query = $this->db->get();
+		$result = $query->result();
+	
+		return $result;
+	}
+	
+	function detach($data){
+		//data should include the sectio nand hte attachment to detach from it. thsi way we can potentially keep a library of all attachments and reusethem even if they are not attached to anything at the time.
+		$db_data = array(
+				'dateremoved' => time()
+		);
+		$this->db->where('attachment_id',$data['attachment_id']);
+		$this->db->where('post_id',$data['post_id']);
+		if($this->db->update('attachment2post',$db_data)){
+			$this->set_updated_time_on_post($data['post_id']);
+			print 1;//ajax function
+		}
+	}
+	
 }

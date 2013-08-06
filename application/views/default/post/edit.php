@@ -8,6 +8,19 @@
 			<input class="span9" name="title" id="title" type="text" title="Post Title" placeholder="Post Title"<?php print $is_edit?'value="'.$post->title.'"':''; ?> />
 			<input class="span3" name="cost" id="cost" type="text" title="Price" placeholder="Price"<?php print $is_edit?'value="'.$post->cost.'"':''; ?> />
 		</div>
+		<div class="row-fluid img-display">
+			<label>Images</label>
+			<?php foreach($post->attachments AS $attachment){ ?>
+				<div class="attachment">
+					<img src="<?php print $attachment->attachment_url; ?>">
+					<a href="#" onClick="delete-attachment(<?php print $attachment->ID; ?>)" class="delete-attachment"><i class="icon-trash"></i></a>
+				</div>
+			<?php } ?>
+		</div>
+		<div class="row-fluid img-upload">
+			<label>Add Image</label>
+			<input type="file" name="attachment_url" size="20" />
+		</div>
 		<div class="row-fluid">
 				<input name="author_id" id="author_id" type="hidden" value="<?php print $is_edit?$post->author_id:$user['ID']; ?>" />
 				<textarea class="span12 tinymce" name="content" id="content" placeholder="Post Content"><?php print $is_edit?$post->content:''; ?></textarea>
