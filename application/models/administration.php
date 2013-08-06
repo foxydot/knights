@@ -31,6 +31,41 @@ Class Administration extends CI_Model {
 		}
 	}
 	
+	/**
+	 * Do upload
+	 */
+	function upload($data,$field){	
+		$uploads_dir = SITEPATH.'uploads/';
+		$uploads_url = site_url('uploads/');
+		$org_slug = post_slug($data['org']->name);
+		$org_dir = $uploads_dir.$org_slug;
+		//create the upload folder
+		if(!is_dir($org_dir)){
+			mkdir($org_dir,0777);
+		}
+		//upload the file
+		$config['file_name'] = $_FILES[$field]['name'];
+		$config['file_name'] = $_FILES[$field]['tmp_name'];
+
+		$config['upload_path'] = $org_dir;
+		$config['allowed_types'] = 'pdf|gif|jpeg|jpg|png|doc|docx|pdf|txt|rtf';
+		$config['max_size'] = '100000';
+
+		$this->load->library('upload', $config);
+
+
+		if ( ! $this->upload->do_upload($field)) {
+			ts_data($_FILES);
+			$this->session->set_flashdata('err', $this->upload->display_errors());
+			return false;
+		} else {
+			$data = array('upload_data' => $this->upload->data());
+			$attachment_url = $uploads_url.'/'.$org_slug.'/'.$data['upload_data']['file_name'];
+			return $attachment_url;
+		}
+	}
+	
+	
 	/*
 	 * Gets all sections for a given story
 	 */
@@ -117,11 +152,6 @@ Class Administration extends CI_Model {
 		}
 		if($this->db->insert_batch('section', $insert_batch))
 			print TRUE;
-	}
-	
-	
-	function upload(){
-		
 	}
 	
 	function get_attachment_types(){

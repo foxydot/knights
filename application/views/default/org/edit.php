@@ -4,16 +4,23 @@
 		<h1><?php print $is_edit?'Edit':'New'; ?> Organization Information</h1>
 		<?php print form_fieldset(); ?>
 		<div class="row-fluid">
-			<input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$organization->ID.'"':''; ?> />
-			<input class="span12" name="name" id="name" type="text" title="Organization Name" placeholder="Organization Name"<?php print $is_edit?'value="'.$organization->name.'"':''; ?> />
+			<input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$org->ID.'"':''; ?> />
+			<input class="span12" name="name" id="name" type="text" title="Organization Name" placeholder="Organization Name"<?php print $is_edit?'value="'.$org->name.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
-			<textarea class="span12 tinymce" name="description" id="description" placeholder="Category description"><?php print $is_edit?$organization->description:''; ?></textarea>
+			<textarea class="span12 tinymce" name="description" id="description" placeholder="Category description"><?php print $is_edit?$org->description:''; ?></textarea>
 		</div>
-		<div class="row-fluid">
+		<div class="row-fluid img-upload"<?php print isset($org->meta['logo_url'])?' style="display:none;"':''; ?>>
 			<label>Upload Logo</label>
 			<input type="file" name="logo_url" size="20" />
 		</div>
+		<?php if(isset($org->meta['logo_url'])): ?>
+		<div class="row-fluid img-display">
+			<label>Logo</label>
+			<img src="<?php print $org->meta['logo_url']->meta_value; ?>">
+			<input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
+		</div>
+		<?php endif; ?>
 		<div class="row-fluid">
 			<input class="btn" name="submit" id="submit" type="submit" value="Submit" />
 		</div>
