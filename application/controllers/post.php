@@ -152,10 +152,28 @@ class Post extends CI_Controller {
 				'post' => $post,
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/view',
-				'action' => array('buy' => '','contact' => ''),
+				'action' => array('buy' => '','contact' => '/post/email/'.$ID),
 				'is_edit' => TRUE,
 		);
 		$this->load->view('default.tpl.php',$data);
+	}
+	
+	function email($ID){
+		$this->load->model('Users');
+		if($this->input->post()){
+			$to      = $this->input->post('author');
+			$subject = 'Message about '.$this->input->post('subject');
+			$message = $this->input->post('message');
+			$headers = 'From: '. $this->input->post('sender') . "\r\n" ;
+			
+			if(mail($to, $subject, $message, $headers)){
+				$this->session->set_flashdata('msg','Message Sent!');
+			} else {
+				$this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
+			}
+		}
+		$this->load->helper('url');
+		redirect('/post/view/'.$ID);
 	}
 }
 

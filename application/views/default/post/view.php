@@ -51,7 +51,9 @@
 		<div class="row-fluid">
 			<h2>Contact the poster</h2>
 			<input name="ID" id="ID" type="hidden" value="<?php print $post->post_id; ?>" />
-			<input name="author" id="author" type="hidden" value="<?php print $post->author_id; ?>" />
+			<input name="author" id="author" type="hidden" value="<?php print $post->firstname.' '.$post->lastname.'<'.$post->email.'>'; ?>" />
+			<input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
+			<input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
 			<textarea name="message" id="message" class="tinymce"></textarea>
 			<input class="btn" name="submit" id="submit" type="submit" value="Send" />
 		</div>
