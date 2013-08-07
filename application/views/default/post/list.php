@@ -62,7 +62,7 @@
 				'.$post->title.'
 			</div>
 			<div class="span1 price">
-				'.money_format('%#1n', (float) $post->cost).'
+				'.money_format('%#1.2n', (float) $post->cost).'
 			</div>
 			<div class="span2 date-added">
 				'.date("F j, Y",$post->dateadded).'
