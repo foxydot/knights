@@ -11,6 +11,9 @@
 			<?php print form_fieldset(); ?>
 			<div class="row-fluid">
 				<input name="ID" id="ID" type="hidden" value="<?php print $post->post_id; ?>" />
+				<input name="author" id="author" type="hidden" value="<?php print $post->firstname.' '.$post->lastname.'<'.$post->email.'>'; ?>" />
+				<input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
+				<input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
 				<input class="btn" name="submit" id="submit" type="submit" value="Buy Now" />
 			</div>
 			<?php

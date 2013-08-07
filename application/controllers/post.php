@@ -43,7 +43,7 @@ class Post extends CI_Controller {
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
 		$data = array(
-				'page_title' => SITENAME.' Add Post',
+				'page_title' => SITENAME.': Add Post',
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
@@ -92,7 +92,7 @@ class Post extends CI_Controller {
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
 		$data = array(
-				'page_title' => SITENAME.' Edit Post',
+				'page_title' => SITENAME.': Edit Post',
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'post' => $this->Posts->get_post($ID),
@@ -146,13 +146,13 @@ class Post extends CI_Controller {
 		$this->load->model('Users');
 		$post = $this->Posts->get_post($ID);
 		$data = array(
-				'page_title' => SITENAME.$post->title,
+				'page_title' => SITENAME.': '.$post->title,
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'post' => $post,
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/view',
-				'action' => array('buy' => '','contact' => '/post/email/'.$ID),
+				'action' => array('buy' => '/post/buy/'.$ID,'contact' => '/post/email/'.$ID),
 				'is_edit' => TRUE,
 		);
 		$this->load->view('default.tpl.php',$data);
@@ -174,6 +174,22 @@ class Post extends CI_Controller {
 		}
 		$this->load->helper('url');
 		redirect('/post/view/'.$ID);
+	}
+	
+	function buy($ID){
+		$this->load->model('Categories','Cats');
+		$this->load->model('Users');
+		$post = $this->Posts->get_post($ID);
+		$data = array(
+				'page_title' => SITENAME.': Buy '.$post->title,
+				'body_class' => 'buy post-buy',
+				'user' => $this->session->userdata,
+				'post' => $post,
+				'cats' => $this->Cats->get_cats(),
+				'dashboard' => 'default/post/buy',
+				'is_edit' => TRUE,
+		);
+		$this->load->view('default.tpl.php',$data);
 	}
 }
 
