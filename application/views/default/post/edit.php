@@ -34,7 +34,7 @@
 			<label>Categories</label>
 			<div class="columns-3">
 				<?php foreach($cats[0] AS $cat){ ?>
-				<?php print display_cat($cats,$cat,array('post'=>$post,'is_edit'=>$is_edit))?>
+					<?php print display_cat($cats,$cat,array('post'=>$post,'is_edit'=>$is_edit))?>
 				<?php }?>
 			</div>
 		</div>

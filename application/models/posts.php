@@ -27,8 +27,10 @@ Class Posts extends CI_Model {
 	    	foreach($cats AS $cat){
 	    		$params['cat_id'] = $cat->ID;
 	    		$cats[$i]->posts = $this->get_posts($params,$archive);
+	    		$cats[$i]->has_children = $this->Cats->cat_has_children($cat,$org_id = 1);
 	    		$i++;
 	    	}
+	    	$cats = $this->Cats->group_cats_by_parent($cats);
 	    	return $cats;
 	    }
 
@@ -58,11 +60,14 @@ Class Posts extends CI_Model {
 		}
 		$query = $this->db->get();
 		$result = $query->result();
+		foreach($result AS $k=>$v){
+			$result[$k]->attachments = $this->get_attachments($v->post_id);
+		}
 		return $result;
 	}
 	
 	function get_post($post_id){
-		$this->db->select('*, post.ID as post_id');
+		$this->db->select('post.ID as post_id, title, slug, author_id, cost, content, post.lastedit as lastedit, post.dateadded as dateadded, datepublished, post.dateremoved as dateremoved, post.notes as notes, email, firstname, lastname, accesslevel, group_id');
 		$this->db->from('post');
 		$this->db->join('user','post.author_id=user.ID');
 		$this->db->where('post.ID',$post_id);

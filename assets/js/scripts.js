@@ -3,6 +3,14 @@ $(document).ready(function($) {
 		$(this).parents('form').find('.img-upload').toggle();
 		$(this).parents('form').find('.img-display').toggle();
 	});
+	$('.accordion-toggle').click(function(){
+		$(this).find('i').removeClass('icon-expand').removeClass('icon-collapse');
+		if($(this).hasClass('collapsed')){
+			$(this).find('i').addClass('icon-expand');
+		} else {
+			$(this).find('i').addClass('icon-collapse');
+		}
+	});
 	$('.attachment-delete').click(function(){
 		var info = split_to_array($(this).attr('id'),':');
 		$this = $(this);

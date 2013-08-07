@@ -149,7 +149,7 @@ class Post extends CI_Controller {
 				'page_title' => SITENAME.$post->title,
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
-				'post' => $this->Posts->get_post($ID),
+				'post' => $post,
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/view',
 				'action' => array('buy' => '','contact' => ''),

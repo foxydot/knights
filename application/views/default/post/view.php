@@ -30,14 +30,14 @@
 			</ul>
 		</div>
 		<?php } ?>
-		<div class="categories"><label>Categories</label><span><?php 
+		<div class="categories"><label>Categories</label><ul><li><?php 
 			foreach($post->postcats AS $cat){
 				if(is_object($cat)){
-					$categories[] = $cat->title;
+					$categories[] = $cat->catpath;
 				}
 			}
-			print implode(', ',$categories);
-		?></span>
+			print implode('</li><li>',$categories);
+		?></li></ul>
 		</div>
 		</div>
 	</div>
