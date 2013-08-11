@@ -16,7 +16,7 @@ class Post extends CI_Controller {
 		$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',
-				'dashboard' => 'default/post/list',
+				'dashboard' => 'default/post/list-cats',
 				'user' => $this->session->userdata,
 				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => 'all')),
 				'archive' => FALSE,
@@ -31,7 +31,7 @@ class Post extends CI_Controller {
 				'body_class' => 'list dashboard',
 				'dashboard' => 'default/post/list',
 				'user' => $this->session->userdata,
-				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => 'all','user_id'=>$user_id)),
+				'posts' => $this->Posts->get_user_posts(array('orgs' => 'all','user_id'=>$user_id)),
 				'archive' => FALSE,
 		);
 		$data['footer_js'][] = 'jquery/list';

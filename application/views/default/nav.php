@@ -8,7 +8,7 @@
             </h5>
           <ul class="nav">
 		    <li><a href="/">All Postings</a></li>
-		    <li><a href="/post/user/<?php print $user['ID']; ?>">Your Postings</a></li>
+		    <li><a href="/post/user/<?php print $user['ID']; ?>">My Postings</a></li>
 		    <li><a href="/post/add">New Posting</a></li>
 		    <?php if($this->authenticate->check_auth('administrators')){ ?>
 		    	<li class="dropdown">

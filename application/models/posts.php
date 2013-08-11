@@ -33,6 +33,16 @@ Class Posts extends CI_Model {
 	    	$cats = $this->Cats->group_cats_by_parent($cats);
 	    	return $cats;
 	    }
+	    
+	function get_user_posts($params,$archive=FALSE){
+		$posts = $this->get_posts($params,$archive);
+		$i = 0;
+		foreach($posts AS $post){
+			$posts[$i]->categories = $this->Cats->get_post_cats($post->post_id);
+			$i++;
+		}
+		return $posts;
+	}
 
 	function get_posts($params,$archive=FALSE){
 		$params = array_merge(
