@@ -20,6 +20,11 @@
 			    				<li><a href="/org/add">Add New</a></li>
 			    			</ul>
 			    		</li>
+			    		<li class="dropdown-submenu"><a href="/help">Help</a>
+			    			<ul class="dropdown-menu">
+			    				<li><a href="/help/add">Add New</a></li>
+			    			</ul>
+			    		</li>
 			    		<?php } ?>
 			    		<li class="dropdown-submenu"><a href="/category">Categories</a>
 			    			<ul class="dropdown-menu">

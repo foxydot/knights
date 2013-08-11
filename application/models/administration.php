@@ -63,7 +63,6 @@ Class Administration extends CI_Model {
 		}
 	}
 	
-	
 	function create_history($story_id){
 		//grab all pertinent story data
 		$history_data = array(
