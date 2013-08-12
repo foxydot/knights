@@ -27,7 +27,8 @@ class Help extends CI_Controller {
 		}
 
 	function add()
-		{
+		{			
+			$this->authenticate->check_auth('administrators',true);
 			$org_id = 1;
 			$data = array(
 					'page_title' => SITENAME.' Add Help Article',
@@ -51,6 +52,7 @@ class Help extends CI_Controller {
 
 	function edit($ID)
 		{
+			$this->authenticate->check_auth('administrators',true);
 			$org_id = 1;
 			$data = array(
 					'page_title' => SITENAME.' Edit Help Article',
