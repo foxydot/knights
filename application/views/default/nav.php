@@ -1,3 +1,4 @@
+<?php if($this->authenticate->check_auth('users')): ?>
 <div id="nav" class="navbar">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -46,4 +47,5 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-    </div>		
+    </div>
+<?php endif; ?>	

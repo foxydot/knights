@@ -10,8 +10,9 @@
 		<div class="remember">
 		<span>Remember Me</span>
 		<input name="remember" id="remember" type="checkbox" /><br />
-		<a href="/login/forgot">Forgot Your Password?</a>
-		<a href="/login/register">Request Account</a>
+		<a href="/login/forgot">Forgot Your Password?</a> | 
+		<a href="/login/register">Request Account</a> | 
+		<a href="/help">Help</a>
 		</div><!-- end remember -->
 		<input name="submit" id="submit" type="submit" value="Submit" />
 		<?php
