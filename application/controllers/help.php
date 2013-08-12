@@ -8,7 +8,6 @@ class Help extends CI_Controller {
 				$this->load->helper('url');
 				redirect('/install');
 			}
-			$this->authenticate->check_auth('administrators',true);
 			$this->load->model('Articles');
        }
        
