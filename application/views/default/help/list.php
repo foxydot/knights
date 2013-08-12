@@ -18,10 +18,8 @@
 				</div>
 				<div id="'.$article->slug.'-posts" class="row-fluid accordion-body collapse">';
 				$display .= '
-		<div class="stripe post row-fluid accordion-inner">
-			<div class="span12">
-				'.$article->content.'
-			</div>
+		<div class="stripe post row-fluid accordion-inner span12">
+		'.$article->content.'
 		</div>';
 			$display .= '
 				</div>
