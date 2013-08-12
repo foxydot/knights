@@ -44,7 +44,7 @@ Class Articles extends CI_Model {
 	 	return $this->db->insert_id();
 	 }	
 	 
-	 function edit_art($db_data){
+	 function edit_article($db_data){
 		unset($db_data['submit']);
 		$this->db->where('ID',$db_data['ID']);
 	 	$this->db->update('article',$db_data);
