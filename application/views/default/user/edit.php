@@ -48,6 +48,18 @@
 		<div class="row-fluid">
 			<label>User Photo</label>
 				<input type="file" name="userfile" size="20" />
+		</div>
+		<div class="row-fluid">
+			<label class="pull-left">Use Paypal to accept payment?</label>
+			<select name="meta[use_paypal]" id="use_paypal">
+				<option value="yes"<?php print $is_edit?($the_user->meta['use_paypal']->meta_value=='yes'?' selected = "selected"':''):''; ?>>Yes</option>
+				<option value="no"<?php print $is_edit?($the_user->meta['use_paypal']->meta_value=='no'?' selected = "selected"':''):''; ?>>No</option>
+			</select>
+		</div>
+		<div class="row-fluid">
+			<input class="span12" name="meta[paypal]" id="paypal" type="text" placeholder="Paypal Address"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
+		</div>
+		<div class="row-fluid">
 				<input name="submit" id="submit" type="submit" value="Submit" />
 		</div>
 		<?php

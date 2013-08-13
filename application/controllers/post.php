@@ -39,9 +39,11 @@ class Post extends CI_Controller {
 	}
 
 	function add(){
+		global $user;
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
+		$the_user = $this->Users->get_user($this->session->userdata['ID']);
 		$data = array(
 				'page_title' => SITENAME.': Add Post',
 				'body_class' => 'add post-add',
@@ -52,6 +54,10 @@ class Post extends CI_Controller {
 				'is_edit' => FALSE,
 		);
 		if($this->input->post()){
+			$the_user = $this->Users->get_user($this->session->userdata['ID']);
+			if($the_user->meta['use_paypal']->meta_value != 'no' && $the_user->meta['paypal']->meta_value==''){
+				$this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
+			}
 			$db_data = $this->input->post();
 			unset($db_data['cat']);
 			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));

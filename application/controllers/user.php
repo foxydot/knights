@@ -42,7 +42,9 @@ class User extends CI_Controller {
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
-				if(isset($_FILES['userfile'])){
+				$user_meta = $db_data['meta'];
+				unset($db_data['meta']);
+				if(!empty($_FILES['userfile']['name'])){
 					$uploads_dir = SITEPATH.'uploads/';
 					$uploads_url = site_url('uploads/');
 					$user_slug = post_slug($this->input->post('lastname').'-'.$this->input->post('firstname'));
@@ -84,8 +86,20 @@ class User extends CI_Controller {
 					unset($db_data['submit']);
 					unset($db_data['password']);
 					unset($db_data['passwordtest']);
+					
 					$this->Users->edit_user($ID,$db_data);
 				}	
+				if(count($user_meta>0)){
+					foreach($user_meta AS $k=>$v){
+						$meta_data = array(
+							'user_id' => $ID,
+							'org_id' => 1,
+							'meta_key' => $k,
+							'meta_value' => $v
+							);
+						$this->Users->edit_user_meta($meta_data);
+					}
+				}
 				$this->load->helper('url');
 				redirect('/user');	
 			}
@@ -95,6 +109,8 @@ class User extends CI_Controller {
 	function add()
 		{
 			$this->authenticate->check_auth('administrators',true);
+			$user_meta = $db_data['meta'];
+			unset($db_data['meta']);
 			$data = array(
 				'page_title' => SITENAME.' Administrative users',
 				'body_class' => 'list',
@@ -115,7 +131,18 @@ class User extends CI_Controller {
 					unset($db_data['passwordtest']);
 					$db_data['password'] = md5($db_data['password']);
 					$this->Users->add_user($db_data);
-				}	
+				}		
+				if(count($user_meta>0)){
+					foreach($user_meta AS $k=>$v){
+						$meta_data = array(
+							'user_id' => $ID,
+							'org_id' => 1,
+							'meta_key' => $k,
+							'meta_value' => $v
+							);
+						$this->Users->edit_user_meta($meta_data);
+					}
+				}
 				$this->load->helper('url');
 				redirect('/user');	
 			}

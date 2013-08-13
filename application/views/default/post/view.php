@@ -35,12 +35,15 @@
 		</div>
 		<?php } ?>
 		<div class="categories"><label>Categories</label><ul><li><?php 
+		if($post->postcats){
+			$categories = array();
 			foreach($post->postcats AS $cat){
 				if(is_object($cat)){
 					$categories[] = $cat->catpath;
 				}
 			}
 			print implode('</li><li>',$categories);
+		}
 		?></li></ul>
 		</div>
 		</div>
