@@ -40,7 +40,8 @@
 			</div>
 		</div>
 		<div class="row-fluid">
-			<input class="btn" name="submit" id="submit" type="submit" value="Submit" />
+				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
+				<input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
 		</div>
 		<?php
 		print form_fieldset_close();

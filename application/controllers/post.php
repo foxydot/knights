@@ -99,7 +99,7 @@ class Post extends CI_Controller {
 		$this->load->model('Organizations','Orgs');
 		$data = array(
 				'page_title' => SITENAME.': Edit Post',
-				'body_class' => 'add post-add',
+				'body_class' => 'edit post-edit',
 				'user' => $this->session->userdata,
 				'post' => $this->Posts->get_post($ID),
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
@@ -141,6 +141,43 @@ class Post extends CI_Controller {
 				$this->Posts->attachment_to_post($db_data);
 			}
 			
+			$this->load->helper('url');
+			redirect('/post');
+		}
+		$this->load->view('default.tpl.php',$data);
+	}
+	
+
+	function delete($ID){
+		$this->load->model('Categories','Cats');
+		$this->load->model('Users');
+		$this->load->model('Organizations','Orgs');
+		$data = array(
+				'page_title' => SITENAME.': Edit Post',
+				'body_class' => 'edit post-edit',
+				'user' => $this->session->userdata,
+				'post' => $this->Posts->get_post($ID),
+				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
+				'dashboard' => 'default/post/edit',
+				'action' => 'post/edit/'.$ID,
+				'is_edit' => TRUE,
+		);
+		if($this->input->post()){
+			$db_data = $this->input->post();
+			unset($db_data['cat']);
+			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));
+			$attachment_url = FALSE;
+			if(!empty($_FILES['attachment_url']['name'])){
+				$this->load->model('Administration','Admin');
+				$attachment_url = $this->Admin->upload($db_data,'attachment_url');
+			}
+			unset($db_data['org']);
+			unset($db_data['org_id']);
+			unset($db_data['attachment_url']);
+			$db_data['dateremoved'] = time();
+			$this->Posts->edit_post($db_data);
+			$this->Posts->clear_post_to_cats($db_data['ID']);
+				
 			$this->load->helper('url');
 			redirect('/post');
 		}

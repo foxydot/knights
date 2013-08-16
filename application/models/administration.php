@@ -22,9 +22,13 @@ Class Administration extends CI_Model {
 		} else {
 			$subject = "Message from ".SITENAME;
 		}
-		$users = $this->Users->get_users_by_level('administrator');
+		$users = $this->Users->get_users_by_level('administrators');
 		if($superadmin){
-			array_push($users, $this->Users->get_users_by_level(1));
+			if(is_array($users)){
+				array_push($users, $this->Users->get_users_by_level(1));
+			} else {
+				$users = $this->Users->get_users_by_level(1);
+			}
 		} 
 		foreach($users AS $user){
 			mail($user->email,$subject,$message);

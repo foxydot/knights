@@ -20,6 +20,11 @@ $(document).ready(function($) {
 			}
 		});
 	});
+	$('.edit #delete_btn').click(function(){
+		var myform = $(this).parents('form');
+		myform.attr('action',myform.attr('action').replace('edit','delete'));
+		myform.submit();
+	});
 });
 
 //Utility functions

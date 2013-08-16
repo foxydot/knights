@@ -78,7 +78,36 @@ class Category extends CI_Controller {
 			}
 		
 			$this->load->view('default.tpl.php',$data);
-		}	
+		}
+		
+
+		function delete($ID)
+		{
+			$org_id = 1;
+			$cats = $this->Cats->get_cats();
+			$data = array(
+					'page_title' => SITENAME.' Edit Category',
+					'body_class' => 'edit category-edit',
+					'user' => $this->session->userdata,
+					'cats' => $this->Cats->group_cats_by_parent($cats),
+					'cat' => $this->Cats->get_cat($ID),
+					'dashboard' => 'default/cat/edit',
+					'action' => 'category/edit/'.$ID,
+					'is_edit' => TRUE,
+			);
+			if($this->input->post()){
+				$db_data = $this->input->post();
+				$parent_cat_id = $db_data['parent_cat_id'];
+				unset($db_data['parent_cat_id']);
+				$db_data['dateremoved'] = time();
+				$this->Cats->edit_cat($db_data);
+				$this->Cats->clear_cat_to_org($db_data['ID']);
+				$this->load->helper('url');
+				redirect('/category');
+			}
+		
+			$this->load->view('default.tpl.php',$data);
+		}
 }
 
 /* End of file category.php */

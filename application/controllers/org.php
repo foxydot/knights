@@ -62,8 +62,8 @@ class Org extends CI_Controller {
 		
 			$this->load->view('default.tpl.php',$data);
 		}
-		
-	function edit($ID)
+
+		function edit($ID)
 		{
 			$data = array(
 					'page_title' => SITENAME.' Edit Organization',
@@ -81,7 +81,7 @@ class Org extends CI_Controller {
 				if(isset($_FILES['logo_url'])){
 					$this->load->model('Administration','Admin');
 					$logo_url = $this->Admin->upload($db_data,'logo_url');
-				} 
+				}
 				unset($db_data['org']);
 				unset($db_data['logo_url']);
 				$this->Orgs->edit_org($db_data);
@@ -91,7 +91,7 @@ class Org extends CI_Controller {
 							'meta_key'=>'logo_url',
 							'meta_value'=>$logo_url,
 							'dateadded'=>time()
-							);
+					);
 					if(!isset($data['org']->meta['logo_url'])){
 						$this->Orgs->add_org_meta($db_data);
 					} else {
@@ -99,6 +99,31 @@ class Org extends CI_Controller {
 						$this->Orgs->edit_org_meta($db_data);
 					}
 				}
+		
+				$this->load->helper('url');
+				redirect('/org');
+			}
+		
+			$this->load->view('default.tpl.php',$data);
+		}	
+			
+	function delete($ID)
+		{
+			$data = array(
+					'page_title' => SITENAME.' Edit Organization',
+					'body_class' => 'edit org-edit',
+					'user' => $this->session->userdata,
+					'org' => $this->Orgs->get_org($ID),
+					'dashboard' => 'default/org/edit',
+					'action' => 'org/edit/'.$ID,
+					'is_edit' => TRUE,
+			);
+			if($this->input->post()){
+				$db_data = $this->input->post();
+				unset($db_data['change_img']);
+				unset($db_data['logo_url']);
+				$db_data['dateremoved'] = time();
+				$this->Orgs->edit_org($db_data);
 				
 				$this->load->helper('url');
 				redirect('/org');

@@ -20,7 +20,10 @@
 			<textarea class="span12 tinymce" name="description" id="description" placeholder="Category description"><?php print $is_edit?$cat->description:''; ?></textarea>
 		</div>
 		<div class="row-fluid">
-			<input name="submit" id="submit" type="submit" value="Submit" />
+				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
+				<?php if($this->authenticate->check_auth('administrators')){ ?>
+					<input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
+				<?php } ?>
 		</div>
 		<?php
 		print form_fieldset_close();

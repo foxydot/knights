@@ -52,15 +52,18 @@
 		<div class="row-fluid">
 			<label class="pull-left">Use Paypal to accept payment?</label>
 			<select name="meta[use_paypal]" id="use_paypal">
-				<option value="yes"<?php print $is_edit?($the_user->meta['use_paypal']->meta_value=='yes'?' selected = "selected"':''):''; ?>>Yes</option>
-				<option value="no"<?php print $is_edit?($the_user->meta['use_paypal']->meta_value=='no'?' selected = "selected"':''):''; ?>>No</option>
+				<option value="yes"<?php print $is_edit?(!isset($the_user->meta['use_paypal']) || $the_user->meta['use_paypal']->meta_value=='yes'?' selected = "selected"':''):''; ?>>Yes</option>
+				<option value="no"<?php print $is_edit?(isset($the_user->meta['use_paypal']) && $the_user->meta['use_paypal']->meta_value=='no'?' selected = "selected"':''):''; ?>>No</option>
 			</select>
 		</div>
 		<div class="row-fluid">
 			<input class="span12" name="meta[paypal]" id="paypal" type="text" placeholder="Paypal Address"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
-				<input name="submit" id="submit" type="submit" value="Submit" />
+				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
+				<?php if($this->authenticate->check_auth('administrators')){ ?>
+					<input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
+				<?php } ?>
 		</div>
 		<?php
 		print form_fieldset_close();
