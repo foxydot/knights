@@ -131,10 +131,12 @@ Class Users extends CI_Model {
 	 	$this->db->where('user_id',$ID);
 		$query = $this->db->get();
 		$result = $query->result();
-		foreach($result AS $r){
-			$metas[$r->meta_key] = $r;
-		}
-		return $metas;
+        if($result){
+    		foreach($result AS $r){
+    			$metas[$r->meta_key] = $r;
+    		}
+    		return $metas;
+        }
 	 }
 }
 /* End of file users.php */

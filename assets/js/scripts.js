@@ -1,32 +1,3 @@
-$(document).ready(function($) {
-	$('#change_img').click(function(){
-		$(this).parents('form').find('.img-upload').toggle();
-		$(this).parents('form').find('.img-display').toggle();
-	});
-	$('.accordion-toggle').click(function(){
-		$(this).find('i').removeClass('icon-expand').removeClass('icon-collapse');
-		if($(this).hasClass('collapsed')){
-			$(this).find('i').addClass('icon-expand');
-		} else {
-			$(this).find('i').addClass('icon-collapse');
-		}
-	});
-	$('.attachment-delete').click(function(){
-		var info = split_to_array($(this).attr('id'),':');
-		$this = $(this);
-		$.post("/ajax/unpublish_attachment", {infoArray:info}, function(data){
-			if(data){
-				$this.parent('li').hide();
-			}
-		});
-	});
-	$('.edit #delete_btn').click(function(){
-		var myform = $(this).parents('form');
-		myform.attr('action',myform.attr('action').replace('edit','delete'));
-		myform.submit();
-	});
-});
-
 //Utility functions
 
 function split_to_array(str,delim){
@@ -71,3 +42,41 @@ function array_combine (keys, values) {
 
     return new_array;
 }
+
+$(document).ready(function($) {
+	$('#change_img').click(function(){
+		$(this).parents('form').find('.img-upload').toggle();
+		$(this).parents('form').find('.img-display').toggle();
+	});
+	$('.accordion-toggle').click(function(){
+		$(this).find('i').removeClass('icon-expand').removeClass('icon-collapse');
+		if($(this).hasClass('collapsed')){
+			$(this).find('i').addClass('icon-expand');
+		} else {
+			$(this).find('i').addClass('icon-collapse');
+		}
+	});
+	$('.attachment-delete').click(function(){
+		var info = split_to_array($(this).attr('id'),':');
+		var $this = $(this);
+		$.post("/ajax/unpublish_attachment", {infoArray:info}, function(data){
+			if(data){
+				$this.parent('li').hide();
+			}
+		});
+	});
+	$('.edit #delete_btn').click(function(){
+		var myform = $(this).parents('form');
+		myform.attr('action',myform.attr('action').replace('edit','delete'));
+		myform.submit();
+	});
+	$('.buy #payment_option_paypal').click(function(){
+			$('.payment_info').hide();
+			$('#paypal_info').show();
+	});
+	$('.buy #payment_option_check').click(function(){
+			$('.payment_info').hide();
+			$('#check_info').show();
+	});
+});
+

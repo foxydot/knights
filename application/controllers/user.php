@@ -78,12 +78,12 @@ class User extends CI_Controller {
 						//escape
 						$this->session->set_flashdata('err', 'Passwords do not match');
 					} else {
-						unset($db_data['submit']);
+						unset($db_data['submit_btn']);
 						unset($db_data['passwordtest']);
 						$db_data['password'] = md5($db_data['password']);
 					}
 				} else {
-					unset($db_data['submit']);
+					unset($db_data['submit_btn']);
 					unset($db_data['password']);
 					unset($db_data['passwordtest']);
 					
@@ -127,7 +127,7 @@ class User extends CI_Controller {
 					$this->session->set_flashdata('err', 'Passwords do not match');
 				} else {
 					$db_data = $this->input->post();
-					unset($db_data['submit']);
+					unset($db_data['submit_btn']);
 					unset($db_data['passwordtest']);
 					$db_data['password'] = md5($db_data['password']);
 					$this->Users->add_user($db_data);
@@ -158,7 +158,7 @@ class User extends CI_Controller {
 				$user_meta = $db_data['meta'];
 				unset($db_data['meta']);
 				$db_data['dateremoved'] = time();
-				unset($db_data['submit']);
+				unset($db_data['submit_btn']);
 				unset($db_data['password']);
 				unset($db_data['passwordtest']);
 					

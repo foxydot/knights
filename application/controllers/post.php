@@ -55,9 +55,14 @@ class Post extends CI_Controller {
 		);
 		if($this->input->post()){
 			$the_user = $this->Users->get_user($this->session->userdata['ID']);
-			if($the_user->meta['use_paypal']->meta_value != 'no' && $the_user->meta['paypal']->meta_value==''){
-				$this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
+            if(isset($the_user->meta['use_paypal']) && isset($the_user->meta['paypal'])){
+    			if($the_user->meta['use_paypal']->meta_value != 'no' && $the_user->meta['paypal']->meta_value==''){
+    				$this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
+    			}
+			} else {
+			    $this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
 			}
+
 			$db_data = $this->input->post();
 			unset($db_data['cat']);
 			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));
@@ -228,10 +233,32 @@ class Post extends CI_Controller {
 				'body_class' => 'buy post-buy',
 				'user' => $this->session->userdata,
 				'post' => $post,
+				'seller' => $this->Users->get_user($post->author_id),
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/buy',
 				'is_edit' => TRUE,
 		);
+        
+        if($this->input->post()){  
+            $to      = $this->input->post('author');
+            $subject = 'Message from buyer about '.$this->input->post('subject');
+            $message = $this->input->post('message');
+            $headers = 'From: '. $this->input->post('sender') . "\r\n" ;
+            
+            //send an email if needed
+            if(!empty($message)):
+                if(mail($to, $subject, $message, $headers)){
+                    $this->session->set_flashdata('msg','Message Sent!');
+                } else {
+                    $this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
+                }
+            endif;
+            
+            $payment_option = $this->input->post('payment_option');
+            if($payment_option == 'paypal'){
+                $payment_url = 'https://www.paypal.com/cgi-bin/webscr';
+            }
+        }
 		$this->load->view('default.tpl.php',$data);
 	}
 }

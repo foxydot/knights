@@ -37,7 +37,7 @@ Class Categories extends CI_Model {
 	
 	function add_cat($db_data){
 		unset($db_data['ID']);
-		unset($db_data['submit']);
+		unset($db_data['submit_btn']);
 	 	$slug = $this->common->increment_slug(post_slug($db_data['title']),'category');
 		$db_data['slug'] = $slug;
 		$db_data['dateadded'] = time();
@@ -47,7 +47,7 @@ Class Categories extends CI_Model {
 	 }	
 	 
 	 function edit_cat($db_data){
-		unset($db_data['submit']);
+		unset($db_data['submit_btn']);
 		$this->db->where('ID',$db_data['ID']);
 	 	$this->db->update('category',$db_data);
 	 }
@@ -82,7 +82,7 @@ Class Categories extends CI_Model {
 	 }
 
 	 function cat_to_org($db_data){
-	 	unset($db_data['submit']);
+	 	unset($db_data['submit_btn']);
 	 	$this->db->insert('cat2org',$db_data);
 	 }
 	 	

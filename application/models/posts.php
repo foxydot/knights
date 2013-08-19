@@ -92,7 +92,7 @@ Class Posts extends CI_Model {
 	
 	function add_post($db_data){
 		unset($db_data['ID']);
-		unset($db_data['submit']);
+		unset($db_data['submit_btn']);
 		$slug = $this->common->increment_slug(post_slug($db_data['title']),'post');
 		$db_data['slug'] = $slug;
 		$db_data['dateadded'] = time();
@@ -102,7 +102,7 @@ Class Posts extends CI_Model {
 	}
 	
 	function edit_post($db_data){
-		unset($db_data['submit']);
+		unset($db_data['submit_btn']);
 		unset($db_data['postcats']);
 		$db_data['lastedit'] = time();
 		$this->db->where('ID',$db_data['ID']);
@@ -110,7 +110,7 @@ Class Posts extends CI_Model {
 	}	
 	
 	function post_to_cat($db_data){
-		unset($db_data['submit']);
+		unset($db_data['submit_btn']);
 		$this->db->insert('post2cat',$db_data);
 	}
 			
