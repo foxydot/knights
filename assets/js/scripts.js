@@ -73,10 +73,12 @@ $(document).ready(function($) {
 	$('.buy #payment_option_paypal').click(function(){
 			$('.payment_info').hide();
 			$('#paypal_info').show();
+			$('#buyform').attr('action',$('#paypal_action').val());
 	});
 	$('.buy #payment_option_check').click(function(){
 			$('.payment_info').hide();
 			$('#check_info').show();
+            $('#buyform').attr('action',$('#check_action').val());
 	});
 });
 

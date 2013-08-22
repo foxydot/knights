@@ -187,17 +187,21 @@ Class Posts extends CI_Model {
 		return $result;
 	}
 	
-	function detach($data){
-		//data should include the sectio nand hte attachment to detach from it. thsi way we can potentially keep a library of all attachments and reusethem even if they are not attached to anything at the time.
-		$db_data = array(
-				'dateremoved' => time()
-		);
-		$this->db->where('attachment_id',$data['attachment_id']);
-		$this->db->where('post_id',$data['post_id']);
-		if($this->db->update('attachment2post',$db_data)){
-			$this->set_updated_time_on_post($data['post_id']);
-			print 1;//ajax function
-		}
-	}
+    function detach($data){
+        //data should include the sectio nand hte attachment to detach from it. thsi way we can potentially keep a library of all attachments and reusethem even if they are not attached to anything at the time.
+        $db_data = array(
+                'dateremoved' => time()
+        );
+        $this->db->where('attachment_id',$data['attachment_id']);
+        $this->db->where('post_id',$data['post_id']);
+        if($this->db->update('attachment2post',$db_data)){
+            $this->set_updated_time_on_post($data['post_id']);
+            print 1;//ajax function
+        }
+    }
+
+    function buy($data){
+        //set purchase date, date removed, and purchaser id
+    }
 	
 }

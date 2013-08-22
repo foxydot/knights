@@ -237,6 +237,7 @@ class Post extends CI_Controller {
 				'cats' => $this->Cats->get_cats(),
 				'dashboard' => 'default/post/buy',
 				'is_edit' => TRUE,
+				'urls' => array('check' => 'http://'. $_SERVER['SERVER_NAME'].'/post/buy/'.$ID, 'paypal' => 'https://www.paypal.com/cgi-bin/webscr','return' => 'http://'. $_SERVER['SERVER_NAME'].'/post/postpay','cancel' => 'http://'. $_SERVER['SERVER_NAME'].'/post/cancel'),
 		);
         
         if($this->input->post()){  
@@ -253,14 +254,17 @@ class Post extends CI_Controller {
                     $this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
                 }
             endif;
-            
-            $payment_option = $this->input->post('payment_option');
-            if($payment_option == 'paypal'){
-                $payment_url = 'https://www.paypal.com/cgi-bin/webscr';
-            }
         }
 		$this->load->view('default.tpl.php',$data);
 	}
+
+    function postpay(){
+        print "Thank you for your purchase";
+    }
+    
+    function cancel(){
+        print "You have canceled your purchase";
+    }
 }
 
 /* End of file post.php */

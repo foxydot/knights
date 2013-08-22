@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Sysadmin extends CI_Model {
-	public $db_version = '0.3';
+	public $db_version = '0.4';
 	function __construct()
 	    {
 	        // Call the Model constructor
@@ -866,6 +866,48 @@ Class Sysadmin extends CI_Model {
 				$this->dbforge->create_table('art2org',TRUE);
 				//set version
 				$this->set_version('0.3');
+            case '0.3':
+                /*
+                 * Create post_meta table
+                */
+                $fields = array(
+                        'ID' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'auto_increment' => TRUE,
+                        ),
+                        'post_id' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'null' => FALSE,
+                        ),
+                        'meta_key' => array(
+                                'type' => 'VARCHAR',
+                                'constraint' => '255',
+                                'null' => FALSE,
+                        ),
+                        'meta_value' => array(
+                                'type' => 'TEXT'
+                        ),
+                        'dateadded' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'dateremoved' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'notes' => array(
+                                'type' => 'TEXT'
+                        )
+                );
+                $this->dbforge->add_field($fields);
+                $this->dbforge->add_key('ID',TRUE);
+                $this->dbforge->create_table('post_meta',TRUE);
+                //set version
+                $this->set_version('0.4');
 			default:
 				//redirect to home page
 				$this->load->helper('url');

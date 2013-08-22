@@ -15,6 +15,13 @@ class Ajax extends CI_Controller {
 			$this->Posts->detach($data);
 			}
 	}
+    
+    public function buy_item(){
+        $this->load->model('Posts');
+        if($data = $this->input->post('infoArray')) {
+            $this->Posts->buy($data);
+            }
+    }
 }
 
 /* End of file ajax.php */
