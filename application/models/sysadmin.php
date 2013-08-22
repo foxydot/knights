@@ -578,7 +578,7 @@ Class Sysadmin extends CI_Model {
 		// add the client
 		$db_data = array(
 			'email' => 'mirja@aristogroup.com',
-			'password' => md5(testpass),
+			'password' => md5('testpass'),
 			'firstname' => 'Mirja',
 			'lastname' => 'Zelistra',
 			'accesslevel' => 1,
@@ -906,6 +906,30 @@ Class Sysadmin extends CI_Model {
                 $this->dbforge->add_field($fields);
                 $this->dbforge->add_key('ID',TRUE);
                 $this->dbforge->create_table('post_meta',TRUE);
+                /**
+                 * Add column type to post table
+                 */
+                 $fields = array(
+                        'type' => array(
+                                'type' => 'VARCHAR',
+                                'constraint' => '255',
+                                'null' => FALSE,
+                        ),
+                );
+                $this->dbforge->add_column('post', $fields, 'slug');
+                /**
+                 * Add types array to sys_admin for themed output
+                 */
+                $post_types = array();
+                $post_types['product'] = 'Single Item';
+                $post_types['service'] = 'Service (allow multiple purchases)';
+                $post_types['request'] = 'Seeking Product/Service';
+                
+                $db_data = array(
+                    'sysinfo_key' => 'post_types',
+                    'sysinfo_value' => serialize($post_types)
+                );
+                $this->db->insert('system_info',$db_data);
                 //set version
                 $this->set_version('0.4');
 			default:

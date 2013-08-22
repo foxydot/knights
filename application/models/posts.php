@@ -202,6 +202,8 @@ Class Posts extends CI_Model {
 
     function buy($data){
         //set purchase date, date removed, and purchaser id
+        extract($data);
+        $buyer = $this->Users->
     }
 	
 }

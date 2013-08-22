@@ -2,11 +2,11 @@
 
 function split_to_array(str,delim){
 	var splitstr = str.split(delim);
-	var key = new Array();
-	var val = new Array();
+	var key;
+	var val;
 
 	for(i=0;i<splitstr.length;i++){
-		if(i%2==0){
+		if(i%2===0){
 			key[i/2] = splitstr[i];
 		} else {
 			val[Math.floor(i/2)] = splitstr[i];
@@ -71,14 +71,24 @@ $(document).ready(function($) {
 		myform.submit();
 	});
 	$('.buy #payment_option_paypal').click(function(){
-			$('.payment_info').hide();
-			$('#paypal_info').show();
+			$('.payment_info').slideUp();
+			$('#paypal_info').slideDown();
 			$('#buyform').attr('action',$('#paypal_action').val());
 	});
 	$('.buy #payment_option_check').click(function(){
-			$('.payment_info').hide();
-			$('#check_info').show();
+			$('.payment_info').slideUp();
+			$('#check_info').slideDown();
             $('#buyform').attr('action',$('#check_action').val());
 	});
+	$('#buyform').submit(function(e) {
+        e.preventDefault();
+        var info = {"buyer_id": $(this).find('#buyer_id').val(), "post_id": $(this).find('#ID').val()};
+        $.post("/ajax/buy_item", {infoArray:info}, function(data){
+            if(data){
+                return false;
+            }
+        });
+        return false;
+    });
 });
 

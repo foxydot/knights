@@ -23,12 +23,13 @@
 		</div><!-- end span1 -->
       </div><!--/row-->
 	<?php 
+	if($catsposts):
 		foreach($catsposts[0] AS $cat){
 			if(count($cat->posts)>0 || $cat->has_children):
 			print display_cat($catsposts,$cat);
 		endif;
-		} //end cats ?>
-
+		} //end cats 
+    endif;?>
 	<div id="footer" class="row">
 	</div><!-- end footer -->
 
