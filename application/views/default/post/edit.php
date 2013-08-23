@@ -10,9 +10,10 @@
 			<input class="span3" name="cost" id="cost" type="text" title="Price" placeholder="Price"<?php print $is_edit?'value="'.$post->cost.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
+		    <label>Post Type</label>
 		    <select name="type" id="type">
 		        <?php foreach($types AS $k => $v): ?>
-		            <option value="<?php print $k; ?>"<?php $is_edit && $post->type==$k?' SELECTED':''; ?>><?php print $v; ?></option>
+		            <option value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' SELECTED':''; ?>><?php print $v; ?></option>
 		        <?php endforeach; ?>
 		    </select>
 		</div>
