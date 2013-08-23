@@ -44,11 +44,13 @@ class Post extends CI_Controller {
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
 		$the_user = $this->Users->get_user($this->session->userdata['ID']);
+        $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
 		$data = array(
 				'page_title' => SITENAME.': Add Post',
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
+				'types' => unserialize($the_types->sysinfo_value),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/add/',
 				'is_edit' => FALSE,
@@ -102,12 +104,15 @@ class Post extends CI_Controller {
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
+        $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
+        
 		$data = array(
 				'page_title' => SITENAME.': Edit Post',
 				'body_class' => 'edit post-edit',
 				'user' => $this->session->userdata,
 				'post' => $this->Posts->get_post($ID),
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
+                'types' => unserialize($the_types->sysinfo_value),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/edit/'.$ID,
 				'is_edit' => TRUE,

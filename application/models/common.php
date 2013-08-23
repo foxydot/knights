@@ -42,6 +42,16 @@ Class Common extends CI_Model {
 			return FALSE;
 		}
 	}
+    
+    function get_sysadmin_item($key,$single = TRUE){
+        $query = $this->db->get_where('system_info',array('sysinfo_key' => $key),1);
+        $result = $query->result();
+        if($single){
+            return $result[0];
+        } else {
+            return $result;
+        }
+    }
 	
 	/*
 	 * Convert a timestamp into increments of ago.

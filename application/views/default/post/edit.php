@@ -9,6 +9,13 @@
 			<input class="span9" name="title" id="title" type="text" title="Post Title" placeholder="Post Title"<?php print $is_edit?'value="'.$post->title.'"':''; ?> />
 			<input class="span3" name="cost" id="cost" type="text" title="Price" placeholder="Price"<?php print $is_edit?'value="'.$post->cost.'"':''; ?> />
 		</div>
+		<div class="row-fluid">
+		    <select name="type" id="type">
+		        <?php foreach($types AS $k => $v): ?>
+		            <option value="<?php print $k; ?>"<?php $is_edit && $post->type==$k?' SELECTED':''; ?>><?php print $v; ?></option>
+		        <?php endforeach; ?>
+		    </select>
+		</div>
 		<?php if(isset($post->attachments)) {?>	
 		<div class="row-fluid img-display">
 			<label>Images</label>
