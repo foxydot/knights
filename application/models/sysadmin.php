@@ -923,6 +923,7 @@ Class Sysadmin extends CI_Model {
                 $post_types = array();
                 $post_types['product'] = 'Single Item';
                 $post_types['service'] = 'Service (allow multiple purchases)';
+                $post_types['student-service'] = 'Service provided by a student (allow multiple purchases)';
                 $post_types['request'] = 'Seeking Product/Service';
                 
                 $db_data = array(
