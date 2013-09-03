@@ -82,23 +82,42 @@ class Org extends CI_Controller {
 					$this->load->model('Administration','Admin');
 					$logo_url = $this->Admin->upload($db_data,'logo_url');
 				}
+                if(isset($_FILES['test_csv'])){
+                    $this->load->model('Administration','Admin');
+                    $test_csv = $this->Admin->upload($db_data,'test_csv');
+                }
 				unset($db_data['org']);
-				unset($db_data['logo_url']);
+                unset($db_data['logo_url']);
+                unset($db_data['test_csv']);
 				$this->Orgs->edit_org($db_data);
-				if($logo_url){
-					$db_data = array(
-							'org_id'=>$ID,
-							'meta_key'=>'logo_url',
-							'meta_value'=>$logo_url,
-							'dateadded'=>time()
-					);
-					if(!isset($data['org']->meta['logo_url'])){
-						$this->Orgs->add_org_meta($db_data);
-					} else {
-						$db_data['ID'] = $data['org']->meta['logo_url']->ID;
-						$this->Orgs->edit_org_meta($db_data);
-					}
-				}
+                if($logo_url){
+                    $db_data = array(
+                            'org_id'=>$ID,
+                            'meta_key'=>'logo_url',
+                            'meta_value'=>$logo_url,
+                            'dateadded'=>time()
+                    );
+                    if(!isset($data['org']->meta['logo_url'])){
+                        $this->Orgs->add_org_meta($db_data);
+                    } else {
+                        $db_data['ID'] = $data['org']->meta['logo_url']->ID;
+                        $this->Orgs->edit_org_meta($db_data);
+                    }
+                }
+                if($test_csv){
+                    $db_data = array(
+                            'org_id'=>$ID,
+                            'meta_key'=>'test_csv',
+                            'meta_value'=>$test_csv,
+                            'dateadded'=>time()
+                    );
+                    if(!isset($data['org']->meta['test_csv'])){
+                        $this->Orgs->add_org_meta($db_data);
+                    } else {
+                        $db_data['ID'] = $data['org']->meta['test_csv']->ID;
+                        $this->Orgs->edit_org_meta($db_data);
+                    }
+                }
 		
 				$this->load->helper('url');
 				redirect('/org');

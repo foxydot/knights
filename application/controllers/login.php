@@ -242,6 +242,8 @@ class Login extends CI_Controller {
 				$student['firstname'] = $db_data['studentfirstname'];
 				$student['lastname'] = $db_data['studentlastname'];
 				//add any automated testing here
+				
+				//after testing
 				unset($db_data['submit']);
 				unset($db_data['passwordtest']);
 				unset($db_data['studentfirstname']);

@@ -10,17 +10,28 @@
 		<div class="row-fluid">
 			<textarea class="span12 tinymce" name="description" id="description" placeholder="Category description"><?php print $is_edit?$org->description:''; ?></textarea>
 		</div>
-		<div class="row-fluid img-upload"<?php print isset($org->meta['logo_url'])?' style="display:none;"':''; ?>>
-			<label>Upload Logo</label>
-			<input type="file" name="logo_url" size="20" />
-		</div>
-		<?php if(isset($org->meta['logo_url'])): ?>
-		<div class="row-fluid img-display">
-			<label>Logo</label>
-			<img src="<?php print $org->meta['logo_url']->meta_value; ?>">
-			<input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
-		</div>
-		<?php endif; ?>
+        <div class="row-fluid img-upload"<?php print isset($org->meta['logo_url'])?' style="display:none;"':''; ?>>
+            <label>Upload Logo</label>
+            <input type="file" name="logo_url" size="20" />
+        </div>
+        <?php if(isset($org->meta['logo_url'])): ?>
+        <div class="row-fluid img-display">
+            <label>Logo</label>
+            <img src="<?php print $org->meta['logo_url']->meta_value; ?>">
+            <input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
+        </div>
+        <?php endif; ?>
+        <div class="row-fluid"<?php print isset($org->meta['test_csv'])?' style="display:none;"':''; ?>>
+            <label>Upload Registration Test CSV File</label>
+            <input type="file" name="test_csv" size="20" />
+        </div>
+        <?php if(isset($org->meta['test_csv'])): ?>
+        <div class="row-fluid">
+            <label>Registration Test CSV File</label>
+            <?php print $org->meta['test_csv']->meta_value; ?>
+            <input class="btn" name="change_csv" id="change_csv" type="button" value="Change File" />
+        </div>
+        <?php endif; ?>
 		<div class="row-fluid">
 				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
 				<?php if($this->authenticate->check_auth('administrators')){ ?>

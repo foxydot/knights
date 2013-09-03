@@ -52,7 +52,7 @@ Class Administration extends CI_Model {
 		//$config['file_name'] = $_FILES[$field]['tmp_name'];
 
 		$config['upload_path'] = $org_dir;
-		$config['allowed_types'] = 'pdf|gif|jpeg|jpg|png|doc|docx|pdf|txt|rtf';
+		$config['allowed_types'] = 'pdf|gif|jpeg|jpg|png|doc|docx|pdf|txt|rtf|csv';
 		$config['max_size'] = '100000';
 
 		$this->load->library('upload', $config);
