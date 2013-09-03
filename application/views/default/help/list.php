@@ -11,7 +11,7 @@
 					<h5 class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="icon-expand icon-large pull-left"></i> '.$article->title.'</a></h5>
 				</div>
 				<div class="span1 edit">';
-					if($CI->authenticate->check_auth('super-administrators')){
+					if($CI->authenticate->check_auth('administrators')){
 						$display .= '<a href="/help/edit/'.$article->ID.'" class="btn">Edit</a>';
 					}
 					$display .= '
