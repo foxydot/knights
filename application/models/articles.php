@@ -14,7 +14,7 @@ Class Articles extends CI_Model {
 	
 	function get_articles($orgs = array(),$archive = FALSE){
 		$orgs = $this->Orgs->make_org_array($orgs);
-		$this->db->select('article.ID AS ID,title,slug,excerpt,content,article.dateadded AS dateadded');
+		$this->db->select('article.ID AS ID,title,slug,excerpt,content,article.dateadded AS dateadded,art2org.parent_art_id AS parent_art_id');
 		$this->db->from('article');
 		$this->db->join('art2org','article.ID=art2org.art_id','left outer');
 		if(!$archive){
@@ -25,7 +25,7 @@ Class Articles extends CI_Model {
 		return $result;
 	}
 	function get_article($article_id){
-		$this->db->select('article.ID AS ID,title,slug,excerpt,content,article.dateadded AS dateadded');
+		$this->db->select('article.ID AS ID,title,slug,excerpt,content,article.dateadded AS dateadded,art2org.parent_art_id AS parent_art_id');
 		$this->db->from('article');
 		$this->db->join('art2org','article.ID=art2org.art_id','left outer');
 		$this->db->where('article.ID',$article_id);
