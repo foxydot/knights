@@ -38,6 +38,8 @@ class Org extends CI_Controller {
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
+                $org_meta = $db_data['meta'];
+                unset($db_data['meta']);
 				unset($db_data['change_img']);
 				$ID = $this->Orgs->add_org($db_data);
 				
@@ -55,7 +57,16 @@ class Org extends CI_Controller {
 					);
 					$this->Orgs->add_org_meta($db_data);
 				}
-		
+		        if(count($org_meta>0)){
+                    foreach($org_meta AS $k=>$v){
+                        $meta_data = array(
+                            'org_id' => $ID,
+                            'meta_key' => $k,
+                            'meta_value' => $v
+                            );
+                        $this->Orgs->edit_org_meta($meta_data);
+                    }
+                }
 				$this->load->helper('url');
 				redirect('/org');
 			}
@@ -76,6 +87,8 @@ class Org extends CI_Controller {
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
+                $org_meta = $db_data['meta'];
+                unset($db_data['meta']);
 				unset($db_data['change_img']);
 				$db_data['org'] = $this->Orgs->get_org($ID);
 				if(isset($_FILES['logo_url'])){
@@ -119,6 +132,16 @@ class Org extends CI_Controller {
                     }
                 }
 		
+                if(count($org_meta>0)){
+                    foreach($org_meta AS $k=>$v){
+                        $meta_data = array(
+                            'org_id' => $ID,
+                            'meta_key' => $k,
+                            'meta_value' => $v
+                            );
+                        $this->Orgs->edit_org_meta($meta_data);
+                    }
+                }
 				$this->load->helper('url');
 				redirect('/org');
 			}

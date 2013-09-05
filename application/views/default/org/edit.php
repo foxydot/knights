@@ -8,7 +8,7 @@
 			<input class="span12" name="name" id="name" type="text" title="Organization Name" placeholder="Organization Name"<?php print $is_edit?'value="'.$org->name.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
-			<textarea class="span12 tinymce" name="description" id="description" placeholder="Category description"><?php print $is_edit?$org->description:''; ?></textarea>
+			<textarea class="span12 tinymce" name="description" id="description" placeholder="Organization description"><?php print $is_edit?$org->description:''; ?></textarea>
 		</div>
         <div class="row-fluid img-upload"<?php print isset($org->meta['logo_url'])?' style="display:none;"':''; ?>>
             <label>Upload Logo</label>
@@ -21,6 +21,20 @@
             <input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
         </div>
         <?php endif; ?>
+        <div class="row-fluid">
+            <label class="pull-left">Use Paypal to accept payment?</label>
+            <select name="meta[use_paypal]" id="use_paypal">
+                <option value="yes"<?php print $is_edit?(!isset($org->meta['use_paypal']) || $org->meta['use_paypal']->meta_value=='yes'?' selected = "selected"':''):''; ?>>Yes</option>
+                <option value="no"<?php print $is_edit?(isset($org->meta['use_paypal']) && $org->meta['use_paypal']->meta_value=='no'?' selected = "selected"':''):''; ?>>No</option>
+            </select>
+        </div>
+        <div class="row-fluid">
+            <input class="span12" name="meta[paypal]" id="paypal" type="text" placeholder="Paypal Address"<?php print $is_edit && isset($org->meta['paypal']->meta_value)?'value="'.$org->meta['paypal']->meta_value.'"':''; ?> />
+        </div>
+        <div class="row-fluid">
+            <label>Postal Payment Address</label>
+            <textarea class="span12 tinymce" name="meta[address]" id="meta[address]" placeholder="Postal address"><?php print $is_edit?$org->meta['address']->meta_value:''; ?></textarea>
+        </div>
         <div class="row-fluid"<?php print isset($org->meta['test_csv'])?' style="display:none;"':''; ?>>
             <label>Upload Registration Test CSV File</label>
             <input type="file" name="test_csv" size="20" />

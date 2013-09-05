@@ -72,8 +72,12 @@ class Organizations extends CI_Model {
 	    }
 	    
 	    function edit_org_meta($db_data){
-	    	$this->db->where('ID',$db_data['ID']);
-	    	$this->db->update('org_meta',$db_data);
+	        if(isset($db_data['ID'])){
+    	    	$this->db->where('ID',$db_data['ID']);
+    	    	$this->db->update('org_meta',$db_data);
+            } else {
+                $this->add_org_meta($db_data);
+            }
 	    }
 	    
 	    function get_org_meta($org_id,$field = false){
