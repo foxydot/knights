@@ -92,6 +92,8 @@ class Organizations extends CI_Model {
 		    		$sortedresult[$v->meta_key]=$v;
 		    	}
 		    	return $sortedresult;
+	    	} else {
+	    	    return FALSE;
 	    	}
 	    }
 		    

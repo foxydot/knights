@@ -242,13 +242,37 @@ class Login extends CI_Controller {
 				$student['firstname'] = $db_data['studentfirstname'];
 				$student['lastname'] = $db_data['studentlastname'];
 				//add any automated testing here
-				
+				$approved = FALSE;
+				if($this->Orgs->get_org_meta($org_id,'test_csv')){
+                    $this->load->helper('msd_csv_helper');
+                    $test_csv = $this->Orgs->get_org_meta($org_id,'test_csv');
+                    $test_path = preg_replace('@'.base_url().'@i',SITEPATH,$test_csv['test_csv']->meta_value);
+                    $test_array = parse_csvfile($test_path);
+                    foreach($test_array AS $ta){
+                        if($ta['StudentLastName'] == $student['lastname'] && $ta['StudentFirstName'] == $student['firstname']){
+                            if(($ta['Par1FirstName']==$db_data['firstname'] && $ta['Par1LastName']==$db_data['lastname']) || ($ta['Par2FirstName']==$db_data['firstname'] && $ta['Par2LastName']==$db_data['lastname'])){
+                               $approved = TRUE;
+                                continue;
+                            }
+                        }
+                    }
+                }
+                if($approved){
+                    $subject = 'New User: Auto-approved';
+                    $message = $username.' has registered with CommunityList.US. The application has been approved automatically. You do not need to take any action.';
+                } else {
+                    $subject = 'New User: Action Required!';
+                    $message = $username.' has registered with CommunityList.US, but the application could not be approved automatically. Please review and approve this application.';
+                }
 				//after testing
 				unset($db_data['submit']);
 				unset($db_data['passwordtest']);
 				unset($db_data['studentfirstname']);
 				unset($db_data['studentlastname']);
 				$db_data['password'] = md5($db_data['password']);
+                if($approved){
+                    $db_data['accesslevel'] = 100;
+                }
 				$user_id = $this->Users->add_user($db_data);
 				$db_data = array(
 						'user_id' => $user_id,
@@ -259,8 +283,8 @@ class Login extends CI_Controller {
 				$this->Users->add_user_meta($db_data);
 
 				$this->load->model('Administration','Admin');
-				$this->Admin->notify_admins(array('subject'=>'New User Registration','message'=>$username.' has registered with the eduBay system. Please review and approve this application.'));
-				
+				$this->Admin->notify_admins(array('subject'=>$subject,'message'=>$message));
+				$data['approved'] = $approved;
 				$data['form'] = 'login/register_complete';
 			}
 		} 

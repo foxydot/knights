@@ -13,8 +13,8 @@
 		</fieldset>
 		<fieldset>
 			Please provide the name of your youngest student enrolled at <?php print $organization->name; ?><br />
-			<input name="studentfirstname" class="one-half first" id="studentfirstname" type="text" placeholder="Student First Name" value="<?php print isset($values['firstname'])?$values['firstname']:''; ?>" />
-			<input name="studentlastname" class="one-half last" id="studentlastname" type="text" placeholder="Student Last Name" value="<?php print isset($values['lastname'])?$values['lastname']:''; ?>" />
+			<input name="studentfirstname" class="one-half first" id="studentfirstname" type="text" placeholder="Student First Name" value="<?php print isset($values['studentfirstname'])?$values['studentfirstname']:''; ?>" />
+			<input name="studentlastname" class="one-half last" id="studentlastname" type="text" placeholder="Student Last Name" value="<?php print isset($values['studentlastname'])?$values['studentlastname']:''; ?>" />
 		</fieldset>
 		<input name="submit" id="submit" type="submit" value="Submit" />
 		<?php
