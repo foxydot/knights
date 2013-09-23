@@ -13,7 +13,7 @@
 		    <label>Post Type</label>
 		    <select name="type" id="type">
 		        <?php foreach($types AS $k => $v): ?>
-		            <?php if(!$k=="request"): ?>
+		            <?php if($k!="request"): ?>
 		            <option value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' SELECTED':''; ?>><?php print $v; ?></option>
 		            <?php endif; ?>
 		        <?php endforeach; ?>
