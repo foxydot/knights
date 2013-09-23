@@ -47,7 +47,7 @@
 					<h5 class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#'.$data_parent.'" href="#'.$cat->slug.'-posts"><i class="icon-expand icon-large pull-left"></i> '.$cat->title.'</a></h5>
 				</div>
 				<div id="'.$cat->slug.'-posts" class="row-fluid accordion-body collapse">';
-				foreach($cat->posts AS $post){ 
+				foreach($cat->posts AS $post){
 				$display .= '
 		<div class="stripe post clicky row-fluid accordion-inner" href="/post/view/'.$post->post_id.'">
 			<div class="span1 id">

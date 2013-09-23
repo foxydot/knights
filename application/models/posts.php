@@ -53,7 +53,7 @@ Class Posts extends CI_Model {
 			$params
 		);
 		extract($params);
-		$this->db->select('*, post.ID as post_id');
+		$this->db->select('*, post.ID as post_id,post.dateadded as dateadded');
 		if($cat_id){
 			$this->db->from('post2cat');
 			$this->db->join('post','post.ID=post2cat.post_id');
