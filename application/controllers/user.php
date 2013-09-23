@@ -25,6 +25,12 @@ class User extends CI_Controller {
 			
 			$this->load->view('default.tpl.php',$data);
 		}
+    
+    function editlink(){
+        $ID = $this->session->userdata['ID'];
+        $this->load->helper('url');
+        redirect('/user/edit/'.$ID);  
+    }
 	
 	function edit($ID)
 		{
