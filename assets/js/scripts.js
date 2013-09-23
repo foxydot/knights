@@ -74,9 +74,13 @@ $(document).ready(function($) {
 	    $('.edit #cost,.add #cost').attr('placeholder',placeholder_text);
 	});
 	$('.edit #delete_btn').click(function(){
-		var myform = $(this).parents('form');
-		myform.attr('action',myform.attr('action').replace('edit','delete'));
-		myform.submit();
+	    var r=confirm("Are you sure you want to delete this post?");
+        if (r==true)
+          {
+          var myform = $(this).parents('form');
+          myform.attr('action',myform.attr('action').replace('edit','delete'));
+          myform.submit();
+          }		
 	});
 	$('.buy #payment_option_paypal').click(function(){
 			$('.payment_info').slideUp();
