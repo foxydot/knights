@@ -57,7 +57,7 @@
 			</select>
 		</div>
 		<div class="row-fluid">
-			<input class="span12" name="meta[paypal]" id="paypal" type="text" placeholder="Paypal Address"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
+			<input class="span12" name="meta[paypal]" id="paypal" type="text" placeholder="Your Paypal Address (the email you use to login to PayPal)"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
 				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
