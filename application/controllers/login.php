@@ -226,8 +226,8 @@ class Login extends CI_Controller {
 			array('field'=>'email','label'=>'Email','rules'=>'required|valid_email|is_unique[user.email]'),
 			array('field'=>'password','label'=>'Password','rules'=>'required|matches[passwordtest]'),
 			array('field'=>'passwordtest','label'=>'Password Confirmation','rules'=>'required'),
-			array('field'=>'studentfirstname','label'=>'Student First Name','rules'=>'required|min_length[2]|max_length[20]'),
-			array('field'=>'studentlastname','label'=>'Student Last Name','rules'=>'required|min_length[2]|max_length[20]'),						
+			//array('field'=>'studentfirstname','label'=>'Student First Name','rules'=>'required|min_length[2]|max_length[20]'),
+			//array('field'=>'studentlastname','label'=>'Student Last Name','rules'=>'required|min_length[2]|max_length[20]'),						
 			);//validation rules
 			$this->form_validation->set_message('is_unique', '%s is already in use. Did you <a href="http://knights.local/login/forgot">forget your password?</a>');
 			$this->form_validation->set_rules($rules);//Setting the validation rules inside the validation function
@@ -249,6 +249,9 @@ class Login extends CI_Controller {
                     $test_path = preg_replace('@'.base_url().'@i',SITEPATH,$test_csv['test_csv']->meta_value);
                     $test_array = parse_csvfile($test_path);
                     foreach($test_array AS $ta){
+                        /*if(empty($student['firstname'])||empty($student['lastname'])){
+                            continue;
+                        }*/
                         if($ta['StudentLastName'] == $student['lastname'] && $ta['StudentFirstName'] == $student['firstname']){
                             if(($ta['Par1FirstName']==$db_data['firstname'] && $ta['Par1LastName']==$db_data['lastname']) || ($ta['Par2FirstName']==$db_data['firstname'] && $ta['Par2LastName']==$db_data['lastname'])){
                                $approved = TRUE;

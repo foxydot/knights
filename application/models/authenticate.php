@@ -89,35 +89,6 @@ Class Authenticate extends CI_Model {
 		set_cookie($cookie);
 	}
 	
-	/*
-	 * Story Login
-	 */
-	function story_login($slug,$pwd,$email){
-		$this->db->select('story.ID AS ID,title,lastedit,datepresented,datepublished,datearchived,project.ID AS project_id,name');
-		$this->db->from('story');
-		$this->db->join('project','story.project_id=project.ID','left');
-		$this->db->where('slug = \''.$slug.'\'');
-		$this->db->where('story.password = \''.md5($pwd).'\'');
-		$this->db->limit(1);
-		$query = $this->db->get();
-		if($query->num_rows() == 1){
-			$result = $query->result();
-			$this->story_view_log($result[0]->ID,$email);
-			return $result[0];
-		}else{
-			return 'Password incorrect.';
-		}	
-	}
-	/*
-	 * Create log of story logins.
-	 */
-	function story_view_log($story_id,$email){
-		$data['story_id'] = $story_id;
-		$data['email'] = $email;
-		$data['dateadded'] = time();
-		//insert view
-		$this->db->insert('view_log',$data);
-	}
 	
 	/*
 	 * Basic authentication check with optional redirect
