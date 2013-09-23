@@ -6,7 +6,7 @@
 						<a href="/post/edit/<?php print $post->post_id; ?>" class="btn pull-right">Edit</a>
 					<?php } ?></h1>
 		<div class="price pull-right">
-			<label>Asking Price:</label> <span><?php print money_format('%#1.2n', (float) $post->cost); ?></span>
+			<label>Price<?php print stripos($post->type,'service')!==FALSE?' per hour':''; ?>:</label> <span><?php print money_format('%#1.2n', (float) $post->cost); ?></span>
 			<?php print form_open_multipart($action['buy'],array('id'=>'buy','class'=>'smallform')); ?>
 			<?php print form_fieldset(); ?>
 			<div class="row-fluid">

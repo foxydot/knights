@@ -65,6 +65,14 @@ $(document).ready(function($) {
 			}
 		});
 	});
+	$('.edit #type,.add #type').change(function(){
+	    var myval = $(this).val();
+	    var placeholder_text = 'Price';
+	    if(myval.indexOf('service')>=0){
+	        placeholder_text = 'Price per hour';
+	    }
+	    $('.edit #cost,.add #cost').attr('placeholder',placeholder_text);
+	});
 	$('.edit #delete_btn').click(function(){
 		var myform = $(this).parents('form');
 		myform.attr('action',myform.attr('action').replace('edit','delete'));

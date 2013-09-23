@@ -17,7 +17,7 @@ if(isset($seller->meta['paypal'])){
 		<div class="span6 offset3">
 		<h1><?php print $post->title; ?>
 		<div class="price pull-right">
-			<span><?php print money_format('%#1.2n', (float) $post->cost); ?></span>
+			<span><?php print money_format('%#1.2n', (float) $post->cost); ?><?php print stripos($post->type,'service')!==FALSE?' per hour':''; ?></span>
 		</div>
 		</h1>
 		</div>
