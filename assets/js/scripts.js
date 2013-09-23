@@ -102,5 +102,8 @@ $(document).ready(function($) {
         });
         return false;
     });
+    $('.articlelist .sortable').sortable({
+        placeholder: "ui-state-highlight"
+    });
 });
 

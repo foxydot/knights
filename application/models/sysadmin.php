@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Sysadmin extends CI_Model {
-	public $db_version = '0.4';
+	public $db_version = '0.5';
 	function __construct()
 	    {
 	        // Call the Model constructor
@@ -933,6 +933,20 @@ Class Sysadmin extends CI_Model {
                 $this->db->insert('system_info',$db_data);
                 //set version
                 $this->set_version('0.4');
+            case '0.4':
+                /**
+                 * Add column pageorder to article
+                 */
+                 $fields = array(
+                        'pageorder' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                );
+                $this->dbforge->add_column('article', $fields, 'content');
+                //set version
+                $this->set_version('0.5');
 			default:
 				//redirect to home page
 				$this->load->helper('url');

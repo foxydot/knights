@@ -7,6 +7,7 @@
 			<input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$article->ID.'"':''; ?> />
 			<input name="parent_art_id" id="parent_art_id" type="hidden" <?php print $is_edit?'value="'.$article->parent_art_id.'"':'value="0"'; ?> />
 			<input class="span9" name="title" id="title" type="text" title="Title" placeholder="Title"<?php print $is_edit?'value="'.$article->title.'"':''; ?> />
+            <input class="span3" name="pageorder" id="pageorder" type="text" title="Page Order" placeholder="Page Order"<?php print $is_edit?'value="'.$article->pageorder.'"':''; ?> />
 		</div>
 		<div class="row-fluid">
 			<label>Content</label>
