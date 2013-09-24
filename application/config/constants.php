@@ -4,8 +4,9 @@
 */
 define('SITENAME', 'Knights ');
 define('SITEPATH', preg_replace('@/'.SYSDIR.'@i','',BASEPATH));
-define('THEME_URL','/assets/themes/default');
-define('ADMIN_THEME_URL','/assets/themes/default');
+define('DEFAULT_THEME_URL','/assets/themes/default');
+define('THEME_URL','/assets/themes/knights');
+define('ADMIN_THEME_URL','/assets/themes/knights');
 /*
 |--------------------------------------------------------------------------
 | File and Directory Modes

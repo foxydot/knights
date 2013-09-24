@@ -10,7 +10,7 @@
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
   <script src="/assets/js/scripts.js"></script>
-  <script src="<?php echo ADMIN_THEME_URL; ?>/js/scripts.js"></script>
+  <script src="<?php echo DEFAULT_THEME_URL; ?>/js/scripts.js"></script>
   <!-- Load TinyMCE -->
 <script type="text/javascript" src="/assets/js/tiny_mce/jquery.tinymce.js"></script>
 <script type="text/javascript">

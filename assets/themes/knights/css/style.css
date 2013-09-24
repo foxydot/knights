@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+.opensans{font-family:"Open Sans","Trebuchet MS",Calibri,sans-serif}
+.arial{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif}
+.button:hover,.button:visited,.button a,.button a:hover,.button a:visited{color:#fff;text-decoration:none}
+.clearfix{content:".";display:block;height:0;clear:both;visibility:hidden}
+.opensans{font-family:"Open Sans","Trebuchet MS",Calibri,sans-serif}
+.arial{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif}
+body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{line-height:1.5625;margin:0;padding:0;text-decoration:none}
+a,a:visited{color:#004c70;text-decoration:none}
+a:hover{text-decoration:underline}
+body{background-color:#bad0dd;background-image:url("../img/pg-bkg.png");background-repeat:no-repeat;background-position:760px 400px;font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:14px;margin:0}body .wrap{width:960px;margin:0 auto}
+::-moz-selection{background-color:#ccc;color:#fff}
+::selection{background-color:#ccc;color:#fff}
+input[type="submit"],a.button{background:#004c70;background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #00070a), color-stop(1, #0091d6));background:-ms-linear-gradient(bottom, #00070a, #0091d6);background:-moz-linear-gradient(center bottom, #00070a 0, #0091d6 100%);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-moz-background-clip:padding;-webkit-background-clip:padding-box;background-clip:padding-box;border:.5px solid #00070a;-webkit-box-shadow:0 0 2px rgba(0,0,0,0.2);-moz-box-shadow:0 0 2px rgba(0,0,0,0.2);box-shadow:0 0 2px rgba(0,0,0,0.2);padding:6px 24px;font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;color:#fff !important;font-size:12px;font-weight:normal;text-shadow:1px 1px 2px #000;text-transform:uppercase;display:table;margin:12px auto;filter:dropshadow(color=#000000, offx=1, offy=1)}
+.logo-container{padding:1em auto}.logo-container #logo{margin:2em auto;background:url(../img/logo.png) no-repeat center center;width:200px;height:200px;display:block}
+.stripe.odd{background:#efefef}
+.stripe.even{background:#fff}
+.list .level-1 div{padding-left:1em}
+.list .level-2 div{padding-left:2em}
+.list .level-3 div{padding-left:3em}
+.list .level-4 div{padding-left:4em}
+.list .level-5 div{padding-left:5em}
+.columns-3{-moz-column-width:30%;-moz-column-count:3;-moz-column-gap:1%;-moz-column-rule-color:#fff;-moz-column-rule-style:solid;-moz-column-rule-width:0;-webkit-column-width:30%;-webkit-column-count:3;-webkit-column-gap:1%;-webkit-column-rule-color:#fff;-webkit-column-rule-style:solid;-webkit-column-rule-width:0;column-width:30%;column-count:3;column-gap:1%;column-rule-color:#fff;column-rule-style:solid;column-rule-width:0}.columns-3 .level-0{font-weight:bold;text-transform:uppercase}
+.columns-3 .level-1{padding-left:30px}
+.columns-3 .level-2{padding-left:40px}
+.columns-3 .level-3{padding-left:50px}
+.columns-3 .level-4{padding-left:60px}
+.columns-3 .level-5{padding-left:70px}
+.attachment-view{display:inline-block;position:relative}.attachment-view .attachment-delete{display:block;position:absolute;top:0;right:0;color:#fff;cursor:pointer}
+footer{margin:30px}
+.modal-backdrop{opacity:.4}
+.modal-body .wrap{min-width:auto;width:auto}
+form.popupform{width:500px}form.popupform input,form.popupform select,form.popupform textarea{display:block}
+.accordion-group{border-color:#004c70}

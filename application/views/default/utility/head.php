@@ -46,6 +46,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/responsive.css">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/style.css">
   <?php include_once(SITEPATH.ADMIN_THEME_URL.'/inc/css.php'); ?>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->

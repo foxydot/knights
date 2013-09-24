@@ -1,0 +1,178 @@
+@import 'mixins';
+/* Defaults
+------------------------------------------------------------ */
+
+body,
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6,
+p,
+select,
+textarea {
+  line-height: 1.5625;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+blockquote,
+input,
+select,
+textarea,
+.author-box,
+.breadcrumb,
+.sticky,
+.taxonomy-description,
+.wp-caption {
+}
+
+
+/* Hyperlinks
+------------------------------------------------------------ */
+
+a,
+a:visited {
+  color: @blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Body
+------------------------------------------------------------ */
+
+body {
+  background-color: @ltblue;
+  background-image: url("../img/pg-bkg.png");
+  background-repeat: no-repeat;
+  background-position: 760px 400px;
+  .arial;
+  font-size: 14px;
+  margin:0;
+  .wrap {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+::-moz-selection {
+  background-color: @ltgrey;
+  color: @white;
+}
+
+::selection {
+  background-color: @ltgrey;
+  color: @white;
+}
+
+/* Button
+------------------------------------------------------------ */
+input[type="submit"], a.button{
+  .button(@color1);
+}
+.logo-container{
+  padding: 1em auto;
+  #logo {
+    margin:2em auto;
+    background: url(../img/logo.png) no-repeat center center;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+}
+
+.stripe.odd {background:@vltgrey;}
+.stripe.even {background:@white;}
+
+.list{
+  .level-1 {
+    div {
+      padding-left: 1em;
+    }
+  }
+  .level-2 {
+    div {
+      padding-left: 2em;
+    }
+  }
+  .level-3 {
+    div {
+      padding-left: 3em;
+    }
+  }
+  .level-4 {
+    div {
+      padding-left: 4em;
+    }
+  }
+  .level-5 {
+    div {
+      padding-left: 5em;
+    }
+  }
+}
+.columns-3 {
+  .columns(30%, 3, 1%, #FFF, solid, 0px);
+  .level-0 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .level-1 {
+    padding-left: 30px;
+  }
+  .level-2 {
+    padding-left: 40px;
+  }
+  .level-3 {
+    padding-left: 50px;
+  }
+  .level-4 {
+    padding-left: 60px;
+  }
+  .level-5 {
+    padding-left: 70px;
+  }
+}
+
+.attachment-view{
+  display: inline-block;
+  position: relative;
+  .attachment-delete{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: @white;
+    cursor: pointer;
+  }
+}
+
+footer {margin: 30px;}
+
+/*Modal Forms */
+.modal-backdrop{opacity:0.4;}
+.modal-body{
+  .wrap{
+    min-width: auto;
+    width: auto;
+  }
+}
+form.popupform {
+  width: 500px;
+  input,
+  select,
+  textarea {
+    display: block;
+  }
+}
+.accordion-group{
+  border-color: @blue;
+}
