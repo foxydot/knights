@@ -82,12 +82,12 @@ $(document).ready(function($) {
           myform.submit();
           }		
 	});
-	$('.buy #payment_option_paypal').click(function(){
+	$('.buy #payment_option_paypal,.invoice #payment_option_paypal').click(function(){
 			$('.payment_info').slideUp();
 			$('#paypal_info').slideDown();
 			$('#buyform').attr('action',$('#paypal_action').val());
 	});
-	$('.buy #payment_option_check').click(function(){
+	$('.buy #payment_option_check,.invoice #payment_option_check').click(function(){
 			$('.payment_info').slideUp();
 			$('#check_info').slideDown();
             $('#buyform').attr('action',$('#check_action').val());

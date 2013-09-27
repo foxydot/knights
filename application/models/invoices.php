@@ -18,6 +18,7 @@ class Invoices extends CI_Model {
         $this->db->insert('invoice',$db_data);
         $invoice_id = $this->db->insert_id();
         $this->email_invoice($invoice_id);
+        return $invoice_id;
     }    
     
     function email_invoice($invoice_id){

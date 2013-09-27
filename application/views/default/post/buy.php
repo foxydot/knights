@@ -50,7 +50,7 @@ if(isset($seller->meta['paypal'])){
                     <input type="hidden" name="tax_rate" value="0.000">
                     <input type="hidden" name="shipping" value="0.00">
                     <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit_btn" alt="PayPal - The safer, easier way to pay online!">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit_btn" alt="PayPal - The safer, easier way to pay online!" value="PayPal">
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </div>
 			<input type="radio" name="payment_option" id="payment_option_check" value="Cash/Check"> Pay by cash or check 
