@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Sysadmin extends CI_Model {
-	public $db_version = '0.5';
+	public $db_version = '0.6';
 	function __construct()
 	    {
 	        // Call the Model constructor
@@ -947,6 +947,58 @@ Class Sysadmin extends CI_Model {
                 $this->dbforge->add_column('article', $fields, 'content');
                 //set version
                 $this->set_version('0.5');
+            case '0.5':
+                /**
+                 * Create table for invoice tracking
+                 */
+                 /*
+                 * Create invoice table
+                */
+                $fields = array(
+                        'ID' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'auto_increment' => TRUE,
+                        ),
+                        'org_id' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'null' => FALSE,
+                        ),
+                        'author_id' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'null' => FALSE,
+                        ),
+                        'post_id' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'null' => FALSE,
+                        ),
+                        'fee' => array(
+                                'type' => 'VARCHAR',
+                                'constraint' => '255',
+                                'null' => FALSE,
+                        ),
+                        'dateadded' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'dateremoved' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'notes' => array(
+                                'type' => 'TEXT'
+                        )
+                );
+                $this->dbforge->add_field($fields);
+                $this->dbforge->add_key('ID',TRUE);
+                $this->dbforge->create_table('invoice',TRUE);
+                //set version
+                $this->set_version('0.6');
 			default:
 				//redirect to home page
 				$this->load->helper('url');

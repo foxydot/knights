@@ -10,3 +10,30 @@ if(!function_exists('post_slug'))
 				array('', '-', ''), $str));
 	}
 }
+
+if(!function_exists('get_the_fee'))
+{
+function get_the_fee($post){
+        switch($post->type){
+            case 'service':
+                $fee = 20;
+                break;
+            case 'student-service':
+            case 'request':
+                $fee = 5;
+                break;
+            case 'product':
+            default:
+                $cost = (float) $post->cost;
+                if($cost<=100){
+                    $fee = .1*$cost;
+                } elseif($cost>100 && $cost<=1000) {
+                    $fee = (.05*($cost-100))+10;
+                } else {
+                    $fee = (.02*($cost-1000))+55;
+                }
+                break;
+        }
+        return $fee;
+    }
+}

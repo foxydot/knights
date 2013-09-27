@@ -1,12 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 .opensans{font-family:"Open Sans","Trebuchet MS",Calibri,sans-serif}
 .arial{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif}
 .button:hover,.button:visited,.button a,.button a:hover,.button a:visited{color:#fff;text-decoration:none}
 .clearfix{content:".";display:block;height:0;clear:both;visibility:hidden}
-.opensans{font-family:"Open Sans","Trebuchet MS",Calibri,sans-serif}
+.opensans{font-family:"Raleway","Open Sans","Trebuchet MS",Calibri,sans-serif}
 .arial{font-family:"Helvetica Neue",Arial,Helvetica,sans-serif}
 body,h1,h2,h2 a,h2 a:visited,h3,h4,h5,h6,p,select,textarea{line-height:1.5625;margin:0;padding:0;text-decoration:none}
+h1,h2,h3,h4,h5,h6{font-family:"Open Sans","Trebuchet MS",Calibri,sans-serif;font-family:"Raleway","Open Sans","Trebuchet MS",Calibri,sans-serif}
 a,a:visited{color:#004c70;text-decoration:none}
 a:hover{text-decoration:underline}
 body{background-color:#bad0dd;background-image:url("../img/pg-bkg.png");background-repeat:no-repeat;background-position:760px 400px;font-family:"Helvetica Neue",Arial,Helvetica,sans-serif;font-size:14px;margin:0}body .wrap{width:960px;margin:0 auto}

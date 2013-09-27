@@ -94,6 +94,12 @@ class Post extends CI_Controller {
 				);
 				$this->Posts->attachment_to_post($db_data);
 			}
+            //Invoice
+            $post = $this->Posts->get_post($post_id);
+            if(stripos($post->type,'product')===FALSE){
+                $this->load->model('Invoices');
+                $this->Invoices->create_invoice($post);
+            }
 			$this->load->helper('url');
 			redirect('/post');
 		}
@@ -161,12 +167,15 @@ class Post extends CI_Controller {
 	function delete($ID){
 		$this->load->model('Categories','Cats');
 		$this->load->model('Users');
-		$this->load->model('Organizations','Orgs');
+        $this->load->model('Organizations','Orgs');
+        
+        $post = $this->Posts->get_post($ID);
+        
 		$data = array(
 				'page_title' => SITENAME.': Edit Post',
 				'body_class' => 'edit post-edit',
 				'user' => $this->session->userdata,
-				'post' => $this->Posts->get_post($ID),
+				'post' => $post,
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/edit/'.$ID,
@@ -187,7 +196,11 @@ class Post extends CI_Controller {
 			$db_data['dateremoved'] = time();
 			$this->Posts->edit_post($db_data);
 			$this->Posts->clear_post_to_cats($db_data['ID']);
-				
+			if(stripos($post->type,'product')!==FALSE){
+			    $this->load->model('Invoices');
+                $this->Invoices->create_invoice($post);
+			}
+            	
 			$this->load->helper('url');
 			redirect('/post');
 		}

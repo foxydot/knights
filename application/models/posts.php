@@ -211,33 +211,8 @@ Class Posts extends CI_Model {
         $subject = 'Purchase of '.$post->post_title;
         $message = 'Good News!
         '.$buyer->firstname.' '.$buyer->lastname.' has shown an intent to purchase '.$post->post_title.'. 
-        Please check your email and/or PayPal. If the purchase is completed, please remit '.$fee.' to '.$org->name.' as soon as possible.';
+        Please check your email and/or PayPal. If the purchase is completed, please remit '.get_the_fee($post).' to '.$org->name.' as soon as possible.';
         mail($post->email,$subject,$message);
-        ts_data($post);
-    }
-    
-    function get_the_fee($post){
-        switch($post->type){
-            case 'request':
-                break;
-            case 'service':
-                $fee = 20;
-                break;
-            case 'student-service':
-                $fee = 5;
-                break;
-            case 'product':
-            default:
-                $cost = (float) $post->cost;
-                if($cost<=100){
-                    $fee = .1*$cost;
-                } elseif($cost>100 && $cost<=1000) {
-                    $fee = (.05*($cost-100))+10;
-                } else {
-                    $fee = (.02*($cost-1000))+55;
-                }
-                break;
-        }
     }
 	
 }
