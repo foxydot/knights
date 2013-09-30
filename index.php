@@ -28,6 +28,7 @@
 	case 'knights.msdlab3.com':
 		define('ENVIRONMENT', 'testing');
 		break;
+    case 'communitylist.us':
 	default:
 		define('ENVIRONMENT', 'production');
 		break;
