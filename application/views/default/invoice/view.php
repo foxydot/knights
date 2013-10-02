@@ -14,7 +14,6 @@
         <?php print form_open_multipart($urls['paypal'],array('id'=>'invoiceform','class'=>'smallform')); ?>
             <input type="hidden" id="paypal_action" value="<?php print $urls['paypal']; ?>">
             <input type="hidden" id="check_action" value="<?php print $urls['check']; ?>">
-            <input type="hidden" id="buyer_id" value="<?php print $user['ID']; ?>">
         <?php print form_fieldset(); ?>
         <div class="row-fluid payment_options">
             <label>Payment Options</label>
