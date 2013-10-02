@@ -69,10 +69,10 @@ class Invoices extends CI_Model {
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         
-        //$this->email->from('knights@communitylist.us', $organization->name.' List');
-        $this->email->from('test@msdlab.com', $organization->name.' List');
+        $this->email->from('knights@communitylist.us', $organization->name.' List');
+        //$this->email->from('test@msdlab.com', $organization->name.' List');
         $this->email->to($invoice->email);
-        //$this->email->bcc('knights@communitylist.us');
+        $this->email->bcc('knights@communitylist.us');
         $this->email->subject($message_subject);
         $this->email->message($message_html);
         $this->email->set_alt_message($message_plaintext);
