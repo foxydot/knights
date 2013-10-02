@@ -37,3 +37,9 @@ function get_the_fee($post){
         return $fee;
     }
 }
+if(!function_exists('preg_replacement_quote'))
+{
+function preg_replacement_quote($str) {
+    return preg_replace('/(\$|\\\\)(?=\d)/', '\\\\\1', $str);
+}
+}

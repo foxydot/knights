@@ -23,8 +23,63 @@ class Invoices extends CI_Model {
     
     function email_invoice($invoice_id){
         $invoice = $this->get_invoice($invoice_id);
+        $this->load->model('Organizations','Orgs');
+        $organization = $this->Orgs->get_org($invoice->org_id);
         //prep email
+        switch($invoice->type){
+            case 'product':
+                include_once(SITEPATH.THEME_URL.'/email/product-invoice.php');
+                break;
+            case 'service':
+            case 'student-service':
+            case 'request':
+                include_once(SITEPATH.THEME_URL.'/email/service-invoice.php');
+                break;
+        }
+        
+        setlocale(LC_MONETARY, 'en_US');
+        $fee = money_format('%#1.2n', (float) $invoice->fee);
+        //include_once(SITEPATH.THEMEURL.'email/email_template.php');
+        $pattern = array(
+            '/__POST_TITLE__/',
+            '/__BUYER_FIRSTNAME__/',
+            '/__BUYER_LASTNAME__/',
+            '/__SELLER_FIRSTNAME__/',
+            '/__SELLER_LASTNAME__/',
+            '/__LISTING_FEE__/',
+            '/__ORGANIZATION_NAME__/',
+            '/__INVOICE_URL__/'
+        );
+        $replacement = array(
+            preg_quote($invoice->title),
+            '',
+            '',
+            preg_replacement_quote($invoice->firstname),
+            preg_replacement_quote($invoice->lastname),
+            preg_replacement_quote($fee),
+            preg_replacement_quote($organization->name),
+            preg_replacement_quote(site_url('invoice/view/'.$invoice_id))
+        );
+        $message_subject = preg_replace($pattern, $replacement, $message_subject);
+        $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
+        $message_html = preg_replace($pattern, $replacement, $message_html);
         //send email
+        $this->load->library('email');
+        
+        $config['mailtype'] = 'html';
+        $this->email->initialize($config);
+        
+        //$this->email->from('knights@communitylist.us', $organization->name.' List');
+        $this->email->from('test@msdlab.com', $organization->name.' List');
+        $this->email->to($invoice->email);
+        //$this->email->bcc('knights@communitylist.us');
+        $this->email->subject($message_subject);
+        $this->email->message($message_html);
+        $this->email->set_alt_message($message_plaintext);
+        
+        $this->email->send();
+        
+        //echo $this->email->print_debugger();
     }
     
     function get_invoice($invoice_id){
