@@ -27,12 +27,34 @@ Class Posts extends CI_Model {
 	    	foreach($cats AS $cat){
 	    		$params['cat_id'] = $cat->ID;
 	    		$cats[$i]->posts = $this->get_posts($params,$archive);
-	    		$cats[$i]->has_children = $this->Cats->cat_has_children($cat,$org_id = 1);
+	    		$cats[$i]->has_children = $this->cat_has_children_or_posts($cat,$org_id = 1);
 	    		$i++;
 	    	}
 	    	$cats = $this->Cats->group_cats_by_parent($cats);
 	    	return $cats;
 	    }
+   
+   function cat_has_children_or_posts($cat,$org_id = 1){
+       $posts = $this->get_posts(array('cat_id'=>$cat->ID));
+       if(isset($posts[0])){
+           return TRUE; //cat has posts, return true.
+       }
+        $this->db->select('cat_id AS ID');
+        $this->db->from('cat2org');
+        $this->db->where('org_id',$org_id);
+        $this->db->where('parent_cat_id',$cat->ID);
+        $query = $this->db->get();
+        $result = $query->result();
+        if(isset($result[0])){
+            foreach($result AS $r){
+                if($this->cat_has_children_or_posts($r) == TRUE){
+                    return TRUE;
+                }
+            }
+        } else {
+            return FALSE; //cat has neither posts nor children, return false.
+        }
+     }
 	    
 	function get_user_posts($params,$archive=FALSE){
 		$posts = $this->get_posts($params,$archive);
