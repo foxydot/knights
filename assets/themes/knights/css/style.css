@@ -30,6 +30,7 @@ input[type="submit"],a.button{background:#004c70;background:-webkit-gradient(lin
 .columns-3 .level-4{padding-left:60px}
 .columns-3 .level-5{padding-left:70px}
 .attachment-view{display:inline-block;position:relative}.attachment-view .attachment-delete{display:block;position:absolute;top:0;right:0;color:#fff;cursor:pointer}
+.attachment-view img{max-width:300px;max-height:300px}
 footer{margin:30px}
 .modal-backdrop{opacity:.4}
 .modal-body .wrap{min-width:auto;width:auto}
