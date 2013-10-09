@@ -105,5 +105,6 @@ $(document).ready(function($) {
     $('.articlelist .sortable').sortable({
         placeholder: "ui-state-highlight"
     });
+    location.hash && $(location.hash + '.collapse').collapse('show');
 });
 
