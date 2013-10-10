@@ -16,12 +16,18 @@
 			<h4>Date Added</h4>
 		</div><!-- end span2 -->
 		<div class="span2">
-			<h4>Poster</h4>
+			<h4>Seller</h4>
 		</div><!-- end span2 -->
 		<div class="span1">
 			<h4></h4>
 		</div><!-- end span1 -->
       </div><!--/row-->
+      <div class="row-fluid">
+          <div class="alert alert-info">
+            <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+            Categories displayed below include <strong>active</strong> listings. For a full overview of all categories, please look under “New Posting.”
+        </div>
+      </div>
 	<?php 
 	if($catsposts):
 		foreach($catsposts[0] AS $cat){
