@@ -1,6 +1,12 @@
-<div class="container-fluid form">
+    <div class="container-fluid form">
 	<div class="row-fluid">
+        
 		<?php print form_open_multipart($action,array('id'=>'post','class'=>'smallform span6 offset3')); ?>
+		<div class="alert alert-info">
+            <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+            Only non-Summit identifiable items are allowed to be posted on the Knights List.
+        </div>
+		
 		<h1><?php print $is_edit?'Edit':'New'; ?> Post</h1>
 		<?php print form_fieldset(); ?>
 		<div class="row-fluid">
