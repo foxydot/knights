@@ -115,8 +115,6 @@ class User extends CI_Controller {
 	function add()
 		{
 			$this->authenticate->check_auth('administrators',true);
-			$user_meta = $db_data['meta'];
-			unset($db_data['meta']);
 			$data = array(
 				'page_title' => SITENAME.' Administrative Users',
 				'body_class' => 'add user-add',
@@ -133,10 +131,13 @@ class User extends CI_Controller {
 					$this->session->set_flashdata('err', 'Passwords do not match');
 				} else {
 					$db_data = $this->input->post();
-					unset($db_data['submit_btn']);
+                    $user_meta = $db_data['meta'];
+                    unset($db_data['meta']);
+                    unset($db_data['user_id']);
+                    unset($db_data['submit_btn']);
 					unset($db_data['passwordtest']);
 					$db_data['password'] = md5($db_data['password']);
-					$this->Users->add_user($db_data);
+					$ID = $this->Users->add_user($db_data);
 				}		
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
