@@ -249,17 +249,19 @@ class Login extends CI_Controller {
                     $test_path = preg_replace('@'.base_url().'@i',SITEPATH,$test_csv['test_csv']->meta_value);
                     $test_array = parse_csvfile($test_path);
                     foreach($test_array AS $ta){
-                        /*if(empty($student['firstname'])||empty($student['lastname'])){
+                        if(empty($student['firstname'])||empty($student['lastname'])){
                             continue;
-                        }*/
-                        if($ta['StudentLastName'] == $student['lastname'] && $ta['StudentFirstName'] == $student['firstname']){
-                            if(($ta['Par1FirstName']==$db_data['firstname'] && $ta['Par1LastName']==$db_data['lastname']) || ($ta['Par2FirstName']==$db_data['firstname'] && $ta['Par2LastName']==$db_data['lastname'])){
-                               $approved = TRUE;
-                                continue;
+                        }
+                        if($ta['StudentLastName'] == $student['lastname']){
+                            if(trim($ta['StudentFirstName']) == trim($student['firstname']) || trim($ta['StudentPreferredName']) == trim($student['firstname'])){
+                                if((trim($ta['Par1FirstName'])==trim($db_data['firstname']) && trim($ta['Par1LastName'])==trim($db_data['lastname'])) || (trim($ta['Par2FirstName'])==trim($db_data['firstname']) && trim($ta['Par2LastName'])==trim($db_data['lastname']))){                                    
+                                   $approved = TRUE;
+                                    continue;
+                                }
                             }
                         }
                     }
-                }
+                } 
                 if($approved){
                     $subject = 'New User: Auto-approved';
                     $message = $username.' has registered with CommunityList.US. The application has been approved automatically. You do not need to take any action.';
