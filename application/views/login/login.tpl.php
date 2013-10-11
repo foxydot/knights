@@ -3,9 +3,9 @@
 	<img id="logo" src="<?php print ADMIN_THEME_URL ?>/img/logo.png" alt="<?php print SITENAME; ?>" />
 		<?php if(isset($message)||isset($error)){ ?>
 			<div id="message">
-				<?php print isset($message)?'<div class="msg">'.$message.'</div>':''; ?>
+				<?php print isset($message)?'<div class="alert alert-message">'.$message.'</div>':''; ?>
 				<?php print validation_errors(); ?>
-				<?php print isset($error)?'<div class="err">'.$error.'</div>':''; ?>
+				<?php print isset($error)?'<div class="alert alert-error">'.$error.'</div>':''; ?>
 			</div>
 		<?php } ?>
 		<div class="clear"></div>		

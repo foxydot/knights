@@ -25,7 +25,7 @@
 		    	<div class="clear"></div>
 		    	
 		      	<label id="password_label" for="passwordValid">Confirm Password</label>
-		      	<input type="password" name="passwordValid" size="16" id="passwordValid" title="Your password again" />	    	
+		      	<input type="password" name="password_valid" size="16" id="password_valid" title="Your password again" />	    	
 		    	<div class="clear"></div>
 		  	</div>
 		  	<div class="submit">
