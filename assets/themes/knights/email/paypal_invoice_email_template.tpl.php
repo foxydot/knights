@@ -12,5 +12,17 @@
 
 $subject = 'Purchase of __POST_TITLE__';
 $message_plaintext = 'Good News!
-        __BUYER_FIRSTNAME__ __BUYER_LASTNAME__ has shown an intent to purchase __POST_TITLE__. 
-        Please check your email and/or PayPal. If the purchase is completed, please remit __LISTING_FEE__ to __ORGANIZATION_NAME__ as soon as possible.';
+        __BUYER_FIRSTNAME__ __BUYER_LASTNAME__ has shown an intent to purchase your __POST_TITLE__. 
+        Please contact __BUYER_FIRSTNAME__ __BUYER_LASTNAME__ at __BUYER_EMAIL__ to make arrangements regarding the exchange of your payment and the item. 
+        
+        To avoid any kind of confusion, please DELETE your item from the Knights List, following these steps:
+
+    * Please log into your Knights List account
+    * Go into "My Postings"
+    * Click on the sold item
+    * Choose "Edit"
+    * Choose "Delete" at the bottom of the page
+
+Once you deleted your item, please check your e-mail to pay your Listing Fee to the __ORGANIZATION_NAME__. 100% of your Listing Fee will go to the __ORGANIZATION_NAME__, benefiting the school and your child(ren). 
+
+Thank you so much for supporting __ORGANIZATION_NAME__! ';
