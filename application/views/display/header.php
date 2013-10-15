@@ -1,3 +1,4 @@
+<?php global $org_id,$site_title; ?>
 <!doctype html>
 <html lang="en">	
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -11,7 +12,7 @@
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
 
-  <title><?php print isset($page_title)?$page_title:SITENAME; ?></title>
+  <title><?php print isset($page_title)?$page_title:$site_title; ?></title>
   <meta name="description" content="<?php //presentation description; ?>">
   <meta name="author" content="<?php //presentation author; ?>">
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->

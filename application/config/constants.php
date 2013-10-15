@@ -2,7 +2,6 @@
 /*
  * SITE CONSTANTS
 */
-define('SITENAME', 'Community List');
 define('SITEPATH', preg_replace('@/'.SYSDIR.'@i','',BASEPATH));
 define('DEFAULT_THEME_URL','/assets/themes/default');
 define('THEME_URL','/assets/themes/knights');

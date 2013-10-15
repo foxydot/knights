@@ -17,10 +17,17 @@
         <?php if(isset($org->meta['logo_url'])): ?>
         <div class="row-fluid img-display">
             <label>Logo</label>
-            <img src="<?php print $org->meta['logo_url']->meta_value; ?>">
+            <img src="<?php print $org->meta['logo_url']->meta_value; ?>" style="max-height:300px;max-width:300px;" />
+            <br />
             <input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
         </div>
         <?php endif; ?>
+        <div class="row-fluid">
+            <input class="span12" name="meta[site_title]" id="site_title" type="text" title="Site Title" placeholder="Site Title"<?php print $is_edit && isset($org->meta['site_title']->meta_value)?'value="'.$org->meta['site_title']->meta_value.'"':''; ?> />
+        </div>
+        <div class="row-fluid">
+            <input class="span12" name="meta[subdomain]" id="subdomain" type="text" title="Subdomain" placeholder="Subdomain"<?php print $is_edit && isset($org->meta['subdomain']->meta_value)?'value="'.$org->meta['subdomain']->meta_value.'"':''; ?> />
+        </div>
         <div class="row-fluid">
             <label class="pull-left">Use Paypal to accept payment?</label>
             <select name="meta[use_paypal]" id="use_paypal">

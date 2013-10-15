@@ -52,6 +52,24 @@ Class Common extends CI_Model {
             return $result;
         }
     }
+    
+    function get_org_info_from_subdomain(){
+        global $org_id,$site_title;
+        $subdomain_arr = explode('.', $_SERVER['HTTP_HOST'], 2); //creates the various parts  
+        $subdomain = $subdomain_arr[0]; //assigns the first part  
+        $query = $this->db->get_where('org_meta',array('meta_key' => 'subdomain','meta_value' => $subdomain),1);
+        $result = $query->result();
+        $org_id = $result[0]->org_id;
+        $this->db->select('meta_value');
+        $query = $this->db->get_where('org_meta',array('meta_key' => 'site_title','org_id' => $org_id),1);
+        $result = $query->result();
+        $site_title = $result[0]->meta_value;
+        if($site_title == ''){
+            define('SITENAME', 'Community List');
+        } else {
+            define('SITENAME', $site_title);
+        }
+    }
 	
 	/*
 	 * Convert a timestamp into increments of ago.

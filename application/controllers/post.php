@@ -10,6 +10,7 @@ class Post extends CI_Controller {
 			}
 			$this->authenticate->check_auth('users',true);
 			$this->load->model('Posts');
+            $this->common->get_org_info_from_subdomain();
        }
        
 	function index(){
