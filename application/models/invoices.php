@@ -49,7 +49,8 @@ class Invoices extends CI_Model {
             '/__LISTING_FEE__/',
             '/__ORGANIZATION_NAME__/',
             '/__INVOICE_URL__/',
-            '/__SITE_TITLE__/'
+            '/__SITE_TITLE__/',
+            '/__LISTING_CODE__/'
         );
         $replacement = array(
             preg_quote($invoice->title),
@@ -60,7 +61,8 @@ class Invoices extends CI_Model {
             preg_replacement_quote($fee),
             preg_replacement_quote($organization->name),
             preg_replacement_quote(site_url('invoice/view/'.$invoice_id)),
-            preg_replacement_quote(SITENAME)
+            preg_replacement_quote(str_pad((string)SITENAME,8,'0',STR_PAD_LEFT)),
+            preg_replacement_quote($invoice_id),
         );
         $message_subject = preg_replace($pattern, $replacement, $message_subject);
         $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
@@ -71,7 +73,7 @@ class Invoices extends CI_Model {
         $config['mailtype'] = 'html';
         $this->email->initialize($config);
         
-        $this->email->from('knights@communitylist.us', $organization->name.' List');
+        $this->email->from('knights@communitylist.us', SITENAME);
         //$this->email->from('test@msdlab.com', $organization->name.' List');
         $this->email->to($invoice->email);
         $this->email->bcc('knights@communitylist.us');

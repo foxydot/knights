@@ -17,16 +17,16 @@ If paying by check, please
 
 $message_html = '
 <p>Thank you for using __SITE_TITLE__!<p>
-<p>This is your invoice for your posting of __POST_TITLE__.</p>
+<p>This is your invoice for your posting of __POST_TITLE__(__LISTING_CODE__).</p>
 
-<p>100% of the Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!</p>
+<p><strong>100% of your Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!</strong>, benefiting the school and your child(ren)!</p>
 
 <p>Please submit your __LISTING_FEE__ fee using <a href="__INVOICE_URL__">PayPal</a> or by mailing a check.</p>
 <p><span>If <span style="text-decoration: underline;">paying by&nbsp;<strong>check</strong></span></span>, please</p>
 <p>. Make out to &ldquo;Summit Parent Association &ndash; Knights List&rdquo;</p>
-<p>. Memo Line &ldquo;<em>please include the item&rsquo;s listing number here&rdquo;</em></p>
+<p>. Memo Line &ldquo;__LISTING_CODE__&rdquo;</p>
 <p><em>.</em>&nbsp;Mail to:&nbsp;&nbsp;&nbsp;&nbsp; Summit Parent Association, attn: Treasurer</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2161 Grandin Road</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cincinnati, OH 45208</p>
-<p>Thank you so much for supporting the Summit Parent Association!</p>
+<p><strong>Thank you so much for supporting the __ORGANIZATION_NAME__!</strong></p>
 ';
