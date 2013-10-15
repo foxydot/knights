@@ -8,6 +8,7 @@ class Login extends CI_Controller {
 			$this->load->helper('url');
 			redirect('/install');
 		}
+        $this->common->get_org_info_from_subdomain();
 	}
 	
 	function index()

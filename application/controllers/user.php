@@ -9,6 +9,7 @@ class User extends CI_Controller {
 				redirect('/install');
 			}
 			$this->load->model('Users');
+            $this->common->get_org_info_from_subdomain();
        }
 	
 	function index()

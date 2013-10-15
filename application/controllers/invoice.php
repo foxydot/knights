@@ -9,6 +9,7 @@ class Invoice extends CI_Controller {
                 redirect('/install');
             }
             $this->load->model('Invoices');
+            $this->common->get_org_info_from_subdomain();
        }
        
     function index(){

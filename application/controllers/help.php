@@ -9,6 +9,7 @@ class Help extends CI_Controller {
 				redirect('/install');
 			}
 			$this->load->model('Articles');
+            $this->common->get_org_info_from_subdomain();
        }
        
 	function index()

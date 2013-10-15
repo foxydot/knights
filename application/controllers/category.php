@@ -10,6 +10,7 @@ class Category extends CI_Controller {
 			}
 			$this->authenticate->check_auth('administrators',true);
 			$this->load->model('Categories','Cats');
+            $this->common->get_org_info_from_subdomain();
        }
        
 	function index()
