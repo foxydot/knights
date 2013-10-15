@@ -53,6 +53,10 @@
             <input class="btn" name="change_csv" id="change_csv" type="button" value="Change File" />
         </div>
         <?php endif; ?>
+        <div class="row-fluid">
+            <label>Site Guidelines</label>
+            <textarea class="span12 tinymce" name="meta[guidelines]" id="guidelines" placeholder="Guideline Text"><?php print $is_edit && isset($org->meta['guidelines']->meta_value)?$org->meta['guidelines']->meta_value:''; ?></textarea>
+        </div>
 		<div class="row-fluid">
 				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
 				<?php if($this->authenticate->check_auth('administrators')){ ?>

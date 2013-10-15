@@ -305,6 +305,7 @@ class Login extends CI_Controller {
 				'page_css' => 'login',
 				'form' => 'login/terms',
 				'organization' => $this->Orgs->get_org($org_id),
+				'org_meta' => $this->Orgs->get_org_meta($org_id),
 		);
 		if($this->input->post('terms_accepted')=='true'){
 			$this->Users->edit_user($this->session->userdata['ID'],array('terms_accepted'=>1));

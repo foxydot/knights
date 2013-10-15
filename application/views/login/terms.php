@@ -4,7 +4,7 @@
 		print form_fieldset();
 		?>
 		<h1>Terms & Conditions</h1>
-		<p>Document goes here</p>
+		<?php print $org_meta['guidelines']->meta_value; ?><br />
 		<input type="checkbox" value="true" name="terms_accepted"> I have read and agree to abide by the terms and conditions of this site.
 		<input type="submit" value="Submit" />
 		<?php
