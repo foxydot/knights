@@ -48,7 +48,8 @@ class Invoices extends CI_Model {
             '/__SELLER_LASTNAME__/',
             '/__LISTING_FEE__/',
             '/__ORGANIZATION_NAME__/',
-            '/__INVOICE_URL__/'
+            '/__INVOICE_URL__/',
+            '/__SITE_TITLE__/'
         );
         $replacement = array(
             preg_quote($invoice->title),
@@ -58,7 +59,8 @@ class Invoices extends CI_Model {
             preg_replacement_quote($invoice->lastname),
             preg_replacement_quote($fee),
             preg_replacement_quote($organization->name),
-            preg_replacement_quote(site_url('invoice/view/'.$invoice_id))
+            preg_replacement_quote(site_url('invoice/view/'.$invoice_id)),
+            preg_replacement_quote(SITENAME)
         );
         $message_subject = preg_replace($pattern, $replacement, $message_subject);
         $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
@@ -106,28 +108,6 @@ class Invoices extends CI_Model {
         $result = $query->result();
         return $result;
     }
-    
-    function make_paypal_button($data){
-        $button = '
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_xclick">
-            <input type="hidden" name="business" value="bills@madsciencedept.com">
-            <input type="hidden" name="lc" value="US">
-            <input type="hidden" name="item_name" value="test item">
-            <input type="hidden" name="item_number" value="id">
-            <input type="hidden" name="amount" value="5.00">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="button_subtype" value="services">
-            <input type="hidden" name="no_note" value="1">
-            <input type="hidden" name="no_shipping" value="1">
-            <input type="hidden" name="rm" value="1">
-            <input type="hidden" name="return" value="http://knights.local/finish.php">
-            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
-        ';
-    }     
 }
 /* End of file invoices.php */
 /* Location: ./application/models/invoices.php */

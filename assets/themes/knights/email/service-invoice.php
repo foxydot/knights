@@ -1,6 +1,6 @@
 <?php
 $message_subject = 'Invoice for Posting of __POST_TITLE__';
-$message_plaintext = 'Thank you for using the __ORGANIZATION_NAME__ List!
+$message_plaintext = 'Thank you for using __SITE_TITLE__!
 This is your invoice for your posting of __POST_TITLE__.
 
 100% of the Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!
@@ -16,7 +16,7 @@ If paying by check, please
 ';
 
 $message_html = '
-<p>Thank you for using the __ORGANIZATION_NAME__ List!<p>
+<p>Thank you for using __SITE_TITLE__!<p>
 <p>This is your invoice for your posting of __POST_TITLE__.</p>
 
 <p>100% of the Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!</p>
