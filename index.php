@@ -21,6 +21,7 @@
   switch( $_SERVER['SERVER_NAME'] ) {
     case 'knights.local':
     case 'knights.ro':
+    case 'msd.ro':
 		define('ENVIRONMENT', 'development');
 		break;
 	case 'knights.msdlab.com':
