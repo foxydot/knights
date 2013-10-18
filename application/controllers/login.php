@@ -254,8 +254,8 @@ class Login extends CI_Controller {
                             continue;
                         }
                         if($ta['StudentLastName'] == $student['lastname']){
-                            if(trim($ta['StudentFirstName']) == trim($student['firstname']) || trim($ta['StudentPreferredName']) == trim($student['firstname'])){
-                                if((trim($ta['Par1FirstName'])==trim($db_data['firstname']) && trim($ta['Par1LastName'])==trim($db_data['lastname'])) || (trim($ta['Par2FirstName'])==trim($db_data['firstname']) && trim($ta['Par2LastName'])==trim($db_data['lastname']))){                                    
+                            if(trim(strtolower($ta['StudentFirstName'])) == trim(strtolower($student['firstname'])) || trim(strtolower($ta['StudentPreferredName'])) == trim(strtolower($student['firstname']))){
+                                if((trim(strtolower($ta['Par1FirstName']))==trim(strtolower($db_data['firstname'])) && trim(strtolower($ta['Par1LastName']))==trim(strtolower($db_data['lastname']))) || (trim(strtolower($ta['Par2FirstName']))==trim(strtolower($db_data['firstname'])) && trim(strtolower($ta['Par2LastName']))==trim(strtolower($db_data['lastname'])))){                                    
                                    $approved = TRUE;
                                     continue;
                                 }
@@ -265,10 +265,10 @@ class Login extends CI_Controller {
                 } 
                 if($approved){
                     $subject = 'New User: Auto-approved';
-                    $message = $username.' has registered with CommunityList.US. The application has been approved automatically. You do not need to take any action.';
+                    $message = $username.' has registered with '.SITENAME.'. The application has been approved automatically. You do not need to take any action.';
                 } else {
                     $subject = 'New User: Action Required!';
-                    $message = $username.' has registered with CommunityList.US, but the application could not be approved automatically. Please review and approve this application.';
+                    $message = $username.' has registered with '.SITENAME.', but the application could not be approved automatically. Please review and approve this application.';
                 }
 				//after testing
 				unset($db_data['submit']);

@@ -199,14 +199,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/system\/database\/drivers\/cubrid\/index.html" : {
+    "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/cubrid\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src-ck.js",
+      "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/wordcount\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
@@ -237,12 +239,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/system\/core\/Exceptions.php" : {
+    "\/system\/database\/drivers\/cubrid\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/core\/Exceptions.php",
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/cubrid\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -252,6 +254,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/database\/drivers\/mssql\/mssql_forge.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/libraries\/Table.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/libraries\/Table.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -266,15 +277,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/scripts-ck.js",
       "fileType" : 64
     },
-    "\/system\/libraries\/Table.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Table.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/controllers\/invoice.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -284,16 +286,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src.js" : {
+    "\/system\/core\/Exceptions.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autoresize\/editor_plugin_src-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/system\/core\/Exceptions.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/uploads\/summit-country-day-knights\/IMG_13561.jpg" : {
       "ignoreWasSetByUser" : 0,
@@ -335,6 +335,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/scripts-ck.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/scripts-ck.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/scripts-ck-ck.js",
+      "fileType" : 64
+    },
     "\/application\/config\/database.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -353,17 +364,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/simple\/editor_template-ck.js",
-      "fileType" : 64
-    },
-    "\/assets\/js\/scripts-ck.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/scripts-ck.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/scripts-ck-ck.js",
       "fileType" : 64
     },
     "\/system\/database\/DB_utility.php" : {
@@ -437,14 +437,14 @@
       "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-tooltip-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/ui_black.css" : {
+    "\/system\/database\/drivers\/odbc\/odbc_forge.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/ui_black.css",
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/odbc\/odbc_forge.php",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 2048
     },
     "\/assets\/themes\/default\/less\/elements.less" : {
       "ieCompatibility" : 1,
@@ -463,14 +463,14 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/system\/database\/drivers\/odbc\/odbc_forge.php" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/ui_black.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/odbc\/odbc_forge.php",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/ui_black.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/assets\/bootstrap\/less\/sprites.less" : {
       "ieCompatibility" : 1,
@@ -498,16 +498,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en.js" : {
+    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/css\/searchreplace.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/css\/searchreplace.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/system\/libraries\/Pagination.php" : {
       "ignoreWasSetByUser" : 0,
@@ -518,14 +516,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/css\/searchreplace.css" : {
+    "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/css\/searchreplace.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/simple\/langs\/en-ck.js",
+      "fileType" : 64
     },
     "\/assets\/bootstrap\/css\/responsive-utilities.css" : {
       "ignoreWasSetByUser" : 0,
@@ -654,16 +654,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite.js" : {
+    "\/system\/libraries\/Sha1.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/system\/libraries\/Sha1.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/system\/database\/drivers\/sqlsrv\/sqlsrv_utility.php" : {
       "ignoreWasSetByUser" : 0,
@@ -685,14 +683,16 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advlink\/js\/advlink-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/image.htm" : {
+    "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/image.htm",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src-ck.js",
+      "fileType" : 64
     },
     "\/application\/controllers\/category.php" : {
       "ignoreWasSetByUser" : 0,
@@ -702,6 +702,17 @@
       "inputAbbreviatedPath" : "\/application\/controllers\/category.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/cite-ck.js",
+      "fileType" : 64
     },
     "\/assets\/bootstrap\/less\/accordion.less" : {
       "ieCompatibility" : 1,
@@ -720,23 +731,12 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src.js" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/image.htm" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/legacyoutput\/editor_plugin_src-ck.js",
-      "fileType" : 64
-    },
-    "\/system\/libraries\/Sha1.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Sha1.php",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/image.htm",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1182,14 +1182,14 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advimage\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
-    "\/application\/config\/mimes.php" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/dialog.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/config\/mimes.php",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/dialog.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
     },
     "\/application\/views\/default\/footer.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1227,21 +1227,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/language\/english\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/language\/english\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/database\/drivers\/oci8\/oci8_utility.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/database\/drivers\/oci8\/oci8_utility.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/config\/mimes.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/config\/mimes.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1267,14 +1267,14 @@
       "initialSize" : 1866518,
       "fileType" : 4096
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/dialog.css" : {
+    "\/system\/language\/english\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/dialog.css",
+      "inputAbbreviatedPath" : "\/system\/language\/english\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "fileType" : 2048
     },
     "\/application\/core\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -1327,6 +1327,15 @@
       "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-scrollspy-ck.js",
       "fileType" : 64
     },
+    "\/application\/views\/default\/sysadmin\/uninstall.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/default\/sysadmin\/uninstall.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/js\/tiny_mce\/plugins\/nonbreaking\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1337,15 +1346,6 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/nonbreaking\/editor_plugin-ck.js",
       "fileType" : 64
-    },
-    "\/application\/views\/default\/sysadmin\/uninstall.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/sysadmin\/uninstall.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/assets\/bootstrap\/js\/bootstrap-typeahead.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1427,15 +1427,6 @@
       "initialSize" : 3133,
       "fileType" : 8192
     },
-    "\/assets\/js\/tiny_mce\/plugins\/advlink\/css\/advlink.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advlink\/css\/advlink.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/js\/jquery\/add.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1446,6 +1437,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/jquery\/add-ck.js",
       "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/advlink\/css\/advlink.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advlink\/css\/advlink.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1506,6 +1506,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/utils\/form_utils-ck.js",
       "fileType" : 64
     },
+    "\/system\/helpers\/typography_helper.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/helpers\/typography_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/system\/libraries\/Cart.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1515,12 +1524,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/helpers\/typography_helper.php" : {
+    "\/system\/database\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/typography_helper.php",
+      "inputAbbreviatedPath" : "\/system\/database\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1540,15 +1549,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/system\/database\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/application\/views\/display\/pdf.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1646,28 +1646,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/jquery\/index-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src-ck.js",
-      "fileType" : 64
-    },
-    "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/js\/tiny_mce\/plugins\/wordcount\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1687,6 +1665,28 @@
       "inputAbbreviatedPath" : "\/system\/core\/CodeIgniter.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/js\/element_common-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/editor_plugin_src-ck.js",
+      "fileType" : 64
     },
     "\/application\/errors\/error_db.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1708,6 +1708,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/editor_template_src-ck.js",
       "fileType" : 64
     },
+    "\/system\/helpers\/inflector_helper.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/helpers\/inflector_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/system\/database\/drivers\/pdo\/pdo_driver.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1717,39 +1726,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/helpers\/text_helper.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/text_helper.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/config\/config.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/config\/config.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/system\/libraries\/Zip.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Zip.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/application\/helpers\/msd_csv_helper.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/helpers\/msd_csv_helper.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1771,6 +1753,24 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/system\/libraries\/User_agent.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/libraries\/User_agent.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/helpers\/text_helper.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/helpers\/text_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/bootstrap\/less\/pager.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/pager.less",
@@ -1788,21 +1788,21 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/system\/helpers\/inflector_helper.php" : {
+    "\/application\/helpers\/msd_csv_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/inflector_helper.php",
+      "inputAbbreviatedPath" : "\/application\/helpers\/msd_csv_helper.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/libraries\/User_agent.php" : {
+    "\/system\/libraries\/Zip.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/User_agent.php",
+      "inputAbbreviatedPath" : "\/system\/libraries\/Zip.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1815,15 +1815,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin.js" : {
+    "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/table\/js\/row.js" : {
@@ -1846,6 +1846,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/jquery\/list.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/jquery\/list.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/jquery\/list-ck.js",
+      "fileType" : 64
+    },
     "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/skins\/clearlooks2\/window.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1855,23 +1866,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions.js" : {
+    "\/assets\/themes\/default\/css\/admin.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/js\/emotions-ck.js",
-      "fileType" : 64
-    },
-    "\/assets\/js\/tiny_mce\/plugins\/table\/css\/cell.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/css\/cell.css",
+      "inputAbbreviatedPath" : "\/assets\/themes\/default\/css\/admin.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -1884,6 +1884,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin-ck.js",
+      "fileType" : 64
+    },
     "\/assets\/js\/tiny_mce\/plugins\/template\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1893,17 +1904,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/template\/editor_plugin_src-ck.js",
-      "fileType" : 64
-    },
-    "\/assets\/js\/jquery\/list.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/jquery\/list.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/jquery\/list-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/iespell\/editor_plugin.js" : {
@@ -1916,6 +1916,23 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/iespell\/editor_plugin-ck.js",
       "fileType" : 64
+    },
+    "\/assets\/bootstrap\/less\/grid.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/grid.less",
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/css\/grid.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/wireframes\/register.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1944,29 +1961,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/bootstrap\/less\/grid.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/grid.less",
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/css\/grid.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
+    "\/assets\/js\/tiny_mce\/plugins\/table\/css\/cell.css" : {
       "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/assets\/themes\/default\/css\/admin.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/themes\/default\/css\/admin.css",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/css\/cell.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -1999,15 +1999,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/views\/default\/cat\/list.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/cat\/list.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/bootstrap\/less\/media.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/media.less",
@@ -2025,16 +2016,23 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin.js" : {
+    "\/application\/views\/default\/cat\/list.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/application\/views\/default\/cat\/list.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/helpers\/captcha_helper.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/helpers\/captcha_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/js\/tiny_mce\/plugins\/print\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2047,14 +2045,16 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/print\/editor_plugin-ck.js",
       "fileType" : 64
     },
-    "\/system\/helpers\/captcha_helper.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/captcha_helper.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autolink\/editor_plugin-ck.js",
+      "fileType" : 64
     },
     "\/system\/database\/drivers\/mysqli\/mysqli_utility.php" : {
       "ignoreWasSetByUser" : 0,
@@ -2198,15 +2198,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/emotions\/emotions.htm" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/emotions.htm",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/plugins\/save\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2218,24 +2209,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/save\/editor_plugin_src-ck.js",
       "fileType" : 64
     },
-    "\/application\/config\/foreign_chars.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/config\/foreign_chars.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/assets\/js\/tiny_mce\/plugins\/table\/merge_cells.htm" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/merge_cells.htm",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/plugins\/advhr\/js\/rule.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2246,6 +2219,33 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advhr\/js\/rule-ck.js",
       "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/table\/merge_cells.htm" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/merge_cells.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/config\/foreign_chars.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/config\/foreign_chars.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/emotions\/emotions.htm" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/emotions\/emotions.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/js\/tiny_mce\/plugins\/iespell\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2363,15 +2363,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/utils\/editable_selects-ck.js",
       "fileType" : 64
     },
-    "\/assets\/bootstrap\/css\/responsive.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/css\/responsive.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2400,15 +2391,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/content.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/content.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/js\/tiny_mce\/plugins\/paste\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2420,14 +2402,23 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/paste\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
-    "\/application\/models\/authenticate.php" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/content.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/models\/authenticate.php",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/highcontrast\/content.css",
       "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "fileType" : 16
+    },
+    "\/assets\/bootstrap\/css\/responsive.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/css\/responsive.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/themes\/knights\/email\/service-invoice.php" : {
       "ignoreWasSetByUser" : 0,
@@ -2435,6 +2426,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/themes\/knights\/email\/service-invoice.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/models\/authenticate.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/models\/authenticate.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2469,15 +2469,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/save\/editor_plugin-ck.js",
       "fileType" : 64
     },
-    "\/application\/config\/user_agents.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/config\/user_agents.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/langs\/en.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2488,6 +2479,15 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/langs\/en-ck.js",
       "fileType" : 64
+    },
+    "\/application\/config\/user_agents.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/config\/user_agents.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/js\/tiny_mce\/themes\/simple\/editor_template_src.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2508,6 +2508,23 @@
       "inputAbbreviatedPath" : "\/application\/views\/login\/terms.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/bootstrap\/less\/close.less" : {
+      "ieCompatibility" : 1,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/close.less",
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/css\/close.css",
+      "outputPathIsSetByUser" : 0,
+      "strictUnits" : 0,
+      "relativeURLS" : 0,
+      "ignore" : 1,
+      "strictImports" : 0,
+      "ignoreWasSetByUser" : 0,
+      "shouldRunBless" : 0,
+      "hidden" : 0,
+      "strictMath" : 0,
+      "outputStyle" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/application\/views\/login\/register_complete.php" : {
       "ignoreWasSetByUser" : 0,
@@ -2532,23 +2549,6 @@
       "hidden" : 0,
       "strictMath" : 0,
       "outputStyle" : 1,
-      "fileType" : 1,
-      "debugStyle" : 0
-    },
-    "\/assets\/bootstrap\/less\/close.less" : {
-      "ieCompatibility" : 1,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/close.less",
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/css\/close.css",
-      "outputPathIsSetByUser" : 0,
-      "strictUnits" : 0,
-      "relativeURLS" : 0,
-      "ignore" : 1,
-      "strictImports" : 0,
-      "ignoreWasSetByUser" : 0,
-      "shouldRunBless" : 0,
-      "hidden" : 0,
-      "strictMath" : 0,
-      "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
     },
@@ -2583,17 +2583,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullscreen\/editor_plugin_src-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src-ck.js",
-      "fileType" : 64
-    },
     "\/system\/libraries\/Ftp.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2620,6 +2609,17 @@
       "inputAbbreviatedPath" : "\/system\/core\/Security.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/contextmenu\/editor_plugin_src-ck.js",
+      "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/editor_template.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2932,6 +2932,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/views\/default\/post\/view.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/default\/post\/view.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/themes\/knights\/img\/paynow.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2942,15 +2951,6 @@
       "outputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/paynow.png",
       "initialSize" : 5721,
       "fileType" : 8192
-    },
-    "\/application\/views\/default\/post\/view.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/post\/view.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/assets\/bootstrap\/less\/scaffolding.less" : {
       "ieCompatibility" : 1,
@@ -3030,21 +3030,21 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/system\/libraries\/Cache\/drivers\/Cache_file.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Cache\/drivers\/Cache_file.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/language\/english\/db_lang.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/language\/english\/db_lang.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/libraries\/Cache\/drivers\/Cache_file.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/libraries\/Cache\/drivers\/Cache_file.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3143,6 +3143,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/dialog.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/dialog.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/uploads\/mad-science-dept-llc\/ApplicationsMAMPtmpphpphp924DHc.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3153,15 +3162,6 @@
       "outputAbbreviatedPath" : "\/uploads\/mad-science-dept-llc\/ApplicationsMAMPtmpphpphp924DHc.png",
       "initialSize" : 68027,
       "fileType" : 8192
-    },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/dialog.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/dialog.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/assets\/bootstrap\/less\/responsive-navbar.less" : {
       "ieCompatibility" : 1,
@@ -3315,21 +3315,21 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/style\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
-    "\/system\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/acronym.htm" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/acronym.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3373,6 +3373,24 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/ui.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/ui.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/advimage\/image.htm" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advimage\/image.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/bootstrap\/less\/popovers.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/assets\/bootstrap\/less\/popovers.less",
@@ -3389,24 +3407,6 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/assets\/js\/tiny_mce\/plugins\/advimage\/image.htm" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advimage\/image.htm",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/ui.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/default\/ui.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/anchor.htm" : {
       "ignoreWasSetByUser" : 0,
@@ -3527,27 +3527,23 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/bootstrap\/js\/bootstrap-button.js" : {
+    "\/application\/views\/display\/footer.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-button.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-button-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/application\/views\/display\/footer.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src.js" : {
+    "\/assets\/themes\/knights\/css\/login.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/css\/login.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
@@ -3595,23 +3591,27 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/themes\/knights\/css\/login.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/css\/login.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
-    "\/application\/views\/display\/footer.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/display\/footer.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/inlinepopups\/editor_plugin_src-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/bootstrap\/js\/bootstrap-button.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-button.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-button-ck.js",
+      "fileType" : 64
     },
     "\/system\/core\/Common.php" : {
       "ignoreWasSetByUser" : 0,
@@ -3642,21 +3642,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/application\/views\/default\/header.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/header.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/language\/english\/calendar_lang.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/language\/english\/calendar_lang.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/views\/default\/header.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/default\/header.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3669,6 +3669,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/application\/cache\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/cache\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/js\/tiny_mce\/plugins\/bbcode\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3680,30 +3689,21 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/bbcode\/editor_plugin_src-ck.js",
       "fileType" : 64
     },
+    "\/application\/hooks\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/hooks\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/application\/controllers\/org.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/controllers\/org.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/application\/cache\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/cache\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/system\/core\/Hooks.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/core\/Hooks.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3716,12 +3716,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/hooks\/index.html" : {
+    "\/system\/core\/Hooks.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/hooks\/index.html",
+      "inputAbbreviatedPath" : "\/system\/core\/Hooks.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3872,16 +3872,14 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog.js" : {
+    "\/system\/helpers\/date_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/system\/helpers\/date_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/themes\/knights\/less\/login.less" : {
       "ieCompatibility" : 1,
@@ -3900,17 +3898,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/js\/tiny_mce\/plugins\/media\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3922,14 +3909,36 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/media\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/plugins\/table\/cell.htm" : {
+    "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/cell.htm",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/editor_plugin_src-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/fullpage\/fullpage.htm" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/fullpage.htm",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/example\/js\/dialog-ck.js",
+      "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/xhtmlxtras\/css\/attributes.css" : {
       "ignoreWasSetByUser" : 0,
@@ -3940,15 +3949,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/application\/errors\/error_general.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/errors\/error_general.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/controllers\/post.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3958,21 +3958,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/helpers\/date_helper.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/table\/cell.htm" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/date_helper.php",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/cell.htm",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/fullpage\/fullpage.htm" : {
+    "\/application\/errors\/error_general.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/fullpage\/fullpage.htm",
+      "inputAbbreviatedPath" : "\/application\/errors\/error_general.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4024,26 +4024,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png",
-      "initialSize" : 651,
-      "fileType" : 8192
-    },
-    "\/application\/views\/default\/utility\/foot.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/utility\/foot.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/plugins\/fullpage\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4066,6 +4046,15 @@
       "outputAbbreviatedPath" : "\/assets\/themes\/default\/js\/jquery\/userindex-ck.js",
       "fileType" : 64
     },
+    "\/application\/views\/default\/utility\/foot.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/default\/utility\/foot.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/application\/views\/default\/sysadmin\/maintenance.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4074,6 +4063,17 @@
       "inputAbbreviatedPath" : "\/application\/views\/default\/sysadmin\/maintenance.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/img\/button_bg_black.png",
+      "initialSize" : 651,
+      "fileType" : 8192
     },
     "\/system\/core\/Controller.php" : {
       "ignoreWasSetByUser" : 0,
@@ -4229,15 +4229,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/themes\/default\/css\/style.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/themes\/default\/css\/style.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/assets\/themes\/default\/less\/mixins.less" : {
       "ieCompatibility" : 1,
       "inputAbbreviatedPath" : "\/assets\/themes\/default\/less\/mixins.less",
@@ -4264,6 +4255,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/assets\/themes\/default\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/themes\/default\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/application\/controllers\/admin.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4273,14 +4273,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/core\/Utf8.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/core\/Utf8.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin-ck.js",
+      "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/directionality\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
@@ -4304,16 +4306,14 @@
       "initialSize" : 12799,
       "fileType" : 8192
     },
-    "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin.js" : {
+    "\/system\/core\/Utf8.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/visualchars\/editor_plugin-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/system\/core\/Utf8.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/system\/database\/drivers\/odbc\/odbc_result.php" : {
       "ignoreWasSetByUser" : 0,
@@ -4368,21 +4368,21 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/system\/database\/drivers\/sqlsrv\/sqlsrv_result.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/sqlsrv\/sqlsrv_result.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/language\/english\/email_lang.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/language\/english\/email_lang.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/database\/drivers\/sqlsrv\/sqlsrv_result.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/sqlsrv\/sqlsrv_result.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4395,17 +4395,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/js\/tiny_mce\/plugins\/bbcode\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4417,15 +4406,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/bbcode\/editor_plugin-ck.js",
       "fileType" : 64
     },
-    "\/assets\/bootstrap\/js\/bootstrap-carousel.js" : {
+    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-carousel.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-carousel-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/editor_plugin-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/table\/langs\/en_dlg.js" : {
@@ -4437,6 +4426,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/langs\/en_dlg-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/bootstrap\/js\/bootstrap-carousel.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-carousel.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-carousel-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/charmap.js" : {
@@ -4515,23 +4515,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg",
-      "initialSize" : 145263,
-      "fileType" : 4096
-    },
     "\/system\/database\/drivers\/sqlite\/sqlite_result.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/database\/drivers\/sqlite\/sqlite_result.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/database\/drivers\/mssql\/mssql_utility.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/mssql\/mssql_utility.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4570,14 +4568,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/system\/database\/drivers\/mssql\/mssql_utility.php" : {
+    "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/mssql\/mssql_utility.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpn8muA1.jpg",
+      "initialSize" : 145263,
+      "fileType" : 4096
     },
     "\/assets\/js\/tiny_mce\/themes\/simple\/skins\/o2k7\/content.css" : {
       "ignoreWasSetByUser" : 0,
@@ -4588,17 +4588,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed-ck.js",
-      "fileType" : 64
-    },
     "\/assets\/themes\/default\/js\/scripts.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4608,6 +4597,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/themes\/default\/js\/scripts-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/preview\/jscripts\/embed-ck.js",
       "fileType" : 64
     },
     "\/assets\/bootstrap\/less\/tooltip.less" : {
@@ -4745,6 +4745,15 @@
       "outputAbbreviatedPath" : "\/assets\/themes\/default\/js\/jquery\/edit-ck.js",
       "fileType" : 64
     },
+    "\/system\/libraries\/Typography.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/libraries\/Typography.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/application\/views\/default\/org\/list.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4763,15 +4772,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/libraries\/Typography.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Typography.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/helpers\/smiley_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4781,21 +4781,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/views\/login\/storylogin.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/login\/storylogin.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/system\/database\/drivers\/odbc\/odbc_utility.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/database\/drivers\/odbc\/odbc_utility.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/views\/login\/storylogin.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/login\/storylogin.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4938,23 +4938,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg-ck.js",
-      "fileType" : 64
-    },
     "\/system\/helpers\/security_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/helpers\/security_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/views\/default\/user\/list.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/default\/user\/list.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4974,6 +4972,17 @@
       "outputStyle" : 0,
       "fileType" : 1,
       "debugStyle" : 0
+    },
+    "\/assets\/themes\/knights\/img\/pg-bkg.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/pg-bkg.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/pg-bkg.png",
+      "initialSize" : 177960,
+      "fileType" : 8192
     },
     "\/assets\/bootstrap\/less\/buttons.less" : {
       "ieCompatibility" : 1,
@@ -5001,17 +5010,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/themes\/knights\/img\/pg-bkg.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/pg-bkg.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/pg-bkg.png",
-      "initialSize" : 177960,
-      "fileType" : 8192
-    },
     "\/system\/helpers\/email_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5021,24 +5019,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/views\/default\/user\/list.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/user\/list.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/searchreplace\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/plugins\/advimage\/js\/image.js" : {
@@ -5050,6 +5039,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advimage\/js\/image-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/paste\/js\/pastetext-ck.js",
       "fileType" : 64
     },
     "\/system\/libraries\/Cache\/Cache.php" : {
@@ -5070,17 +5070,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link-ck.js",
-      "fileType" : 64
-    },
     "\/system\/helpers\/number_helper.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5089,6 +5078,17 @@
       "inputAbbreviatedPath" : "\/system\/helpers\/number_helper.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells-ck.js",
+      "fileType" : 64
     },
     "\/assets\/bootstrap\/less\/carousel.less" : {
       "ieCompatibility" : 1,
@@ -5136,15 +5136,15 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advlist\/editor_plugin-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells.js" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/table\/js\/merge_cells-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/link-ck.js",
       "fileType" : 64
     },
     "\/application\/views\/login\/login.php" : {
@@ -5198,12 +5198,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/language\/english\/ftp_lang.php" : {
+    "\/application\/models\/organizations.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/language\/english\/ftp_lang.php",
+      "inputAbbreviatedPath" : "\/application\/models\/organizations.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5216,12 +5216,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/models\/organizations.php" : {
+    "\/system\/language\/english\/ftp_lang.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/models\/organizations.php",
+      "inputAbbreviatedPath" : "\/system\/language\/english\/ftp_lang.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5309,15 +5309,15 @@
       "outputAbbreviatedPath" : "\/assets\/themes\/default\/js\/modernizr-ck.js",
       "fileType" : 64
     },
-    "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg.js" : {
+    "\/assets\/bootstrap\/js\/bootstrap.min.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg.js",
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap.min.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap.min-ck.js",
       "fileType" : 64
     },
     "\/uploads\/mad-science-dept-llc\/ApplicationsMAMPtmpphpphpuI4h0E.png" : {
@@ -5331,15 +5331,15 @@
       "initialSize" : 68027,
       "fileType" : 8192
     },
-    "\/assets\/bootstrap\/js\/bootstrap.min.js" : {
+    "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap.min.js",
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap.min-ck.js",
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
     "\/system\/libraries\/Cache\/drivers\/Cache_memcached.php" : {
@@ -5481,16 +5481,14 @@
       "initialSize" : 145263,
       "fileType" : 4096
     },
-    "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src.js" : {
+    "\/application\/views\/default\/post\/list.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/application\/views\/default\/post\/list.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/system\/language\/english\/form_validation_lang.php" : {
       "ignoreWasSetByUser" : 0,
@@ -5510,14 +5508,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/views\/default\/post\/list.php" : {
+    "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/views\/default\/post\/list.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/autosave\/editor_plugin_src-ck.js",
+      "fileType" : 64
     },
     "\/assets\/themes\/default\/css\/mixins.css" : {
       "ignoreWasSetByUser" : 0,
@@ -5566,12 +5566,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/database\/drivers\/postgre\/index.html" : {
+    "\/system\/database\/drivers\/mysqli\/mysqli_result.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/postgre\/index.html",
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/mysqli\/mysqli_result.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5581,6 +5581,55 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/system\/libraries\/javascript\/Jquery.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/language\/english\/profiler_lang.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/language\/english\/profiler_lang.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/database\/drivers\/postgre\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/postgre\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/assets\/bootstrap\/js\/bootstrap-affix.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-affix.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-affix-ck.js",
+      "fileType" : 64
+    },
+    "\/assets\/js\/tiny_mce\/tiny_mce.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/tiny_mce.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/tiny_mce-ck.js",
+      "fileType" : 64
+    },
+    "\/system\/core\/Input.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/core\/Input.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5604,55 +5653,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/advhr\/editor_plugin-ck.js",
-      "fileType" : 64
-    },
-    "\/system\/core\/Input.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/core\/Input.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/assets\/js\/tiny_mce\/tiny_mce.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/tiny_mce.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/tiny_mce-ck.js",
-      "fileType" : 64
-    },
-    "\/system\/database\/drivers\/mysqli\/mysqli_result.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/mysqli\/mysqli_result.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/system\/language\/english\/profiler_lang.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/language\/english\/profiler_lang.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/assets\/bootstrap\/js\/bootstrap-affix.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-affix.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/assets\/bootstrap\/js\/bootstrap-affix-ck.js",
       "fileType" : 64
     },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/js\/about.js" : {
@@ -5755,15 +5755,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/assets\/js\/tiny_mce\/plugins\/media\/media.htm" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/media\/media.htm",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpsrUsOh.jpg" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5774,6 +5765,15 @@
       "outputAbbreviatedPath" : "\/uploads\/summit-country-day-knights\/ApplicationsMAMPtmpphpphpsrUsOh.jpg",
       "initialSize" : 145263,
       "fileType" : 4096
+    },
+    "\/assets\/js\/tiny_mce\/plugins\/media\/media.htm" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/media\/media.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/dialog.css" : {
       "ignoreWasSetByUser" : 0,
@@ -5822,6 +5822,24 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/system\/database\/drivers\/postgre\/postgre_utility.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/database\/drivers\/postgre\/postgre_utility.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/helpers\/language_helper.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/helpers\/language_helper.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/assets\/js\/tiny_mce\/plugins\/template\/langs\/en_dlg.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5833,24 +5851,6 @@
       "outputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/plugins\/template\/langs\/en_dlg-ck.js",
       "fileType" : 64
     },
-    "\/system\/helpers\/language_helper.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/helpers\/language_helper.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/system\/database\/drivers\/postgre\/postgre_utility.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/database\/drivers\/postgre\/postgre_utility.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/skins\/o2k7\/ui_silver.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5860,23 +5860,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/assets\/themes\/knights\/img\/logo.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/logo.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/logo.png",
-      "initialSize" : 1831,
-      "fileType" : 8192
-    },
     "\/assets\/js\/tiny_mce\/themes\/advanced\/link.htm" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/assets\/js\/tiny_mce\/themes\/advanced\/link.htm",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/system\/libraries\/Profiler.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/system\/libraries\/Profiler.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5906,14 +5904,16 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/system\/libraries\/Profiler.php" : {
+    "\/assets\/themes\/knights\/img\/logo.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/system\/libraries\/Profiler.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
+      "inputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/logo.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/assets\/themes\/knights\/img\/logo.png",
+      "initialSize" : 1831,
+      "fileType" : 8192
     },
     "\/system\/database\/drivers\/cubrid\/cubrid_result.php" : {
       "ignoreWasSetByUser" : 0,
@@ -6075,21 +6075,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/third_party\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/third_party\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/views\/display\/header.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/views\/display\/header.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/third_party\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/third_party\/index.html",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
