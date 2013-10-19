@@ -93,11 +93,10 @@ $(document).ready(function($) {
             $('#buyform').attr('action',$('#check_action').val());
 	});
 	$('#buyform').submit(function(e) {
-        e.preventDefault();
         var info = {"buyer_id": $(this).find('#buyer_id').val(), "post_id": $(this).find('#ID').val()};
         $.post("/ajax/buy_item", {infoArray:info}, function(data){
             if(data){
-                return false;
+                return true;
             }
         });
         return false;

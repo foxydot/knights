@@ -28,7 +28,7 @@ class Post extends CI_Controller {
 	
 	function user($user_id){
 		$data = array(
-				'page_title' => 'Welcome to '.SITENAME,
+				'page_title' => 'Your Posts on '.SITENAME,
 				'body_class' => 'list dashboard',
 				'dashboard' => 'default/post/list',
 				'user' => $this->session->userdata,
@@ -234,7 +234,7 @@ class Post extends CI_Controller {
 			$headers = 'From: '. $this->input->post('sender') . "\r\n" ;
 			
 			if(mail($to, $subject, $message, $headers)){
-				$this->session->set_flashdata('msg','Message Sent!');
+				$this->session->set_flashdata('msg','Thank you for your purchase. The seller will contact you soon to arrange the exchange of payment and goods.<br /><br />Thank you for using '.SITENAME.' and supporting '.$org->name.'');
 			} else {
 				$this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
 			}
@@ -278,11 +278,29 @@ class Post extends CI_Controller {
 	}
 
     function postpay(){
-        print "Thank you for your purchase";
+        global $org_id;
+        $org = $this->Orgs->get_org($org_id);
+        $data = array(
+                'page_title' => 'Thank you for your purchase on '.SITENAME,
+                'body_class' => 'buy post-buy',
+                'user' => $this->session->userdata,
+                'dashboard' => 'default/post/note',
+                'note' => 'Thank you for your purchase. The seller will contact you soon to arrange the exchange of goods.<br /><br />Thank you for using '.SITENAME.' and supporting '.$org->name,
+       );
+        $this->load->view('default.tpl.php',$data);
     }
     
     function cancel(){
-        print "You have canceled your purchase";
+        global $org_id;
+        $org = $this->Orgs->get_org($org_id);
+        $data = array(
+                'page_title' => 'Thank you for your purchase on '.SITENAME,
+                'body_class' => 'buy post-buy',
+                'user' => $this->session->userdata,
+                'dashboard' => 'default/post/note',
+                'note' => 'Your purchase has been canceled.',
+       );
+        $this->load->view('default.tpl.php',$data);
     }
 }
 

@@ -69,6 +69,7 @@ Class Common extends CI_Model {
         } else {
             define('SITENAME', $site_title);
         }
+        return $org_id;
     }
 	
 	/*

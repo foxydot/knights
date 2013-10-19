@@ -223,18 +223,20 @@ Class Posts extends CI_Model {
     }
 
     function buy($data){
+        $org_id = $this->common->get_org_info_from_subdomain();
+        $org = $this->Orgs->get_org($org_id);
         $this->load->model("Users");
         //set purchase date, date removed, and purchaser id
         extract($data);
         $buyer = $this->Users->get_user($buyer_id);
         $post = $this->get_post($post_id);
-        
-        
-        $subject = 'Purchase of '.$post->post_title;
+
+        $subject = 'Purchase of '.$post->title;
         $message = 'Good News!
-        '.$buyer->firstname.' '.$buyer->lastname.' has shown an intent to purchase '.$post->post_title.'. 
+        '.$buyer->firstname.' '.$buyer->lastname.' has shown an intent to purchase '.$post->title.'. 
         Please check your email and/or PayPal. If the purchase is completed, please remit '.get_the_fee($post).' to '.$org->name.' as soon as possible.';
         mail($post->email,$subject,$message);
+        print 'TRUE';
     }
 	
 }
