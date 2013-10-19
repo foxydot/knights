@@ -48,6 +48,7 @@ class User extends CI_Controller {
 				'is_edit' => TRUE,
 			);
 			if($this->input->post()){
+			    $prev_user_level = $data['the_user']->accesslevel;
 				$db_data = $this->input->post();
 				$user_meta = $db_data['meta'];
 				unset($db_data['meta']);
@@ -107,6 +108,14 @@ class User extends CI_Controller {
 						$this->Users->edit_user_meta($meta_data);
 					}
 				}
+                if($prev_user_level == NULL && $this->input->post('accesslevel') == 100){
+                    //send new usr email
+                    $subject = 'Welcome to '.SITENAME.'!';
+                    $message = 'Welcome to '.SITENAME.'! Your account is now active and you are ready to list and search for items with the Summit Community.
+                    
+                    Thank you for using '.SITENAME.' and supporting'.$org->name.'!';
+                    mail($data['the_user']->email,$subject,$message); 
+                }
 				$this->load->helper('url');
 				redirect('/user');	
 			}
