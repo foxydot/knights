@@ -9,6 +9,7 @@ Class Sysadmin extends CI_Model {
 	        // Call the Model constructor
 	        parent::__construct();
 			$this->load->dbforge();
+            $this->common->get_org_info_from_subdomain();
 	    }
 	/*
 	 * Installation script installs primary tables and initial data if needed.
