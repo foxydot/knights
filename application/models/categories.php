@@ -96,6 +96,7 @@ Class Categories extends CI_Model {
 	 	if($cats){
 		 	foreach($cats AS $cat){
 		 		$allcats[$cat->parent_cat_id][$cat->ID] = $cat;
+                $allcats[$cat->parent_cat_id][$cat->ID]->isparent = $this->cat_has_children($cat);
 		 	}
 	 	}
 	 	return $allcats;

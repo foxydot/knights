@@ -65,13 +65,21 @@
 </div>
 
 
-<?php function display_cat($cats,$cat,$attr=array(),$level=0){
+<?php 
+function display_cat($cats,$cat,$attr=array(),$level=0){
 	extract($attr);
 	$selected = $is_edit && in_array($cat->ID,$post->postcats['ids'])?' CHECKED':'';
-	$display = '
-	<label class="checkbox level-'.$level.'">
-		<input type="checkbox" name="cat['.$cat->ID.']" id="cat-'.$cat->ID.'" class="pull-left" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
-	</label>';
+    if($cat->isparent){
+        $display = '
+        <label class="checkbox level-'.$level.'">
+            '.$cat->title.'
+        </label>';
+    } else {
+        $display = '
+        <label class="checkbox level-'.$level.'">
+            <input type="checkbox" name="cat['.$cat->ID.']" id="cat-'.$cat->ID.'" class="pull-left" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
+        </label>';
+    }
 	if(isset($cats[$cat->ID])){
 		foreach($cats[$cat->ID] AS $c){
 			$display .= display_cat($cats,$c,$attr,$level+1);
