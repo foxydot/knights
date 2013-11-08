@@ -92,15 +92,27 @@ $(document).ready(function($) {
 			$('#check_info').slideDown();
             $('#buyform').attr('action',$('#check_action').val());
 	});
-	$('#buyform').submit(function(e) {
-        var info = {"buyer_id": $(this).find('#buyer_id').val(), "post_id": $(this).find('#ID').val()};
-        $.post("/ajax/buy_item", {infoArray:info}, function(data){
-            if(data){
-                return true;
-            }
-        });
-        return false;
+    
+    var submitForReal = false;
+    $("buyform").submit(function (event) {
+        if(!submitForReal){
+            event.preventDefault();
+        } else {
+            var info = {"buyer_id": $(this).find('#buyer_id').val(), "post_id": $(this).find('#ID').val()};
+            $.post("/ajax/buy_item", {infoArray:info}, function(data){
+                if(data){
+                    submitForReal = true;
+                    $('#buyform').submit();
+                }
+            });
+      }
     });
+    
+    
+    
+    
+    
+    
     $('.articlelist .sortable').sortable({
         placeholder: "ui-state-highlight"
     });
