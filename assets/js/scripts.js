@@ -2,9 +2,8 @@
 
 function split_to_array(str,delim){
 	var splitstr = str.split(delim);
-	var key;
-	var val;
-
+	var key = new Array;
+	var val = new Array;
 	for(i=0;i<splitstr.length;i++){
 		if(i%2===0){
 			key[i/2] = splitstr[i];
@@ -57,13 +56,16 @@ $(document).ready(function($) {
 		}
 	});
 	$('.attachment-delete').click(function(){
-		var info = split_to_array($(this).attr('id'),':');
-		var $this = $(this);
-		$.post("/ajax/unpublish_attachment", {infoArray:info}, function(data){
-			if(data){
-				$this.parent('li').hide();
-			}
-		});
+	    var r=confirm("Are you sure you want to delete this image?");
+        if (r==true){
+    		var info = split_to_array($(this).attr('id'),':');
+    		var $this = $(this);
+    		$.post("/ajax/unpublish_attachment", {infoArray:info}, function(data){
+    			if(data){
+    				$this.parent('li').hide();
+    			}
+    		});
+    	}
 	});
 	$('.edit #type,.add #type').change(function(){
 	    var myval = $(this).val();
