@@ -3,7 +3,7 @@ $message_subject = 'Invoice for Posting of __POST_TITLE__';
 $message_plaintext = 'Thank you for using __SITE_TITLE__!
 This is your invoice for your posting of __POST_TITLE__.
 
-100% of the Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!
+100% of the Listing Fee will go to the __ORGANIZATION_NAME__!
 
 Please submit your __LISTING_FEE__ fee using PayPal (__INVOICE_URL__) or by mailing a check.
 
@@ -19,7 +19,7 @@ $message_html = '
 <p>Thank you for using __SITE_TITLE__!<p>
 <p>This is your invoice for your posting of __POST_TITLE__(__LISTING_CODE__).</p>
 
-<p><strong>100% of your Listing Fee will go to the __ORGANIZATION_NAME__ Parents Association!</strong>, benefiting the school and your child(ren)!</p>
+<p><strong>100% of your Listing Fee will go to the __ORGANIZATION_NAME__!</strong>, benefiting the school and your child(ren)!</p>
 
 <p>Please submit your __LISTING_FEE__ fee using <a href="__INVOICE_URL__">PayPal</a> or by mailing a check.</p>
 <p><span>If <span style="text-decoration: underline;">paying by&nbsp;<strong>check</strong></span></span>, please</p>
