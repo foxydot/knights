@@ -13,8 +13,8 @@
 		</fieldset>
 		<fieldset>
 		    <?php //TODO:Replace with Org meta for restriction string  ?>
-		    <p>To ensure that access to the Knights List is limited to the Summit Community, please provide the name of your youngest student enrolled at the Summit Country Day School.</p>
-		    <p>If you belong to the Summit's Faculty and Staff (and have no child at the Summit) please leave the fields empty.</p>
+		    <p>To ensure that access to the Knights List is limited to The Summit Community, please provide the name of your youngest student enrolled at The Summit Country Day School.</p>
+		    <p>If you belong to The Summit's Faculty and Staff (and have no child at The Summit), or are a Summit Alumni, please leave the fields empty.</p>
 			<br />
 			<input name="studentfirstname" class="one-half first" id="studentfirstname" type="text" placeholder="Student First Name" value="<?php print isset($values['studentfirstname'])?$values['studentfirstname']:''; ?>" />
 			<input name="studentlastname" class="one-half last" id="studentlastname" type="text" placeholder="Student Last Name" value="<?php print isset($values['studentlastname'])?$values['studentlastname']:''; ?>" />

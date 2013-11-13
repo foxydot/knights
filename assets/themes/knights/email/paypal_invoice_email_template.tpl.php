@@ -23,6 +23,6 @@ $message_plaintext = 'Good News!
     * Choose "Edit"
     * Choose "Delete" at the bottom of the page
 
-Once you deleted your item, please check your e-mail to pay your Listing Fee to the __ORGANIZATION_NAME__. 100% of your Listing Fee will go to the __ORGANIZATION_NAME__, benefiting the school and your child(ren). 
+Once you deleted your item, please check your e-mail to pay your Listing Fee to The __ORGANIZATION_NAME__. 100% of your Listing Fee will go to The __ORGANIZATION_NAME__, benefiting the school and your child(ren). 
 
 Thank you so much for supporting __ORGANIZATION_NAME__! ';
