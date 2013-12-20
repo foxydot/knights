@@ -38,13 +38,17 @@
 		</div>
 		<?php } ?>
 		<div class="row-fluid img-upload">
-			<label>Add Image</label>
+			<label>Add Image (Recommended photo size is less than 2MB)</label>
 			<input type="file" name="attachment_url" size="20" />
 		</div>
 		<div class="row-fluid">
 				<input name="author_id" id="author_id" type="hidden" value="<?php print $is_edit?$post->author_id:$user['ID']; ?>" />
 				<textarea class="span12 tinymce" name="content" id="content" placeholder="Post Content"><?php print $is_edit?$post->content:''; ?></textarea>
 		</div>
+		<div class="alert alert-info">
+            <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+            Need another category? <a href="mailto:knights@communitylist.us">Email us!</a>
+        </div>
 		<div class="row-fluid">
 			<label>Categories</label>
 			<div class="columns-3">

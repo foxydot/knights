@@ -1039,6 +1039,15 @@ Class Sysadmin extends CI_Model {
 		$filename = SITENAME.'_'.date('Ymdhis').'.gz';
 		force_download($filename, $backup); 
 	}
+    
+    public function update_types($types){
+        $this->db->where('sysinfo_key','post_types');
+        $db_data = array(
+            'sysinfo_key' => 'post_types',
+            'sysinfo_value' => $types
+        );
+        $this->db->update('system_info',$db_data);
+    }
 }
 
 /* End of file install.php */

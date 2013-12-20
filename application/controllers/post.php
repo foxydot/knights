@@ -46,6 +46,7 @@ class Post extends CI_Controller {
 		$this->load->model('Organizations','Orgs');
 		$the_user = $this->Users->get_user($this->session->userdata['ID']);
         $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
+        //TODO: Move post types to org meta and set up admin area for it.
 		$data = array(
 				'page_title' => SITENAME.': Add Post',
 				'body_class' => 'add post-add',

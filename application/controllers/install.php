@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Install extends CI_Controller {
+    //TODO: Rename to maintenance and do a runaround for install
 	public function index()
 	{
 		$data = array();
@@ -62,6 +63,25 @@ class Install extends CI_Controller {
 			$this->sysadmin->backup_db();
 		}
 	}
+    
+    public function edit_post_types(){
+        $this->authenticate->check_auth('administrators',true);
+        if($this->session->userdata['ID'] == 1){
+            $this->load->model('sysadmin');
+            if(!empty($_POST)){
+                $types = array_filter(array_combine($_POST['key'],$_POST['value']));
+                $this->sysadmin->update_types(serialize($types));
+            }
+            $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
+            $data = array(
+                    'body_class' => 'edit admin-edit',
+                    'user' => $this->session->userdata,
+                    'types' => unserialize($the_types->sysinfo_value),
+                    'form' => 'default/sysadmin/edit_post_types',
+            );
+            $this->load->view('login/login.tpl.php',$data);
+        }
+    }
 
 }
 
