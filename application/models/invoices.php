@@ -33,6 +33,9 @@ class Invoices extends CI_Model {
             case 'service':
             case 'student-service':
             case 'request':
+            case 'business-student':
+            case 'business-personal':
+            case 'business-professional':
                 include_once(SITEPATH.THEME_URL.'/email/service-invoice.php');
                 break;
         }
