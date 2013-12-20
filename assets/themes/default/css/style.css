@@ -218,3 +218,14 @@ form.popupform select,
 form.popupform textarea {
   display: block;
 }
+label.inline {
+  display: inline-block;
+  padding: 0.4em 0;
+}
+.list .header {
+  margin-bottom: 1em;
+}
+.list .header h4 {
+  font-size: 1em;
+  line-height: 1em;
+}

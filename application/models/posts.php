@@ -118,7 +118,6 @@ Class Posts extends CI_Model {
 		$slug = $this->common->increment_slug(post_slug($db_data['title']),'post');
 		$db_data['slug'] = $slug;
 		$db_data['dateadded'] = time();
-	
 		$this->db->insert('post',$db_data);
 		return $this->db->insert_id();
 	}

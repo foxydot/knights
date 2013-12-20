@@ -76,6 +76,22 @@ class Help extends CI_Controller {
 		
 			$this->load->view('default.tpl.php',$data);
 		}	
+        
+    
+    function delete($ID){
+        $this->authenticate->check_auth('administrators',true);
+        $org_id = 1;
+        if($this->input->post()){
+            $db_data = $this->input->post();
+            $parent_art_id = $db_data['parent_art_id'];
+            unset($db_data['parent_art_id']);
+            $this->Articles->delete_article($db_data);
+            $this->Articles->clear_art_to_org($db_data['ID']);
+            $this->load->helper('url');
+            redirect('/help');
+        }
+        $this->load->view('default.tpl.php',$data);
+    }
 }
 
 /* End of file article.php */

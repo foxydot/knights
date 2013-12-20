@@ -45,11 +45,18 @@ Class Articles extends CI_Model {
 	 	return $this->db->insert_id();
 	 }	
 	 
-	 function edit_article($db_data){
-		unset($db_data['submit']);
-		$this->db->where('ID',$db_data['ID']);
-	 	$this->db->update('article',$db_data);
-	 }
+     function edit_article($db_data){
+        unset($db_data['submit']);
+        $this->db->where('ID',$db_data['ID']);
+        $this->db->update('article',$db_data);
+     }
+
+     function delete_article($db_data){
+        unset($db_data['submit']);
+        $this->db->where('ID',$db_data['ID']);
+        $db_data = array('dateremoved' => time());
+        $this->db->update('article',$db_data);
+     }
 
 	 function art_to_org($db_data){
 	 	unset($db_data['submit']);

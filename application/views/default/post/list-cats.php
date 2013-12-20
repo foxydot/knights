@@ -1,4 +1,10 @@
 <div id="post-list" class="container-fluid list accordion">
+      <div class="row-fluid">
+          <div class="alert alert-info">
+            <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+            Categories displayed below include <strong>active</strong> listings. For a full overview of all categories, please look under “New Posting.”
+        </div>
+      </div>
       <div class="header row-fluid">
         <div class="span1">
 			<h4>Listing Number</h4>
@@ -22,12 +28,6 @@
 			<h4></h4>
 		</div><!-- end span1 -->
       </div><!--/row-->
-      <div class="row-fluid">
-          <div class="alert alert-info">
-            <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
-            Categories displayed below include <strong>active</strong> listings. For a full overview of all categories, please look under “New Posting.”
-        </div>
-      </div>
 	<?php 
 	if($catsposts):
 		foreach($catsposts[0] AS $cat){

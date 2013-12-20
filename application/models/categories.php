@@ -17,6 +17,7 @@ Class Categories extends CI_Model {
 		$this->db->select('category.ID AS ID,title,slug,description,category.dateadded AS dateadded,parent_cat_id');
 		$this->db->from('category');
 		$this->db->join('cat2org','category.ID=cat2org.cat_id','left outer');
+        $this->db->order_by("category.title", "asc"); 
 		if(!$archive){
 			$this->db->where('category.dateremoved <=',0);
 		}
