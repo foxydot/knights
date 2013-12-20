@@ -15,6 +15,13 @@ if(!function_exists('get_the_fee'))
 {
 function get_the_fee($post){
         switch($post->type){
+            case 'business-professional':
+                $fee = 250;
+                break;
+            case 'business-personal':
+                $fee = 40;
+                break;
+            case 'business-student':
             case 'service':
                 $fee = 20;
                 break;
