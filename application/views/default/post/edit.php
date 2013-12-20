@@ -18,11 +18,11 @@
 		</div>
 		<div class="row-fluid">
 		    <label>Post Type</label>
-		    <select name="type" id="type">
-		        <?php foreach($types AS $k => $v): ?>
-		            <option value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' SELECTED':''; ?>><?php print $v; ?></option>
-		        <?php endforeach; ?>
-		    </select>
+		    <div class="columns-2">
+	        <?php foreach($types AS $k => $v): ?>
+	            <input type="radio" name="types" id="types" value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' CHECKED':''; ?> /> <?php print $v; ?><br />
+	        <?php endforeach; ?>
+	        </div>
 		</div>
 		<?php if(isset($post->attachments)) {?>	
 		<div class="row-fluid img-display">
@@ -51,7 +51,7 @@
         </div>
 		<div class="row-fluid">
 			<label>Categories</label>
-			<div class="columns-3">
+			<div class="columns-2">
 				<?php foreach($cats[0] AS $cat){ ?>
 					<?php $attr = $is_edit?array('post'=>$post,'is_edit'=>$is_edit):array('is_edit'=>$is_edit); ?>
 					<?php print display_cat($cats,$cat,$attr)?>
