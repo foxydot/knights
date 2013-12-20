@@ -76,7 +76,9 @@ class Invoices extends CI_Model {
         $this->email->from('knights@communitylist.us', SITENAME);
         //$this->email->from('test@msdlab.com', $organization->name.' List');
         $this->email->to($invoice->email);
+        //TODO: Set this to use admin emails.
         $this->email->bcc('knights@communitylist.us');
+        $this->email->bcc('mirja@aristogroup.com');
         $this->email->subject($message_subject);
         $this->email->message($message_html);
         $this->email->set_alt_message($message_plaintext);
