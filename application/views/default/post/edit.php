@@ -40,6 +40,7 @@
 		<div class="row-fluid img-upload">
 			<label>Add Image (Recommended photo size is less than 2MB)</label>
 			<input type="file" name="attachment_url" size="20" />
+			<p><em>Please note: currently, only one image may be added at a time. After saving, you will be able to edit and add another image.</em></p>
 		</div>
 		<div class="row-fluid">
 				<input name="author_id" id="author_id" type="hidden" value="<?php print $is_edit?$post->author_id:$user['ID']; ?>" />

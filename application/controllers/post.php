@@ -118,7 +118,7 @@ class Post extends CI_Controller {
                 $this->Invoices->create_invoice($post);
             }
 			$this->load->helper('url');
-			redirect('/post');
+			redirect('/post/edit/'.$post_id);
 		}
 		$this->load->view('default.tpl.php',$data);
 	}
@@ -175,7 +175,7 @@ class Post extends CI_Controller {
 			}
 			
 			$this->load->helper('url');
-			redirect('/post');
+            redirect('/post/edit/'.$ID);
 		}
 		$this->load->view('default.tpl.php',$data);
 	}
