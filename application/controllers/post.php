@@ -294,21 +294,27 @@ class Post extends CI_Controller {
 				'urls' => array('check' => 'http://'. $_SERVER['SERVER_NAME'].'/post/buy/'.$ID, 'paypal' => 'https://www.paypal.com/cgi-bin/webscr','return' => 'http://'. $_SERVER['SERVER_NAME'].'/post/postpay','cancel' => 'http://'. $_SERVER['SERVER_NAME'].'/post/cancel'),
 		);
         
-        if($this->input->post()){  
+        if($this->input->post('message')){  
             $to      = $this->input->post('author');
             $subject = 'Message from buyer about '.$this->input->post('subject');
-            $message = $this->input->post('message');
+            $message = $this->input->post('sender') .'has shown an intent to purchase this item. Please contact the buyer to make further arrangements.
+            
+            Here is the buyer\'s message:
+            '.$this->input->post('message');
             $headers = 'From: '. $this->input->post('sender') . "\r\n" ;
             
             //send an email if needed
             if(!empty($message)):
                 if(mail($to, $subject, $message, $headers)){
                     $this->session->set_flashdata('msg','Message Sent!');
+                    $this->load->helper('url');
+                    redirect('/post/postpay/'.$ID);
                 } else {
                     $this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
                 }
             endif;
         }
+        
 		$this->load->view('default.tpl.php',$data);
 	}
 

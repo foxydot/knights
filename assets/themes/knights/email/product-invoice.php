@@ -16,6 +16,7 @@ If paying by check, please
 ';
 
 $message_html = '
+<p style="text-align: center;"><img src="__ORGANIZATION_LOGO__" alt="__ORGANIZATION_NAME__"></p>
 <p>Thank you for using __SITE_TITLE__!<p>
 <p>This is your invoice for your posting of __POST_TITLE__(__LISTING_CODE__). If the item has not sold, or sold for a different price than listed, please contact us at knights@communitylist.us.</p>
 
