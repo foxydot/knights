@@ -20,7 +20,7 @@
 		    <label>Post Type</label>
 		    <div class="columns-2">
 	        <?php foreach($types AS $k => $v): ?>
-	            <input type="radio" name="types" id="types" value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' CHECKED':''; ?> /> <?php print $v; ?><br />
+	            <input type="radio" name="type" id="type" value="<?php print $k; ?>"<?php print $is_edit && $post->type==$k?' CHECKED':''; ?> /> <?php print $v; ?><br />
 	        <?php endforeach; ?>
 	        </div>
 		</div>
