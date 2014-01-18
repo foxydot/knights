@@ -269,7 +269,7 @@ class Post extends CI_Controller {
 			$headers = 'From: '. $this->input->post('sender') . "\r\n" ;
 			
 			if(mail($to, $subject, $message, $headers)){
-				$this->session->set_flashdata('msg','Thank you for your purchase. The seller will contact you soon to arrange the exchange of payment and goods.<br /><br />Thank you for using '.SITENAME.' and supporting '.$org->name.'');
+				$this->session->set_flashdata('msg','Your message has been sent.');
 			} else {
 				$this->session->set_flashdata('err','There was a problem with your message. Please try again later.');
 			}
