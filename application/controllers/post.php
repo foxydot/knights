@@ -38,6 +38,21 @@ class Post extends CI_Controller {
 		$data['footer_js'][] = 'jquery/list';
 		$this->load->view('default.tpl.php',$data);	
 	}
+    
+    function search(){
+        if($this->input->post('search_terms')){
+            $data = array(
+                'page_title' => 'Welcome to '.SITENAME,
+                'body_class' => 'list dashboard',
+                'dashboard' => 'default/post/list-cats',
+                'user' => $this->session->userdata,
+                'catsposts' => $this->Posts->get_search_posts(array('orgs' => 'all','search_terms' => $this->input->post('search_terms'))),
+                'archive' => FALSE,
+            );
+            $data['footer_js'][] = 'jquery/list';
+            $this->load->view('default.tpl.php',$data);
+        }
+    }
 
 	function add(){
 		global $user;

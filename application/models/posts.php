@@ -33,6 +33,20 @@ Class Posts extends CI_Model {
 	    	$cats = $this->Cats->group_cats_by_parent($cats);
 	    	return $cats;
 	    }
+    
+    function get_search_posts($params){
+        $params = array_merge(
+                array(
+                    'orgs' => array(),
+                ),
+                $params
+            );
+            extract($params);
+            $orgs = $this->Orgs->make_org_array($orgs);
+            $posts = $this->get_posts($params);
+            ts_data($posts);
+            return $posts;
+    }
    
    function cat_has_children_or_posts($cat,$org_id = 1){
        $posts = $this->get_posts(array('cat_id'=>$cat->ID));
@@ -90,6 +104,9 @@ Class Posts extends CI_Model {
 		if(!$archive){
 			$this->db->where('post.dateremoved <=',0);
 		}
+        if(isset($search_terms)){
+            $this->db->like('post.title',$search_terms);
+        }
 		$query = $this->db->get();
 		$result = $query->result();
 		foreach($result AS $k=>$v){
