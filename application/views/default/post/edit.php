@@ -2,6 +2,14 @@
 	<div class="row-fluid">
         
 		<?php print form_open_multipart($action,array('id'=>'post','class'=>'smallform span6 offset3')); ?>
+		<?php if($msg){ 
+		    foreach($msg AS $m) { ?>
+		    <div class="alert alert-<?php print $m['type'] ?>">
+                <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+                <?php print $m['text']; ?>
+            </div>
+		<?php  }
+        } ?>
 		<div class="alert alert-info">
             <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
             Only non-Summit identifiable items are allowed to be posted on the Knights List.
@@ -68,6 +76,16 @@
 		print form_close();
 		?>
 	</div>
+</div>
+
+<div class="modal hide fade" id="save-msg">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Please Wait</h3>
+    </div>
+    <div class="modal-body">
+        <p>Your post is being saved. If you used large images, this may take up to a minute. This page will refresh when saving is complete.</p>
+    </div>
 </div>
 
 

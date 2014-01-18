@@ -75,6 +75,9 @@ $(document).ready(function($) {
 	    }
 	    $('.edit #cost,.add #cost').attr('placeholder',placeholder_text);
 	});
+	$('.edit form').submit(function(){
+	    $('#save-msg').modal('show');
+	});
 	$('.edit #delete_btn').click(function(){
 	    var r=confirm("Are you sure you want to delete this post?");
         if (r==true)

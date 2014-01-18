@@ -71,6 +71,7 @@ class Post extends CI_Controller {
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/add/',
 				'is_edit' => FALSE,
+				'msg' => FALSE,
 		);
 		if($this->input->post()){
 			$the_user = $this->Users->get_user($this->session->userdata['ID']);
@@ -117,6 +118,13 @@ class Post extends CI_Controller {
                 $this->load->model('Invoices');
                 $this->Invoices->create_invoice($post);
             }
+            $msg = array(
+                array(
+                    'type' => 'success',
+                    'text' => 'Your post has been added.',
+                )
+            );
+            $this->session->set_flashdata('editmsg', $msg);
 			$this->load->helper('url');
 			redirect('/post/edit/'.$post_id);
 		}
@@ -139,7 +147,11 @@ class Post extends CI_Controller {
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/edit/'.$ID,
 				'is_edit' => TRUE,
+				'msg' => FALSE,
 		);
+        if($this->session->flashdata('editmsg')){
+            $data['msg'] = $this->session->flashdata('editmsg');
+        }
 		if($this->input->post()){
 			$db_data = $this->input->post();
 			unset($db_data['cat']);
@@ -174,6 +186,13 @@ class Post extends CI_Controller {
 				$this->Posts->attachment_to_post($db_data);
 			}
 			
+            $msg = array(
+                array(
+                    'type' => 'success',
+                    'text' => 'Your changes have been saved.',
+                )
+            );
+            $this->session->set_flashdata('editmsg', $msg);
 			$this->load->helper('url');
             redirect('/post/edit/'.$ID);
 		}
