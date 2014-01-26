@@ -236,3 +236,37 @@ label.inline {
   font-size: 1em;
   line-height: 1em;
 }
+header {
+  position: relative;
+}
+header .search {
+  position: relative;
+  margin-right: 2rem;
+}
+header .search form {
+  position: relative;
+  margin: 0;
+}
+header .search form input[type="submit"] {
+  font-family: FontAwesome;
+  display: block;
+  margin-top: 0;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #666666 !important;
+  background: none;
+  border: 0;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  text-shadow: 0 0 0 #000 !important;
+}
+header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

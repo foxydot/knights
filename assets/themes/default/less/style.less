@@ -191,3 +191,31 @@ label.inline{
     }
   }
 }
+header{
+  position: relative;
+  .search{
+    position: relative;
+    margin-right: 2rem;
+    form{
+      position: relative;
+      margin: 0;
+      input[type="submit"]{
+        font-family: FontAwesome;
+        display: block;
+        margin-top: 0;
+        padding: 8px;
+        position: absolute;
+        right:0;
+        top:0;
+        color: @dkgrey !important;
+        background: none;
+        border: 0;
+        .drop-shadow(0,0,0,0);
+        text-shadow: 0 0 0 #000 !important;
+      }
+    }
+  }
+}
+header:after{
+  .clearfix;
+}

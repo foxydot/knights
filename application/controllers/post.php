@@ -50,8 +50,12 @@ class Post extends CI_Controller {
                 'archive' => FALSE,
             );
             $data['footer_js'][] = 'jquery/list';
-            $this->load->view('default.tpl.php',$data);
+        } else {
+            $this->session->set_flashdata('err','No search terms were entered.');
+            $this->load->helper('url');
+            redirect('/post/');
         }
+        $this->load->view('default.tpl.php',$data);
     }
 
 	function add(){

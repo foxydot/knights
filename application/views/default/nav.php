@@ -4,12 +4,6 @@
         <div class="container-fluid">
           <div class="nav-collapse collapse">
             <h5 class="navbar-text pull-right">
-               <div class="search">
-                    <form action="/post/search" method="post">
-                        <input type="text" name="search_terms" id="search_terms" placeholder="Search" />
-                        <input type="submit" style="search-submit" />
-                    </form>
-                </div> 
             	Welcome back, <a href="/user/edit/<?php print $user['ID']; ?>" class="edituser navbar-link"><?php print $user['firstname']; ?><a/>
             	<a id="logout" class="btn btn-small" href="/login/logout">Log Out</a>
             </h5>
