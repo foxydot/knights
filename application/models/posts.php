@@ -103,8 +103,8 @@ Class Posts extends CI_Model {
 		}
 		if($user_id){
 			$this->db->where('post.author_id',$user_id);
-            $this->db->join('user','post.author_id=user.ID');
 		}
+        $this->db->join('user','post.author_id=user.ID');
 		if(!$archive){
 			$this->db->having('post.dateremoved <=',0);
 		}
