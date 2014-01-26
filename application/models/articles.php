@@ -36,7 +36,8 @@ Class Articles extends CI_Model {
 	}
 	function add_article($db_data){
 		unset($db_data['ID']);
-		unset($db_data['submit']);
+        unset($db_data['submit']);
+        unset($db_data['submit_btn']);
 	 	$slug = $this->common->increment_slug(post_slug($db_data['title']),'article');
 		$db_data['slug'] = $slug;
 		$db_data['dateadded'] = time();
@@ -47,12 +48,14 @@ Class Articles extends CI_Model {
 	 
      function edit_article($db_data){
         unset($db_data['submit']);
+        unset($db_data['submit_btn']);
         $this->db->where('ID',$db_data['ID']);
         $this->db->update('article',$db_data);
      }
 
      function delete_article($db_data){
         unset($db_data['submit']);
+        unset($db_data['submit_btn']);
         $this->db->where('ID',$db_data['ID']);
         $db_data = array('dateremoved' => time());
         $this->db->update('article',$db_data);
@@ -60,6 +63,7 @@ Class Articles extends CI_Model {
 
 	 function art_to_org($db_data){
 	 	unset($db_data['submit']);
+        unset($db_data['submit_btn']);
 	 	$this->db->insert('art2org',$db_data);
 	 }
 	  
