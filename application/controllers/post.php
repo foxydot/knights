@@ -44,9 +44,9 @@ class Post extends CI_Controller {
             $data = array(
                 'page_title' => 'Welcome to '.SITENAME,
                 'body_class' => 'list dashboard',
-                'dashboard' => 'default/post/list-cats',
+                'dashboard' => 'default/post/list',
                 'user' => $this->session->userdata,
-                'catsposts' => $this->Posts->get_search_posts(array('orgs' => 'all','search_terms' => $this->input->post('search_terms'))),
+                'posts' => $this->Posts->get_search_posts(array('orgs' => 'all','search_terms' => $this->input->post('search_terms'))),
                 'archive' => FALSE,
             );
             $data['footer_js'][] = 'jquery/list';

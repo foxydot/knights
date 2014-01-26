@@ -34,7 +34,7 @@ Class Posts extends CI_Model {
 	    	return $cats;
 	    }
     
-    function get_search_posts($params){
+    function get_search_posts($params,$archive=FALSE){
         $params = array_merge(
                 array(
                     'orgs' => array(),
@@ -43,8 +43,12 @@ Class Posts extends CI_Model {
             );
             extract($params);
             $orgs = $this->Orgs->make_org_array($orgs);
-            $posts = $this->get_posts($params);
-            ts_data($posts);
+            $posts = $this->get_posts($params,$archive);
+            $i = 0;
+            foreach($posts AS $post){
+                $posts[$i]->categories = $this->Cats->get_post_cats($post->post_id);
+                $i++;
+            }
             return $posts;
     }
    
@@ -99,15 +103,17 @@ Class Posts extends CI_Model {
 		}
 		if($user_id){
 			$this->db->where('post.author_id',$user_id);
+            $this->db->join('user','post.author_id=user.ID');
 		}
-		$this->db->join('user','post.author_id=user.ID');
 		if(!$archive){
-			$this->db->where('post.dateremoved <=',0);
+			$this->db->having('post.dateremoved <=',0);
 		}
         if(isset($search_terms)){
             $this->db->like('post.title',$search_terms);
+            $this->db->or_like('post.content',$search_terms);
         }
 		$query = $this->db->get();
+        //ts_data($this->db->last_query());
 		$result = $query->result();
 		foreach($result AS $k=>$v){
 			$result[$k]->attachments = $this->get_attachments($v->post_id);
