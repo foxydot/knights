@@ -68,7 +68,7 @@ class Invoices extends CI_Model {
             preg_replacement_quote($organization->name),
             preg_replacement_quote(site_url('invoice/view/'.$invoice_id)),
             preg_replacement_quote(str_pad((string)SITENAME,8,'0',STR_PAD_LEFT)),
-            preg_replacement_quote($invoice_id),
+            preg_replacement_quote($invoice->post_id),
         );
         $message_subject = preg_replace($pattern, $replacement, $message_subject);
         $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
