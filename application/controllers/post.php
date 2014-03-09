@@ -268,7 +268,7 @@ class Post extends CI_Controller {
 		$this->load->model('Users');
 		if($this->input->post()){
             $this->load->library('email');
-            $this->load->library('html2text');
+            $this->load->library('Html2Text','html2text');
             $config['mailtype'] = 'html';
             $this->email->initialize($config);
             
