@@ -43,7 +43,16 @@
 		    <?php } ?>
 		    <li><a href="/user/edit/<?php print $user['ID']; ?>">Account Settings</a></li>
 		    <li><a href="/help">Help</a></li>
+		    <li><?php if($this->authenticate->check_auth()): ?>
+    <div class="search">
+        <form action="/post/search" method="post">
+            <input type="text" name="search_terms" id="search_terms" placeholder="Search" />
+            <input type="submit" value="&#xf002;" />
+        </form>
+    </div> 
+    <?php endif; ?></li>
 		    </ul>
+		    
           </div><!--/.nav-collapse -->
         </div>
       </div>

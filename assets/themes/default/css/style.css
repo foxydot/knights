@@ -239,18 +239,27 @@ label.inline {
 header {
   position: relative;
 }
-header .search {
+header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.search {
   position: relative;
   margin-right: 2rem;
 }
-header .search form {
+.search form {
   position: relative;
   margin: 0;
 }
-header .search form input[type="submit"] {
+.search form input {
+  margin: 6px;
+}
+.search form input[type="submit"] {
   font-family: FontAwesome;
   display: block;
-  margin-top: 0;
   padding: 8px;
   position: absolute;
   right: 0;
@@ -262,11 +271,4 @@ header .search form input[type="submit"] {
   -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   text-shadow: 0 0 0 #000 !important;
-}
-header:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
 }

@@ -193,16 +193,22 @@ label.inline{
 }
 header{
   position: relative;
-  .search{
+}
+header:after{
+  .clearfix;
+}
+.search{
     position: relative;
     margin-right: 2rem;
     form{
       position: relative;
       margin: 0;
+      input{
+        margin:6px;
+      }
       input[type="submit"]{
         font-family: FontAwesome;
         display: block;
-        margin-top: 0;
         padding: 8px;
         position: absolute;
         right:0;
@@ -215,7 +221,3 @@ header{
       }
     }
   }
-}
-header:after{
-  .clearfix;
-}
