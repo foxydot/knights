@@ -25,7 +25,7 @@ class Invoices extends CI_Model {
         $invoice = $this->get_invoice($invoice_id);
         $this->load->model('Organizations','Orgs');
         $organization = $this->Orgs->get_org($invoice->org_id);
-        $this->Common->get_org_info_from_subdomain();
+        $this->common->get_org_info_from_subdomain();
         //prep email
         switch($invoice->type){
             case 'product':

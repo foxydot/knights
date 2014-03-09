@@ -65,8 +65,9 @@ Class Common extends CI_Model {
         $result = $query->result();
         $site_title = $result[0]->meta_value;
         if($site_title == ''){
-            define('SITENAME', 'Community List');
-        } else {
+            $site_title = 'Community List';
+        }
+        if(!defined('SITENAME')){
             define('SITENAME', $site_title);
         }
         return $org_id;
