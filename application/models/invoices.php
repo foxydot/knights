@@ -26,10 +26,11 @@ class Invoices extends CI_Model {
         $this->load->model('Organizations','Orgs');
         $organization = $this->Orgs->get_org($invoice->org_id);
         $this->common->get_org_info_from_subdomain();
+        //$message_subject = $message_plaintext = $message_html = '';
         //prep email
         switch($invoice->type){
             case 'product':
-                include_once(SITEPATH.THEME_URL.'/email/product-invoice.php');
+                require_once(SITEPATH.THEME_URL.'/email/product-invoice.php');
                 break;
             case 'service':
             case 'student-service':
@@ -37,10 +38,12 @@ class Invoices extends CI_Model {
             case 'business-student':
             case 'business-personal':
             case 'business-professional':
-                include_once(SITEPATH.THEME_URL.'/email/service-invoice.php');
+            case 'businesses-student':
+            case 'businesses-personal':
+            case 'businesses-professional':
+                require_once(SITEPATH.THEME_URL.'/email/service-invoice.php');
                 break;
         }
-        
         setlocale(LC_MONETARY, 'en_US');
         $fee = money_format('%#1.2n', (float) $invoice->fee);
         //include_once(SITEPATH.THEMEURL.'email/email_template.php');

@@ -20,7 +20,7 @@
         <input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$post->post_id.'"':''; ?> />
         <input name="org_id" id="org_id" type="hidden" value="1" />
 		<div class="row-fluid">
-			<div class="span9"><input class="span12" name="title" id="title" type="text" title="Post Title" placeholder="Post Title"<?php print $is_edit?'value="'.$post->title.'"':''; ?> /></div>
+			<div class="span9"><input class="span12" name="title" id="title" type="text" title="Post Title" placeholder="Post Title"<?php print $is_edit?'value="'.htmlentities($post->title, ENT_QUOTES).'"':''; ?> /></div>
 <?php //TODO: Add client side validation to ensure this is a number ?>
 			<div class="span3"><label class="inline span1">$</label><input class="span11" name="cost" id="cost" type="text" title="Price" placeholder="Price"<?php print $is_edit?'value="'.$post->cost.'"':''; ?> /></div>
 		</div>
