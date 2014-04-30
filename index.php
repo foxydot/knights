@@ -19,9 +19,7 @@ ini_set("memory_limit","128M");
  *
  */
   switch( $_SERVER['SERVER_NAME'] ) {
-    case 'knights.local':
-    case 'knights.ro':
-    case 'msd.ro':
+    case (preg_match('/(.*)communitylist\.ro$/i', $_SERVER['SERVER_NAME']) ? true : false):
 		define('ENVIRONMENT', 'development');
 		break;
 	case 'knights.msdlab.com':

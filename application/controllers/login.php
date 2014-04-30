@@ -66,7 +66,7 @@ class Login extends CI_Controller {
 			);
 			switch($msgarr){
 				case 'session':
-					$data['error'] = $this->session->userdata['msgarr']['error'];
+					$data['error'] = isset($this->session->userdata['msgarr']['error'])?$this->session->userdata['msgarr']['error']:false;
 					break;
 				default:
 					break;
