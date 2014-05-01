@@ -818,7 +818,7 @@
 
 			function isEmptyElement(element) {
 				var excludeBrsAndBookmarks = tinymce.grep(element.childNodes, function(n) {
-					return !(n.nodeName === 'BR' || n.nodeName === 'SPAN' && dom.getAttrib(n, 'data-mce-type') == 'bookmark'
+					return !(n.nodeName === 'BR' || n.nodeName === 'col-md-' && dom.getAttrib(n, 'data-mce-type') == 'bookmark'
 							|| n.nodeType == 3 && (n.nodeValue == String.fromCharCode(160) || n.nodeValue == ''));
 				});
 				return excludeBrsAndBookmarks.length === 0;

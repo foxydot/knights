@@ -1,5 +1,5 @@
 /* Reset */
-.highcontrastSkin table, .highcontrastSkin tbody, .highcontrastSkin a, .highcontrastSkin img, .highcontrastSkin tr, .highcontrastSkin div, .highcontrastSkin td, .highcontrastSkin iframe, .highcontrastSkin span, .highcontrastSkin *, .highcontrastSkin .mceText {border:0; margin:0; padding:0; vertical-align:baseline; border-collapse:separate;}
+.highcontrastSkin table, .highcontrastSkin tbody, .highcontrastSkin a, .highcontrastSkin img, .highcontrastSkin tr, .highcontrastSkin div, .highcontrastSkin td, .highcontrastSkin iframe, .highcontrastSkin col-md-, .highcontrastSkin *, .highcontrastSkin .mceText {border:0; margin:0; padding:0; vertical-align:baseline; border-collapse:separate;}
 .highcontrastSkin a:hover, .highcontrastSkin a:link, .highcontrastSkin a:visited, .highcontrastSkin a:active {text-decoration:none; font-weight:normal; cursor:default;}
 .highcontrastSkin table td {vertical-align:middle}
 
@@ -57,11 +57,11 @@
 .highcontrastSkin .mceSplitButton:focus a.mceOpen, .highcontrastSkin .mceSplitButton:active a.mceOpen { border-width: 5px; border-left-width: 1px; padding: 1px 0px 1px 4px;-webkit-focus-ring-color:none;outline:none;}
 
 /* Menu */
-.highcontrastSkin .mceNoIcons span.mceIcon {width:0;}
+.highcontrastSkin .mceNoIcons col-md-.mceIcon {width:0;}
 .highcontrastSkin .mceMenu {position:absolute; left:0; top:0; z-index:1000; border:1px solid; }
 .highcontrastSkin .mceMenu table {background:white; color: black}
 .highcontrastSkin .mceNoIcons a .mceText {padding-left:10px}
-.highcontrastSkin .mceMenu a, .highcontrastSkin .mceMenu span, .highcontrastSkin .mceMenu {display:block;background:white; color: black}
+.highcontrastSkin .mceMenu a, .highcontrastSkin .mceMenu col-md-, .highcontrastSkin .mceMenu {display:block;background:white; color: black}
 .highcontrastSkin .mceMenu td {height:2em}
 .highcontrastSkin .mceMenu a {position:relative;padding:3px 0 4px 0; display: block;}
 .highcontrastSkin .mceMenu .mceText {position:relative; display:block; cursor:default; margin:0; padding:0 25px 0 25px;}
@@ -69,9 +69,9 @@
 .highcontrastSkin .mceMenu .mceIcon {position:absolute; top:0; left:0; width:26px;}
 .highcontrastSkin td.mceMenuItemSeparator {border-top:1px solid; height:1px}
 .highcontrastSkin .mceMenuItemTitle a {border:0; border-bottom:1px solid}
-.highcontrastSkin .mceMenuItemTitle span.mceText {font-weight:bold; padding-left:4px}
-.highcontrastSkin .mceNoIcons .mceMenuItemSelected span.mceText:before {content: "\2713\A0";}
-.highcontrastSkin .mceMenu span.mceMenuLine {display:none}
+.highcontrastSkin .mceMenuItemTitle col-md-.mceText {font-weight:bold; padding-left:4px}
+.highcontrastSkin .mceNoIcons .mceMenuItemSelected col-md-.mceText:before {content: "\2713\A0";}
+.highcontrastSkin .mceMenu col-md-.mceMenuLine {display:none}
 .highcontrastSkin .mceMenuItemSub a .mceText:after {content: "\A0\25B8"}
 .highcontrastSkin .mceMenuItem td, .highcontrastSkin .mceMenuItem th {line-height: normal}
 
@@ -84,19 +84,19 @@
 .highcontrastSkin .mceColorSplitMenu a.mceMoreColors:hover {border:1px solid; background-color:#B6BDD2}
 .highcontrastSkin a.mceMoreColors:hover {border:1px solid #0A246A; color: #000;}
 .highcontrastSkin .mceColorPreview {display:none;}
-.highcontrastSkin .mce_forecolor span.mceAction, .highcontrastSkin .mce_backcolor span.mceAction {height:17px;overflow:hidden}
+.highcontrastSkin .mce_forecolor col-md-.mceAction, .highcontrastSkin .mce_backcolor col-md-.mceAction {height:17px;overflow:hidden}
 
 /* Progress,Resize */
 .highcontrastSkin .mceBlocker {position:absolute; left:0; top:0; z-index:1000; opacity:0.5; -ms-filter:'alpha(opacity=30)'; filter:alpha(opacity=50); background:#FFF}
 .highcontrastSkin .mceProgress {position:absolute; left:0; top:0; z-index:1001; background:url(../default/img/progress.gif) no-repeat; width:32px; height:32px; margin:-16px 0 0 -16px}
 
 /* Formats */
-.highcontrastSkin .mce_p span.mceText {}
-.highcontrastSkin .mce_address span.mceText {font-style:italic}
-.highcontrastSkin .mce_pre span.mceText {font-family:monospace}
-.highcontrastSkin .mce_h1 span.mceText {font-weight:bolder; font-size: 2em}
-.highcontrastSkin .mce_h2 span.mceText {font-weight:bolder; font-size: 1.5em}
-.highcontrastSkin .mce_h3 span.mceText {font-weight:bolder; font-size: 1.17em}
-.highcontrastSkin .mce_h4 span.mceText {font-weight:bolder; font-size: 1em}
-.highcontrastSkin .mce_h5 span.mceText {font-weight:bolder; font-size: .83em}
-.highcontrastSkin .mce_h6 span.mceText {font-weight:bolder; font-size: .75em}
+.highcontrastSkin .mce_p col-md-.mceText {}
+.highcontrastSkin .mce_address col-md-.mceText {font-style:italic}
+.highcontrastSkin .mce_pre col-md-.mceText {font-family:monospace}
+.highcontrastSkin .mce_h1 col-md-.mceText {font-weight:bolder; font-size: 2em}
+.highcontrastSkin .mce_h2 col-md-.mceText {font-weight:bolder; font-size: 1.5em}
+.highcontrastSkin .mce_h3 col-md-.mceText {font-weight:bolder; font-size: 1.17em}
+.highcontrastSkin .mce_h4 col-md-.mceText {font-weight:bolder; font-size: 1em}
+.highcontrastSkin .mce_h5 col-md-.mceText {font-weight:bolder; font-size: .83em}
+.highcontrastSkin .mce_h6 col-md-.mceText {font-weight:bolder; font-size: .75em}

@@ -33,9 +33,9 @@
 					row = tinymce.DOM.get(ed.id + '_path_row');
 
 					if (row)
-						tinymce.DOM.add(row.parentNode, 'div', {'style': 'float: right'}, ed.getLang('wordcount.words', 'Words: ') + '<span id="' + t.id + '">0</span>');
+						tinymce.DOM.add(row.parentNode, 'div', {'style': 'float: right'}, ed.getLang('wordcount.words', 'Words: ') + '<col-md- id="' + t.id + '">0</col-md->');
 				} else {
-					tinymce.DOM.add(id, 'span', {}, '<span id="' + t.id + '">0</span>');
+					tinymce.DOM.add(id, 'col-md-', {}, '<col-md- id="' + t.id + '">0</col-md->');
 				}
 			});
 

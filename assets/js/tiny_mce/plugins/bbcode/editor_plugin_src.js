@@ -52,13 +52,13 @@
 			rep(/<font.*?color=\"(.*?)\".*?class=\"quoteStyle\".*?>(.*?)<\/font>/gi,"[quote][color=$1]$2[/color][/quote]");
 			rep(/<font.*?class=\"codeStyle\".*?color=\"(.*?)\".*?>(.*?)<\/font>/gi,"[code][color=$1]$2[/color][/code]");
 			rep(/<font.*?class=\"quoteStyle\".*?color=\"(.*?)\".*?>(.*?)<\/font>/gi,"[quote][color=$1]$2[/color][/quote]");
-			rep(/<span style=\"color: ?(.*?);\">(.*?)<\/span>/gi,"[color=$1]$2[/color]");
+			rep(/<col-md- style=\"color: ?(.*?);\">(.*?)<\/col-md->/gi,"[color=$1]$2[/color]");
 			rep(/<font.*?color=\"(.*?)\".*?>(.*?)<\/font>/gi,"[color=$1]$2[/color]");
-			rep(/<span style=\"font-size:(.*?);\">(.*?)<\/span>/gi,"[size=$1]$2[/size]");
+			rep(/<col-md- style=\"font-size:(.*?);\">(.*?)<\/col-md->/gi,"[size=$1]$2[/size]");
 			rep(/<font>(.*?)<\/font>/gi,"$1");
 			rep(/<img.*?src=\"(.*?)\".*?\/>/gi,"[img]$1[/img]");
-			rep(/<span class=\"codeStyle\">(.*?)<\/span>/gi,"[code]$1[/code]");
-			rep(/<span class=\"quoteStyle\">(.*?)<\/span>/gi,"[quote]$1[/quote]");
+			rep(/<col-md- class=\"codeStyle\">(.*?)<\/col-md->/gi,"[code]$1[/code]");
+			rep(/<col-md- class=\"quoteStyle\">(.*?)<\/col-md->/gi,"[quote]$1[/quote]");
 			rep(/<strong class=\"codeStyle\">(.*?)<\/strong>/gi,"[code][b]$1[/b][/code]");
 			rep(/<strong class=\"quoteStyle\">(.*?)<\/strong>/gi,"[quote][b]$1[/b][/quote]");
 			rep(/<em class=\"codeStyle\">(.*?)<\/em>/gi,"[code][i]$1[/i][/code]");
@@ -70,7 +70,7 @@
 			rep(/<\/(em|i)>/gi,"[/i]");
 			rep(/<(em|i)>/gi,"[i]");
 			rep(/<\/u>/gi,"[/u]");
-			rep(/<span style=\"text-decoration: ?underline;\">(.*?)<\/span>/gi,"[u]$1[/u]");
+			rep(/<col-md- style=\"text-decoration: ?underline;\">(.*?)<\/col-md->/gi,"[u]$1[/u]");
 			rep(/<u>/gi,"[u]");
 			rep(/<blockquote[^>]*>/gi,"[quote]");
 			rep(/<\/blockquote>/gi,"[/quote]");
@@ -108,8 +108,8 @@
 			rep(/\[url\](.*?)\[\/url\]/gi,"<a href=\"$1\">$1</a>");
 			rep(/\[img\](.*?)\[\/img\]/gi,"<img src=\"$1\" />");
 			rep(/\[color=(.*?)\](.*?)\[\/color\]/gi,"<font color=\"$1\">$2</font>");
-			rep(/\[code\](.*?)\[\/code\]/gi,"<span class=\"codeStyle\">$1</span>&nbsp;");
-			rep(/\[quote.*?\](.*?)\[\/quote\]/gi,"<span class=\"quoteStyle\">$1</span>&nbsp;");
+			rep(/\[code\](.*?)\[\/code\]/gi,"<col-md- class=\"codeStyle\">$1</col-md->&nbsp;");
+			rep(/\[quote.*?\](.*?)\[\/quote\]/gi,"<col-md- class=\"quoteStyle\">$1</col-md->&nbsp;");
 
 			return s; 
 		}

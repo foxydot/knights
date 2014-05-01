@@ -300,18 +300,18 @@ if ( ! function_exists('highlight_code'))
 		$str = highlight_string($str, TRUE);
 
 		// Prior to PHP 5, the highligh function used icky <font> tags
-		// so we'll replace them with <span> tags.
+		// so we'll replace them with <col-md-> tags.
 
 		if (abs(PHP_VERSION) < 5)
 		{
-			$str = str_replace(array('<font ', '</font>'), array('<span ', '</span>'), $str);
+			$str = str_replace(array('<font ', '</font>'), array('<col-md- ', '</col-md->'), $str);
 			$str = preg_replace('#color="(.*?)"#', 'style="color: \\1"', $str);
 		}
 
 		// Remove our artificially added PHP, and the syntax highlighting that came with it
-		$str = preg_replace('/<span style="color: #([A-Z0-9]+)">&lt;\?php(&nbsp;| )/i', '<span style="color: #$1">', $str);
-		$str = preg_replace('/(<span style="color: #[A-Z0-9]+">.*?)\?&gt;<\/span>\n<\/span>\n<\/code>/is', "$1</span>\n</span>\n</code>", $str);
-		$str = preg_replace('/<span style="color: #[A-Z0-9]+"\><\/span>/i', '', $str);
+		$str = preg_replace('/<col-md- style="color: #([A-Z0-9]+)">&lt;\?php(&nbsp;| )/i', '<col-md- style="color: #$1">', $str);
+		$str = preg_replace('/(<col-md- style="color: #[A-Z0-9]+">.*?)\?&gt;<\/col-md->\n<\/col-md->\n<\/code>/is', "$1</col-md->\n</col-md->\n</code>", $str);
+		$str = preg_replace('/<col-md- style="color: #[A-Z0-9]+"\><\/col-md->/i', '', $str);
 
 		// Replace our markers back to PHP tags.
 		$str = str_replace(array('phptagopen', 'phptagclose', 'asptagopen', 'asptagclose', 'backslashtmp', 'scriptclose'),

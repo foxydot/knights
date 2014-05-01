@@ -1,24 +1,24 @@
 <?php setlocale(LC_MONETARY, 'en_US'); ?>
-<div class="container-fluid post">
-    <div class="row-fluid">
-        <div class="span6 offset3">
+<div class="container post">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
         <h1>Invoice for post: <?php print $invoice->title; ?>
         <div class="fee pull-right">
-            <span><?php print money_format('%#1.2n', (float) $invoice->fee); ?></span>
+            <col-md-><?php print money_format('%#1.2n', (float) $invoice->fee); ?></col-md->
         </div>
         </h1>
         </div>
     </div>
-    <div class="row-fluid">
-        <div class="span6 offset3">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
         <?php print form_open_multipart($urls['paypal'],array('id'=>'invoiceform','class'=>'smallform')); ?>
             <input type="hidden" id="paypal_action" value="<?php print $urls['paypal']; ?>">
             <input type="hidden" id="check_action" value="<?php print $urls['check']; ?>">
         <?php print form_fieldset(); ?>
-        <div class="row-fluid payment_options">
+        <div class="row payment_options">
             <label>Payment Options</label>
             <input type="radio" name="payment_option" id="payment_option_paypal" value="PayPal"> Pay securely with PayPal <br/>
-                <div class="row-fluid payment_info hide" id="paypal_info">
+                <div class="row payment_info hide" id="paypal_info">
                     <input type="hidden" name="cmd" value="_xclick">
                     <input type="hidden" name="business" value="<?php print $org->meta['paypal']->meta_value; ?>">
                     <input type="hidden" name="lc" value="US">
@@ -39,7 +39,7 @@
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </div>
             <input type="radio" name="payment_option" id="payment_option_check" value="Cash/Check"> Pay by check 
-                <div class="row-fluid payment_info hide" id="check_info">
+                <div class="row payment_info hide" id="check_info">
                     You have elected to pay via check. <br /><br />
                     
                     If paying by check, please

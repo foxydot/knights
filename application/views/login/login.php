@@ -8,7 +8,7 @@
 		<input name="email" id="email" type="text" placeholder="Email" />
 		<input name="password" id="password" type="password" placeholder="Password" />
 		<div class="remember">
-		<span>Remember Me</span>
+		<col-md->Remember Me</col-md->
 		<input name="remember" id="remember" type="checkbox" /><br />
 		<a href="/login/forgot">Forgot Your Password?</a> | 
 		<a href="/login/register">Request Account</a> 

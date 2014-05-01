@@ -14,8 +14,8 @@
 	<form onsubmit="updateAction();return false;" action="#">
 		<div class="tabs">
 			<ul>
-				<li id="general_tab" class="current" aria-controls="general_panel"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#table_dlg.general_tab}</a></span></li>
-				<li id="advanced_tab" aria-controls="advanced_panel"><span><a href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">{#table_dlg.advanced_tab}</a></span></li>
+				<li id="general_tab" class="current" aria-controls="general_panel"><col-md-><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#table_dlg.general_tab}</a></col-md-></li>
+				<li id="advanced_tab" aria-controls="advanced_panel"><col-md-><a href="javascript:mcTabs.displayTab('advanced_tab','advanced_panel');" onmousedown="return false;">{#table_dlg.advanced_tab}</a></col-md-></li>
 			</ul>
 		</div>
 
@@ -125,14 +125,14 @@
 						<tr>
 							<td class="column1"><label for="bgcolor" id="bgcolor_label">{#table_dlg.bgcolor}</label></td> 
 							<td>
-								<span role="group" aria-labelledby="bgcolor_label">
+								<col-md- role="group" aria-labelledby="bgcolor_label">
 								<table role="presentation" border="0" cellpadding="0" cellspacing="0">
 									<tr>
 										<td><input id="bgcolor" name="bgcolor" type="text" value="" size="9" onchange="updateColor('bgcolor_pick','bgcolor');changedColor();" /></td>
 										<td id="bgcolor_pickcontainer">&nbsp;</td>
 									</tr>
 								</table>
-								</span>
+								</col-md->
 							</td> 
 						</tr>
 					</table>

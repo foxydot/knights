@@ -179,7 +179,7 @@ function add_subsection(parent){
 	new_subsection(info);
 	/*
 	var html = '<div class="subsection indent" id="subsection' + newsubsection + '">																						\
-	<div class="span3 sub-head" id="sub-head' + info['story_section'] + '-' + newsubsection + '">																							\
+	<div class="col-md-3 sub-head" id="sub-head' + info['story_section'] + '-' + newsubsection + '">																							\
 		<div class="color' + color + ' textBox">																													\
 			<h6 class="version">' + info['story_section'] + '.' + newsubsection + '</h6>																												\
 			<h6 id="story_id:' + info['story_id'] + ':section_id:' + info['section_id'] + ':section_type:2:story_section:' + info['story_section'] + ':story_subsection:' + newsubsection + '" class="remove">x</h6>									\
@@ -189,7 +189,7 @@ function add_subsection(parent){
 			<div class="clear"></div>\
 		</div><!-- end textbox -->																														\
 	</div><!-- end Sub Head -->																															\
-	<div class="span4 prose" id="prose' + info['story_section'] + '-' + newsubsection + '">																													\
+	<div class="col-md-4 prose" id="prose' + info['story_section'] + '-' + newsubsection + '">																													\
 		<div class="color' + color + ' textBox">																													\
 			<h6 class="version">' + info['story_section'] + '.' + newsubsection + '</h6>																												\
 			<h6 id="story_id:' + info['story_id'] + ':section_id:' + info['section_id'] + ':section_type:3:story_section:' + info['story_section'] + ':story_subsection:' + newsubsection + '" class="remove">x</h6>									\
@@ -197,7 +197,7 @@ function add_subsection(parent){
 			<div class="clear"></div>\
 		</div><!-- end textbox -->																														\
 	</div><!-- end Prose -->																															\
-	<div class="span3 topline" id="topline' + info['story_section'] + '-' + newsubsection + '">																													\
+	<div class="col-md-3 topline" id="topline' + info['story_section'] + '-' + newsubsection + '">																													\
 		<div class="color' + color + ' textBox">																													\
 			<h6 class="version">' + info['story_section'] + '.' + newsubsection + '</h6>																												\
 			<h6 id="story_id:' + info['story_id'] + ':section_id:' + info['section_id'] + ':section_type:4:story_section:' + info['story_section'] + ':story_subsection:' + newsubsection + '" class="remove">x</h6>									\

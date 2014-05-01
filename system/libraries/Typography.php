@@ -33,7 +33,7 @@ class CI_Typography {
 	var $skip_elements	= 'p|pre|ol|ul|dl|object|table|h\d';
 
 	// Tags we want the parser to completely ignore when splitting the string.
-	var $inline_elements = 'a|abbr|acronym|b|bdo|big|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|q|samp|select|small|span|strong|sub|sup|textarea|tt|var';
+	var $inline_elements = 'a|abbr|acronym|b|bdo|big|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|q|samp|select|small|col-md-|strong|sub|sup|textarea|tt|var';
 
 	// array of block level elements that require inner content to be within another block level element
 	var $inner_block_required = array('blockquote');
@@ -111,7 +111,7 @@ class CI_Typography {
 		}
 
 		// Convert "ignore" tags to temporary marker.  The parser splits out the string at every tag
-		// it encounters.  Certain inline tags, like image tags, links, span tags, etc. will be
+		// it encounters.  Certain inline tags, like image tags, links, col-md- tags, etc. will be
 		// adversely affected if they are split out so we'll convert the opening bracket < temporarily to: {@TAG}
 		$str = preg_replace("#<(/*)(".$this->inline_elements.")([ >])#i", "{@TAG}\\1\\2\\3", $str);
 

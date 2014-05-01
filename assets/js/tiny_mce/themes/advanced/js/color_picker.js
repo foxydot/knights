@@ -222,7 +222,7 @@ function generateWebColors() {
 		if (tinyMCEPopup.editor.forcedHighContrastMode) {
 			h += '<canvas class="mceColorSwatch" height="10" width="10" data-color="' + colors[i] + '"></canvas>';
 		}
-		h += '<span class="mceVoiceLabel" style="display:none;" id="web_colors_' + i + '">' + colors[i].toUpperCase() + '</span>';
+		h += '<col-md- class="mceVoiceLabel" style="display:none;" id="web_colors_' + i + '">' + colors[i].toUpperCase() + '</col-md->';
 		h += '</a></td>';
 		if ((i+1) % 18 == 0)
 			h += '</tr><tr>';
@@ -258,7 +258,7 @@ function generateNamedColors() {
 		if (tinyMCEPopup.editor.forcedHighContrastMode) {
 			h += '<canvas class="mceColorSwatch" height="10" width="10" data-color="' + colors[i] + '"></canvas>';
 		}
-		h += '<span class="mceVoiceLabel" style="display:none;" id="named_colors_' + i + '">' + v + '</span>';
+		h += '<col-md- class="mceVoiceLabel" style="display:none;" id="named_colors_' + i + '">' + v + '</col-md->';
 		h += '</a>';
 		i++;
 	}

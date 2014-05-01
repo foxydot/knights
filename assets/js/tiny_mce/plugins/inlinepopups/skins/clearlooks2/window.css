@@ -1,7 +1,7 @@
 /* Clearlooks 2 */
 
 /* Reset */
-.clearlooks2, .clearlooks2 div, .clearlooks2 span, .clearlooks2 a {vertical-align:baseline; text-align:left; position:absolute; border:0; padding:0; margin:0; background:transparent; font-family:Arial,Verdana; font-size:11px; color:#000; text-decoration:none; font-weight:normal; width:auto; height:auto; overflow:hidden; display:block}
+.clearlooks2, .clearlooks2 div, .clearlooks2 col-md-, .clearlooks2 a {vertical-align:baseline; text-align:left; position:absolute; border:0; padding:0; margin:0; background:transparent; font-family:Arial,Verdana; font-size:11px; color:#000; text-decoration:none; font-weight:normal; width:auto; height:auto; overflow:hidden; display:block}
 
 /* General */
 .clearlooks2 {position:absolute; direction:ltr}
@@ -15,17 +15,17 @@
 .clearlooks2 .mceTop .mceLeft {width:6px; background:url(img/corners.gif)}
 .clearlooks2 .mceTop .mceCenter {right:6px; width:100%; height:23px; background:url(img/horizontal.gif) 12px 0; clip:rect(auto auto auto 12px)}
 .clearlooks2 .mceTop .mceRight {right:0; width:6px; height:23px; background:url(img/corners.gif) -12px 0}
-.clearlooks2 .mceTop span {width:100%; text-align:center; vertical-align:middle; line-height:23px; font-weight:bold}
+.clearlooks2 .mceTop col-md- {width:100%; text-align:center; vertical-align:middle; line-height:23px; font-weight:bold}
 .clearlooks2 .mceFocus .mceTop .mceLeft {background:url(img/corners.gif) -6px 0}
 .clearlooks2 .mceFocus .mceTop .mceCenter {background:url(img/horizontal.gif) 0 -23px}
 .clearlooks2 .mceFocus .mceTop .mceRight {background:url(img/corners.gif) -18px 0}
-.clearlooks2 .mceFocus .mceTop span {color:#FFF}
+.clearlooks2 .mceFocus .mceTop col-md- {color:#FFF}
 
 /* Middle */
 .clearlooks2 .mceMiddle, .clearlooks2 .mceMiddle div {top:0}
 .clearlooks2 .mceMiddle {width:100%; height:100%; clip:rect(23px auto auto auto)}
 .clearlooks2 .mceMiddle .mceLeft {left:0; width:5px; height:100%; background:url(img/vertical.gif) -5px 0}
-.clearlooks2 .mceMiddle span {top:23px; left:5px; width:100%; height:100%; background:#FFF}
+.clearlooks2 .mceMiddle col-md- {top:23px; left:5px; width:100%; height:100%; background:#FFF}
 .clearlooks2 .mceMiddle .mceRight {right:0; width:5px; height:100%; background:url(img/vertical.gif)}
 
 /* Bottom */
@@ -35,12 +35,12 @@
 .clearlooks2 .mceBottom .mceLeft {left:0; width:5px; background:url(img/corners.gif) -34px -6px}
 .clearlooks2 .mceBottom .mceCenter {left:5px; width:100%; background:url(img/horizontal.gif) 0 -46px}
 .clearlooks2 .mceBottom .mceRight {right:0; width:5px; background: url(img/corners.gif) -34px 0}
-.clearlooks2 .mceBottom span {display:none}
+.clearlooks2 .mceBottom col-md- {display:none}
 .clearlooks2 .mceStatusbar .mceBottom, .clearlooks2 .mceStatusbar .mceBottom div {height:23px}
 .clearlooks2 .mceStatusbar .mceBottom .mceLeft {background:url(img/corners.gif) -29px 0}
 .clearlooks2 .mceStatusbar .mceBottom .mceCenter {background:url(img/horizontal.gif) 0 -52px}
 .clearlooks2 .mceStatusbar .mceBottom .mceRight {background:url(img/corners.gif) -24px 0}
-.clearlooks2 .mceStatusbar .mceBottom span {display:block; left:7px; font-family:Arial, Verdana; font-size:11px; line-height:23px}
+.clearlooks2 .mceStatusbar .mceBottom col-md- {display:block; left:7px; font-family:Arial, Verdana; font-size:11px; line-height:23px}
 
 /* Actions */
 .clearlooks2 a {width:29px; height:16px; top:3px;}
@@ -80,7 +80,7 @@
 /* Alert/Confirm */
 .clearlooks2 .mceButton {font-weight:bold; bottom:10px; width:80px; height:30px; background:url(img/button.gif); line-height:30px; vertical-align:middle; text-align:center; outline:0}
 .clearlooks2 .mceMiddle .mceIcon {left:15px; top:35px; width:32px; height:32px}
-.clearlooks2 .mceAlert .mceMiddle span, .clearlooks2 .mceConfirm .mceMiddle span {background:transparent;left:60px; top:35px; width:320px; height:50px; font-weight:bold; overflow:auto; white-space:normal}
+.clearlooks2 .mceAlert .mceMiddle col-md-, .clearlooks2 .mceConfirm .mceMiddle col-md- {background:transparent;left:60px; top:35px; width:320px; height:50px; font-weight:bold; overflow:auto; white-space:normal}
 .clearlooks2 a:hover {font-weight:bold;}
 .clearlooks2 .mceAlert .mceMiddle, .clearlooks2 .mceConfirm .mceMiddle {background:#D6D7D5}
 .clearlooks2 .mceAlert .mceOk {left:50%; top:auto; margin-left: -40px}

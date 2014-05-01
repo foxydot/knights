@@ -7,31 +7,31 @@
         $mainspan = 11;
     }
 ?>
-<div id="help-list" class="container-fluid list accordion">
+<div id="help-list" class="container list panel-group">
 	<?php 
 		foreach($articles AS $article){
 			$display = '
-		<div class="stripe row-fluid accordion-group sortable">';
+		<div class="stripe row panel panel-default sortable">';
                     /*if($admin){
                         $display .= '
-                        <div class="span1 edit">
-                            <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+                        <div class="col-md-1 edit">
+                            <col-md- class="ui-icon ui-icon-arrowthick-2-n-s"></col-md->
                         </div>';
                     }*/
                     $display .= '
-				<div class="span'.$mainspan.' accordion-heading">
-					<h5 class="heading"><a class="accordion-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="icon-expand icon-large pull-left"></i> '.$article->title.'</a></h5>
+				<div class="col-md-'.$mainspan.' panel-heading">
+					<h5 class="heading"><a class="panel-group-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="icon-expand icon-large pull-left"></i> '.$article->title.'</a></h5>
 				</div>';
 					if($admin){
 						$display .= '
-                <div class="span1 edit">
+                <div class="col-md-1 edit">
                     <a href="/help/edit/'.$article->ID.'" class="btn">Edit</a>
                 </div>';
 					}
 					$display .= '
-				<div id="'.$article->slug.'-posts" class="row-fluid accordion-body collapse">';
+				<div id="'.$article->slug.'-posts" class="row panel-collapse collapse">';
 				$display .= '
-		<div class="stripe post row-fluid accordion-inner span12">
+		<div class="stripe post row panel-body col-md-12">
 		'.$article->content.'
 		</div>';
 			$display .= '

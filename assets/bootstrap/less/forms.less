@@ -266,29 +266,29 @@ textarea {
 .input-xxlarge    { width: 530px; }
 
 // Grid style input sizes
-input[class*="span"],
-select[class*="span"],
-textarea[class*="span"],
-.uneditable-input[class*="span"],
+input[class*="col-md-"],
+select[class*="col-md-"],
+textarea[class*="col-md-"],
+.uneditable-input[class*="col-md-"],
 // Redeclare since the fluid row class is more specific
-.row-fluid input[class*="span"],
-.row-fluid select[class*="span"],
-.row-fluid textarea[class*="span"],
-.row-fluid .uneditable-input[class*="span"] {
+.row-fluid input[class*="col-md-"],
+.row-fluid select[class*="col-md-"],
+.row-fluid textarea[class*="col-md-"],
+.row-fluid .uneditable-input[class*="col-md-"] {
   float: none;
   margin-left: 0;
 }
 // Ensure input-prepend/append never wraps
-.input-append input[class*="span"],
-.input-append .uneditable-input[class*="span"],
-.input-prepend input[class*="span"],
-.input-prepend .uneditable-input[class*="span"],
-.row-fluid input[class*="span"],
-.row-fluid select[class*="span"],
-.row-fluid textarea[class*="span"],
-.row-fluid .uneditable-input[class*="span"],
-.row-fluid .input-prepend [class*="span"],
-.row-fluid .input-append [class*="span"] {
+.input-append input[class*="col-md-"],
+.input-append .uneditable-input[class*="col-md-"],
+.input-prepend input[class*="col-md-"],
+.input-prepend .uneditable-input[class*="col-md-"],
+.row-fluid input[class*="col-md-"],
+.row-fluid select[class*="col-md-"],
+.row-fluid textarea[class*="col-md-"],
+.row-fluid .uneditable-input[class*="col-md-"],
+.row-fluid .input-prepend [class*="col-md-"],
+.row-fluid .input-append [class*="col-md-"] {
   display: inline-block;
 }
 
@@ -306,14 +306,14 @@ textarea[class*="span"],
 }
 
 // Float to collapse white-space for proper grid alignment
-.controls-row [class*="span"],
+.controls-row [class*="col-md-"],
 // Redeclare the fluid grid collapse since we undo the float for inputs
-.row-fluid .controls-row [class*="span"] {
+.row-fluid .controls-row [class*="col-md-"] {
   float: left;
 }
 // Explicity set top padding on all checkboxes/radios, not just first-child
-.controls-row .checkbox[class*="span"],
-.controls-row .radio[class*="span"] {
+.controls-row .checkbox[class*="col-md-"],
+.controls-row .radio[class*="col-md-"] {
   padding-top: 5px;
 }
 
@@ -426,7 +426,7 @@ select:focus:invalid {
   margin-bottom: @baseLineHeight / 2;
   vertical-align: middle;
   font-size: 0; // white space collapse hack
-  white-space: nowrap; // Prevent span and input from separating
+  white-space: nowrap; // Prevent col-md- and input from separating
 
   // Reset the white space collapse hack
   input,

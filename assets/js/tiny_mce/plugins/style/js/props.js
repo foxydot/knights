@@ -60,8 +60,8 @@ function init(ed) {
 	existingStyles = aggregateStyles(tinyMCEPopup.getWindowArg('styles'));
 	ce.style.cssText = tinyMCEPopup.editor.dom.serializeStyle(existingStyles);
 
-	applyActionIsInsert = ed.getParam("edit_css_style_insert_span", false);
-	document.getElementById('toggle_insert_span').checked = applyActionIsInsert;
+	applyActionIsInsert = ed.getParam("edit_css_style_insert_col-md-", false);
+	document.getElementById('toggle_insert_col-md-').checked = applyActionIsInsert;
 
 	h = getBrowserHTML('background_image_browser','background_image','image','advimage');
 	document.getElementById("background_image_browser").innerHTML = h;
@@ -414,12 +414,12 @@ function applyAction() {
 
 	if (applyActionIsInsert) {
 		ed.formatter.register('plugin_style', {
-			inline: 'span', styles: existingStyles
+			inline: 'col-md-', styles: existingStyles
 		});
 		ed.formatter.remove('plugin_style');
 
 		ed.formatter.register('plugin_style', {
-			inline: 'span', styles: newStyles
+			inline: 'col-md-', styles: newStyles
 		});
 		ed.formatter.apply('plugin_style');
 	} else {

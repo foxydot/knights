@@ -7,7 +7,7 @@
 		<input name="email" id="email" type="text" placeholder="Email" />
 		<input name="password" id="password" type="password" placeholder="Password" />
 		<div class="remember">
-		<span>Remember Me</span>
+		<col-md->Remember Me</col-md->
 		<input name="remember" id="remember" type="checkbox" /><br />
 		</div><!-- end remember -->
 		<input name="submit" id="submit" type="submit" value="Submit" />

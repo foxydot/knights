@@ -180,10 +180,10 @@ table {
 // -----------------
 
 // Reset default grid behavior
-table td[class*="span"],
-table th[class*="span"],
-.row-fluid table td[class*="span"],
-.row-fluid table th[class*="span"] {
+table td[class*="col-md-"],
+table th[class*="col-md-"],
+.row-fluid table td[class*="col-md-"],
+.row-fluid table th[class*="col-md-"] {
   display: table-cell;
   float: none; // undo default grid column styles
   margin-left: 0; // undo default grid column styles
@@ -192,18 +192,18 @@ table th[class*="span"],
 // Change the column widths to account for td/th padding
 .table td,
 .table th {
-  &.span1     { .tableColumns(1); }
-  &.span2     { .tableColumns(2); }
-  &.span3     { .tableColumns(3); }
-  &.span4     { .tableColumns(4); }
-  &.span5     { .tableColumns(5); }
-  &.span6     { .tableColumns(6); }
-  &.span7     { .tableColumns(7); }
-  &.span8     { .tableColumns(8); }
-  &.span9     { .tableColumns(9); }
-  &.span10    { .tableColumns(10); }
-  &.span11    { .tableColumns(11); }
-  &.span12    { .tableColumns(12); }
+  &.col-md-1     { .tableColumns(1); }
+  &.col-md-2     { .tableColumns(2); }
+  &.col-md-3     { .tableColumns(3); }
+  &.col-md-4     { .tableColumns(4); }
+  &.col-md-5     { .tableColumns(5); }
+  &.col-md-6     { .tableColumns(6); }
+  &.col-md-7     { .tableColumns(7); }
+  &.col-md-8     { .tableColumns(8); }
+  &.col-md-9     { .tableColumns(9); }
+  &.col-md-10    { .tableColumns(10); }
+  &.col-md-11    { .tableColumns(11); }
+  &.col-md-12    { .tableColumns(12); }
 }
 
 

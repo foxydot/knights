@@ -29,7 +29,7 @@
 	    <![endif]-->
 	    
   <!-- CSS: implied media="all" -->	    
-  <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <link href="<?php echo THEME_URL ?>/css/style.css" rel="stylesheet">
   <!--[if IE]>
 	<link href="<?php echo THEME_URL ?>/css/ie.css" rel="stylesheet">

@@ -156,11 +156,11 @@ class CI_Unit_test {
 				{
 					if ($val == $CI->lang->line('ut_passed'))
 					{
-						$val = '<span style="color: #0C0;">'.$val.'</span>';
+						$val = '<col-md- style="color: #0C0;">'.$val.'</col-md->';
 					}
 					elseif ($val == $CI->lang->line('ut_failed'))
 					{
-						$val = '<span style="color: #C00;">'.$val.'</span>';
+						$val = '<col-md- style="color: #C00;">'.$val.'</col-md->';
 					}
 				}
 

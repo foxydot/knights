@@ -104,8 +104,8 @@
 				before = true;
 			}
 
-			//caretContainer = dom.create('span', {id: caretContainerId, 'data-mce-bogus': true, style:'border: 1px solid red'}, invisibleChar);
-			caretContainer = dom.create('span', {id: caretContainerId, 'data-mce-bogus': true}, invisibleChar);
+			//caretContainer = dom.create('col-md-', {id: caretContainerId, 'data-mce-bogus': true, style:'border: 1px solid red'}, invisibleChar);
+			caretContainer = dom.create('col-md-', {id: caretContainerId, 'data-mce-bogus': true}, invisibleChar);
 
 			if (before) {
 				target.parentNode.insertBefore(caretContainer, target);
@@ -348,7 +348,7 @@
 		init : function(ed, url) {
 			var editClass, nonEditClass, nonEditableRegExps;
 
-			// Converts configured regexps to noneditable span items
+			// Converts configured regexps to noneditable col-md- items
 			function convertRegExpsToNonEditable(ed, args) {
 				var i = nonEditableRegExps.length, content = args.content, cls = tinymce.trim(nonEditClass);
 
@@ -366,7 +366,7 @@
 							return match;
 						}
 
-						return '<span class="' + cls + '" data-mce-content="' + ed.dom.encode(args[0]) + '">' + ed.dom.encode(typeof(args[1]) === "string" ? args[1] : args[0]) + '</span>';
+						return '<col-md- class="' + cls + '" data-mce-content="' + ed.dom.encode(args[0]) + '">' + ed.dom.encode(typeof(args[1]) === "string" ? args[1] : args[0]) + '</col-md->';
 					});
 				}
 

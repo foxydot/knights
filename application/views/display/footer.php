@@ -1,6 +1,6 @@
     	<!-- Le javascript -->  
   <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="<?php echo THEME_URL; ?>/js/scripts.js"></script>
 		
 <?php print isset($footer_js)?page_js($footer_js):''; ?>

@@ -23,7 +23,7 @@ $message_html = '
 <p><strong>100% of your Listing Fee will go to the __ORGANIZATION_NAME__!</strong>, benefiting the school and your child(ren)!</p>
 
 <p>Please submit your __LISTING_FEE__ fee using <a href="__INVOICE_URL__">PayPal</a> or by mailing a check.</p>
-<p><span>If <span style="text-decoration: underline;">paying by&nbsp;<strong>check</strong></span></span>, please</p>
+<p><col-md->If <col-md- style="text-decoration: underline;">paying by&nbsp;<strong>check</strong></col-md-></col-md->, please</p>
 <p>. Make out to &ldquo;Summit Parent Association &ndash; Knights List&rdquo;</p>
 <p>. Memo Line &ldquo;__LISTING_CODE__&rdquo;</p>
 <p><em>.</em>&nbsp;Mail to:&nbsp;&nbsp;&nbsp;&nbsp; Summit Parent Association, attn: Treasurer</p>

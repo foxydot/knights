@@ -12,7 +12,7 @@
 <form onsubmit="AdvHRDialog.update();return false;" action="#">
 	<div class="tabs">
 		<ul>
-			<li id="general_tab" class="current" aria-controls="general_panel"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advhr.advhr_desc}</a></span></li>
+			<li id="general_tab" class="current" aria-controls="general_panel"><col-md-><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advhr.advhr_desc}</a></col-md-></li>
 		</ul>
 	</div>
 
@@ -23,7 +23,7 @@
 						<td><label id="width_label" for="width">{#advhr_dlg.width}</label></td>
 						<td class="nowrap">
 							<input id="width" name="width" type="text" value="" class="mceFocus" />
-							<span style="display:none;" id="width_unit_label">{#advhr_dlg.widthunits}</span>
+							<col-md- style="display:none;" id="width_unit_label">{#advhr_dlg.widthunits}</col-md->
 							<select name="width2" id="width2" aria-labelledby="width_unit_label">
 								<option value="">px</option>
 								<option value="%">%</option>

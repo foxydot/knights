@@ -18,10 +18,10 @@
 	<div id="headline-<?php print $section_id; ?>" class="headline">
 		<div class="container">
 			<div class="row">
-				<div class="span1">
+				<div class="col-md-1">
 					<div class="numeric-headline"><?php print $section_id; ?>.<?php print $section[0]['Headline']->story_subsection; ?></div>
 				</div>
-				<div class="fold span11">
+				<div class="fold col-md-11">
 					<h2><?php print display($section[0]['Headline']->content); ?></h2>
 				</div>
 			</div>
@@ -41,11 +41,11 @@
 		<footer>
 	    	<div id="signoff" class="container">
 	    		<div class="row">
-	    			<div id="emb" class="span8">
+	    			<div id="emb" class="col-md-8">
 	    				<img src="/assets/frontend/img/emblem.png" alt="Thrive Plan"/>
 	    			</div>
 	    			<?php //insert author vcard ?>
-	    			<div id="vcard" class="span2" style="background-image: url(<?php print $story->avatar; ?>);">
+	    			<div id="vcard" class="col-md-2" style="background-image: url(<?php print $story->avatar; ?>);">
 	    				<p><?php print $story->firstname; ?> <?php print $story->lastname; ?></p>
 	    				<p><a href="mailto:<?php print $story->email; ?>"><?php print $story->email; ?></a><br/>513.891.3000</p>
 	    			</div>

@@ -166,9 +166,9 @@ class CI_Calendar {
 		}
 
 		// Heading containing the month/year
-		$colspan = ($this->show_next_prev == TRUE) ? 5 : 7;
+		$colcol-md- = ($this->show_next_prev == TRUE) ? 5 : 7;
 
-		$this->temp['heading_title_cell'] = str_replace('{colspan}', $colspan, $this->temp['heading_title_cell']);
+		$this->temp['heading_title_cell'] = str_replace('{colcol-md-}', $colcol-md-, $this->temp['heading_title_cell']);
 		$this->temp['heading_title_cell'] = str_replace('{heading}', $this->get_month_name($month)."&nbsp;".$year, $this->temp['heading_title_cell']);
 
 		$out .= $this->temp['heading_title_cell'];
@@ -408,7 +408,7 @@ class CI_Calendar {
 						'table_open'				=> '<table border="0" cellpadding="4" cellspacing="0">',
 						'heading_row_start'			=> '<tr>',
 						'heading_previous_cell'		=> '<th><a href="{previous_url}">&lt;&lt;</a></th>',
-						'heading_title_cell'		=> '<th colspan="{colspan}">{heading}</th>',
+						'heading_title_cell'		=> '<th colcol-md-="{colcol-md-}">{heading}</th>',
 						'heading_next_cell'			=> '<th><a href="{next_url}">&gt;&gt;</a></th>',
 						'heading_row_end'			=> '</tr>',
 						'week_row_start'			=> '<tr>',

@@ -32,18 +32,18 @@
 			case 'image': 
 				foreach($group AS $attachment){
 					$modal = $attachment->modal?' ismodal':'';
-					print '<li class="image'.$modal.' attachment-'.$attachment->ID.'"><span class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</span><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><img title="'.$attachment->title.'" src="'.$attachment->attachment_url.'" style="width: 100px;" /></li>';
+					print '<li class="image'.$modal.' attachment-'.$attachment->ID.'"><col-md- class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</col-md-><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><img title="'.$attachment->title.'" src="'.$attachment->attachment_url.'" style="width: 100px;" /></li>';
 				}
 				break; 
 			case 'document': 
 				foreach($group AS $attachment){
 					$attachment_title = $attachment->title != ''?$attachment->title:$attachment->attachment_url;
-					print '<li class="document attachment-'.$attachment->ID.'"><span class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</span><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><a href="'.$attachment->attachment_url.'">'.$attachment_title.'</a></li>';
+					print '<li class="document attachment-'.$attachment->ID.'"><col-md- class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</col-md-><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><a href="'.$attachment->attachment_url.'">'.$attachment_title.'</a></li>';
 				}
 				break;
 			case 'video': 
 				foreach($group AS $attachment){
-					print '<li class="video attachment-'.$attachment->ID.'"><span class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</span><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><a href="'.$attachment->attachment_url.'">'.$attachment->attachment_url.'</a></li>';
+					print '<li class="video attachment-'.$attachment->ID.'"><col-md- class="remove" id="section_id:'.$section->section_id.':attachment_id:'.$attachment->ID.'">x</col-md-><a class="edit" href="/admin/edit_media/'.$attachment->ID.'">edit</a><a href="'.$attachment->attachment_url.'">'.$attachment->attachment_url.'</a></li>';
 				}
 				break;
 		} ?>

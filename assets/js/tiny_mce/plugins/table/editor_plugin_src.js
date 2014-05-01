@@ -25,7 +25,7 @@
 		return elm.innerHTML.replace(/<(br|img|object|embed|input|textarea)[^>]*>/gi, '-').replace(/<[^>]+>/g, '').length == 0;
 	};
 
-	function getSpanVal(td, name) {
+	function getcol-md-Val(td, name) {
 		return parseInt(td.getAttribute(name) || 1);
 	}
 
@@ -62,30 +62,30 @@
 					y += startY;
 
 					each(dom.select('> td, > th', tr), function(td, x) {
-						var x2, y2, rowspan, colspan;
+						var x2, y2, rowcol-md-, colcol-md-;
 
-						// Skip over existing cells produced by rowspan
+						// Skip over existing cells produced by rowcol-md-
 						if (grid[y]) {
 							while (grid[y][x])
 								x++;
 						}
 
-						// Get col/rowspan from cell
-						rowspan = getSpanVal(td, 'rowspan');
-						colspan = getSpanVal(td, 'colspan');
+						// Get col/rowcol-md- from cell
+						rowcol-md- = getcol-md-Val(td, 'rowcol-md-');
+						colcol-md- = getcol-md-Val(td, 'colcol-md-');
 
-						// Fill out rowspan/colspan right and down
-						for (y2 = y; y2 < y + rowspan; y2++) {
+						// Fill out rowcol-md-/colcol-md- right and down
+						for (y2 = y; y2 < y + rowcol-md-; y2++) {
 							if (!grid[y2])
 								grid[y2] = [];
 
-							for (x2 = x; x2 < x + colspan; x2++) {
+							for (x2 = x; x2 < x + colcol-md-; x2++) {
 								grid[y2][x2] = {
 									part : part,
 									real : y2 == y && x2 == x,
 									elm : td,
-									rowspan : rowspan,
-									colspan : colspan
+									rowcol-md- : rowcol-md-,
+									colcol-md- : colcol-md-
 								};
 							}
 						}
@@ -104,7 +104,7 @@
 				return row[x];
 		};
 
-		function setSpanVal(td, name, val) {
+		function setcol-md-Val(td, name, val) {
 			if (td) {
 				val = parseInt(val);
 
@@ -173,8 +173,8 @@
 			}, 'childNodes');
 
 			cell = cloneNode(cell, false);
-			setSpanVal(cell, 'rowSpan', 1);
-			setSpanVal(cell, 'colSpan', 1);
+			setcol-md-Val(cell, 'rowcol-md-', 1);
+			setcol-md-Val(cell, 'colcol-md-', 1);
 
 			if (formatNode) {
 				cell.appendChild(formatNode);
@@ -254,22 +254,22 @@
 		function split() {
 			each(grid, function(row, y) {
 				each(row, function(cell, x) {
-					var colSpan, rowSpan, newCell, i;
+					var colcol-md-, rowcol-md-, newCell, i;
 
 					if (isCellSelected(cell)) {
 						cell = cell.elm;
-						colSpan = getSpanVal(cell, 'colspan');
-						rowSpan = getSpanVal(cell, 'rowspan');
+						colcol-md- = getcol-md-Val(cell, 'colcol-md-');
+						rowcol-md- = getcol-md-Val(cell, 'rowcol-md-');
 
-						if (colSpan > 1 || rowSpan > 1) {
-							setSpanVal(cell, 'rowSpan', 1);
-							setSpanVal(cell, 'colSpan', 1);
+						if (colcol-md- > 1 || rowcol-md- > 1) {
+							setcol-md-Val(cell, 'rowcol-md-', 1);
+							setcol-md-Val(cell, 'colcol-md-', 1);
 
 							// Insert cells right
-							for (i = 0; i < colSpan - 1; i++)
+							for (i = 0; i < colcol-md- - 1; i++)
 								dom.insertAfter(cloneCell(cell), cell);
 
-							fillLeftDown(x, y, rowSpan - 1, colSpan);
+							fillLeftDown(x, y, rowcol-md- - 1, colcol-md-);
 						}
 					}
 				});
@@ -304,10 +304,10 @@
 				split();
 				buildGrid();
 
-				// Set row/col span to start cell
+				// Set row/col col-md- to start cell
 				startCell = getCell(startX, startY).elm;
-				setSpanVal(startCell, 'colSpan', (endX - startX) + 1);
-				setSpanVal(startCell, 'rowSpan', (endY - startY) + 1);
+				setcol-md-Val(startCell, 'colcol-md-', (endX - startX) + 1);
+				setcol-md-Val(startCell, 'rowcol-md-', (endY - startY) + 1);
 
 				// Remove other cells and add it's contents to the start cell
 				for (y = startY; y <= endY; y++) {
@@ -346,7 +346,7 @@
 		};
 
 		function insertRow(before) {
-			var posY, cell, lastCell, x, rowElm, newRow, newCell, otherCell, rowSpan;
+			var posY, cell, lastCell, x, rowElm, newRow, newCell, otherCell, rowcol-md-;
 
 			// Find first/last row
 			each(grid, function(row, y) {
@@ -375,18 +375,18 @@
 
 				if (cell != lastCell) {
 					if (!before) {
-						rowSpan = getSpanVal(cell, 'rowspan');
-						if (rowSpan > 1) {
-							setSpanVal(cell, 'rowSpan', rowSpan + 1);
+						rowcol-md- = getcol-md-Val(cell, 'rowcol-md-');
+						if (rowcol-md- > 1) {
+							setcol-md-Val(cell, 'rowcol-md-', rowcol-md- + 1);
 							continue;
 						}
 					} else {
 						// Check if cell above can be expanded
 						if (posY > 0 && grid[posY - 1][x]) {
 							otherCell = grid[posY - 1][x].elm;
-							rowSpan = getSpanVal(otherCell, 'rowSpan');
-							if (rowSpan > 1) {
-								setSpanVal(otherCell, 'rowSpan', rowSpan + 1);
+							rowcol-md- = getcol-md-Val(otherCell, 'rowcol-md-');
+							if (rowcol-md- > 1) {
+								setcol-md-Val(otherCell, 'rowcol-md-', rowcol-md- + 1);
 								continue;
 							}
 						}
@@ -394,7 +394,7 @@
 
 					// Insert new cell into new row
 					newCell = cloneCell(cell);
-					setSpanVal(newCell, 'colSpan', cell.colSpan);
+					setcol-md-Val(newCell, 'colcol-md-', cell.colcol-md-);
 
 					newRow.appendChild(newCell);
 
@@ -429,26 +429,26 @@
 			});
 
 			each(grid, function(row, y) {
-				var cell, rowSpan, colSpan;
+				var cell, rowcol-md-, colcol-md-;
 
 				if (!row[posX])
 					return;
 
 				cell = row[posX].elm;
 				if (cell != lastCell) {
-					colSpan = getSpanVal(cell, 'colspan');
-					rowSpan = getSpanVal(cell, 'rowspan');
+					colcol-md- = getcol-md-Val(cell, 'colcol-md-');
+					rowcol-md- = getcol-md-Val(cell, 'rowcol-md-');
 
-					if (colSpan == 1) {
+					if (colcol-md- == 1) {
 						if (!before) {
 							dom.insertAfter(cloneCell(cell), cell);
-							fillLeftDown(posX, y, rowSpan - 1, colSpan);
+							fillLeftDown(posX, y, rowcol-md- - 1, colcol-md-);
 						} else {
 							cell.parentNode.insertBefore(cloneCell(cell), cell);
-							fillLeftDown(posX, y, rowSpan - 1, colSpan);
+							fillLeftDown(posX, y, rowcol-md- - 1, colcol-md-);
 						}
 					} else
-						setSpanVal(cell, 'colSpan', cell.colSpan + 1);
+						setcol-md-Val(cell, 'colcol-md-', cell.colcol-md- + 1);
 
 					lastCell = cell;
 				}
@@ -463,12 +463,12 @@
 				each(row, function(cell, x) {
 					if (isCellSelected(cell) && tinymce.inArray(cols, x) === -1) {
 						each(grid, function(row) {
-							var cell = row[x].elm, colSpan;
+							var cell = row[x].elm, colcol-md-;
 
-							colSpan = getSpanVal(cell, 'colSpan');
+							colcol-md- = getcol-md-Val(cell, 'colcol-md-');
 
-							if (colSpan > 1)
-								setSpanVal(cell, 'colSpan', colSpan - 1);
+							if (colcol-md- > 1)
+								setcol-md-Val(cell, 'colcol-md-', colcol-md- - 1);
 							else
 								dom.remove(cell);
 						});
@@ -489,12 +489,12 @@
 
 				nextTr = dom.getNext(tr, 'tr');
 
-				// Move down row spanned cells
+				// Move down row col-md-ned cells
 				each(tr.cells, function(cell) {
-					var rowSpan = getSpanVal(cell, 'rowSpan');
+					var rowcol-md- = getcol-md-Val(cell, 'rowcol-md-');
 
-					if (rowSpan > 1) {
-						setSpanVal(cell, 'rowSpan', rowSpan - 1);
+					if (rowcol-md- > 1) {
+						setcol-md-Val(cell, 'rowcol-md-', rowcol-md- - 1);
 						pos = getPos(cell);
 						fillLeftDown(pos.x, pos.y, 1, 1);
 					}
@@ -503,17 +503,17 @@
 				// Delete cells
 				pos = getPos(tr.cells[0]);
 				each(grid[pos.y], function(cell) {
-					var rowSpan;
+					var rowcol-md-;
 
 					cell = cell.elm;
 
 					if (cell != lastCell) {
-						rowSpan = getSpanVal(cell, 'rowSpan');
+						rowcol-md- = getcol-md-Val(cell, 'rowcol-md-');
 
-						if (rowSpan <= 1)
+						if (rowcol-md- <= 1)
 							dom.remove(cell);
 						else
-							setSpanVal(cell, 'rowSpan', rowSpan - 1);
+							setcol-md-Val(cell, 'rowcol-md-', rowcol-md- - 1);
 
 						lastCell = cell;
 					}
@@ -562,7 +562,7 @@
 				targetCellCount = 0;
 				each(row, function(cell, x) {
 					if (cell.real)
-						targetCellCount += cell.colspan;
+						targetCellCount += cell.colcol-md-;
 
 					if (cell.elm.parentNode == targetRow)
 						match = 1;
@@ -578,11 +578,11 @@
 			each(rows, function(row) {
 				var cellCount = row.cells.length, cell;
 
-				// Remove col/rowspans
+				// Remove col/rowcol-md-s
 				for (i = 0; i < cellCount; i++) {
 					cell = row.cells[i];
-					setSpanVal(cell, 'colSpan', 1);
-					setSpanVal(cell, 'rowSpan', 1);
+					setcol-md-Val(cell, 'colcol-md-', 1);
+					setcol-md-Val(cell, 'rowcol-md-', 1);
 				}
 
 				// Needs more cells
@@ -629,7 +629,7 @@
 
 			each(grid, function(row, y) {
 				each(row, function(cell, x) {
-					var colSpan, rowSpan;
+					var colcol-md-, rowcol-md-;
 
 					if (isCellSelected(cell)) {
 						cell = grid[y][x];
@@ -641,17 +641,17 @@
 							maxY = y;
 
 						if (cell.real) {
-							colSpan = cell.colspan - 1;
-							rowSpan = cell.rowspan - 1;
+							colcol-md- = cell.colcol-md- - 1;
+							rowcol-md- = cell.rowcol-md- - 1;
 
-							if (colSpan) {
-								if (x + colSpan > maxX)
-									maxX = x + colSpan;
+							if (colcol-md-) {
+								if (x + colcol-md- > maxX)
+									maxX = x + colcol-md-;
 							}
 
-							if (rowSpan) {
-								if (y + rowSpan > maxY)
-									maxY = y + rowSpan;
+							if (rowcol-md-) {
+								if (y + rowcol-md- > maxY)
+									maxY = y + rowcol-md-;
 							}
 						}
 					}
@@ -662,7 +662,7 @@
 		};
 
 		function setEndCell(cell) {
-			var startX, startY, endX, endY, maxX, maxY, colSpan, rowSpan;
+			var startX, startY, endX, endY, maxX, maxY, colcol-md-, rowcol-md-;
 
 			endPos = getPos(cell);
 
@@ -673,7 +673,7 @@
 				endX = Math.max(startPos.x, endPos.x);
 				endY = Math.max(startPos.y, endPos.y);
 
-				// Expand end positon to include spans
+				// Expand end positon to include col-md-s
 				maxX = endX;
 				maxY = endY;
 
@@ -682,8 +682,8 @@
 					cell = grid[y][startX];
 
 					if (!cell.real) {
-						if (startX - (cell.colspan - 1) < startX)
-							startX -= cell.colspan - 1;
+						if (startX - (cell.colcol-md- - 1) < startX)
+							startX -= cell.colcol-md- - 1;
 					}
 				}
 
@@ -692,8 +692,8 @@
 					cell = grid[startY][x];
 
 					if (!cell.real) {
-						if (startY - (cell.rowspan - 1) < startY)
-							startY -= cell.rowspan - 1;
+						if (startY - (cell.rowcol-md- - 1) < startY)
+							startY -= cell.rowcol-md- - 1;
 					}
 				}
 
@@ -703,17 +703,17 @@
 						cell = grid[y][x];
 
 						if (cell.real) {
-							colSpan = cell.colspan - 1;
-							rowSpan = cell.rowspan - 1;
+							colcol-md- = cell.colcol-md- - 1;
+							rowcol-md- = cell.rowcol-md- - 1;
 
-							if (colSpan) {
-								if (x + colSpan > maxX)
-									maxX = x + colSpan;
+							if (colcol-md-) {
+								if (x + colcol-md- > maxX)
+									maxX = x + colcol-md-;
 							}
 
-							if (rowSpan) {
-								if (y + rowSpan > maxY)
-									maxY = y + rowSpan;
+							if (rowcol-md-) {
+								if (y + rowcol-md- > maxY)
+									maxY = y + rowcol-md-;
 							}
 						}
 					}
@@ -1168,7 +1168,7 @@
 							var c = column;
 							while (c.previousSibling) {
 								c = c.previousSibling;
-								colIndex = colIndex + getSpanVal(c, "colspan");
+								colIndex = colIndex + getcol-md-Val(c, "colcol-md-");
 							}
 							return colIndex;
 						}
@@ -1177,7 +1177,7 @@
 							var c = 0;
 							var r = 0;
 							each(rowElement.children, function(cell, i) {
-								c = c + getSpanVal(cell, "colspan");
+								c = c + getcol-md-Val(cell, "colcol-md-");
 								r = i;
 								if (c > columnIndex)
 									return false;
@@ -1299,12 +1299,12 @@
 				},
 
 				mceTableMergeCells : function(grid) {
-					var rowSpan, colSpan, cell;
+					var rowcol-md-, colcol-md-, cell;
 
 					cell = ed.dom.getParent(ed.selection.getNode(), 'th,td');
 					if (cell) {
-						rowSpan = cell.rowSpan;
-						colSpan = cell.colSpan;
+						rowcol-md- = cell.rowcol-md-;
+						colcol-md- = cell.colcol-md-;
 					}
 
 					if (!ed.dom.select('td.mceSelected,th.mceSelected').length) {
@@ -1314,8 +1314,8 @@
 							height : 110 + parseInt(ed.getLang('table.merge_cells_delta_height', 0)),
 							inline : 1
 						}, {
-							rows : rowSpan,
-							cols : colSpan,
+							rows : rowcol-md-,
+							cols : colcol-md-,
 							onaction : function(data) {
 								grid.merge(cell, data.cols, data.rows);
 							},

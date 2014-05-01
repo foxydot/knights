@@ -31,7 +31,7 @@
 		};
 
 		// Create block/inline element to use for preview
-		name = fmt.block || fmt.inline || 'span';
+		name = fmt.block || fmt.inline || 'col-md-';
 		previewElm = dom.create(name);
 
 		// Add format styles to preview element
@@ -163,7 +163,7 @@
 				theme_advanced_resize_horizontal : 1,
 				theme_advanced_resizing_use_cookie : 1,
 				theme_advanced_font_sizes : "1,2,3,4,5,6,7",
-				theme_advanced_font_selector : "span",
+				theme_advanced_font_selector : "col-md-",
 				theme_advanced_show_current_color: 0,
 				readonly : ed.settings.readonly
 			}, ed.settings);
@@ -301,7 +301,7 @@
 					var name = 'style_' + idx, fmt;
 
 					fmt = {
-						inline : 'span',
+						inline : 'col-md-',
 						attributes : {'class' : o['class']},
 						selector : '*'
 					};
@@ -382,7 +382,7 @@
 						if (val) {
 							name = 'style_' + (counter++);
 							fmt = {
-								inline : 'span',
+								inline : 'col-md-',
 								classes : val,
 								selector : '*'
 							};
@@ -608,8 +608,8 @@
 
 			// TODO: ACC Should have an aria-describedby attribute which is user-configurable to describe what this field is actually for.
 			// Maybe actually inherit it from the original textara?
-			n = p = DOM.create('span', {role : 'application', 'aria-labelledby' : ed.id + '_voice', id : ed.id + '_parent', 'class' : 'mceEditor ' + ed.settings.skin + 'Skin' + (s.skin_variant ? ' ' + ed.settings.skin + 'Skin' + t._ufirst(s.skin_variant) : '')});
-			DOM.add(n, 'span', {'class': 'mceVoiceLabel', 'style': 'display:none;', id: ed.id + '_voice'}, s.aria_label);
+			n = p = DOM.create('col-md-', {role : 'application', 'aria-labelledby' : ed.id + '_voice', id : ed.id + '_parent', 'class' : 'mceEditor ' + ed.settings.skin + 'Skin' + (s.skin_variant ? ' ' + ed.settings.skin + 'Skin' + t._ufirst(s.skin_variant) : '')});
+			DOM.add(n, 'col-md-', {'class': 'mceVoiceLabel', 'style': 'display:none;', id: ed.id + '_voice'}, s.aria_label);
 
 			if (!DOM.boxModel)
 				n = DOM.add(n, 'div', {'class' : 'mceOldBoxModel'});
@@ -663,7 +663,7 @@
 	
 					e = e.target;
 
-					if (e.nodeName == 'SPAN' && DOM.hasClass(e.parentNode, 'mceButton')) {
+					if (e.nodeName == 'col-md-' && DOM.hasClass(e.parentNode, 'mceButton')) {
 						re = DOM.get(ed.id + '_path_row');
 						t.lastPath = re.innerHTML;
 						DOM.setHTML(re, e.parentNode.title);
@@ -966,10 +966,10 @@
 			n = td = DOM.add(n, 'td', {'class' : 'mceStatusbar'}); 
 			n = DOM.add(n, 'div', {id : ed.id + '_path_row', 'role': 'group', 'aria-labelledby': ed.id + '_path_voice'});
 			if (s.theme_advanced_path) {
-				DOM.add(n, 'span', {id: ed.id + '_path_voice'}, ed.translate('advanced.path'));
-				DOM.add(n, 'span', {}, ': ');
+				DOM.add(n, 'col-md-', {id: ed.id + '_path_voice'}, ed.translate('advanced.path'));
+				DOM.add(n, 'col-md-', {}, ': ');
 			} else {
-				DOM.add(n, 'span', {}, '&#160;');
+				DOM.add(n, 'col-md-', {}, '&#160;');
 			}
 			
 
@@ -1120,7 +1120,7 @@
 
 			// Find out current fontSize, fontFamily and fontClass
 			getParent(function(n) {
-				if (n.nodeName === 'SPAN') {
+				if (n.nodeName === 'col-md-') {
 					if (!cl && n.className)
 						cl = n.className;
 				}
@@ -1193,7 +1193,7 @@
 			}
 
 			if (s.theme_advanced_path && s.theme_advanced_statusbar_location) {
-				p = DOM.get(ed.id + '_path') || DOM.add(ed.id + '_path_row', 'span', {id : ed.id + '_path'});
+				p = DOM.get(ed.id + '_path') || DOM.add(ed.id + '_path_row', 'col-md-', {id : ed.id + '_path'});
 
 				if (t.statusKeyboardNavigation) {
 					t.statusKeyboardNavigation.destroy();
@@ -1255,7 +1255,7 @@
 
 							break;
 
-						case 'span':
+						case 'col-md-':
 							if (v = DOM.getAttrib(n, 'style'))
 								ti += 'style: ' + v + ' ';
 
@@ -1271,7 +1271,7 @@
 						if (v) {
 							ti += 'class: ' + v + ' ';
 
-							if (ed.dom.isBlock(n) || na == 'img' || na == 'span')
+							if (ed.dom.isBlock(n) || na == 'img' || na == 'col-md-')
 								na += '.' + v;
 						}
 					}
@@ -1286,7 +1286,7 @@
 					pi = DOM.create('a', {'href' : "javascript:;", role: 'button', onmousedown : "return false;", title : ti, 'class' : 'mcePath_' + (de++)}, na);
 
 					if (p.hasChildNodes()) {
-						p.insertBefore(DOM.create('span', {'aria-hidden': 'true'}, '\u00a0\u00bb '), p.firstChild);
+						p.insertBefore(DOM.create('col-md-', {'aria-hidden': 'true'}, '\u00a0\u00bb '), p.firstChild);
 						p.insertBefore(pi, p.firstChild);
 					} else
 						p.appendChild(pi);

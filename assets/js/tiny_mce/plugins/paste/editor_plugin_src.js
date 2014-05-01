@@ -16,7 +16,7 @@
 			paste_block_drop : false,
 			paste_retain_style_properties : "none",
 			paste_strip_class_attributes : "mso",
-			paste_remove_spans : false,
+			paste_remove_col-md-s : false,
 			paste_remove_styles : false,
 			paste_remove_styles_if_webkit : true,
 			paste_convert_middot_lists : true,
@@ -252,8 +252,8 @@
 									dom.remove(child, 1);
 								}
 
-								// Remove apply style spans
-								each(dom.select('span.Apple-style-span', n), function(n) {
+								// Remove apply style col-md-s
+								each(dom.select('col-md-.Apple-style-col-md-', n), function(n) {
 									dom.remove(n, 1);
 								});
 
@@ -389,7 +389,7 @@
 				if (getParam(ed, "paste_convert_middot_lists")) {
 					process([
 						[/<!--\[if !supportLists\]-->/gi, '$&__MCE_ITEM__'],					// Convert supportLists to a list item marker
-						[/(<span[^>]+(?:mso-list:|:\s*symbol)[^>]+>)/gi, '$1__MCE_ITEM__'],		// Convert mso-list and symbol spans to item markers
+						[/(<col-md-[^>]+(?:mso-list:|:\s*symbol)[^>]+>)/gi, '$1__MCE_ITEM__'],		// Convert mso-list and symbol col-md-s to item markers
 						[/(<p[^>]+(?:MsoListParagraph)[^>]+>)/gi, '$1__MCE_ITEM__']				// Convert mso-list and symbol paragraphs to item markers (FF)
 					]);
 				}
@@ -415,16 +415,16 @@
 					h = h.replace(/(<[a-z][^>]*\s)(?:id|name|language|type|on\w+|\w+:\w+)=(?:"[^"]*"|\w+)\s?/gi, "$1");
 				} while (len != h.length);
 
-				// Remove all spans if no styles is to be retained
+				// Remove all col-md-s if no styles is to be retained
 				if (getParam(ed, "paste_retain_style_properties").replace(/^none$/i, "").length == 0) {
-					h = h.replace(/<\/?span[^>]*>/gi, "");
+					h = h.replace(/<\/?col-md-[^>]*>/gi, "");
 				} else {
 					// We're keeping styles, so at least clean them up.
 					// CSS Reference: http://msdn.microsoft.com/en-us/library/aa155477.aspx
 
 					process([
-						// Convert <span style="mso-spacerun:yes">___</span> to string of alternating breaking/non-breaking spaces of same length
-						[/<span\s+style\s*=\s*"\s*mso-spacerun\s*:\s*yes\s*;?\s*"\s*>([\s\u00a0]*)<\/span>/gi,
+						// Convert <col-md- style="mso-spacerun:yes">___</col-md-> to string of alternating breaking/non-breaking spaces of same length
+						[/<col-md-\s+style\s*=\s*"\s*mso-spacerun\s*:\s*yes\s*;?\s*"\s*>([\s\u00a0]*)<\/col-md->/gi,
 							function(str, spaces) {
 								return (spaces.length > 0)? spaces.replace(/./, " ").slice(Math.floor(spaces.length/2)).split("").join("\u00a0") : "";
 							}
@@ -569,9 +569,9 @@
 				h = h.replace(/ class=([\-\w]+)/gi, removeClasses);
 			}
 
-			// Remove spans option
-			if (getParam(ed, "paste_remove_spans")) {
-				h = h.replace(/<\/?span[^>]*>/gi, "");
+			// Remove col-md-s option
+			if (getParam(ed, "paste_remove_col-md-s")) {
+				h = h.replace(/<\/?col-md-[^>]*>/gi, "");
 			}
 
 			//console.log('After preprocess:' + h);
@@ -629,8 +629,8 @@
 
 						if (styleProps && npc > 0)
 							dom.setStyles(el, newStyle); // Add back the stored subset of styles
-						else // Remove empty span tags that do not have class attributes
-							if (el.nodeName == 'SPAN' && !el.className)
+						else // Remove empty col-md- tags that do not have class attributes
+							if (el.nodeName == 'col-md-' && !el.className)
 								dom.remove(el, true);
 					});
 				}
@@ -699,15 +699,15 @@
 						}
 					}
 
-					// Remove middot or number spans if they exists
-					each(dom.select('span', p), function(span) {
-						var html = span.innerHTML.replace(/<\/?\w+[^>]*>/gi, '');
+					// Remove middot or number col-md-s if they exists
+					each(dom.select('col-md-', p), function(col-md-) {
+						var html = col-md-.innerHTML.replace(/<\/?\w+[^>]*>/gi, '');
 
-						// Remove span with the middot or the number
+						// Remove col-md- with the middot or the number
 						if (type == 'ul' && /^__MCE_ITEM__[\u2022\u00b7\u00a7\u00d8o\u25CF]/.test(html))
-							dom.remove(span);
+							dom.remove(col-md-);
 						else if (/^__MCE_ITEM__[\s\S]*\w+\.(&nbsp;|\u00a0)*\s*/.test(html))
-							dom.remove(span);
+							dom.remove(col-md-);
 					});
 
 					html = p.innerHTML;
@@ -740,7 +740,7 @@
 		_insert : function(h, skip_undo) {
 			var ed = this.editor, r = ed.selection.getRng();
 
-			// First delete the contents seems to work better on WebKit when the selection spans multiple list items or multiple table cells.
+			// First delete the contents seems to work better on WebKit when the selection col-md-s multiple list items or multiple table cells.
 			if (!ed.selection.isCollapsed() && r.startContainer != r.endContainer)
 				ed.getDoc().execCommand('Delete', false, null);
 

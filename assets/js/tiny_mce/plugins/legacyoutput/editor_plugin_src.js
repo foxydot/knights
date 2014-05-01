@@ -40,20 +40,20 @@
 					bold : [
 						{inline : 'b', remove : 'all'},
 						{inline : 'strong', remove : 'all'},
-						{inline : 'span', styles : {fontWeight : 'bold'}}
+						{inline : 'col-md-', styles : {fontWeight : 'bold'}}
 					],
 					italic : [
 						{inline : 'i', remove : 'all'},
 						{inline : 'em', remove : 'all'},
-						{inline : 'span', styles : {fontStyle : 'italic'}}
+						{inline : 'col-md-', styles : {fontStyle : 'italic'}}
 					],
 					underline : [
 						{inline : 'u', remove : 'all'},
-						{inline : 'span', styles : {textDecoration : 'underline'}, exact : true}
+						{inline : 'col-md-', styles : {textDecoration : 'underline'}, exact : true}
 					],
 					strikethrough : [
 						{inline : 'strike', remove : 'all'},
-						{inline : 'span', styles : {textDecoration: 'line-through'}, exact : true}
+						{inline : 'col-md-', styles : {textDecoration: 'line-through'}, exact : true}
 					],
 
 					// Change font size and font family to use the deprecated font element

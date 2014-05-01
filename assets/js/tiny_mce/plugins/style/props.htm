@@ -11,17 +11,17 @@
 </head>
 
 <body id="styleprops" style="display: none" role="application" aria-labelledby="app_title">
-<span id="app_title" style="display:none">{#style_dlg.title}</span>
+<col-md- id="app_title" style="display:none">{#style_dlg.title}</col-md->
 <form onsubmit="updateAction();return false;" action="#">
 <div class="tabs">
 	<ul>
-		<li id="text_tab" class="current" aria-controls="text_panel"><span><a href="javascript:mcTabs.displayTab('text_tab','text_panel');" onMouseDown="return false;">{#style_dlg.text_tab}</a></span></li>
-		<li id="background_tab" aria-controls="background_panel"><span><a href="javascript:mcTabs.displayTab('background_tab','background_panel');" onMouseDown="return false;">{#style_dlg.background_tab}</a></span></li>
-		<li id="block_tab" aria-controls="block_panel"><span><a href="javascript:mcTabs.displayTab('block_tab','block_panel');" onMouseDown="return false;">{#style_dlg.block_tab}</a></span></li>
-		<li id="box_tab" aria-controls="box_panel"><span><a href="javascript:mcTabs.displayTab('box_tab','box_panel');" onMouseDown="return false;">{#style_dlg.box_tab}</a></span></li>
-		<li id="border_tab" aria-controls="border_panel"><span><a href="javascript:mcTabs.displayTab('border_tab','border_panel');" onMouseDown="return false;">{#style_dlg.border_tab}</a></span></li>
-		<li id="list_tab" aria-controls="list_panel"><span><a href="javascript:mcTabs.displayTab('list_tab','list_panel');" onMouseDown="return false;">{#style_dlg.list_tab}</a></span></li>
-		<li id="positioning_tab" aria-controls="positioning_panel"><span><a href="javascript:mcTabs.displayTab('positioning_tab','positioning_panel');" onMouseDown="return false;">{#style_dlg.positioning_tab}</a></span></li>
+		<li id="text_tab" class="current" aria-controls="text_panel"><col-md-><a href="javascript:mcTabs.displayTab('text_tab','text_panel');" onMouseDown="return false;">{#style_dlg.text_tab}</a></col-md-></li>
+		<li id="background_tab" aria-controls="background_panel"><col-md-><a href="javascript:mcTabs.displayTab('background_tab','background_panel');" onMouseDown="return false;">{#style_dlg.background_tab}</a></col-md-></li>
+		<li id="block_tab" aria-controls="block_panel"><col-md-><a href="javascript:mcTabs.displayTab('block_tab','block_panel');" onMouseDown="return false;">{#style_dlg.block_tab}</a></col-md-></li>
+		<li id="box_tab" aria-controls="box_panel"><col-md-><a href="javascript:mcTabs.displayTab('box_tab','box_panel');" onMouseDown="return false;">{#style_dlg.box_tab}</a></col-md-></li>
+		<li id="border_tab" aria-controls="border_panel"><col-md-><a href="javascript:mcTabs.displayTab('border_tab','border_panel');" onMouseDown="return false;">{#style_dlg.border_tab}</a></col-md-></li>
+		<li id="list_tab" aria-controls="list_panel"><col-md-><a href="javascript:mcTabs.displayTab('list_tab','list_panel');" onMouseDown="return false;">{#style_dlg.list_tab}</a></col-md-></li>
+		<li id="positioning_tab" aria-controls="positioning_panel"><col-md-><a href="javascript:mcTabs.displayTab('positioning_tab','positioning_panel');" onMouseDown="return false;">{#style_dlg.positioning_tab}</a></col-md-></li>
 	</ul>
 </div>
 
@@ -32,7 +32,7 @@
 		<table role="presentation" border="0" width="100%">
 			<tr>
 				<td><label for="text_font">{#style_dlg.text_font}</label></td>
-				<td colspan="3">
+				<td colcol-md-="3">
 					<select id="text_font" name="text_font" class="mceEditableSelect mceFocus"></select>
 				</td>
 			</tr>
@@ -88,7 +88,7 @@
 			</tr>
 			<tr>
 				<td><label for="text_color">{#style_dlg.text_color}</label></td>
-				<td colspan="2">
+				<td colcol-md-="2">
 					<table role="presentation" border="0" cellpadding="0" cellspacing="0">
 						<tr>
 							<td><input id="text_color" name="text_color" type="text" value="" size="9" onChange="updateColor('text_color_pick','text_color');" /></td>
@@ -99,7 +99,7 @@
 			</tr>
 			<tr>
 				<td valign="top" style="vertical-align: top; padding-top: 3px;">{#style_dlg.text_decoration}</td>
-				<td colspan="2">
+				<td colcol-md-="2">
 					<table role="presentation" border="0" cellspacing="0" cellpadding="0">
 						<tr>
 							<td><input id="text_underline" name="text_underline" class="checkbox" type="checkbox" /></td>
@@ -825,9 +825,9 @@
 </div>
 </div>
 
-<div class="panel_toggle_insert_span">
-	<input type="checkbox" class="checkbox" id="toggle_insert_span" name="toggle_insert_span" onClick="toggleApplyAction();" />
-	<label for="toggle_insert_span">{#style_dlg.toggle_insert_span}</label>
+<div class="panel_toggle_insert_col-md-">
+	<input type="checkbox" class="checkbox" id="toggle_insert_col-md-" name="toggle_insert_col-md-" onClick="toggleApplyAction();" />
+	<label for="toggle_insert_col-md-">{#style_dlg.toggle_insert_col-md-}</label>
 </div>
 
 <div class="mceActionPanel">

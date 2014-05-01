@@ -12,28 +12,28 @@ if(isset($seller->meta['paypal'])){
 }
 
 ?>
-<div class="container-fluid post">
-	<div class="row-fluid">
-		<div class="span6 offset3">
+<div class="container post">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
 		<h1><?php print $post->title; ?>
 		<div class="price pull-right">
-			<span><?php print money_format('%#1.2n', (float) $post->cost); ?><?php print stripos($post->type,'service')!==FALSE?' per hour':''; ?></span>
+			<col-md-><?php print money_format('%#1.2n', (float) $post->cost); ?><?php print stripos($post->type,'service')!==FALSE?' per hour':''; ?></col-md->
 		</div>
 		</h1>
 		</div>
 	</div>
-	<div class="row-fluid">
-		<div class="span6 offset3">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
 		<?php print form_open_multipart($urls['check'],array('id'=>'buyform','class'=>'smallform')); ?>
             <input type="hidden" id="paypal_action" value="<?php print $urls['paypal']; ?>">
             <input type="hidden" id="check_action" value="<?php print $urls['check']; ?>">
             <input type="hidden" id="buyer_id" value="<?php print $user['ID']; ?>">
 		<?php print form_fieldset(); ?>
 		<?php if($use_paypal == 'yes' && $paypal): ?>
-		<div class="row-fluid payment_options">
+		<div class="row payment_options">
 			<label>Payment Options</label>
 			<input type="radio" name="payment_option" id="payment_option_paypal" value="PayPal"> Pay securely with PayPal <br/>
-    			<div class="row-fluid payment_info hide" id="paypal_info">
+    			<div class="row payment_info hide" id="paypal_info">
                     <input type="hidden" name="cmd" value="_xclick">
                     <input type="hidden" name="business" value="<?php print $paypal; ?>">
                     <input type="hidden" name="lc" value="US">
@@ -54,7 +54,7 @@ if(isset($seller->meta['paypal'])){
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </div>
 			<input type="radio" name="payment_option" id="payment_option_check" value="Cash/Check"> Pay by cash or check 
-        		<div class="row-fluid payment_info hide" id="check_info">
+        		<div class="row payment_info hide" id="check_info">
         			You have elected to pay via cash or check. Please make arrangements with the seller to exchange goods and funds using the message box below.
         
                     <label>Send message to seller</label>
@@ -67,7 +67,7 @@ if(isset($seller->meta['paypal'])){
         		</div>
         </div>
 		<?php else: ?>
-		<div class="row-fluid payment_info" id="check_info">
+		<div class="row payment_info" id="check_info">
 			The seller has elected to accept payment via cash or check. Please make arrangements with the seller to exchange goods and funds using the message box below.
 
             <label>Send message to seller</label>

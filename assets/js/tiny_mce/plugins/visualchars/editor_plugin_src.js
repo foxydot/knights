@@ -59,7 +59,7 @@
 
 				for (i = 0; i < nl.length; i++) {
 					nv = nl[i].nodeValue;
-					nv = nv.replace(/(\u00a0)/g, '<span data-mce-bogus="1" class="mceItemHidden mceItemNbsp">$1</span>');
+					nv = nv.replace(/(\u00a0)/g, '<col-md- data-mce-bogus="1" class="mceItemHidden mceItemNbsp">$1</col-md->');
 
 					div = ed.dom.create('div', null, nv);
 					while (node = div.lastChild)
@@ -68,7 +68,7 @@
 					ed.dom.remove(nl[i]);
 				}
 			} else {
-				nl = ed.dom.select('span.mceItemNbsp', b);
+				nl = ed.dom.select('col-md-.mceItemNbsp', b);
 
 				for (i = nl.length - 1; i >= 0; i--)
 					ed.dom.remove(nl[i], 1);

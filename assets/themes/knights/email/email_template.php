@@ -12,7 +12,7 @@ $html_template = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http
         body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;} 
         /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
         .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
-        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+        .ExternalClass, .ExternalClass p, .ExternalClass col-md-, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
         /* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
         #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
         /* End reset */

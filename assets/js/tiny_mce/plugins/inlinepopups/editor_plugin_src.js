@@ -118,12 +118,12 @@
 							['div', {'class' : 'mceLeft'}],
 							['div', {'class' : 'mceCenter'}],
 							['div', {'class' : 'mceRight'}],
-							['span', {id : id + '_title'}, f.title || '']
+							['col-md-', {id : id + '_title'}, f.title || '']
 						],
 
 						['div', {id : id + '_middle', 'class' : 'mceMiddle'}, 
 							['div', {id : id + '_left', 'class' : 'mceLeft', tabindex : '0'}],
-							['span', {id : id + '_content'}],
+							['col-md-', {id : id + '_content'}],
 							['div', {id : id + '_right', 'class' : 'mceRight', tabindex : '0'}]
 						],
 
@@ -131,7 +131,7 @@
 							['div', {'class' : 'mceLeft'}],
 							['div', {'class' : 'mceCenter'}],
 							['div', {'class' : 'mceRight'}],
-							['span', {id : id + '_status'}, 'Content']
+							['col-md-', {id : id + '_status'}, 'Content']
 						],
 
 						['a', {'class' : 'mceMove', tabindex : '-1', href : 'javascript:;'}],

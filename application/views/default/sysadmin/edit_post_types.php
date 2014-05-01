@@ -1,14 +1,14 @@
 <form method="post">
     <?php //TODO: Add description, invoice tools, etc. ?>
-    <div class="row-fluid"><div class="span4">Key</div><div class="span4">Value</div></div>
+    <div class="row"><div class="col-md-4">Key</div><div class="col-md-4">Value</div></div>
 <?php
     $i = 0;
     foreach($types AS $k=>$v){
-        print '<div class="row-fluid"><input class="span4" name="key['.$i.']" value="'.$k.'" /><input class="span4" name="value['.$i.']" value="'.$v.'" /></div>';
+        print '<div class="row"><input class="col-md-4" name="key['.$i.']" value="'.$k.'" /><input class="col-md-4" name="value['.$i.']" value="'.$v.'" /></div>';
         $i++;
     }
     for($j=0;$j<3;$j++){
-        print '<div class="row-fluid"><input class="span4" name="key['.$i.']" /><input class="span4" name="value['.$i.']" /></div>';
+        print '<div class="row"><input class="col-md-4" name="key['.$i.']" /><input class="col-md-4" name="value['.$i.']" /></div>';
         $i++;
     }
 ?>

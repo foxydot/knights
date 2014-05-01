@@ -3,11 +3,11 @@
 <?php include_once '_nav.php'; ?>
 <div class="container">  
 	<div class="row header">  
-		<div class="span11"><h1>Item Title</h1></div>
-		<div class="span1"><a href="edit-posting.php" class="button">Edit</a></div>
+		<div class="col-md-11"><h1>Item Title</h1></div>
+		<div class="col-md-1"><a href="edit-posting.php" class="button">Edit</a></div>
 	</div>
 	<div class="row">  
-		<div class="span4">
+		<div class="col-md-4">
 			<div class="post-image-gallery">
 				<div class="main"></div>
 				<div class="subs">
@@ -18,7 +18,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="span8">
+		<div class="col-md-8">
 			<div class="row">Price: $50.00</div>
 			<div class="row"><h3>Item information.</h3> <!-- start slipsum code -->
 
@@ -38,14 +38,14 @@
 			<li>Name: Testy McTesterson</li>
 			<li>Posted on: 1/12/2013</li>
 			</ul>
-			<form class="span3">
+			<form class="col-md-3">
 				<h3>Email poster</h3>
 				<input type="text" placeholder="email address" /><br />
 				<input type="text" placeholder="phone number" /><br />
 				<textarea placeholder="message"></textarea><br />
 				<input type="submit" value="send message">
 			</form>
-			<form class="span3">
+			<form class="col-md-3">
 				<h3>Send to a friend</h3>
 				<input type="text" placeholder="friend's email address" /><br />
 				<input type="text" placeholder="your email address" /><br />

@@ -135,9 +135,9 @@ if ( ! function_exists('standard_date'))
 // ------------------------------------------------------------------------
 
 /**
- * Timespan
+ * Timecol-md-
  *
- * Returns a span of seconds in this format:
+ * Returns a col-md- of seconds in this format:
  *	10 days 14 hours 36 minutes 47 seconds
  *
  * @access	public
@@ -145,9 +145,9 @@ if ( ! function_exists('standard_date'))
  * @param	integer	Unix timestamp
  * @return	integer
  */
-if ( ! function_exists('timespan'))
+if ( ! function_exists('timecol-md-'))
 {
-	function timespan($seconds = 1, $time = '')
+	function timecol-md-($seconds = 1, $time = '')
 	{
 		$CI =& get_instance();
 		$CI->lang->load('date');

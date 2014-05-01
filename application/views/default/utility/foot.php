@@ -8,7 +8,7 @@
   <!-- scripts concatenated and minified via ant build script-->  
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="/assets/js/scripts.js"></script>
   <script src="<?php echo DEFAULT_THEME_URL; ?>/js/scripts.js"></script>
   <!-- Load TinyMCE -->

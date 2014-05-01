@@ -54,20 +54,20 @@
   }
   .thumbnails > li {
     float: none;
-    margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
+    margin-left: 0; // Reset the default margin for all li elements when no .col-md-* classes are present
   }
   // Make all grid-sized elements block level again
-  [class*="span"],
-  .uneditable-input[class*="span"], // Makes uneditable inputs full-width when using grid sizing
-  .row-fluid [class*="span"] {
+  [class*="col-md-"],
+  .uneditable-input[class*="col-md-"], // Makes uneditable inputs full-width when using grid sizing
+  .row-fluid [class*="col-md-"] {
     float: none;
     display: block;
     width: 100%;
     margin-left: 0;
     .box-sizing(border-box);
   }
-  .span12,
-  .row-fluid .span12 {
+  .col-md-12,
+  .row-fluid .col-md-12 {
     width: 100%;
     .box-sizing(border-box);
   }
@@ -77,25 +77,25 @@
 
   // FORM FIELDS
   // -----------
-  // Make span* classes full width
+  // Make col-md-* classes full width
   .input-large,
   .input-xlarge,
   .input-xxlarge,
-  input[class*="span"],
-  select[class*="span"],
-  textarea[class*="span"],
+  input[class*="col-md-"],
+  select[class*="col-md-"],
+  textarea[class*="col-md-"],
   .uneditable-input {
     .input-block-level();
   }
   // But don't let it screw up prepend/append inputs
   .input-prepend input,
   .input-append input,
-  .input-prepend input[class*="span"],
-  .input-append input[class*="span"] {
+  .input-prepend input[class*="col-md-"],
+  .input-append input[class*="col-md-"] {
     display: inline-block; // redeclare so they don't wrap to new lines
     width: auto;
   }
-  .controls-row [class*="span"] + [class*="span"] {
+  .controls-row [class*="col-md-"] + [class*="col-md-"] {
     margin-left: 0;
   }
 

@@ -551,9 +551,9 @@
 }
 
 // Table columns
-.tableColumns(@columnSpan: 1) {
+.tableColumns(@columncol-md-: 1) {
   float: none; // undo default grid column styles
-  width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
+  width: ((@gridColumnWidth) * @columncol-md-) + (@gridGutterWidth * (@columncol-md- - 1)) - 16; // 16 is total padding on left and right of table cells
   margin-left: 0; // undo default grid column styles
 }
 
@@ -574,11 +574,11 @@
 
   .core (@gridColumnWidth, @gridGutterWidth) {
 
-    .spanX (@index) when (@index > 0) {
-      .span@{index} { .span(@index); }
-      .spanX(@index - 1);
+    .col-md-X (@index) when (@index > 0) {
+      .col-md-@{index} { .col-md-(@index); }
+      .col-md-X(@index - 1);
     }
-    .spanX (0) {}
+    .col-md-X (0) {}
 
     .offsetX (@index) when (@index > 0) {
       .offset@{index} { .offset(@index); }
@@ -590,7 +590,7 @@
       margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns + 1));
     }
 
-    .span (@columns) {
+    .col-md- (@columns) {
       width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
     }
 
@@ -599,7 +599,7 @@
       .clearfix();
     }
 
-    [class*="span"] {
+    [class*="col-md-"] {
       float: left;
       min-height: 1px; // prevent collapsing columns
       margin-left: @gridGutterWidth;
@@ -609,21 +609,21 @@
     .container,
     .navbar-static-top .container,
     .navbar-fixed-top .container,
-    .navbar-fixed-bottom .container { .span(@gridColumns); }
+    .navbar-fixed-bottom .container { .col-md-(@gridColumns); }
 
-    // generate .spanX and .offsetX
-    .spanX (@gridColumns);
+    // generate .col-md-X and .offsetX
+    .col-md-X (@gridColumns);
     .offsetX (@gridColumns);
 
   }
 
   .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth) {
 
-    .spanX (@index) when (@index > 0) {
-      .span@{index} { .span(@index); }
-      .spanX(@index - 1);
+    .col-md-X (@index) when (@index > 0) {
+      .col-md-@{index} { .col-md-(@index); }
+      .col-md-X(@index - 1);
     }
-    .spanX (0) {}
+    .col-md-X (0) {}
 
     .offsetX (@index) when (@index > 0) {
       .offset@{index} { .offset(@index); }
@@ -642,7 +642,7 @@
       *margin-left: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%) + @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
     }
 
-    .span (@columns) {
+    .col-md- (@columns) {
       width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
       *width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridRowWidth * 100 * 1%);
     }
@@ -650,23 +650,23 @@
     .row-fluid {
       width: 100%;
       .clearfix();
-      [class*="span"] {
+      [class*="col-md-"] {
         .input-block-level();
         float: left;
         margin-left: @fluidGridGutterWidth;
         *margin-left: @fluidGridGutterWidth - (.5 / @gridRowWidth * 100 * 1%);
       }
-      [class*="span"]:first-child {
+      [class*="col-md-"]:first-child {
         margin-left: 0;
       }
 
       // Space grid-sized controls properly if multiple per line
-      .controls-row [class*="span"] + [class*="span"] {
+      .controls-row [class*="col-md-"] + [class*="col-md-"] {
         margin-left: @fluidGridGutterWidth;
       }
 
-      // generate .spanX and .offsetX
-      .spanX (@gridColumns);
+      // generate .col-md-X and .offsetX
+      .col-md-X (@gridColumns);
       .offsetX (@gridColumns);
     }
 
@@ -674,13 +674,13 @@
 
   .input(@gridColumnWidth, @gridGutterWidth) {
 
-    .spanX (@index) when (@index > 0) {
-      input.span@{index}, textarea.span@{index}, .uneditable-input.span@{index} { .span(@index); }
-      .spanX(@index - 1);
+    .col-md-X (@index) when (@index > 0) {
+      input.col-md-@{index}, textarea.col-md-@{index}, .uneditable-input.col-md-@{index} { .col-md-(@index); }
+      .col-md-X(@index - 1);
     }
-    .spanX (0) {}
+    .col-md-X (0) {}
 
-    .span(@columns) {
+    .col-md-(@columns) {
       width: ((@gridColumnWidth) * @columns) + (@gridGutterWidth * (@columns - 1)) - 14;
     }
 
@@ -691,12 +691,12 @@
     }
 
     // Space grid-sized controls properly if multiple per line
-    .controls-row [class*="span"] + [class*="span"] {
+    .controls-row [class*="col-md-"] + [class*="col-md-"] {
       margin-left: @gridGutterWidth;
     }
 
-    // generate .spanX
-    .spanX (@gridColumns);
+    // generate .col-md-X
+    .col-md-X (@gridColumns);
 
   }
 }

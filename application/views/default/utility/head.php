@@ -24,7 +24,7 @@
 
 
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <style type="text/css">
       body {
         padding-top: 60px;
@@ -35,7 +35,7 @@
       }
 
       @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
+        /* Enable use of floated navbar navbar-default text */
         .navbar-text.pull-right {
           float: none;
           padding-left: 5px;
@@ -43,9 +43,8 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="/assets/bootstrap/css/responsive.css">
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/style.css">
   <?php include_once(SITEPATH.ADMIN_THEME_URL.'/inc/css.php'); ?>
