@@ -1,4 +1,4 @@
-<div id="post-list" class="container list panel-group">
+<div id="post-list" class="container-fluid list">
       <div class="header row">
         <div class="col-md-1">
 			<h4>Listing Number</h4>
@@ -65,7 +65,7 @@
 			</div>
 			<div class="col-md-1 edit">';
 				if($CI->authenticate->check_auth('administrators')||$CI->common->is_author($user['ID'],$post->author_id)){
-					$display .= '<a href="/post/edit/'.$post->post_id.'" class="btn">Edit</a>';
+					$display .= '<a href="/post/edit/'.$post->post_id.'" class="pull-right btn btn-sm btn-default">Edit</a>';
 				} 
 			$display .= '
 			</div>

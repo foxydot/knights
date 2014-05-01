@@ -7,7 +7,7 @@
         $mainspan = 11;
     }
 ?>
-<div id="help-list" class="container list panel-group">
+<div id="help-list" class="container-fluid list panel-group">
 	<?php 
 		foreach($articles AS $article){
 			$display = '
@@ -19,19 +19,21 @@
                         </div>';
                     }*/
                     $display .= '
-				<div class="col-md-'.$mainspan.' panel-heading">
-					<h5 class="heading"><a class="panel-group-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="icon-expand icon-large pull-left"></i> '.$article->title.'</a></h5>
-				</div>';
+				<div class="panel-heading">
+					<h5 class="heading"><a class="panel-group-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="fa fa-chevron-circle-down fa-lg pull-left"></i> '.$article->title.'</a>
+				';
 					if($admin){
 						$display .= '
-                <div class="col-md-1 edit">
-                    <a href="/help/edit/'.$article->ID.'" class="btn">Edit</a>
+                <div class="edit pull-right">
+                    <a href="/help/edit/'.$article->ID.'" class="btn btn-default btn-sm">Edit</a>
                 </div>';
 					}
 					$display .= '
-				<div id="'.$article->slug.'-posts" class="row panel-collapse collapse">';
+					</h5>
+					</div>
+				<div id="'.$article->slug.'-posts" class="panel-collapse collapse">';
 				$display .= '
-		<div class="stripe post row panel-body col-md-12">
+		<div class="stripe post panel-body">
 		'.$article->content.'
 		</div>';
 			$display .= '
