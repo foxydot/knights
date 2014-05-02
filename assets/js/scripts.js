@@ -43,10 +43,14 @@ function array_combine (keys, values) {
 }
 
 $(document).ready(function($) {
-	$('#change_img').click(function(){
-		$(this).parents('form').find('.img-upload').toggle();
-		$(this).parents('form').find('.img-display').toggle();
-	});
+    $('#change_logo').click(function(){
+        $(this).parents('form').find('.logo-upload').toggle();
+        $(this).parents('form').find('.logo-display').toggle();
+    });
+    $('#change_img').click(function(){
+        $(this).parents('form').find('.img-upload').toggle();
+        $(this).parents('form').find('.img-display').toggle();
+    });
 	$('.panel-toggle').click(function(){
 		$(this).find('i').removeClass('fa-chevron-circle-down').removeClass('fa-chevron-circle-up');
 		if($(this).hasClass('collapsed')){

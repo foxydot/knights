@@ -35,7 +35,9 @@ class Org extends CI_Controller {
 					'user' => $this->session->userdata,
 					'dashboard' => 'default/org/edit',
 					'action' => 'org/add',
-					'is_edit' => FALSE,
+					'is_edit' => FALSE,                    
+					'page_css' => array('../../../colorpicker/css/colorpicker','../../../colorpicker/css/layout'),
+                    'footer_js' => array('../colorpicker/js/colorpicker','../colorpicker/js/eye','../colorpicker/js/utils','../colorpicker/js/layout'),
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
@@ -45,25 +47,38 @@ class Org extends CI_Controller {
 				$ID = $this->Orgs->add_org($db_data);
 				
 				$db_data['org'] = $this->Orgs->get_org($ID);
-				if(isset($_FILES['logo_url'])){
-					$this->load->model('Administration','Admin');
-					$logo_url = $this->Admin->upload($db_data,'logo_url');
-				}
-				if($logo_url){
-					$db_data = array(
-							'org_id'=>$ID,
-							'meta_key'=>'logo_url',
-							'meta_value'=>$logo_url,
-							'dateadded'=>time()
-					);
-					$this->Orgs->add_org_meta($db_data);
-				}
+                if(isset($_FILES['logo_url'])){
+                    $this->load->model('Administration','Admin');
+                    $logo_url = $this->Admin->upload($db_data,'logo_url');
+                }
+                if(isset($_FILES['background_url'])){
+                    $this->load->model('Administration','Admin');
+                    $background_url = $this->Admin->upload($db_data,'background_url');
+                }
+                if($logo_url){
+                    $db_data = array(
+                            'org_id'=>$ID,
+                            'meta_key'=>'logo_url',
+                            'meta_value'=>$logo_url,
+                            'dateadded'=>time()
+                    );
+                    $this->Orgs->add_org_meta($db_data);
+                }
+                if($background_url){
+                    $db_data = array(
+                            'org_id'=>$ID,
+                            'meta_key'=>'background_url',
+                            'meta_value'=>$background_url,
+                            'dateadded'=>time()
+                    );
+                    $this->Orgs->add_org_meta($db_data);
+                }
 		        if(count($org_meta>0)){
                     foreach($org_meta AS $k=>$v){
                         $meta_data = array(
                             'org_id' => $ID,
                             'meta_key' => $k,
-                            'meta_value' => $v
+                            'meta_value' => is_array($v)?serialize($v):$v
                             );
                         $this->Orgs->edit_org_meta($meta_data);
                     }
@@ -85,6 +100,8 @@ class Org extends CI_Controller {
 					'dashboard' => 'default/org/edit',
 					'action' => 'org/edit/'.$ID,
 					'is_edit' => TRUE,
+                    'page_css' => array('../../../colorpicker/css/colorpicker','../../../colorpicker/css/layout'),
+                    'footer_js' => array('../colorpicker/js/colorpicker','../colorpicker/js/eye','../colorpicker/js/utils','../colorpicker/js/layout'),
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
@@ -92,16 +109,21 @@ class Org extends CI_Controller {
                 unset($db_data['meta']);
 				unset($db_data['change_img']);
 				$db_data['org'] = $this->Orgs->get_org($ID);
-				if(isset($_FILES['logo_url'])){
-					$this->load->model('Administration','Admin');
-					$logo_url = $this->Admin->upload($db_data,'logo_url');
-				}
+                if(isset($_FILES['logo_url'])){
+                    $this->load->model('Administration','Admin');
+                    $logo_url = $this->Admin->upload($db_data,'logo_url');
+                }
+                if(isset($_FILES['background_url'])){
+                    $this->load->model('Administration','Admin');
+                    $background_url = $this->Admin->upload($db_data,'background_url');
+                }
                 if(isset($_FILES['test_csv'])){
                     $this->load->model('Administration','Admin');
                     $test_csv = $this->Admin->upload($db_data,'test_csv');
                 }
 				unset($db_data['org']);
                 unset($db_data['logo_url']);
+                unset($db_data['background_url']);
                 unset($db_data['test_csv']);
 				$this->Orgs->edit_org($db_data);
                 if($logo_url){
@@ -115,6 +137,20 @@ class Org extends CI_Controller {
                         $this->Orgs->add_org_meta($db_data);
                     } else {
                         $db_data['ID'] = $data['org']->meta['logo_url']->ID;
+                        $this->Orgs->edit_org_meta($db_data);
+                    }
+                }
+                if($background_url){
+                    $db_data = array(
+                            'org_id'=>$ID,
+                            'meta_key'=>'background_url',
+                            'meta_value'=>$background_url,
+                            'dateadded'=>time()
+                    );
+                    if(!isset($data['org']->meta['background_url'])){
+                        $this->Orgs->add_org_meta($db_data);
+                    } else {
+                        $db_data['ID'] = $data['org']->meta['background_url']->ID;
                         $this->Orgs->edit_org_meta($db_data);
                     }
                 }
@@ -138,7 +174,7 @@ class Org extends CI_Controller {
                         $meta_data = array(
                             'org_id' => $ID,
                             'meta_key' => $k,
-                            'meta_value' => $v
+                            'meta_value' => is_array($v)?serialize($v):$v
                             );
                         $this->Orgs->edit_org_meta($meta_data);
                     }
@@ -164,7 +200,8 @@ class Org extends CI_Controller {
 			if($this->input->post()){
 				$db_data = $this->input->post();
 				unset($db_data['change_img']);
-				unset($db_data['logo_url']);
+                unset($db_data['logo_url']);
+                unset($db_data['background_url']);
 				$db_data['dateremoved'] = time();
 				$this->Orgs->edit_org($db_data);
 				
