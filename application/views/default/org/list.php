@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
 	<div class="header row">
 		<div class="col-md-2">
 			<h4>Name</h4>

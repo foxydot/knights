@@ -1,5 +1,5 @@
 <?php //ts_data($cats); ?>
-<div class="container list">
+<div class="container-fluid list">
 	<div class="header row">
 		<div class="col-md-2">
 			<h4>Category</h4>

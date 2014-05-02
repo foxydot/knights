@@ -47,12 +47,12 @@ $(document).ready(function($) {
 		$(this).parents('form').find('.img-upload').toggle();
 		$(this).parents('form').find('.img-display').toggle();
 	});
-	$('.accordion-toggle').click(function(){
-		$(this).find('i').removeClass('icon-expand').removeClass('icon-collapse');
+	$('.panel-toggle').click(function(){
+		$(this).find('i').removeClass('fa-chevron-circle-down').removeClass('fa-chevron-circle-up');
 		if($(this).hasClass('collapsed')){
-			$(this).find('i').addClass('icon-expand');
+			$(this).find('i').addClass('fa-chevron-circle-down');
 		} else {
-			$(this).find('i').addClass('icon-collapse');
+			$(this).find('i').addClass('fa-chevron-circle-up');
 		}
 	});
 	$('.attachment-delete').click(function(){

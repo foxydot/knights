@@ -1,6 +1,7 @@
+<?php global $org_id,$site_title,$site_logo; ?>
 <?php $this->load->view('default/utility/head'); ?>
 <div class="loginContainer">
-	<img id="logo" src="<?php print ADMIN_THEME_URL ?>/img/logo.png" alt="<?php print SITENAME; ?>" />
+	<img id="logo" src="<?php print $site_logo ?>" alt="<?php print SITENAME; ?>" />
 		<?php if(isset($message)||isset($error)){ ?>
 			<div id="message">
 				<?php print isset($message) && $message!=''?'<div class="alert alert-message">'.$message.'</div>':''; ?>

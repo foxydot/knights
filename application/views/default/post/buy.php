@@ -12,7 +12,7 @@ if(isset($seller->meta['paypal'])){
 }
 
 ?>
-<div class="container post">
+<div class="container-fluid post">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 		<h1><?php print $post->title; ?>
@@ -63,7 +63,7 @@ if(isset($seller->meta['paypal'])){
                     <input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
                     <input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
                     <textarea name="message" id="message" class="tinymce"></textarea>
-                    <input class="btn" name="submit" id="submit" type="submit" value="Send" />
+                    <input class="btn btn-default btn-sm" name="submit" id="submit" type="submit" value="Send" />
         		</div>
         </div>
 		<?php else: ?>
@@ -76,7 +76,7 @@ if(isset($seller->meta['paypal'])){
             <input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
             <input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
             <textarea name="message" id="message" class="tinymce"></textarea>
-            <input class="btn" name="submit_btn" id="submit_btn" type="submit" value="Buy Now" />
+            <input class="btn btn-default btn-sm" name="submit_btn" id="submit_btn" type="submit" value="Buy Now" />
 		</div>
 		<?php endif; ?>
 		<?php

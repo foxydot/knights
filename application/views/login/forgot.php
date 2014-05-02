@@ -4,7 +4,7 @@
 	print form_fieldset();
 	?>
 	  	<div class="submit">
-	    	<input class="btn" name="commit" type="submit" value="<?php print $buttontxt; ?>" />
+	    	<input class="btn btn-default btn-sm" name="commit" type="submit" value="<?php print $buttontxt; ?>" />
 	  	</div>
 	<?php 
 	print form_fieldset_close();
@@ -30,7 +30,7 @@
 		  	</div>
 		  	<div class="submit">
 				<input name="reset_key" type="hidden" id="reset_key" value="<?php print $user[0]->resetkey; ?>" />
-		    	<input class="btn" name="commit" type="submit" value="<?php print $buttontxt; ?>" />
+		    	<input class="btn btn-default btn-sm" name="commit" type="submit" value="<?php print $buttontxt; ?>" />
 		  	</div>
 		<?php 
 		print form_fieldset_close();
@@ -47,7 +47,7 @@
 		  		<div class="clear"></div>
 		  	</div>
 		  	<div class="submit">
-		    	<input class="btn" name="commit" type="submit" value="Reset Password" />
+		    	<input class="btn btn-default btn-sm" name="commit" type="submit" value="Reset Password" />
 		  	</div>
 	<?php 
 	print form_fieldset_close();

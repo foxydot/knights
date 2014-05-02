@@ -1,9 +1,9 @@
 <?php setlocale(LC_MONETARY, 'en_US'); ?>
-<div class="container post">
+<div class="container-fluid post">
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 		<h1><?php print $post->title; ?><?php if($this->authenticate->check_auth('administrators')||$this->common->is_author($user['ID'],$post->author_id)){ ?>
-						<a href="/post/edit/<?php print $post->post_id; ?>" class="btn pull-right">Edit</a>
+						<a href="/post/edit/<?php print $post->post_id; ?>" class="btn btn-default btn-sm pull-right">Edit</a>
 					<?php } ?></h1>
 		<div class="price pull-right">
 			<label>Price<?php print stripos($post->type,'service')!==FALSE?' per hour':''; ?>:</label> <col-md-><?php print money_format('%#1.2n', (float) $post->cost); ?></col-md->
@@ -14,7 +14,7 @@
 				<input name="author" id="author" type="hidden" value="<?php print $post->firstname.' '.$post->lastname.'<'.$post->email.'>'; ?>" />
 				<input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
 				<input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
-				<input class="btn" name="submit" id="submit" type="submit" value="Buy Now" />
+				<input class="btn btn-default btn-sm" name="submit" id="submit" type="submit" value="Buy Now" />
 			</div>
 			<?php
 			print form_fieldset_close();
@@ -61,7 +61,7 @@
 			<input name="sender" id="sender" type="hidden" value="<?php print $user['name'].'<'.$user['email'].'>'; ?>" />
 			<input name="subject" id="subject" type="hidden" value="<?php print $post->title; ?>" />
 			<textarea name="message" id="message" class="tinymce"></textarea>
-			<input class="btn" name="submit" id="submit" type="submit" value="Send" />
+			<input class="btn btn-default btn-sm" name="submit" id="submit" type="submit" value="Send" />
 		</div>
 		<?php
 		print form_fieldset_close();

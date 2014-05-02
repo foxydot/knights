@@ -1,4 +1,4 @@
-<div class="container form">
+<div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'category','class'=>'smallform col-md-6 col-md-offset-3')); ?>
 		<h1><?php print $is_edit?'Edit':'New'; ?> Category</h1>

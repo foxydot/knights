@@ -1,4 +1,4 @@
-    <div class="container form">
+    <div class="container-fluid form">
 	<div class="row">
         
 		<?php print form_open_multipart($action,array('id'=>'post','class'=>'smallform col-md-6 col-md-offset-3')); ?>

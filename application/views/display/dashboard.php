@@ -2,7 +2,7 @@
 			<div id="poster">
 				<img src="<?php print $story->banner_url; ?>" alt="<?php print $story->name; ?>: <?php print $story->title; ?>"/>
 			</div>
-			<div id="theme" class="container">
+			<div id="theme" class="container-fluid">
 				<div class="logo"><img src="<?php print $story->logo_url; ?>" alt="<?php print $story->name; ?>"/></div>
 				<div class="title">
 					<h4><?php print date('F j, Y',$story->datepresented);?></h4>
@@ -16,7 +16,7 @@
 <?php $section_id = $section[0]['Headline']->story_section; ?>
 <div id="section<?php print $section_id; ?>" class="section">
 	<div id="headline-<?php print $section_id; ?>" class="headline">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-1">
 					<div class="numeric-headline"><?php print $section_id; ?>.<?php print $section[0]['Headline']->story_subsection; ?></div>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 	</div> 
-	<div class="container">
+	<div class="container-fluid">
 		<?php for($i=1;$i<count($section);$i++){ ?>
 		<?php //ts_data($section[$i]);?>
 		<?php $quote_ribbon = isset($quotes[$section_id][$section[$i]['Sub Head']->story_subsection])?do_quote_wrap($quotes[$section_id][$section[$i]['Sub Head']->story_subsection]):'';?>
@@ -39,7 +39,7 @@
 			</div>
 		</div>
 		<footer>
-	    	<div id="signoff" class="container">
+	    	<div id="signoff" class="container-fluid">
 	    		<div class="row">
 	    			<div id="emb" class="col-md-8">
 	    				<img src="/assets/frontend/img/emblem.png" alt="Thrive Plan"/>

@@ -1,4 +1,4 @@
-<div class="container form">
+<div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'organization','class'=>'smallform col-md-6 col-md-offset-3')); ?>
 		<h1><?php print $is_edit?'Edit':'New'; ?> Organization Information</h1>
@@ -19,7 +19,7 @@
             <label>Logo</label>
             <img src="<?php print $org->meta['logo_url']->meta_value; ?>" style="max-height:300px;max-width:300px;" />
             <br />
-            <input class="btn" name="change_img" id="change_img" type="button" value="Change Logo" />
+            <input class="btn btn-default btn-sm" name="change_img" id="change_img" type="button" value="Change Logo" />
         </div>
         <?php endif; ?>
         <div class="row">
@@ -50,7 +50,7 @@
         <div class="row">
             <label>Registration Test CSV File</label>
             <?php print $org->meta['test_csv']->meta_value; ?>
-            <input class="btn" name="change_csv" id="change_csv" type="button" value="Change File" />
+            <input class="btn btn-default btn-sm" name="change_csv" id="change_csv" type="button" value="Change File" />
         </div>
         <?php endif; ?>
         <div class="row">

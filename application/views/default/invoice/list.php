@@ -1,4 +1,4 @@
-<div id="invoice-list" class="container list panel-group">
+<div id="invoice-list" class="container-fluid list panel-group">
       <div class="header row">
         <div class="col-md-1">
             <h4>Listing Number</h4>
