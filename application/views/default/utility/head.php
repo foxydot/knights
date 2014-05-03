@@ -53,6 +53,7 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="/display<?php // echo site_url('display'); ?>">
 <?php print isset($page_css)?page_css($page_css):''; ?>
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects --> 
   <script src="/assets/js/modernizr.js"></script>

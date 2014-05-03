@@ -66,50 +66,57 @@
                 </div>
                 <?php endif; ?>
                 <?php
-                $colorscheme = unserialize($org->meta['colorscheme']->meta_value);
+                if($is_edit){$colorscheme = unserialize($org->meta['colorscheme']->meta_value);}
                 ?>
                 <div class="row">
                     <label class="col-md-12">Color Scheme</label>
-                    <div class="col-md-2 text-center">
+                    <div class="col-md-3 text-center">
                         <span>Background</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="background" name="meta[colorscheme][background]" value="<?php print $colorscheme['background']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['background']; ?>;"></div>
+                            <input type="hidden" id="background" name="meta[colorscheme][background]" value="<?php print $is_edit?$colorscheme['background']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['background']:'#BAD0DD'; ?>;"></div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
+                    <div class="col-md-3 text-center">
                         <span>Text</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="text" name="meta[colorscheme][text]" value="<?php print $colorscheme['text']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['text']; ?>;"></div>
+                            <input type="hidden" id="text" name="meta[colorscheme][text]" value="<?php print $is_edit?$colorscheme['text']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['text']:'#333333'; ?>;"></div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
-                        <span>Linked Text</span>
+                    <div class="col-md-3 text-center">
+                        <span>Link Color</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="link" name="meta[colorscheme][link]" value="<?php print $colorscheme['link']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['link']; ?>;"></div>
+                            <input type="hidden" id="link" name="meta[colorscheme][link]" value="<?php print $is_edit?$colorscheme['link']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['link']:'#2A6496'; ?>;"></div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
+                    <div class="col-md-3 text-center">
+                        <span>Link Hover</span>
+                        <div class="colorSelector center-block">
+                            <input type="hidden" id="highlight" name="meta[colorscheme][highlight]" value="<?php print $is_edit?$colorscheme['highlight']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['highlight']:'#428BCA'; ?>;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
                         <span>Nav Bar</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="navbackground" name="meta[colorscheme][navbackground]" value="<?php print $colorscheme['navbackground']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['navbackground']; ?>;"></div>
+                            <input type="hidden" id="navbackground" name="meta[colorscheme][navbackground]" value="<?php print $is_edit?$colorscheme['navbackground']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['navbackground']:'#F8F8F8'; ?>;"></div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
+                    <div class="col-md-3 text-center">
                         <span>Nav Text</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="navtext" name="meta[colorscheme][navtext]" value="<?php print $colorscheme['navtext']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['navtext']; ?>;"></div>
+                            <input type="hidden" id="navtext" name="meta[colorscheme][navtext]" value="<?php print $is_edit?$colorscheme['navtext']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['navtext']:'#333333'; ?>;"></div>
                         </div>
                     </div>
-                    <div class="col-md-2 text-center">
-                        <span>Highlight</span>
+                    <div class="col-md-3 text-center">
+                        <span>Buttons</span>
                         <div class="colorSelector center-block">
-                            <input type="hidden" id="highlight" name="meta[colorscheme][highlight]" value="<?php print $colorscheme['highlight']; ?>" />
-                            <div style="background-color:<?php print $colorscheme['highlight']; ?>;"></div>
+                            <input type="hidden" id="navtext" name="meta[colorscheme][button]" value="<?php print $is_edit?$colorscheme['button']:''; ?>" />
+                            <div style="background-color:<?php print $is_edit?$colorscheme['button']:'#428BCA'; ?>;"></div>
                         </div>
                     </div>
                 </div>
