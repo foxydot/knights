@@ -10,27 +10,63 @@ class Admin extends CI_Controller {
 			}
 			$this->authenticate->check_auth('administrators',true);
 			$this->load->model('Administration','Admin');
+            $this->load->model('Organizations','Orgs');
+            $this->common->get_org_info_from_subdomain();
        }
 	
-	function index()
-		{
-			
-		}
-		
-	function edit($ID){
-		$data = array(
-				'page_title' => 'Welcome to '.SITENAME,
-				'body_class' => 'projectList',
-				'user' => $this->session->userdata,
-				'story' => $this->Admin->get_story($ID),
-				'sections' => $this->Admin->get_sections($ID),
-				'quotes' => $quotes,
-				'dashboard' => 'admin/edit',
-			);
-		$data['footer_js'][] = 'jquery/index';	
-		$data['footer_js'][] = 'jquery/edit';	
-		$this->load->view('default.tpl.php',$data);
-	}
+	function index(){
+        $this->authenticate->check_auth('administrators',true);
+            $data = array(
+                'page_title' => SITENAME.' Admin',
+                'body_class' => 'list admin',
+                'user' => $this->session->userdata,
+                'orgs' => $this->Orgs->get_orgs(),
+            );
+            $data['footer_js'][] = 'jquery/list';
+        if($this->authenticate->check_auth('super-administrators',false)){
+            $this->load->model('sysadmin');
+            $data['system_info'] = $this->common->getSystemInfo();
+            $data['update_database_version'] = $this->sysadmin->get_update_version();
+            $data['dashboard'] = 'default/sysadmin/maintenance';
+            if(empty($_POST)){
+                $this->load->view('default.tpl.php',$data);
+            } else {
+                $this->sysadmin->upgrade();
+            }
+        } else {
+            //load panel for admin level admin.
+        }
+    }
+    
+    public function backup_db(){
+        $this->authenticate->check_auth('administrators',true);
+        if($this->session->userdata['ID'] == 1){
+            $this->load->model('sysadmin');
+            $this->sysadmin->backup_db();
+        }
+    }
+    
+    public function edit_post_types(){
+        $this->authenticate->check_auth('administrators',true);
+        if($this->session->userdata['ID'] == 1){
+            $this->load->model('sysadmin');
+            if(!empty($_POST)){
+                $types = array_filter(array_combine($_POST['key'],$_POST['value']));
+                $this->sysadmin->update_types(serialize($types));
+            }
+            $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
+            $data = array(
+                    'body_class' => 'edit admin-edit',
+                    'user' => $this->session->userdata,
+                    'types' => unserialize($the_types->sysinfo_value),
+                    'form' => 'default/sysadmin/edit_post_types',
+            );
+            $this->load->view('login/login.tpl.php',$data);
+        }
+    }
+    
+    
+    ///OLD STUFF BELOW, MAYBE REMOVE?
 	
 	function edit_section($section_id,$story_id){
 		if($this->input->post()){

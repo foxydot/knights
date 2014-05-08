@@ -43,6 +43,8 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/bootstrap/css/bootstrap.min.css">
+    <link href="<?php echo DEFAULT_THEME_URL; ?>/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/css/style.css">
@@ -53,7 +55,7 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="/display<?php // echo site_url('display'); ?>">
+    <link rel="stylesheet" href="<?php echo site_url('display'); ?>">
 <?php print isset($page_css)?page_css($page_css):''; ?>
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects --> 
   <script src="/assets/js/modernizr.js"></script>

@@ -8,7 +8,6 @@ class Display extends CI_Controller {
                 $this->load->helper('url');
                 redirect('/install');
             }
-            $this->authenticate->check_auth('users',true);
             $this->load->model('Organizations','Orgs');
             $this->common->get_org_info_from_subdomain();
        }

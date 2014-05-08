@@ -23,15 +23,37 @@ a:hover{
 .navbar-default .navbar-nav li  a:hover{
     color: '.adjustColorLightenDarken($navtext, 20).'
 }
-.btn-default{
-    background-color: '.$button.' !important;
+.btn-default,input[type="submit"], a.button,.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background: '.$button.';
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, '.adjustColorLightenDarken($button, 20).'),
+                               color-stop(1, '.adjustColorLightenDarken($button, -20).'));
+  background: -ms-linear-gradient(bottom,
+                                  '.adjustColorLightenDarken($button, 20).',
+                                  '.adjustColorLightenDarken($button, -20).');
+  background: -moz-linear-gradient(center bottom,
+                                   '.adjustColorLightenDarken($button, 20).' 0%,
+                                   '.adjustColorLightenDarken($button, -20).' 100%);
     border-color: '.adjustColorLightenDarken($button, 20).' !important;
-    color: '.adjustColorLightenDarken($button, 30).' !important;
+    color: '.$buttontext.' !important;
 }
-.btn-default:hover{
-    background-color: '.adjustColorLightenDarken($button, 20).' !important;
+.btn-default:hover,input[type="submit"]:hover, a.button:hover,.nav-pills > li > a:hover, .nav-pills > li > a:focus {
+    background: '.$button.';
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, '.adjustColorLightenDarken($button,-20).'),
+                               color-stop(1, '.adjustColorLightenDarken($button, 20).'));
+  background: -ms-linear-gradient(bottom,
+                                  '.adjustColorLightenDarken($button, -20).',
+                                  '.adjustColorLightenDarken($button, 20).');
+  background: -moz-linear-gradient(center bottom,
+                                   '.adjustColorLightenDarken($button, -20).' 0%,
+                                   '.adjustColorLightenDarken($button, 20).' 100%);
     border-color: '.adjustColorLightenDarken($button, 40).' !important;
-    color: '.adjustColorLightenDarken($button, 60).' !important;
+    color: '.$buttontext.' !important;
 }';
 
 /**
