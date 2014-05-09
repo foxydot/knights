@@ -31,8 +31,18 @@ Class Authenticate extends CI_Model {
 				return 'Account Suspended';
 			}
 			return $result[0];
-		}else{
-			return 'Incorrect username/password';
+		} else {
+		    $this->db->select('ID');
+            $this->db->from('user');
+            $this->db->where('user.email = \''.$uid.'\'');
+            $this->db->where('user.password = \''.md5($pwd).'\'');
+            $this->db->limit(1);
+            $query = $this->db->get();
+		    if($query->num_rows() == 1){
+		        return 'Do you have priviliages on '.SITENAME.'?';
+		    } else {
+			     return 'Incorrect username/password';
+            }
 		}	
 	}
 	

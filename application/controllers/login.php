@@ -49,6 +49,7 @@ class Login extends CI_Controller {
 						$this->authenticate->userdata_to_cookie();
 					}
 					$login = true;
+                    redirect('/');
 				} else { // If validation fails.
 					$data = array(
 						'form' => 'login/login',
@@ -58,7 +59,6 @@ class Login extends CI_Controller {
 					$this->load->view('login/login.tpl.php',$data); //Load the login page and pass the error message
 					$login = false;
 				}
-				redirect('/');
 			}
 		}else{
 			$data = array(
