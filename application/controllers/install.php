@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Install extends CI_Controller {
-    //TODO: Rename to maintenance and do a runaround for install
 	public function index()
 	{
 		$data = array();
@@ -21,8 +20,8 @@ class Install extends CI_Controller {
 			);
 			$this->load->view('login/login.tpl.php',$data);
 			} else {
-				$this->load->model('sysadmin');
-				$this->sysadmin->install();
+				$this->load->model('systemadmin');
+				$this->systemadmin->install();
 			}
 		}		
 	}
@@ -34,8 +33,8 @@ class Install extends CI_Controller {
 			if(empty($_POST)){
 				$this->load->view('login/login.tpl.php',$data);
 			} else {
-				$this->load->model('sysadmin');
-				$this->sysadmin->uninstall();
+				$this->load->model('systemadmin');
+				$this->systemadmin->uninstall();
 				$this->session->sess_destroy();
 				$this->load->helper('url');
 				redirect('/install');

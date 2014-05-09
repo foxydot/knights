@@ -10,7 +10,7 @@ Class Users extends CI_Model {
 	        parent::__construct();
 	    }
 	 function get_all_users($suspended = FALSE){
-	 	$this->db->select('user.ID AS ID,email,firstname,lastname,user.accesslevel AS accesslevel,user.dateadded AS dateadded,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
+	 	$this->db->select('user.ID AS ID,email,firstname,lastname,user.accesslevel AS accesslevel,user.dateadded AS dateadded,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel,terms_accepted');
 		$this->db->from('user');
 		$this->db->join('user_group','user.group_id=user_group.ID','left');
 		if(!$suspended){

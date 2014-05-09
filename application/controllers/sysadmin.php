@@ -15,7 +15,6 @@ class Admin extends CI_Controller {
        }
 	
 	function index(){
-	    $global $org_id;
         $this->authenticate->check_auth('administrators',true);
             $data = array(
                 'page_title' => SITENAME.' Admin',
@@ -24,15 +23,29 @@ class Admin extends CI_Controller {
                 'orgs' => $this->Orgs->get_orgs(),
             );
             $data['footer_js'][] = 'jquery/list';
-        if($this->authenticate->check_auth('super-administrators',false) && !$org_id){
-            //redirect to sysadmin panel
-            $this->load->helper('url');
-            redirect('/sysadmin');   
+        if($this->authenticate->check_auth('super-administrators',false)){
+            $this->load->model('sysadmin');
+            $data['system_info'] = $this->common->getSystemInfo();
+            $data['update_database_version'] = $this->sysadmin->get_update_version();
+            $data['dashboard'] = 'default/sysadmin/maintenance';
+            if(empty($_POST)){
+                $this->load->view('default.tpl.php',$data);
+            } else {
+                $this->sysadmin->upgrade();
+            }
         } else {
             //load panel for admin level admin.
         }
     }
-   
+    
+    public function backup_db(){
+        $this->authenticate->check_auth('administrators',true);
+        if($this->session->userdata['ID'] == 1){
+            $this->load->model('sysadmin');
+            $this->sysadmin->backup_db();
+        }
+    }
+    
     public function edit_post_types(){
         $this->authenticate->check_auth('super-administrators',true);
             $this->load->model('sysadmin');
@@ -52,6 +65,20 @@ class Admin extends CI_Controller {
     
     
     ///OLD STUFF BELOW, MAYBE REMOVE?
+	
+	function edit_section($section_id,$story_id){
+		if($this->input->post()){
+			$db_data = array(
+				'content' => $this->input->post('editorContent'),
+				'story_id' => $story_id,
+			);
+			$this->Admin->create_history($story_id);
+			$this->Admin->edit_section($section_id,$db_data);
+			$this->Admin->set_updated_time_on_story($story_id);
+			$this->load->helper('url');
+			redirect('/admin/edit/'.$story_id.'#id'.$section_id);		
+		}
+	}
 	
 	function textedit($datastr){
 		preg_match_all("/([^\:]+)\:([^\:]+)/", $datastr, $pairs);
