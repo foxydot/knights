@@ -35,12 +35,15 @@ class User extends CI_Controller {
 	
 	function edit($ID)
 		{
-			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){$this->authenticate->check_auth('administrators',true);}
+			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){
+			    $this->authenticate->check_auth('administrators',true);
+            }
+            $the_user =$this->Users->get_user($ID);
 			$data = array(
-				'page_title' => SITENAME.' Administrative Users',
+				'page_title' => SITENAME.' User '.$the_user->firstname. ' ' . $the_user->lastname,
 				'body_class' => 'edit user-edit',
 				'user' => $this->session->userdata,
-				'the_user' => $this->Users->get_user($ID),
+				'the_user' => $the_user,
 				'access' => $this->authenticate->get_levels(),
 				'groups' => $this->Users->get_all_user_groups(),
 				'dashboard' => 'default/user/edit',
