@@ -15,7 +15,7 @@ class Category extends CI_Controller {
        
 	function index()
 		{
-			$org_id = 1;
+			global $org_id;
 			$cats = $this->Cats->get_cats();
 			$data = array(
 				'page_title' => SITENAME.' Categories',
@@ -30,7 +30,7 @@ class Category extends CI_Controller {
 
 	function add()
 		{
-			$org_id = 1;
+			global $org_id;
 			$cats = $this->Cats->get_cats();
 			$data = array(
 					'page_title' => SITENAME.' Add Category',
@@ -55,7 +55,7 @@ class Category extends CI_Controller {
 
 	function edit($ID)
 		{
-			$org_id = 1;
+			global $org_id;
 			$cats = $this->Cats->get_cats();
 			$data = array(
 					'page_title' => SITENAME.' Edit Category',
@@ -84,7 +84,7 @@ class Category extends CI_Controller {
 
 		function delete($ID)
 		{
-			$org_id = 1;
+			global $org_id;
 			$cats = $this->Cats->get_cats();
 			$data = array(
 					'page_title' => SITENAME.' Edit Category',

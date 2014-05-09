@@ -47,8 +47,7 @@ class Admin extends CI_Controller {
     }
     
     public function edit_post_types(){
-        $this->authenticate->check_auth('administrators',true);
-        if($this->session->userdata['ID'] == 1){
+        $this->authenticate->check_auth('super-administrators',true);
             $this->load->model('sysadmin');
             if(!empty($_POST)){
                 $types = array_filter(array_combine($_POST['key'],$_POST['value']));
@@ -59,10 +58,9 @@ class Admin extends CI_Controller {
                     'body_class' => 'edit admin-edit',
                     'user' => $this->session->userdata,
                     'types' => unserialize($the_types->sysinfo_value),
-                    'form' => 'default/sysadmin/edit_post_types',
+                    'dashboard' => 'default/sysadmin/edit_post_types',
             );
-            $this->load->view('login/login.tpl.php',$data);
-        }
+            $this->load->view('default.tpl.php',$data);
     }
     
     

@@ -48,6 +48,7 @@ class User extends CI_Controller {
 				'is_edit' => TRUE,
 			);
 			if($this->input->post()){
+			    global $org_id;
 			    $prev_user_level = $data['the_user']->accesslevel;
 				$db_data = $this->input->post();
 				$user_meta = $db_data['meta'];
@@ -101,7 +102,7 @@ class User extends CI_Controller {
 					foreach($user_meta AS $k=>$v){
 						$meta_data = array(
 							'user_id' => $ID,
-							'org_id' => 1,
+							'org_id' => $org_id,
 							'meta_key' => $k,
 							'meta_value' => $v
 							);
@@ -140,6 +141,7 @@ class User extends CI_Controller {
 					//escape
 					$this->session->set_flashdata('err', 'Passwords do not match');
 				} else {
+				    global $org_id;
 					$db_data = $this->input->post();
                     $user_meta = $db_data['meta'];
                     unset($db_data['meta']);
@@ -148,12 +150,15 @@ class User extends CI_Controller {
 					unset($db_data['passwordtest']);
 					$db_data['password'] = md5($db_data['password']);
 					$ID = $this->Users->add_user($db_data);
+                    $db_data['user_id'] = $ID;
+                    $db_data['org_id'] = $org_id;
+                    $this->Users->add_user_org($db_data);
 				}		
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
 						$meta_data = array(
 							'user_id' => $ID,
-							'org_id' => 1,
+							'org_id' => $org_id,
 							'meta_key' => $k,
 							'meta_value' => $v
 							);
@@ -171,6 +176,7 @@ class User extends CI_Controller {
 		{
 			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){$this->authenticate->check_auth('administrators',true);}
 			if($this->input->post()){
+			    global $org_id;
 				$db_data = $this->input->post();
 				$user_meta = $db_data['meta'];
 				unset($db_data['meta']);
@@ -180,12 +186,12 @@ class User extends CI_Controller {
 				unset($db_data['passwordtest']);
 					
 				$this->Users->edit_user($ID,$db_data);
-				
+				$this->Users->delete_user_orgs($ID);
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
 						$meta_data = array(
 								'user_id' => $ID,
-								'org_id' => 1,
+								'org_id' => $org_id,
 								'meta_key' => $k,
 								'meta_value' => $v,
 								'dateremoved' => time()

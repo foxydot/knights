@@ -8,8 +8,9 @@ class Invoices extends CI_Model {
         }
         
     function create_invoice($post){
+        global $org_id;
         $db_data = array(
-            'org_id' => 1,
+            'org_id' => $org_id,
             'author_id' => $post->author_id,
             'post_id' => $post->post_id,
             'fee' => get_the_fee($post),

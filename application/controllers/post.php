@@ -14,12 +14,13 @@ class Post extends CI_Controller {
        }
        
 	function index(){
+	    global $org_id;
 		$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',
 				'dashboard' => 'default/post/list-cats',
 				'user' => $this->session->userdata,
-				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => 'all')),
+				'catsposts' => $this->Posts->get_cats_and_posts(array('orgs' => array($org_id))),
 				'archive' => FALSE,
 		);
 		$data['footer_js'][] = 'jquery/list';

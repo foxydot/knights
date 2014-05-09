@@ -24,12 +24,14 @@ Class Posts extends CI_Model {
 	    	$orgs = $this->Orgs->make_org_array($orgs);
 	    	$cats = $this->Cats->get_cats($orgs);
 	    	$i = 0;
-	    	foreach($cats AS $cat){
-	    		$params['cat_id'] = $cat->ID;
-	    		$cats[$i]->posts = $this->get_posts($params,$archive);
-	    		$cats[$i]->has_children = $this->cat_has_children_or_posts($cat,$org_id = 1);
-	    		$i++;
-	    	}
+            foreach($orgs AS $org){
+    	    	foreach($cats AS $cat){
+    	    		$params['cat_id'] = $cat->ID;
+    	    		$cats[$i]->posts = $this->get_posts($params,$archive);
+    	    		$cats[$i]->has_children = $this->cat_has_children_or_posts($cat,$org);
+    	    		$i++;
+    	    	}
+            }
 	    	$cats = $this->Cats->group_cats_by_parent($cats);
 	    	return $cats;
 	    }

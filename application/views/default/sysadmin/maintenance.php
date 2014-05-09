@@ -1,7 +1,7 @@
-	<ul class="list">
+	<div class="container-fluid">
+	    <ul class="list col-md-6 col-md-offset-3">
 		<li><strong>Last Updated:</strong> <?php print date("m.d.Y",$system_info['last_update']); ?></li>
 		<li><strong>Current Version:</strong> <?php print $system_info['version']; ?></li>
-		<li><a href="/install/backup_db">Backup Database</a></li>
 	<?php if($system_info['version']==$update_database_version){ ?>
 	<li>Database is updated to the current revision.</li>
 	<?php } else { ?>
@@ -11,4 +11,7 @@
 <input type="submit" value="YES">
 </form></li>
 	<?php } ?>
+        <li><a href="/admin/backup_db" class="btn btn-default">Backup Database</a></li>
+    	<li><a href="/admin/edit_post_types" class="btn btn-default">Edit Post Types</a></li>
 	</ul>
+</div>

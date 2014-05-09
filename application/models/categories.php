@@ -21,6 +21,7 @@ Class Categories extends CI_Model {
 		if(!$archive){
 			$this->db->where('category.dateremoved <=',0);
 		}
+        $this->db->where_in('cat2org.org_id ',$orgs);
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result;
@@ -54,12 +55,13 @@ Class Categories extends CI_Model {
 	 }
 	 
 
-	 function get_post_cats($post_id){
+	 function get_post_cats($post_id,$orgs = array()){
+	    $orgs = $this->Orgs->make_org_array($orgs);
 	 	$this->db->from('post2cat');
 	 	$this->db->join('category','post2cat.cat_id=category.ID');
 	 	$this->db->join('cat2org','category.ID = cat2org.cat_id');
 	 	$this->db->where('post2cat.post_id',$post_id);
-	 	$this->db->where('cat2org.org_id',1);
+	 	$this->db->where_in('cat2org.org_id',$orgs);
 	 	$query = $this->db->get();
 	 	$result = $query->result();
 	 	if($result){

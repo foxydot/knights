@@ -212,7 +212,7 @@ class Login extends CI_Controller {
 	}
 	
 	public function register(){
-		$org_id = 1;
+		global $org_id;
 		$this->load->model('Organizations','Orgs');
 		$data = array(
 				'page_css' => 'login',
@@ -298,7 +298,7 @@ class Login extends CI_Controller {
 	}
 	
 	public function terms(){
-		$org_id = 1;
+		global $org_id;
 		$this->load->model('Organizations','Orgs');
 		$this->load->model('Users');
 		$data = array(

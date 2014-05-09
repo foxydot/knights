@@ -14,6 +14,11 @@ class Organizations extends CI_Model {
 	    		} else {
 	    			return FALSE;
 	    		}
+	    	} else {
+	    	    if(count($orgs)==0){
+	    	        global $org_id;
+                    $orgs[] = $org_id;
+	    	    }
 	    	}
 	    	return $orgs;
 	    }

@@ -138,6 +138,34 @@ Class Users extends CI_Model {
     		return $metas;
         }
 	 }
+     
+     function add_user_org($data){
+        $db_data = $data;
+        $db_data['dateadded'] = time();
+        $this->db->insert('user2org',$db_data);
+        return $this->db->insert_id();
+     }
+     
+     function edit_user_org($data){
+         
+     }
+     
+     function get_user_orgs($ID){
+        $this->db->select('ID,user_id,org_id,access_level,terms_accepted');
+        $this->db->from('user2org');
+        $this->db->where('dateremoved',0);
+        $this->db->where('user_id',$ID);
+        $query = $this->db->get();
+        $result = $query->result();
+        if($result){
+            return $result;
+        }
+     }
+     
+     function delete_user_orgs($ID){
+        $this->db->where('user_id',$ID);
+        $this->db_update(array('dateremoved'=>time()));
+     }
 }
 /* End of file users.php */
 /* Location: ./application/models/users.php */

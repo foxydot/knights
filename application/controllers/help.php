@@ -14,7 +14,7 @@ class Help extends CI_Controller {
        
 	function index()
 		{
-			$org_id = 1;
+			global $org_id;
 			$data = array(
 				'page_title' => SITENAME.' Help',
 				'body_class' => 'list articlelist',
@@ -29,7 +29,7 @@ class Help extends CI_Controller {
 	function add()
 		{			
 			$this->authenticate->check_auth('administrators',true);
-			$org_id = 1;
+			global $org_id;
 			$data = array(
 					'page_title' => SITENAME.' Add Help Article',
 					'body_class' => 'add article-add',
@@ -53,7 +53,7 @@ class Help extends CI_Controller {
 	function edit($ID)
 		{
 			$this->authenticate->check_auth('administrators',true);
-			$org_id = 1;
+			global $org_id;
 			$data = array(
 					'page_title' => SITENAME.' Edit Help Article',
 					'body_class' => 'edit article-edit',
@@ -80,7 +80,7 @@ class Help extends CI_Controller {
     
     function delete($ID){
         $this->authenticate->check_auth('administrators',true);
-        $org_id = 1;
+        global $org_id;
         if($this->input->post()){
             $db_data = $this->input->post();
             $parent_art_id = $db_data['parent_art_id'];
