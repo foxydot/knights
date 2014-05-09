@@ -41,7 +41,7 @@ Class Authenticate extends CI_Model {
             $query = $this->db->get();
 		    if($query->num_rows() == 1){
                 $result = $query->result();
-		        if($result[0]->accesslevel === 1){
+		        if($result[0]->accesslevel == 1){
 		            return $result[0];
 		        } else {
 		            return 'Do you have priviliages on '.SITENAME.'?';
