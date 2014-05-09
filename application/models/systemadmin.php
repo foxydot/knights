@@ -1003,7 +1003,7 @@ Class Systemadmin extends CI_Model {
             case '0.6':
                 //add all exisiting users to org 1 in preparation for multi-site
                 $this->load->model('Users');
-                $users = $this->Users->get_all_users();
+                $users = $this->Users->get_all_users('all');
                 foreach($users AS $user){
                     $db_data = array(
                         'user_id' => $user->ID,
