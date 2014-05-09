@@ -19,6 +19,7 @@
 			<h4>Date Added</h4>
 		</div><!-- end col-md-1 -->
 	</div><!-- end titleBar -->
+	<?php if(count($users)>0){ ?>
 			<?php foreach($users AS $user){ ?>
 			<div class="stripe user clicky row" href="/user/edit/<?php print $user->ID; ?>">
 				<div class="col-md-2">
@@ -40,7 +41,14 @@
 					<h6 class="sub"><?php print date("F j, Y",$user->dateadded); ?></h6>
 				</div>
 			</div>
-			<?php } //end stories ?>
+			<?php } //end users ?>
+    <?php } else { ?>
+        <div class="row">
+            <div class="col-md-12">
+                 This organization has no users.
+            </div>
+        </div>
+    <?php } ?>
 		<div id="footer" class="row">	
 	</div><!-- end footer -->
 </div><!-- end container -->

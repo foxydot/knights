@@ -78,9 +78,14 @@ Class Posts extends CI_Model {
 	    
 	function get_user_posts($params,$archive=FALSE){
 		$posts = $this->get_posts($params,$archive);
+        extract($params);
+        $orgs = $this->Orgs->make_org_array($orgs);
 		$i = 0;
 		foreach($posts AS $post){
 			$posts[$i]->categories = $this->Cats->get_post_cats($post->post_id);
+            if(count($orgs)>0 && count($posts[$i]->categories)<1){
+                unset($posts[$i]);
+            }
 			$i++;
 		}
 		return $posts;

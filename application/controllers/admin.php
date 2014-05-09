@@ -15,7 +15,7 @@ class Admin extends CI_Controller {
        }
 	
 	function index(){
-	    $global $org_id;
+	    global $org_id;
         $this->authenticate->check_auth('administrators',true);
             $data = array(
                 'page_title' => SITENAME.' Admin',
@@ -24,30 +24,14 @@ class Admin extends CI_Controller {
                 'orgs' => $this->Orgs->get_orgs(),
             );
             $data['footer_js'][] = 'jquery/list';
-        if($this->authenticate->check_auth('super-administrators',false) && !$org_id){
+        if($this->authenticate->check_auth('super-administrators',false) && $org_id == 1){
             //redirect to sysadmin panel
             $this->load->helper('url');
             redirect('/sysadmin');   
         } else {
             //load panel for admin level admin.
+            print 'load admin level admin';
         }
-    }
-   
-    public function edit_post_types(){
-        $this->authenticate->check_auth('super-administrators',true);
-            $this->load->model('sysadmin');
-            if(!empty($_POST)){
-                $types = array_filter(array_combine($_POST['key'],$_POST['value']));
-                $this->sysadmin->update_types(serialize($types));
-            }
-            $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
-            $data = array(
-                    'body_class' => 'edit admin-edit',
-                    'user' => $this->session->userdata,
-                    'types' => unserialize($the_types->sysinfo_value),
-                    'dashboard' => 'default/sysadmin/edit_post_types',
-            );
-            $this->load->view('default.tpl.php',$data);
     }
 }
 

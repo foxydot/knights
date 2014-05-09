@@ -28,12 +28,13 @@ class Post extends CI_Controller {
 	}
 	
 	function user($user_id){
+	    global $org_id;
 		$data = array(
 				'page_title' => 'Your Posts on '.SITENAME,
 				'body_class' => 'list dashboard',
 				'dashboard' => 'default/post/list',
 				'user' => $this->session->userdata,
-				'posts' => $this->Posts->get_user_posts(array('orgs' => 'all','user_id'=>$user_id)),
+				'posts' => $this->Posts->get_user_posts(array('orgs' => array($org_id),'user_id'=>$user_id)),
 				'archive' => FALSE,
 		);
 		$data['footer_js'][] = 'jquery/list';

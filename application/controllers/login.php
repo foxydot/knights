@@ -310,6 +310,7 @@ class Login extends CI_Controller {
 		if($this->input->post('terms_accepted')=='true'){
 			$this->Users->edit_user($this->session->userdata['ID'],array('terms_accepted'=>1));
 			$this->authenticate->userdata_to_session($this->Users->get_user($this->session->userdata['ID']));
+            $this->Users->edit_user_org($this->session->userdata['ID'],array('terms_accepted'=>1));
 			$login = true;
 			redirect('/');
 		}

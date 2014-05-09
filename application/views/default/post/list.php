@@ -23,16 +23,25 @@
 		</div><!-- end col-md-1 -->
       </div><!--/row-->
 	<?php 
+	if(count($posts)>0){
 		foreach($posts AS $post){
-			print display_post($post);
-		} //end cats ?>
+			print display_post($post,$user);
+		} //end cats
+    } else {
+        print '<div class="row">
+            <div class="col-md-12">
+                You have no posts on '.SITENAME.'.
+            </div>
+        </div>';
+    }	 ?>
 
 	<div id="footer" class="row">
 	</div><!-- end footer -->
 
     </div><!--/.fluid-container-->
     
-<?php function display_post($post){
+<?php function display_post($post,$user){
+    global $org_id;
 	$display = FALSE;
 	setlocale(LC_MONETARY, 'en_US');
 		$CI =& get_instance();

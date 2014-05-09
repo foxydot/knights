@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Sysadmin extends CI_Controller {
 	public function __construct()
        {
             parent::__construct();
@@ -11,6 +11,7 @@ class Admin extends CI_Controller {
 			$this->authenticate->check_auth('administrators',true);
 			$this->load->model('Administration','Admin');
             $this->load->model('Organizations','Orgs');
+            $this->load->model('Systemadmin','sysadmin');
             $this->common->get_org_info_from_subdomain();
        }
 	
@@ -24,7 +25,6 @@ class Admin extends CI_Controller {
             );
             $data['footer_js'][] = 'jquery/list';
         if($this->authenticate->check_auth('super-administrators',false)){
-            $this->load->model('sysadmin');
             $data['system_info'] = $this->common->getSystemInfo();
             $data['update_database_version'] = $this->sysadmin->get_update_version();
             $data['dashboard'] = 'default/sysadmin/maintenance';
@@ -41,14 +41,12 @@ class Admin extends CI_Controller {
     public function backup_db(){
         $this->authenticate->check_auth('administrators',true);
         if($this->session->userdata['ID'] == 1){
-            $this->load->model('sysadmin');
             $this->sysadmin->backup_db();
         }
     }
     
     public function edit_post_types(){
         $this->authenticate->check_auth('super-administrators',true);
-            $this->load->model('sysadmin');
             if(!empty($_POST)){
                 $types = array_filter(array_combine($_POST['key'],$_POST['value']));
                 $this->sysadmin->update_types(serialize($types));

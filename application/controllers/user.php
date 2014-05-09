@@ -153,9 +153,14 @@ class User extends CI_Controller {
 					unset($db_data['passwordtest']);
 					$db_data['password'] = md5($db_data['password']);
 					$ID = $this->Users->add_user($db_data);
-                    $db_data['user_id'] = $ID;
-                    $db_data['org_id'] = $org_id;
-                    $this->Users->add_user_org($db_data);
+                    
+                    $org_data = array(
+                        'user_id' => $ID,
+                        'org_id' => $org_id, 
+                        'accesslevel' => $db_data['accesslevel'],
+                        'dateadded' => time(),
+                    );
+                    $this->Users->add_user_org($org_data);
 				}		
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){

@@ -11,7 +11,7 @@
 <input type="submit" value="YES">
 </form></li>
 	<?php } ?>
-        <li><a href="/admin/backup_db" class="btn btn-default">Backup Database</a></li>
-    	<li><a href="/admin/edit_post_types" class="btn btn-default">Edit Post Types</a></li>
+        <li><a href="/sysadmin/backup_db" class="btn btn-default">Backup Database</a></li>
+    	<li><a href="/sysadmin/edit_post_types" class="btn btn-default">Edit Post Types</a></li>
 	</ul>
 </div>

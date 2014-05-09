@@ -15,11 +15,14 @@ Class Authenticate extends CI_Model {
 	 * Login
 	 */
 	function login($uid,$pwd){
-		$this->db->select('user.ID AS ID,email,firstname,lastname,terms_accepted,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
+	    global $org_id;
+		$this->db->select('user.ID AS ID,email,firstname,lastname,user2org.terms_accepted AS terms_accepted,user2org.accesslevel AS accesslevel,user2org.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
 		$this->db->from('user');
 		$this->db->join('user_group','user.group_id=user_group.ID','left');
+        $this->db->join('user2org','user.ID=user2org.user_id','left');
 		$this->db->where('user.email = \''.$uid.'\'');
 		$this->db->where('user.password = \''.md5($pwd).'\'');
+        $this->db->where('user2org.org_id = \''.$org_id.'\'');
 		$this->db->limit(1);
 		$query = $this->db->get();
 		if($query->num_rows() == 1){

@@ -30,19 +30,30 @@
       </div><!--/row-->
 	<?php 
 	if($catsposts):
+        global $numposts;
+        $numposts = 0;
 		foreach($catsposts[0] AS $cat){
 			if(count($cat->posts)>0 || $cat->has_children):
-			print display_cat($catsposts,$cat);
+			print display_cat($catsposts,$cat,$user);
 		endif;
 		} //end cats 
-    endif;?>
+    endif;
+    if($numposts==0):
+        print '<div class="row">
+            <div class="alert alert-info">
+                <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
+                '.SITENAME.' has no posts yet.
+            </div>
+        </div>';
+    endif; ?>
 	<div id="footer" class="row">
 	</div><!-- end footer -->
 
     </div><!--/.fluid-container-->
     
 <?php 
-function display_cat($cats,$cat,$level=0){
+function display_cat($cats,$cat,$user,$level=0){
+    global $numposts;
     $display = FALSE;
     setlocale(LC_MONETARY, 'en_US');
     if(count($cat->posts)>0 || $cat->has_children):
@@ -91,12 +102,13 @@ function display_cat($cats,$cat,$level=0){
                     </div>
                 </div>
             ';
+            $numposts++;
         endforeach; //end posts
         if(isset($cats[$cat->ID])):
             $display .= '
                 <div id="post-list-'.$cat->ID.'" class="panel-group">';
                 foreach($cats[$cat->ID] AS $c){
-                    $display .= display_cat($cats,$c,$level+1);
+                    $display .= display_cat($cats,$c,$user,$level+1);
                 }
                 $display .= '
                 </div>
