@@ -11,6 +11,13 @@ if(!function_exists('post_slug'))
 	}
 }
 
+if(!function_exists('clean_url'))
+{
+    function clean_url($url){
+            return preg_replace('/[^a-zA-Z0-9\_\-\?\&\+\.\/\:]/i','',$url);
+        }
+}
+
 if(!function_exists('get_the_fee'))
 {
 function get_the_fee($post){
