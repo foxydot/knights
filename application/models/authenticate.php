@@ -32,14 +32,20 @@ Class Authenticate extends CI_Model {
 			}
 			return $result[0];
 		} else {
-		    $this->db->select('ID');
+            $this->db->select('user.ID AS ID,email,firstname,lastname,user.terms_accepted AS terms_accepted,user.accesslevel AS accesslevel,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel');
             $this->db->from('user');
+            $this->db->join('user_group','user.group_id=user_group.ID','left');
             $this->db->where('user.email = \''.$uid.'\'');
             $this->db->where('user.password = \''.md5($pwd).'\'');
             $this->db->limit(1);
             $query = $this->db->get();
 		    if($query->num_rows() == 1){
-		        return 'Do you have priviliages on '.SITENAME.'?';
+                $result = $query->result();
+		        if($result[0]->accesslevel === 1){
+		            return $result[0];
+		        } else {
+		            return 'Do you have priviliages on '.SITENAME.'?';
+                }
 		    } else {
 			     return 'Incorrect username/password';
             }
