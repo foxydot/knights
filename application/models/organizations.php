@@ -6,11 +6,14 @@ class Organizations extends CI_Model {
 	        // Call the Model constructor
 	        parent::__construct();
 	    }
-	    
+	    //TODO: Change name to org_ID_array
 	    function make_org_array($orgs){
 	    	if(!is_array($orgs)){
 	    		if($this->authenticate->check_auth() && $orgs =='all'){
-	    			$orgs = $this->get_orgs();
+	    		    $orgs = array();
+                    foreach($this->get_orgs() AS $org){
+                        $orgs[]=$org->ID;
+                    }
 	    		} else {
 	    			return FALSE;
 	    		}

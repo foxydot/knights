@@ -1001,20 +1001,26 @@ Class Systemadmin extends CI_Model {
                 //set version
                 $this->set_version('0.6');
             case '0.6':
-                //add all exisiting users to org 1 in preparation for multi-site
                 $this->load->model('Users');
-                $users = $this->Users->get_all_users('all');
-                foreach($users AS $user){
-                    $db_data = array(
-                        'user_id' => $user->ID,
-                        'org_id' => 1, //because we are setting an initial setup and converting from signle site, all users are currently part of org 1
-                        'accesslevel' => $user->accesslevel,
-                        'terms_accepted' => $user->terms_accepted,
-                        'dateadded' => $user->dateadded,
-                        'dateapproved' => time(),
-                        'dateremoved' => $user->dateremoved
-                    );
-                    $this->Users->add_user_org($db_data);
+                //add all exisiting users to org 1 in preparation for multi-site
+                $this->db->select('user.ID AS ID,user.accesslevel AS accesslevel,user.dateadded AS dateadded,user.dateremoved AS dateremoved,user.terms_accepted');
+                $this->db->from('user');
+                $query = $this->db->get();
+                
+                if($query->num_rows() > 0){
+                    $users = $query->result();
+                        foreach($users AS $user){
+                            $db_data = array(
+                                'user_id' => $user->ID,
+                                'org_id' => 1, //because we are setting an initial setup and converting from signle site, all users are currently part of org 1
+                                'accesslevel' => $user->accesslevel,
+                                'terms_accepted' => $user->terms_accepted,
+                                'dateadded' => $user->dateadded,
+                                'dateapproved' => time(),
+                                'dateremoved' => $user->dateremoved
+                            );
+                            $this->Users->add_user_org($db_data);
+                        }   
                 }
                 $this->set_version('0.7');
 			default:
