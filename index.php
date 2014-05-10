@@ -25,6 +25,7 @@ ini_set("memory_limit","128M");
 	case 'knights.msdlab.com':
 	case 'knights.msdlab2.com':
 	case 'knights.msdlab3.com':
+    case (preg_match('/(.*)msdlab3\.com$/i', $_SERVER['SERVER_NAME']) ? true : false):
 		define('ENVIRONMENT', 'testing');
 		break;
     case 'communitylist.us':
