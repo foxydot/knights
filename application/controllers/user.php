@@ -38,7 +38,7 @@ class User extends CI_Controller {
 			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){
 			    $this->authenticate->check_auth('administrators',true);
             }
-            $the_user =$this->Users->get_user($ID);
+            $the_user = $this->Users->get_user($ID);
 			$data = array(
 				'page_title' => SITENAME.' User '.$the_user->firstname. ' ' . $the_user->lastname,
 				'body_class' => 'edit user-edit',
@@ -120,8 +120,9 @@ class User extends CI_Controller {
                     Thank you for using '.SITENAME.' and supporting'.$org->name.'!';
                     mail($data['the_user']->email,$subject,$message); 
                 }
+                $this->session->set_flashdata('msg', 'Changes saved');
 				$this->load->helper('url');
-				redirect('/user');	
+				redirect('/user/edit/'.$ID);	
 			}
 			$this->load->view('default.tpl.php',$data);
 		}
