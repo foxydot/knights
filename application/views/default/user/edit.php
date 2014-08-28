@@ -61,7 +61,7 @@
 			<input class="col-md-12" name="meta[paypal]" id="paypal" type="text" placeholder="Your Paypal Address (the email you use to login to PayPal)"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
 		</div>
         <div class="row">
-            <label>Subscribe to Categories</label>
+            <label>Please notify me by email when new items are added to the checked categories:</label>
             <div class="columns-2">
                 <?php foreach($cats[0] AS $cat){ ?>
                     <?php $attr = $is_edit?array('user'=>$the_user,'is_edit'=>$is_edit):array('is_edit'=>$is_edit); ?>
