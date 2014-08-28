@@ -61,7 +61,15 @@
 			<input class="col-md-12" name="meta[paypal]" id="paypal" type="text" placeholder="Your Paypal Address (the email you use to login to PayPal)"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
 		</div>
         <div class="row">
+            <br />
+        </div>
+        <div class="row">
             <label>Please notify me by email when new items are added to the checked categories:</label>
+            <div>
+                <label class="checkbox level-1">
+                    <input type="checkbox" value="15" class="pull-left first-child last-child odd" id="check-all" name="check-all"> Check/Un-check All
+                </label>
+            </div>
             <div class="columns-2">
                 <?php foreach($cats[0] AS $cat){ ?>
                     <?php $attr = $is_edit?array('user'=>$the_user,'is_edit'=>$is_edit):array('is_edit'=>$is_edit); ?>
@@ -95,7 +103,7 @@ function display_cat($cats,$cat,$attr=array(),$level=0){
     } else {
         $display = '
         <label class="checkbox level-'.$level.'">
-            <input type="checkbox" name="meta[subscribe]['.$cat->ID.']" id="meta-subscribe-'.$cat->ID.'" class="pull-left" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
+            <input type="checkbox" name="meta[subscribe]['.$cat->ID.']" id="meta-subscribe-'.$cat->ID.'" class="pull-left category-check" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
         </label>';
     }
     if(isset($cats[$cat->ID])){
