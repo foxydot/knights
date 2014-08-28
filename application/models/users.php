@@ -192,6 +192,23 @@ Class Users extends CI_Model {
         $this->db->where('user_id',$ID);
         $this->db_update(array('dateremoved'=>time()));
      }
+     
+     function get_all_users_subscribed_to_cat($cat_id){
+         //this is a crummy method, but it works for now.
+        $this->db->select('user_id');
+        $this->db->from('user_meta');
+        $this->db->where('meta_key','subscribe');
+        $this->db->like('meta_value','"'.$cat_id.'"');
+        $this->db->where('dateremoved',0);
+        $query = $this->db->get();
+        $result = $query->result();
+        if($result){
+            foreach($result AS $r){
+                $subscribers[] = $r->user_id;
+            }
+            return $subscribers;
+        }
+     }
 }
 /* End of file users.php */
 /* Location: ./application/models/users.php */

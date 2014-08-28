@@ -271,7 +271,20 @@ Class Posts extends CI_Model {
     function notify_cat_subs($data){
         extract($data);
         if($cat_id && $post_id){
-            $this->load->model("Users");
+            $this->load->model('Categories','Cats');
+            $this->load->model('Users');
+            $this->load->model('Organizations','Orgs');
+            $org_id = $this->common->get_org_info_from_subdomain();
+            $org = $this->Orgs->get_org($org_id);
+            $cat = $this->Cats->get_cat($cat_id);
+            $post = $this->get_post($post_id);
+            $subject = $org->meta['site_title']->meta_value.': New item posted to '.$cat->title;
+            $message = $post->title.' has been added to '.$org->meta['site_title']->meta_value.' in the category '.$cat->title;
+            $subscribers = $this->Users->get_all_users_subscribed_to_cat($cat_id);
+            foreach($subscribers AS $subscriber){
+                $user = $this->Users->get_user($subscriber);
+                mail($user->email,$subject,$message);
+            }
         }
     }
 }
