@@ -136,6 +136,8 @@ class User extends CI_Controller {
 	function add()
 		{
 			$this->authenticate->check_auth('administrators',true);
+            
+            $this->load->model('Categories','Cats');
 			$data = array(
 				'page_title' => SITENAME.' Administrative Users',
 				'body_class' => 'add user-add',

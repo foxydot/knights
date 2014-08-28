@@ -67,7 +67,7 @@
             <label>Please notify me by email when new items are added to the checked categories:</label>
             <div>
                 <label class="checkbox level-1">
-                    <input type="checkbox" value="15" class="pull-left first-child last-child odd" id="check-all" name="check-all"> Check/Un-check All
+                    <input type="checkbox" value="15" class="pull-left first-child last-child odd" id="check-all" name="check-all"<?php print $is_edit?'':' CHECKED'; ?>> Check/Un-check All
                 </label>
             </div>
             <div class="columns-2">
@@ -94,7 +94,11 @@
 function display_cat($cats,$cat,$attr=array(),$level=0){
     extract($attr);
     $subscribe = isset($user->meta['subscribe']->meta_value)?unserialize($user->meta['subscribe']->meta_value):array();
-    $selected = $is_edit && in_array($cat->ID,$subscribe)?' CHECKED':'';
+    if($is_edit){
+        $selected = in_array($cat->ID,$subscribe)?' CHECKED':'';
+    } else {
+        $selected = ' CHECKED';
+    }
     if($cat->isparent){
         $display = '
         <label class="checkbox level-'.$level.'">

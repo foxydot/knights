@@ -116,7 +116,7 @@ $(document).ready(function($) {
             });
       }
     });
-    $('.user-edit #check-all').click(function(){
+    $('.user-edit #check-all,.user-add #check-all').click(function(){
         if($(this).is( ':checked' )){
             $('.category-check').prop('checked',true);
         } else {
