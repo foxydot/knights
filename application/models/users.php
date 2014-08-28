@@ -25,7 +25,7 @@ Class Users extends CI_Model {
 		$query = $this->db->get();
 		if($query->num_rows() > 0){
 			$result = $query->result();
-            ts_data($result);
+            ts_data($this->db->last_query());
 			$i=0;
 			foreach($result AS $row){
 				$useraccess = $this->authenticate->levelinfo($row->accesslevel);
