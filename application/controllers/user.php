@@ -38,12 +38,15 @@ class User extends CI_Controller {
 			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){
 			    $this->authenticate->check_auth('administrators',true);
             }
+            
+            $this->load->model('Categories','Cats');
             $the_user = $this->Users->get_user($ID);
 			$data = array(
 				'page_title' => SITENAME.' User '.$the_user->firstname. ' ' . $the_user->lastname,
 				'body_class' => 'edit user-edit',
 				'user' => $this->session->userdata,
 				'the_user' => $the_user,
+                'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
 				'access' => $this->authenticate->get_levels(),
 				'groups' => $this->Users->get_all_user_groups(),
 				'dashboard' => 'default/user/edit',
@@ -103,6 +106,9 @@ class User extends CI_Controller {
 				}	
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
+					    if(is_array($v)){
+                            $v = serialize($v);
+					    }
 						$meta_data = array(
 							'user_id' => $ID,
 							'org_id' => $org_id,
@@ -134,6 +140,7 @@ class User extends CI_Controller {
 				'page_title' => SITENAME.' Administrative Users',
 				'body_class' => 'add user-add',
 				'user' => $this->session->userdata,
+                'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
 				'access' => $this->authenticate->get_levels(),
 				'groups' => $this->Users->get_all_user_groups(),
 				'dashboard' => 'default/user/edit',
@@ -165,6 +172,9 @@ class User extends CI_Controller {
 				}		
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
+                        if(is_array($v)){
+                            $v = serialize($v);
+                        }
 						$meta_data = array(
 							'user_id' => $ID,
 							'org_id' => $org_id,

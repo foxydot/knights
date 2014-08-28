@@ -268,4 +268,10 @@ Class Posts extends CI_Model {
         print 'TRUE';
     }
 	
+    function notify_cat_subs($data){
+        extract($data);
+        if($cat_id && $post_id){
+            $this->load->model("Users");
+        }
+    }
 }

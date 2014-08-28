@@ -139,7 +139,7 @@ Class Users extends CI_Model {
 		$result = $query->result();
         if($result){
     		foreach($result AS $r){
-    			$metas[$r->meta_key] = $r;
+                $metas[$r->meta_key] = $r;
     		}
     		return $metas;
         }

@@ -103,6 +103,7 @@ class Post extends CI_Controller {
 			$post_id = $this->Posts->add_post($db_data);
 			foreach($this->input->post('cat') AS $cat_id){
 				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
+                $this->Posts->notify_cat_subs(array('post_id' => $post_id,'cat_id' => $cat_id));
 			}
 			if($attachment_url){
 				$db_data = array(

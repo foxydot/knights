@@ -1,3 +1,4 @@
+<?php //ts_data($the_user); ?>
 <div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'add-user','class'=>'smallform col-md-6 col-md-offset-3')); ?>
@@ -59,15 +60,48 @@
 		<div class="row">
 			<input class="col-md-12" name="meta[paypal]" id="paypal" type="text" placeholder="Your Paypal Address (the email you use to login to PayPal)"<?php print $is_edit && isset($the_user->meta['paypal']->meta_value)?'value="'.$the_user->meta['paypal']->meta_value.'"':''; ?> />
 		</div>
-		<div class="row">
-				<input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
-				<?php if($this->authenticate->check_auth('administrators')){ ?>
-					<input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
-				<?php } ?>
-		</div>
+        <div class="row">
+            <label>Subscribe to Categories</label>
+            <div class="columns-2">
+                <?php foreach($cats[0] AS $cat){ ?>
+                    <?php $attr = $is_edit?array('user'=>$the_user,'is_edit'=>$is_edit):array('is_edit'=>$is_edit); ?>
+                    <?php print display_cat($cats,$cat,$attr)?>
+                <?php }?>
+            </div>
+        </div>
+        <div class="row">
+                <input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
+                <?php if($this->authenticate->check_auth('administrators')){ ?>
+                    <input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
+                <?php } ?>
+        </div>
 		<?php
 		print form_fieldset_close();
 		print form_close();
 		?>
 	</div>
 </div>
+
+<?php 
+function display_cat($cats,$cat,$attr=array(),$level=0){
+    extract($attr);
+    $subscribe = isset($user->meta['subscribe']->meta_value)?unserialize($user->meta['subscribe']->meta_value):array();
+    $selected = $is_edit && in_array($cat->ID,$subscribe)?' CHECKED':'';
+    if($cat->isparent){
+        $display = '
+        <label class="checkbox level-'.$level.'">
+            '.$cat->title.'
+        </label>';
+    } else {
+        $display = '
+        <label class="checkbox level-'.$level.'">
+            <input type="checkbox" name="meta[subscribe]['.$cat->ID.']" id="meta-subscribe-'.$cat->ID.'" class="pull-left" value="'.$cat->ID.'"'.$selected.' /> '.$cat->title.'
+        </label>';
+    }
+    if(isset($cats[$cat->ID])){
+        foreach($cats[$cat->ID] AS $c){
+            $display .= display_cat($cats,$c,$attr,$level+1);
+        }
+    }
+    return $display;
+}?>
