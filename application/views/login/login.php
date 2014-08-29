@@ -5,6 +5,7 @@
 		print form_fieldset();
 		?>
 		<h1>Log In</h1>
+		<input name="redirect" id="redirect" type="hidden" value="<?php print $this->session->flashdata('redirect'); ?>" />
 		<input name="email" id="email" type="text" placeholder="Email" />
 		<input name="password" id="password" type="password" placeholder="Password" />
 		<div class="remember">

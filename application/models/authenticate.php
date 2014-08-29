@@ -143,7 +143,8 @@ Class Authenticate extends CI_Model {
 					}
 				} else {
 					if($redirect){
-						$this->session->set_userdata('msgarr',array('error' => INSUFFICIENT_PERMISSION_MSG));
+                        $this->session->set_userdata('msgarr',array('error' => INSUFFICIENT_PERMISSION_MSG));
+                        $this->session->set_flashdata('redirect',$_SERVER['REQUEST_URI']);
 						redirect('/login/denied/session');
 						return FALSE;  //user not allowed, redirect
 					} else {
@@ -153,6 +154,7 @@ Class Authenticate extends CI_Model {
 			} else {
 				if($redirect){
 					$this->session->set_userdata('msgarr',array('error' => REQUIRE_LOGIN_MSG));
+                    $this->session->set_flashdata('redirect',$_SERVER['REQUEST_URI']);
 					redirect('/login/verify/session');
 					return FALSE;  //user not logged in, redirect
 				} else {
@@ -162,6 +164,7 @@ Class Authenticate extends CI_Model {
 		} else {
 			if($redirect){
 				$this->session->set_userdata('msgarr',array('error' => PERMISSION_FUBAR_MSG));
+                $this->session->set_flashdata('redirect',$_SERVER['REQUEST_URI']);
 				redirect('/login/denied/session');
 				return FALSE;  //level doesn't exist, redirect
 			} else {

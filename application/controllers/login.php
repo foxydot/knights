@@ -50,7 +50,7 @@ class Login extends CI_Controller {
 					}
 					$login = true;
                     //TODO: Redirect to requested page.
-                    redirect('/');
+                    redirect($this->input->post('redirect'));
 				} else { // If validation fails.
 					$data = array(
 						'form' => 'login/login',
