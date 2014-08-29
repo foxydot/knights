@@ -276,10 +276,18 @@ class Login extends CI_Controller {
 				unset($db_data['studentfirstname']);
 				unset($db_data['studentlastname']);
 				$db_data['password'] = md5($db_data['password']);
+                $db_data['accesslevel'] = 0;
                 if($approved){
                     $db_data['accesslevel'] = 100;
                 }
 				$user_id = $this->Users->add_user($db_data);
+                $org_data = array(
+                    'user_id' => $user_id,
+                    'org_id' => $org_id, 
+                    'accesslevel' => $db_data['accesslevel'],
+                    'dateadded' => time(),
+                );
+                $this->Users->add_user_org($org_data);
 				$db_data = array(
 						'user_id' => $user_id,
 						'org_id' => $org_id,
@@ -287,7 +295,20 @@ class Login extends CI_Controller {
 						'meta_value' => serialize($student),
 				);
 				$this->Users->add_user_meta($db_data);
-
+                //get all the categories and auto subscribe new registrants to them
+                $this->load->model('Categories','Cats');
+                $cats = $this->Cats->get_cats();
+                foreach($cats AS $cat){
+                    $catids[] = $cat->ID;
+                }
+                $db_data = array(
+                        'user_id' => $user_id,
+                        'org_id' => $org_id,
+                        'meta_key' => 'subscribe',
+                        'meta_value' => serialize($catids),
+                );
+                $this->Users->add_user_meta($db_data);
+                //end subscription register
 				$this->load->model('Administration','Admin');
 				$this->Admin->notify_admins(array('subject'=>$subject,'message'=>$message));
 				$data['approved'] = $approved;
