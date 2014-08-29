@@ -49,6 +49,7 @@ class Login extends CI_Controller {
 						$this->authenticate->userdata_to_cookie();
 					}
 					$login = true;
+                    //TODO: Redirect to requested page.
                     redirect('/');
 				} else { // If validation fails.
 					$data = array(
