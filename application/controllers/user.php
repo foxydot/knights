@@ -33,8 +33,11 @@ class User extends CI_Controller {
         redirect('/user/edit/'.$ID);  
     }
 	
-	function edit($ID)
+	function edit($ID = false)
 		{
+		    if(!$ID){
+		        $ID = $this->session->userdata['ID'];
+		    }
 			if(!$this->common->is_author($this->session->userdata['ID'],$ID)){
 			    $this->authenticate->check_auth('administrators',true);
             }

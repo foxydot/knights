@@ -278,12 +278,38 @@ Class Posts extends CI_Model {
             $org = $this->Orgs->get_org($org_id);
             $cat = $this->Cats->get_cat($cat_id);
             $post = $this->get_post($post_id);
-            $subject = $org->meta['site_title']->meta_value.': New item posted to '.$cat->title;
-            $message = $post->title.' has been added to '.$org->meta['site_title']->meta_value.' in the category '.$cat->title;
+                        
+            $message_subject = $org->meta['site_title']->meta_value.': New item posted to '.$cat->title;
+            $message_plaintext = $post->title.' has been added to '.$org->meta['site_title']->meta_value.' in the category '.$cat->title.' View this post at http://'.$_SERVER['SERVER_NAME'].'/post/view/'.$post_id.'
+            
+            You received this message because you are subscribed to updates for this category on '.$org->meta['site_title']->meta_value.'. If you no longer wish to receive updates, please update your user settings at http://'.$_SERVER['SERVER_NAME'].'/user/edit.';
+            $message_html = '<p><a href="http://'.$_SERVER['SERVER_NAME'].'/post/view/'.$post_id.'">'.$post->title.'</a> has been added to '.$org->meta['site_title']->meta_value.' in the category '.$cat->title.'.</p>
+            
+            <p><em>You received this message because you are subscribed to updates for this category on '.$org->meta['site_title']->meta_value.'. If you no longer wish to receive updates, please update your <a href="http://'.$_SERVER['SERVER_NAME'].'/user/edit">user settings</a></em></p>';
+            
+            //send email
+            $this->load->library('email');
+            
+            $config['mailtype'] = 'html';
+            $this->email->initialize($config);
+            
+            $this->email->from('knights@communitylist.us', $org->meta['site_title']->meta_value);
+            $this->email->subject($message_subject);
+            $this->email->message($message_html);
+            $this->email->set_alt_message($message_plaintext);
+        
             $subscribers = $this->Users->get_all_users_subscribed_to_cat($cat_id);
             foreach($subscribers AS $subscriber){
                 $user = $this->Users->get_user($subscriber);
-                mail($user->email,$subject,$message);
+                
+                $this->email->initialize($config);
+            
+                $this->email->to($user->email);
+                $this->email->from('knights@communitylist.us', $org->meta['site_title']->meta_value);
+                $this->email->subject($message_subject);
+                $this->email->message($message_html);
+                $this->email->set_alt_message($message_plaintext);
+                $this->email->send();
             }
         }
     }
