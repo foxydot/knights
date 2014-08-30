@@ -61,7 +61,12 @@ class User extends CI_Controller {
 			    $prev_user_level = $data['the_user']->accesslevel;
 				$db_data = $this->input->post();
 				$user_meta = $db_data['meta'];
+                //poor fix for empty categories
+                if(!isset($user_meta['subscribe'])){
+                    $user_meta['subscribe'] = array();
+                }
 				unset($db_data['meta']);
+                unset($db_data['check-all']);
 				if(!empty($_FILES['userfile']['name'])){
 					$uploads_dir = SITEPATH.'uploads/';
 					$uploads_url = site_url('uploads/');
@@ -164,6 +169,7 @@ class User extends CI_Controller {
                     unset($db_data['user_id']);
                     unset($db_data['submit_btn']);
 					unset($db_data['passwordtest']);
+                    unset($db_data['check-all']);
 					$db_data['password'] = md5($db_data['password']);
 					$ID = $this->Users->add_user($db_data);
                     

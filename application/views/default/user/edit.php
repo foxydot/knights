@@ -67,7 +67,7 @@
             <label>Please notify me by email when new items are added to the checked categories:</label>
             <div>
                 <label class="checkbox level-1">
-                    <input type="checkbox" value="15" class="pull-left first-child last-child odd" id="check-all" name="check-all"<?php print $is_edit?'':' CHECKED'; ?>> Check/Un-check All
+                    <input type="checkbox" value="" class="pull-left first-child last-child odd" id="check-all" name="check-all"<?php print $is_edit?'':' CHECKED'; ?>> Check/Un-check All
                 </label>
             </div>
             <div class="columns-2">
