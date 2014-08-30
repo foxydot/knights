@@ -54,10 +54,6 @@
                 <input name="author_id" id="author_id" type="hidden" value="<?php print $is_edit?$post->author_id:$user['ID']; ?>" />
                 <textarea class="col-md-12 tinymce" name="content" id="content" placeholder="Post Content"><?php print $is_edit?$post->content:''; ?></textarea>
         </div>
-        <div class="row">
-                <label>Search Terms (separate with commas)</label>
-                <textarea class="col-md-12" name="tags" id="tags" placeholder="Search Terms (separate with commas)"><?php print $is_edit?$post->tags:''; ?></textarea>
-        </div>
 		<div class="row">
 			<label>Categories</label>
         <div class="alert alert-info">
