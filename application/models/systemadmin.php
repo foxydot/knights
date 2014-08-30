@@ -1023,6 +1023,74 @@ Class Systemadmin extends CI_Model {
                         }   
                 }
                 $this->set_version('0.7');
+            case '0.7':
+                //add tagging
+                /*
+                 * Create tag table
+                 */
+                $fields = array(
+                        'ID' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => '11',
+                                'auto_increment' => TRUE,
+                        ),
+                        'title' => array(
+                                'type' => 'VARCHAR',
+                                'constraint' => '255',
+                                'null' => FALSE,
+                        ),
+                        'slug' => array(
+                                'type' => 'VARCHAR',
+                                'constraint' => '255',
+                                'null' => FALSE,
+                        ),
+                        'description' => array(
+                                'type' => 'TEXT'
+                        ),
+                        'dateadded' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'dateremoved' => array(
+                                'type' => 'BIGINT',
+                                'constraint' => 12,
+                                'null' => FALSE,
+                        ),
+                        'notes' => array(
+                                'type' => 'TEXT'
+                        )
+                );
+                $this->dbforge->add_field($fields);
+                $this->dbforge->add_key('ID',TRUE);
+                $this->dbforge->create_table('tag',TRUE);
+                /*
+                 * Create post2tag table
+                 */
+                $fields = array(
+                    'ID' => array(
+                        'type' => 'BIGINT',
+                        'constraint' => '11',
+                        'auto_increment' => TRUE,
+                    ),
+                    'post_id' => array(
+                        'type' => 'BIGINT',
+                        'constraint' => '11',
+                        'null' => FALSE,
+                    ),
+                    'tag_id' => array(
+                        'type' => 'BIGINT',
+                        'constraint' => '11',
+                        'null' => FALSE,
+                    ),
+                    'notes' => array(
+                        'type' => 'TEXT'
+                    )
+                );
+                $this->dbforge->add_field($fields);
+                $this->dbforge->add_key('ID',TRUE);
+                $this->dbforge->create_table('post2tag',TRUE);
+                $this->set_version('0.8');
 			default:
 				//redirect to home page
 				$this->load->helper('url');
