@@ -62,7 +62,8 @@ class Post extends CI_Controller {
 
 	function add(){
 		global $user;
-		$this->load->model('Categories','Cats');
+        $this->load->model('Categories','Cats');
+        $this->load->model('Tags');
 		$this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
 		$the_user = $this->Users->get_user($this->session->userdata['ID']);
@@ -90,7 +91,10 @@ class Post extends CI_Controller {
 			}
 
 			$db_data = $this->input->post();
-			unset($db_data['cat']);
+            $tags = explode(',',$db_data['tags']);
+            array_walk($tags, create_function('&$val', '$val = trim($val);')); 
+            unset($db_data['tags']);
+            unset($db_data['cat']);
 			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));
 			$attachment_url = FALSE;
 			if(!empty($_FILES['attachment_url']['name'])){
@@ -101,7 +105,15 @@ class Post extends CI_Controller {
 			unset($db_data['org_id']);
 			unset($db_data['attachment_url']);
 			$post_id = $this->Posts->add_post($db_data);
-			foreach($this->input->post('cat') AS $cat_id){
+            foreach ($tags as $key => $value) {
+                $tag = $this->Tags->get_tag($value);
+                $tag_id = $tag->ID;
+                if(!$tag_id){
+                    $tag_id = $this->Tags->add_tag($value);
+                }
+                $this->Tags->post_to_tag(array('post_id' => $post_id,'tag_id' => $tag_id));
+            }
+            foreach($this->input->post('cat') AS $cat_id){
 				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
                 $this->Posts->notify_cat_subs(array('post_id' => $post_id,'cat_id' => $cat_id));
 			}

@@ -109,9 +109,11 @@ class User extends CI_Controller {
 					unset($db_data['submit_btn']);
 					unset($db_data['password']);
 					unset($db_data['passwordtest']);
-					
-					$this->Users->edit_user($ID,$db_data);
 				}	
+                $this->Users->edit_user($ID,$db_data);
+                $org_db_data['accesslevel'] = $db_data['accesslevel'];
+                $this->Users->edit_user_org($ID,$org_db_data);
+                
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
 					    if(is_array($v)){
