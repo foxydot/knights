@@ -1,6 +1,6 @@
     <div class="container-fluid form">
 	<div class="row">
-        
+ 
 		<?php print form_open_multipart($action,array('id'=>'post','class'=>'smallform col-md-6 col-md-offset-3')); ?>
 		<?php if($msg){ 
 		    foreach($msg AS $m) { ?>
@@ -56,7 +56,7 @@
         </div>
         <div class="row">
                 <label>Search Terms (separate with commas)</label>
-                <textarea class="col-md-12" name="tags" id="tags" placeholder="Search Terms (separate with commas)"><?php print $is_edit?$post->tags:''; ?></textarea>
+                <textarea class="col-md-12" name="tags" id="tags" placeholder="Search Terms (separate with commas)"><?php print $is_edit?$tags:''; ?></textarea>
         </div>
 		<div class="row">
 			<label>Categories</label>

@@ -74,6 +74,7 @@ class Post extends CI_Controller {
 				'body_class' => 'add post-add',
 				'user' => $this->session->userdata,
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
+				'tags' => '',
 				'types' => unserialize($the_types->sysinfo_value),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/add/',
@@ -107,11 +108,12 @@ class Post extends CI_Controller {
 			$post_id = $this->Posts->add_post($db_data);
             foreach ($tags as $key => $value) {
                 $tag = $this->Tags->get_tag($value);
-                $tag_id = $tag->ID;
-                if(!$tag_id){
-                    $tag_id = $this->Tags->add_tag($value);
+                if($tag){
+                    $tag_id = $tag->ID;
+                }else{
+                    $tag_id = $this->Tags->add_tag(array('title' => $value));
                 }
-                $this->Tags->post_to_tag(array('post_id' => $post_id,'tag_id' => $tag_id));
+                $this->Tags->post_to_tag(array('post_id' => $ID,'tag_id' => $tag_id));
             }
             foreach($this->input->post('cat') AS $cat_id){
 				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
@@ -152,7 +154,8 @@ class Post extends CI_Controller {
 
 	function edit($ID){
 		$this->load->model('Categories','Cats');
-		$this->load->model('Users');
+        $this->load->model('Tags');
+        $this->load->model('Users');
 		$this->load->model('Organizations','Orgs');
         $the_types = $this->common->get_sysadmin_item('post_types',TRUE);
         
@@ -162,6 +165,7 @@ class Post extends CI_Controller {
 				'user' => $this->session->userdata,
 				'post' => $this->Posts->get_post($ID),
 				'cats' => $this->Cats->group_cats_by_parent($this->Cats->get_cats()),
+				'tags' => $this->Tags->tags_to_list($this->Tags->get_post_tags($ID)),
                 'types' => unserialize($the_types->sysinfo_value),
 				'dashboard' => 'default/post/edit',
 				'action' => 'post/edit/'.$ID,
@@ -173,6 +177,9 @@ class Post extends CI_Controller {
         }
 		if($this->input->post()){
 			$db_data = $this->input->post();
+            $tags = explode(',',$db_data['tags']);
+            array_walk($tags, create_function('&$val', '$val = trim($val);')); 
+            unset($db_data['tags']);
 			unset($db_data['cat']);
 			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));
 			$attachment_url = FALSE;
@@ -184,6 +191,16 @@ class Post extends CI_Controller {
 			unset($db_data['org_id']);
 			unset($db_data['attachment_url']);
 			$this->Posts->edit_post($db_data);
+            $this->Tags->clear_post_to_tags($db_data['ID']);
+            foreach ($tags as $key => $value) {
+                $tag = $this->Tags->get_tag($value);
+                if($tag){
+                    $tag_id = $tag->ID;
+                }else{
+                    $tag_id = $this->Tags->add_tag(array('title' => $value));
+                }
+                $this->Tags->post_to_tag(array('post_id' => $ID,'tag_id' => $tag_id));
+            }
 			$this->Posts->clear_post_to_cats($db_data['ID']);
 			if($this->input->post('cat')){
 				foreach($this->input->post('cat') AS $cat_id){
@@ -221,7 +238,8 @@ class Post extends CI_Controller {
 
 	function delete($ID){
 		$this->load->model('Categories','Cats');
-		$this->load->model('Users');
+        $this->load->model('Tags');
+        $this->load->model('Users');
         $this->load->model('Organizations','Orgs');
         
         $post = $this->Posts->get_post($ID);
@@ -250,7 +268,8 @@ class Post extends CI_Controller {
 			unset($db_data['attachment_url']);
 			$db_data['dateremoved'] = time();
 			$this->Posts->edit_post($db_data);
-			$this->Posts->clear_post_to_cats($db_data['ID']);
+            $this->Posts->clear_post_to_cats($db_data['ID']);
+            $this->Tags->clear_post_to_tags($db_data['ID']);
 			if(stripos($post->type,'product')!==FALSE){
 			    $this->load->model('Invoices');
                 $this->Invoices->create_invoice($post);

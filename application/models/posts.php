@@ -100,7 +100,7 @@ Class Posts extends CI_Model {
 			$params
 		);
 		extract($params);
-		$this->db->select('*, post.ID as post_id,post.dateadded as dateadded');
+		$this->db->select('*, post.ID as post_id,post.title as title,post.dateadded as dateadded');
 		if($cat_id){
 			$this->db->from('post2cat');
 			$this->db->join('post','post.ID=post2cat.post_id');
@@ -116,8 +116,12 @@ Class Posts extends CI_Model {
 			$this->db->having('post.dateremoved <=',0);
 		}
         if(isset($search_terms)){
+            $this->db->join('post2tag','post.ID=post2tag.post_id');
+            $this->db->join('tag','tag.ID=post2tag.tag_id');
+            
             $this->db->like('post.title',$search_terms);
             $this->db->or_like('post.content',$search_terms);
+            $this->db->or_like('tag.title',$search_terms);
         }
 		$query = $this->db->get();
         //ts_data($this->db->last_query());

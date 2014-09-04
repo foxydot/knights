@@ -13,7 +13,7 @@ Class Tags extends CI_Model {
         
     function get_tags($orgs = array(),$archive = FALSE){
         $orgs = $this->Orgs->make_org_array($orgs);
-        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded,parent_tag_id');
+        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded');
         $this->db->from('tag');
         $this->db->order_by("tag.title", "asc"); 
         if(!$archive){
@@ -25,22 +25,29 @@ Class Tags extends CI_Model {
     }
      
     function get_tag($tag_title){
-        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded,parent_tag_id');
+        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded');
         $this->db->from('tag');
         $this->db->where('tag.title',$tag_title);
         $query = $this->db->get();
         $result = $query->result();
-        return $result[0];
+        if(isset($result[0])){
+            return $result[0];
+        } else {
+            return false;
+        }
     }
     
     function get_tag_by_id($tag_id){
-        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded,parent_tag_id');
+        $this->db->select('tag.ID AS ID,title,slug,description,tag.dateadded AS dateadded');
         $this->db->from('tag');
         $this->db->where('tag.ID',$tag_id);
         $query = $this->db->get();
         $result = $query->result();
-        return $result[0];
-    }
+        if(isset($result[0])){
+            return $result[0];
+        } else {
+            return false;
+        }    }
     
     function add_tag($db_data){
         $slug = $this->common->increment_slug(post_slug($db_data['title']),'tag');
@@ -93,17 +100,20 @@ Class Tags extends CI_Model {
         $this->db->delete('post2tag');
     }
 
-     
-     /**
-      * TODO: Maybe alter this to provide a breadcrumb like feature for posting if we create individual listing pages for tags
-      * 
-      */
+    function tags_to_list($tags){
+        $tagarray = array();
+        foreach($tags AS $tag){
+            $tagarray[] = $tag->title;
+        }
+        if(count($tagarray)>0){
+            return implode(', ',$tagarray);
+        } else {
+            return false;
+        }
+    }
+
      function create_tagpath($tag,$path=array()){
         $path[] = $tag->title;
-        if($tag->parent_tag_id != 0){
-            $parent = $this->get_tag($tag->parent_tag_id);
-            $path = $this->create_tagpath($parent,$path);
-        } 
         return $path;
      }
 }
