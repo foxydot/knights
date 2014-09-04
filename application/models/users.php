@@ -190,7 +190,7 @@ Class Users extends CI_Model {
      
      function delete_user_orgs($ID){
         $this->db->where('user_id',$ID);
-        $this->db->update(array('dateremoved'=>time()));
+        $this->db->update('user2org',array('dateremoved'=>time()));
      }
      
      function get_all_users_subscribed_to_cat($cat_id){

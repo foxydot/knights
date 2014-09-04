@@ -3,7 +3,7 @@
  * Class for installation and updates
  */
 Class Systemadmin extends CI_Model {
-	public $db_version = '0.7';
+	public $db_version = '0.8';
 	function __construct()
 	    {
 	        // Call the Model constructor
