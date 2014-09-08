@@ -257,7 +257,8 @@ class Post extends CI_Controller {
 		);
 		if($this->input->post()){
 			$db_data = $this->input->post();
-			unset($db_data['cat']);
+            unset($db_data['cat']);
+            unset($db_data['tags']);
 			$db_data['org'] = $this->Orgs->get_org($this->input->post('org_id'));
 			$attachment_url = FALSE;
 			if(!empty($_FILES['attachment_url']['name'])){
