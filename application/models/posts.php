@@ -127,8 +127,9 @@ Class Posts extends CI_Model {
             $this->db->or_like('tag.title',$search_terms);
         }
 		$query = $this->db->get();
-        ts_data($this->db->last_query());
+        //ts_data($this->db->last_query());
 		$result = $query->result();
+        ts_data($result);
 		foreach($result AS $k=>$v){
 			$result[$k]->attachments = $this->get_attachments($v->post_id);
 		}
