@@ -28,9 +28,10 @@
 			print display_post($post,$user);
 		} //end cats
     } else {
+        $noposts = $search_terms?'There are no posts matching "'.$search_terms.'" on '.SITENAME:'You have no posts on '.SITENAME;
         print '<div class="row">
             <div class="col-md-12">
-                You have no posts on '.SITENAME.'.
+                '.$noposts.'
             </div>
         </div>';
     }	 ?>

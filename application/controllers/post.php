@@ -48,6 +48,7 @@ class Post extends CI_Controller {
                 'body_class' => 'list dashboard',
                 'dashboard' => 'default/post/list',
                 'user' => $this->session->userdata,
+                'search_terms' => $this->input->post('search_terms'),
                 'posts' => $this->Posts->get_search_posts(array('orgs' => 'all','search_terms' => $this->input->post('search_terms'))),
                 'archive' => FALSE,
             );
@@ -113,7 +114,7 @@ class Post extends CI_Controller {
                 }else{
                     $tag_id = $this->Tags->add_tag(array('title' => $value));
                 }
-                $this->Tags->post_to_tag(array('post_id' => $ID,'tag_id' => $tag_id));
+                $this->Tags->post_to_tag(array('post_id' => $post_id,'tag_id' => $tag_id));
             }
             foreach($this->input->post('cat') AS $cat_id){
 				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));

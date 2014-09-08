@@ -116,15 +116,18 @@ Class Posts extends CI_Model {
 			$this->db->having('post.dateremoved <=',0);
 		}
         if(isset($search_terms)){
+            $this->db->join('post2cat','post.ID=post2cat.post_id');
+            $this->db->join('category','category.ID=post2cat.cat_id');
             $this->db->join('post2tag','post.ID=post2tag.post_id');
             $this->db->join('tag','tag.ID=post2tag.tag_id');
             
             $this->db->like('post.title',$search_terms);
             $this->db->or_like('post.content',$search_terms);
+            $this->db->or_like('category.title',$search_terms);
             $this->db->or_like('tag.title',$search_terms);
         }
 		$query = $this->db->get();
-        //ts_data($this->db->last_query());
+        ts_data($this->db->last_query());
 		$result = $query->result();
 		foreach($result AS $k=>$v){
 			$result[$k]->attachments = $this->get_attachments($v->post_id);
