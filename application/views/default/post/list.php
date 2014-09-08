@@ -47,9 +47,11 @@
 	setlocale(LC_MONETARY, 'en_US');
 		$CI =& get_instance();
 		$postcats = '';
-		foreach($post->categories AS $cat){
-			$postcats .= '<li>'.$cat->catpath.'</li>';
-		}
+        if(isset($post->categories)){
+    		foreach($post->categories AS $cat){
+    			$postcats .= '<li>'.$cat->catpath.'</li>';
+    		}
+        }
 				$display .= '
 		<div class="stripe post clicky row" href="/post/view/'.$post->post_id.'">
 			<div class="col-md-1 id">

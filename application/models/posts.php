@@ -100,7 +100,7 @@ Class Posts extends CI_Model {
 			$params
 		);
 		extract($params);
-		$this->db->select('*, post.ID as ID,post.ID as post_id,post.title as title,post.dateadded as dateadded');
+		$this->db->select('post.ID as post_id,post.title as title,post.type as type,post.author_id as auther_id,post.cost as cost,post.content as content,post.lastedit as lastedit,post.dateadded as dateadded,post.datepublished as datepublished,post.dateremoved as dateremoved,post.notes as notes,user.email as email,user.firstname as firstname, user.lastname as lastname');
 		if($cat_id){
 			$this->db->from('post2cat');
 			$this->db->join('post','post.ID=post2cat.post_id');
@@ -116,10 +116,10 @@ Class Posts extends CI_Model {
 			$this->db->having('post.dateremoved <=',0);
 		}
         if(isset($search_terms)){
-            $this->db->join('post2cat','post.ID=post2cat.post_id');
-            $this->db->join('category','category.ID=post2cat.cat_id');
-            $this->db->join('post2tag','post.ID=post2tag.post_id');
-            $this->db->join('tag','tag.ID=post2tag.tag_id');
+            $this->db->join('post2cat','post.ID=post2cat.post_id','left');
+            $this->db->join('category','category.ID=post2cat.cat_id','left');
+            $this->db->join('post2tag','post.ID=post2tag.post_id','left');
+            $this->db->join('tag','tag.ID=post2tag.tag_id','left');
             
             $this->db->like('post.title',$search_terms);
             $this->db->or_like('post.content',$search_terms);
@@ -127,10 +127,14 @@ Class Posts extends CI_Model {
             $this->db->or_like('tag.title',$search_terms);
         }
 		$query = $this->db->get();
-        //ts_data($this->db->last_query());
 		$result = $query->result();
-        ts_data($result);
-		foreach($result AS $k=>$v){
+        $tested = array();
+        foreach($result AS $k=>$v){
+            if(in_array($v->post_id, $tested)){
+                unset($result[$k]);
+                continue;
+            }
+            $tested[] = $v->post_id;
 			$result[$k]->attachments = $this->get_attachments($v->post_id);
 		}
 		return $result;
