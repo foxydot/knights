@@ -221,6 +221,9 @@ class User extends CI_Controller {
 				$this->Users->delete_user_orgs($ID);
 				if(count($user_meta>0)){
 					foreach($user_meta AS $k=>$v){
+					    if(is_array($v)){
+                            $v = serialize($v);
+                        }
 						$meta_data = array(
 								'user_id' => $ID,
 								'org_id' => $org_id,
