@@ -68,10 +68,11 @@ Class Common extends CI_Model {
             $site_title = 'Community List';
         }
         $query = $this->db->get_where('org_meta',array('meta_key' => 'logo_url','org_id' => $org_id),1);
-        $result = $query->result();
-        $site_logo = $result[0]->meta_value;
-        if($site_logo == ''){
-            $site_logo = ADMIN_THEME_URL.'/img/logo.png';
+        if($result = $query->result()){
+            $site_logo = $result[0]->meta_value;
+            if($site_logo == ''){
+                $site_logo = ADMIN_THEME_URL.'/img/logo.png';
+            }
         }
         if(!defined('SITENAME')){
             define('SITENAME', $site_title);

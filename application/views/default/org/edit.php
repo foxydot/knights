@@ -4,15 +4,15 @@
 		<h1><?php print $is_edit?'Edit':'New'; ?> Organization Information</h1>
 		<!-- Nav tabs -->
         <ul class="nav nav-pills">
-          <li><a href="#info" data-toggle="tab">Basic Info</a></li>
-          <li class="active"><a href="#appearance" data-toggle="tab">Appearance</a></li>
+          <li class="active"><a href="#info" data-toggle="tab">Basic Info</a></li>
+          <li><a href="#appearance" data-toggle="tab">Appearance</a></li>
           <li><a href="#payment" data-toggle="tab">Payment Info</a></li>
           <li><a href="#advanced" data-toggle="tab">Advanced</a></li>
         </ul>
         
         <!-- Tab panes -->
         <div class="tab-content">
-          <div class="tab-pane" id="info">
+          <div class="tab-pane active" id="info">
               <?php print form_fieldset(); ?>
                 <div class="row">
                     <input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$org->ID.'"':''; ?> />
@@ -31,7 +31,7 @@
                 print form_fieldset_close();
                 ?>
           </div>
-          <div class="tab-pane active" id="appearance">
+          <div class="tab-pane" id="appearance">
               <?php print form_fieldset(); ?>
                 <div class="row">
                     <label>Site Title</label>

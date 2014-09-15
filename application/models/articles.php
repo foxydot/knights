@@ -13,6 +13,7 @@ Class Articles extends CI_Model {
 	    }
 	
 	function get_articles($orgs = array(),$archive = FALSE){
+        global $org_id;
 		$orgs = $this->Orgs->make_org_array($orgs);
 		$this->db->select('article.ID AS ID,title,slug,excerpt,content,pageorder,article.dateadded AS dateadded,art2org.parent_art_id AS parent_art_id');
 		$this->db->from('article');
@@ -21,15 +22,18 @@ Class Articles extends CI_Model {
 		if(!$archive){
 			$this->db->where('article.dateremoved <=',0);
 		}
+        $this->db->where('art2org.org_id',$org_id);
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result;
 	}
 	function get_article($article_id){
+        global $org_id;
 		$this->db->select('article.ID AS ID,title,slug,excerpt,content,pageorder,article.dateadded AS dateadded,art2org.parent_art_id AS parent_art_id');
 		$this->db->from('article');
 		$this->db->join('art2org','article.ID=art2org.art_id','left outer');
 		$this->db->where('article.ID',$article_id);
+        $this->db->where('art2org.org_id',$org_id);
 		$query = $this->db->get();
 		$result = $query->result();
 		return $result[0];
