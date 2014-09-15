@@ -1,4 +1,25 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+if(!function_exists('get_from_theme')){
+    function get_from_theme($path,$url=true){
+        //TODO: make this work for real
+        global $org_id;
+        if(file_exists(SITEPATH.'/custom_theme_name/'.$path)){
+            if($url){
+                $ret = custom_theme_url.'/'.$path;
+            } else {
+                $ret = SITEPATH.'/custom_theme_name/'.$path;
+            }
+        } else {
+            if($url){
+                $ret = default_theme_url.'default/'.$path;
+            } else {
+                $ret = SITEPATH.'/default_theme_name/'.$path;
+            }
+            
+        }
+    }
+}
 /*
  * Add page specific CSS by passing a string or array.
 */
@@ -76,4 +97,15 @@ if(!function_exists('page_jquery'))
 			return false;
 		}
 	}
+}
+
+if(!function_exists('get_cheatsheet')){
+    function get_cheatsheet(){
+        ob_start();
+        //TODO: Update to use get_from_theme();
+        require_once(SITEPATH.DEFAULT_THEME_URL.'/textfile/cheatsheet.php'); 
+        $contents = ob_get_contents();
+        ob_end_clean();
+        return $contents;
+    }
 }

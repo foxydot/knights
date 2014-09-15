@@ -221,6 +221,8 @@ form.popupform textarea {
 label {
   font-weight: bold;
   margin-top: 0.5em;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .columns-2 label {
   font-weight: normal;
@@ -271,4 +273,10 @@ header:after {
   -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   text-shadow: 0 0 0 #000 !important;
+}
+.cheatsheet {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
 }

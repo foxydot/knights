@@ -31,7 +31,7 @@ class Invoices extends CI_Model {
         //prep email
         switch($invoice->type){
             case 'product':
-                require_once(SITEPATH.THEME_URL.'/email/product-invoice.php');
+                require_once(SITEPATH.THEME_URL.'/textfile/product-invoice.php');
                 break;
             case 'service':
             case 'student-service':
@@ -42,7 +42,7 @@ class Invoices extends CI_Model {
             case 'businesses-student':
             case 'businesses-personal':
             case 'businesses-professional':
-                require_once(SITEPATH.THEME_URL.'/email/service-invoice.php');
+                require_once(SITEPATH.THEME_URL.'/textfile/service-invoice.php');
                 break;
         }
         setlocale(LC_MONETARY, 'en_US');

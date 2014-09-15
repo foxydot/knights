@@ -101,6 +101,13 @@ $(document).ready(function($) {
 			$('#check_info').slideDown();
             $('#buyform').attr('action',$('#check_action').val());
 	});
+    $('.cheatsheet-trigger').click(function(){
+        if($('.cheatsheet').hasClass('hidden')){
+            $('.cheatsheet').slideDown().removeClass('hidden');
+        } else {
+            $('.cheatsheet').slideUp().addClass('hidden');
+        }
+    });
     
     var submitForReal = false;
     $("buyform").submit(function (event) {

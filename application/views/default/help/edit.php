@@ -1,11 +1,16 @@
 <div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'article','class'=>'smallform col-md-6 col-md-offset-3')); ?>
-		<h1><?php print $is_edit?'Edit':'New'; ?> Help Article</h1>
+		<h1><?php print $is_edit?'Edit':'New'; ?> Help Article<i class="fa fa-question-circle pull-right cheatsheet-trigger"></i></h1>
+		<div class="row cheatsheet hidden">
+		    <?php print get_cheatsheet(); ?>
+		</div>
 		<?php print form_fieldset(); ?>
 		<div class="row">
 			<input name="ID" id="ID" type="hidden" <?php print $is_edit?'value="'.$article->ID.'"':''; ?> />
 			<input name="parent_art_id" id="parent_art_id" type="hidden" <?php print $is_edit?'value="'.$article->parent_art_id.'"':'value="0"'; ?> />
+		  <label class="col-md-9">Title</label>
+		  <label class="col-md-3">Page Order</label>
 			<input class="col-md-9" name="title" id="title" type="text" title="Title" placeholder="Title"<?php print $is_edit?'value="'.$article->title.'"':''; ?> />
             <input class="col-md-3" name="pageorder" id="pageorder" type="text" title="Page Order" placeholder="Page Order"<?php print $is_edit?'value="'.$article->pageorder.'"':''; ?> />
 		</div>
