@@ -23,7 +23,7 @@
                ],
             
             menubar : false,
-            toolbar: "undo redo | styleselect | bold italic forecolor | bullist numlist outdent indent | link",
+            toolbar: "code | undo redo | styleselect | bold italic forecolor | bullist numlist outdent indent | link",
 
 			// General options
 			theme : "modern",

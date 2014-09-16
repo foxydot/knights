@@ -7,6 +7,7 @@
           <li class="active"><a href="#info" data-toggle="tab">Basic Info</a></li>
           <li><a href="#appearance" data-toggle="tab">Appearance</a></li>
           <li><a href="#payment" data-toggle="tab">Payment Info</a></li>
+          <li><a href="#emails" data-toggle="tab">Emails</a></li>
           <li><a href="#advanced" data-toggle="tab">Advanced</a></li>
         </ul>
         
@@ -40,6 +41,29 @@
                 <div class="row">
                     <label>Subdomain</label>
                     <input class="col-md-12" name="meta[subdomain]" id="subdomain" type="text" title="Subdomain" placeholder="Subdomain"<?php print $is_edit && isset($org->meta['subdomain']->meta_value)?'value="'.$org->meta['subdomain']->meta_value.'"':''; ?> />
+                </div>
+                <div class="row">
+                    <label>Theme</label>
+                    <select id="theme" name="meta[theme]">
+                        <option value="default"<?php print isset($org->meta['theme']) && $org->meta['theme']->meta_value=='default'?' SELECTED':'' ?>>default</option>
+                        <?php
+                            $themedir = SITEPATH.'/assets/themes';
+                            if ($handle = opendir($themedir)) {
+                                while (false !== ($entry = readdir($handle))) {
+                                    if(!($entry == '.' || $entry == '..' || $entry == 'default')){
+                                        if(is_dir($themedir.'/'.$entry)){
+                                            $selected = isset($org->meta['theme']) && $org->meta['theme']->meta_value==$entry?' SELECTED':'';
+                                            print '<option value="'.$entry.'"'.$selected.'>'.$entry.'</option>';
+                                            
+                                        }
+                                    }
+                                }
+                                closedir($handle);
+                            } else {
+                                print 'NOPE!';
+                            }
+                        ?>
+                    </select>
                 </div>
                 <div class="row logo-upload"<?php print isset($org->meta['logo_url'])?' style="display:none;"':''; ?>>
                     <label>Upload Logo</label>
@@ -149,6 +173,32 @@
                     <textarea class="col-md-12 tinymce" name="meta[address]" id="meta[address]" placeholder="Postal address"><?php print $is_edit?$org->meta['address']->meta_value:''; ?></textarea>
                 </div>
                 <?php print form_fieldset_close(); ?>
+          </div>
+          <div class="tab-pane" id="emails">
+              <?php 
+                if($is_edit){$email = unserialize($org->meta['email']->meta_value);}
+                $email_types = array(
+                    'product-invoice' => 'Product Invoice',
+                    'service-invoice' => 'Service Invoice',
+                );
+                print form_fieldset();
+                foreach($email_types AS $key => $value){
+              ?>
+                <div class="row">
+                    <h3><?php print $value; ?></h3>
+                    <input class="col-md-12" name="meta[email][<?php print $key; ?>][subject]" id="meta-email-<?php print $key; ?>-subject" type="text" placeholder="Subject"<?php print $is_edit?'value="'.$email[$key]['subject'].'"':''; ?> />
+                    <label>HTML Email</label>
+                    <textarea class="col-md-12 tinymce" name="meta[email][<?php print $key; ?>][html]" id="meta-email-<?php print $key; ?>-html" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['html']:''; ?></textarea>
+                    <label>Plain Text Email</label>
+                    <textarea class="col-md-12" name="meta[email][<?php print $key; ?>][text]" id="meta-email-<?php print $key; ?>-text" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['text']:''; ?></textarea>
+                </div>
+                <div class="row">
+                    <hr />
+                </div>
+                <?php 
+                } //end foreach
+                print form_fieldset_close(); 
+                ?>
           </div>
           <div class="tab-pane" id="advanced">
                 <?php print form_fieldset(); ?>
