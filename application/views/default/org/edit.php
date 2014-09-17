@@ -183,14 +183,18 @@
                 );
                 print form_fieldset();
                 foreach($email_types AS $key => $value){
+                    //TODO: Add javascript to make the full email panel show/hide on default use
               ?>
                 <div class="row">
-                    <h3><?php print $value; ?></h3>
-                    <input class="col-md-12" name="meta[email][<?php print $key; ?>][subject]" id="meta-email-<?php print $key; ?>-subject" type="text" placeholder="Subject"<?php print $is_edit?'value="'.$email[$key]['subject'].'"':''; ?> />
-                    <label>HTML Email</label>
-                    <textarea class="col-md-12 tinymce" name="meta[email][<?php print $key; ?>][html]" id="meta-email-<?php print $key; ?>-html" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['html']:''; ?></textarea>
-                    <label>Plain Text Email</label>
-                    <textarea class="col-md-12" name="meta[email][<?php print $key; ?>][text]" id="meta-email-<?php print $key; ?>-text" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['text']:''; ?></textarea>
+                    <h3 class="col-md-6"><?php print $value; ?></h3>
+                    <div class="col-md-6"><span class="pull-right"><input class="email-default" type="checkbox" name="meta[email][<?php print $key; ?>][default]" id="meta-email-<?php print $key; ?>-default" value="1" <?php print $is_edit && isset($email[$key]['default'])?' checked':''; ?>><label>Use default email?</label></span></div>
+                    <div class="email-fields">
+                        <input class="col-md-12" name="meta[email][<?php print $key; ?>][subject]" id="meta-email-<?php print $key; ?>-subject" type="text" placeholder="Subject"<?php print $is_edit?'value="'.$email[$key]['subject'].'"':''; ?> />
+                        <label>HTML Email</label>
+                        <textarea class="col-md-12 tinymce" name="meta[email][<?php print $key; ?>][html]" id="meta-email-<?php print $key; ?>-html" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['html']:''; ?></textarea>
+                        <label>Plain Text Email</label>
+                        <textarea class="col-md-12" name="meta[email][<?php print $key; ?>][text]" id="meta-email-<?php print $key; ?>-text" placeholder="Leave blank to use default email"><?php print $is_edit?$email[$key]['text']:''; ?></textarea>
+                    </div>
                 </div>
                 <div class="row">
                     <hr />

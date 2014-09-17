@@ -31,7 +31,8 @@ class Invoices extends CI_Model {
         //prep email
         switch($invoice->type){
             case 'product':
-                require_once(SITEPATH.THEME_URL.'/textfile/product-invoice.php');
+                $this->Orgs->get_org_emails($invoice->org_id,'product-invoice');
+                //require_once(SITEPATH.THEME_URL.'/textfile/product-invoice.php');
                 break;
             case 'service':
             case 'student-service':
@@ -42,7 +43,8 @@ class Invoices extends CI_Model {
             case 'businesses-student':
             case 'businesses-personal':
             case 'businesses-professional':
-                require_once(SITEPATH.THEME_URL.'/textfile/service-invoice.php');
+                $this->Orgs->get_org_emails($invoice->org_id,'service-invoice');
+                //require_once(SITEPATH.THEME_URL.'/textfile/service-invoice.php');
                 break;
         }
         setlocale(LC_MONETARY, 'en_US');
@@ -74,6 +76,7 @@ class Invoices extends CI_Model {
             preg_replacement_quote(str_pad((string)SITENAME,8,'0',STR_PAD_LEFT)),
             preg_replacement_quote($invoice->post_id),
         );
+        //TODO: set this up to grab the info out of hte array
         $message_subject = preg_replace($pattern, $replacement, $message_subject);
         $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
         $message_html = preg_replace($pattern, $replacement, $message_html);

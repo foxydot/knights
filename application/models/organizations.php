@@ -109,6 +109,17 @@ class Organizations extends CI_Model {
 	    	    return FALSE;
 	    	}
 	    }
+        
+        function get_org_emails($org_id,$email){
+            $all_emails = $this->get_org_meta($org_id,'email');
+            $email_info = $all_emails[$email];
+            if(isset($email_info['default'])){
+                //TODO:get the file from the default theme
+                //set up that file to push the variables into the same kind of container as the meta
+            } else {
+                return $email_info;
+            }
+        }
 		    
 }
 /* End of file organizations.php */
