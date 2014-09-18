@@ -181,7 +181,12 @@
                     'product-invoice' => 'Product Invoice',
                     'service-invoice' => 'Service Invoice',
                 );
-                print form_fieldset();
+                print form_fieldset();?>
+                <h1>Emails<i class="fa fa-question-circle pull-right cheatsheet-trigger"></i></h1>
+        <div class="row cheatsheet hidden">
+            <?php print get_cheatsheet(); ?>
+        </div>
+                <?php
                 foreach($email_types AS $key => $value){
                     //TODO: Add javascript to make the full email panel show/hide on default use
               ?>

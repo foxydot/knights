@@ -27,12 +27,10 @@ class Invoices extends CI_Model {
         $this->load->model('Organizations','Orgs');
         $organization = $this->Orgs->get_org($invoice->org_id);
         $this->common->get_org_info_from_subdomain();
-        //$message_subject = $message_plaintext = $message_html = '';
         //prep email
         switch($invoice->type){
             case 'product':
-                $this->Orgs->get_org_emails($invoice->org_id,'product-invoice');
-                //require_once(SITEPATH.THEME_URL.'/textfile/product-invoice.php');
+                $email = $this->Orgs->get_org_emails($invoice->org_id,'product-invoice');
                 break;
             case 'service':
             case 'student-service':
@@ -43,10 +41,11 @@ class Invoices extends CI_Model {
             case 'businesses-student':
             case 'businesses-personal':
             case 'businesses-professional':
-                $this->Orgs->get_org_emails($invoice->org_id,'service-invoice');
-                //require_once(SITEPATH.THEME_URL.'/textfile/service-invoice.php');
+                $email = $this->Orgs->get_org_emails($invoice->org_id,'service-invoice');
                 break;
         }
+        
+
         setlocale(LC_MONETARY, 'en_US');
         $fee = money_format('%#1.2n', (float) $invoice->fee);
         //include_once(SITEPATH.THEMEURL.'email/email_template.php');
@@ -77,9 +76,9 @@ class Invoices extends CI_Model {
             preg_replacement_quote($invoice->post_id),
         );
         //TODO: set this up to grab the info out of hte array
-        $message_subject = preg_replace($pattern, $replacement, $message_subject);
-        $message_plaintext = preg_replace($pattern, $replacement, $message_plaintext);
-        $message_html = preg_replace($pattern, $replacement, $message_html);
+        $message_subject = preg_replace($pattern, $replacement, $email['subject']);
+        $message_plaintext = preg_replace($pattern, $replacement, $email['text']);
+        $message_html = preg_replace($pattern, $replacement, $email['html']);
         //send email
         $this->load->library('email');
         
