@@ -222,6 +222,30 @@
                     <input class="btn btn-default btn-sm" name="change_csv" id="change_csv" type="button" value="Change File" />
                 </div>
                 <?php endif; ?>
+                <div class="row">
+                    <h3>Copy from another organization</h3>
+                    <p>Use the following copy switches to copy all the items from one organization to another. Use with caution! This will immediately add a copy of all the selected items to this organization.</p>
+                </div>
+                <?php $copy_things = array(
+                    'categories',
+                    'help',
+                    'emails'
+                ); ?>
+                <?php foreach($copy_things AS $thing){ ?>
+                <div class="row">
+                    <label>Copy <?php print $thing; ?> from</label>
+                    <select name="copy[<?php print $thing; ?>]">
+                        <option value="0">Do not copy</option>
+                        <?php 
+                        foreach($orgs as $o){
+                            if($o->ID != $org->ID){
+                                print '<option value="'.$o->ID.'">'.$o->name.'</option>';
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+                <?php } ?>
                 <?php print form_fieldset_close(); ?>
           </div>
         </div>

@@ -121,6 +121,87 @@ class Organizations extends CI_Model {
                 return $email_info;
             }
         }
+        
+     function copy_feature($org_id,$dupe_id,$feature){
+         switch($feature){
+             case 'emails':
+                 $email_meta = $this->get_org_meta($dupe_id,'email');
+                 //object to array
+                 $db_data = (array) $email_meta['email'];
+                 //unset ID
+                 unset($db_data['ID']);
+                 //reset org_id, date_added
+                 $db_data['org_id'] = $org_id;
+                 $db_data['dateadded'] = time();
+                 $this->edit_org_meta($db_data);
+                 break;
+             case 'categories':
+                 $this->load->model('Categories','Cats');
+                 //get all the categories
+                 $cats = $this->Cats->get_cats(array($dupe_id));
+                 //make a handy replacement array for the parents
+                 $replacements = array();
+                 //reorder array by ID (this should put parents before children);
+                 usort($cats, array(&$this,'sort_by_id'));
+                 foreach($cats as $cat){
+                     //unset/reset as needed
+                     $db_data = (array) $cat;
+                     $old_id = $db_data['ID'];
+                     unset($db_data['ID']);
+                     $db_data['dateadded'] = time();
+                     $old_parent = $db_data['parent_cat_id'];
+                     $parent_cat_id = isset($replacements[$old_parent])?$replacements[$old_parent]:0;
+                     unset($db_data['parent_cat_id']);
+                     //copy them
+                     $cat_id = $this->Cats->add_cat($db_data);
+                     //connect to org
+                     $db_data = array(
+                        'cat_id' => $cat_id,
+                        'parent_cat_id' => $parent_cat_id,
+                        'org_id' => $org_id
+                     );
+                     $this->Cats->cat_to_org($db_data);
+                     //save to array
+                     $replacements[$old_id] = $cat_id;
+                 }
+                 break;
+             case 'help':
+                 $this->load->model('Articles');
+                 $articles = $this->Articles->get_articles(array($dupe_id));
+                 $replacements = array();
+                 //reorder array by ID (this should put parents before children);
+                 usort($articles, array(&$this,'sort_by_id'));
+                 foreach($articles as $article){
+                     //unset/reset as needed
+                     $db_data = (array) $article;
+                     $old_id = $db_data['ID'];
+                     unset($db_data['ID']);
+                     $db_data['dateadded'] = time();
+                     $old_parent = $db_data['parent_art_id'];
+                     $parent_art_id = isset($replacements[$old_parent])?$replacements[$old_parent]:0;
+                     unset($db_data['parent_art_id']);
+                     //copy them
+                     $art_id = $this->Articles->add_article($db_data);
+                     //connect to org
+                     $db_data = array(
+                        'art_id' => $art_id,
+                        'parent_art_id' => $parent_art_id,
+                        'org_id' => $org_id
+                     );
+                     $this->Articles->art_to_org($db_data);
+                     //save to array
+                     $replacements[$old_id] = $art_id;
+                 }
+                 break;
+         }
+     }
+
+    private function sort_by_id($a,$b){
+        if ($a->ID == $b->ID) {
+            return 0;
+        }
+        return ($a->ID < $b->ID) ? -1 : 1;
+    }
 		    
 }
 /* End of file organizations.php */

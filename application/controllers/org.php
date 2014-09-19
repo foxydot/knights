@@ -97,6 +97,7 @@ class Org extends CI_Controller {
 					'body_class' => 'edit org-edit',
 					'user' => $this->session->userdata,
 					'org' => $this->Orgs->get_org($ID),
+					'orgs' => $this->Orgs->get_orgs(),
 					'dashboard' => 'default/org/edit',
 					'action' => 'org/edit/'.$ID,
 					'is_edit' => TRUE,
@@ -107,6 +108,8 @@ class Org extends CI_Controller {
 				$db_data = $this->input->post();
                 $org_meta = $db_data['meta'];
                 unset($db_data['meta']);
+                $copy = $db_data['copy'];
+                unset($db_data['copy']);
 				unset($db_data['change_img']);
 				$db_data['org'] = $this->Orgs->get_org($ID);
                 if(isset($_FILES['logo_url'])){
@@ -177,6 +180,12 @@ class Org extends CI_Controller {
                             'meta_value' => is_array($v)?serialize($v):$v
                             );
                         $this->Orgs->edit_org_meta($meta_data);
+                    }
+                }
+                foreach($copy as $k=>$v){
+                    if($v > 0){
+                        //TODO: figure out which thing we are copying and pass to a function to handle the copying.
+                        $this->Orgs->copy_feature($ID,$v,$k);
                     }
                 }
 				$this->load->helper('url');

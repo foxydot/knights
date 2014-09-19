@@ -11,9 +11,11 @@
 			<h4>Date Added</h4>
 		</div><!-- end col-md-1 -->
 	</div><!-- end titleBar -->
+	   <?php if(isset($cats[0])): ?>
 			<?php foreach($cats[0] AS $cat): ?>
 				<?php print display_cat($cats,$cat); ?>
 			<?php endforeach; //end stories ?>
+	   <?php endif; ?>
 		<div id="footer" class="row">	
 	</div><!-- end footer -->
 </div><!-- end container -->
