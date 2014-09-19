@@ -1,3 +1,4 @@
+<?php global $theme_url; ?>
 <!doctype html>
 <html lang="en">	
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -19,8 +20,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="<?php echo ADMIN_THEME_URL; ?>/img/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php echo ADMIN_THEME_URL; ?>/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php echo $theme_url; ?>/img/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo $theme_url; ?>/img/apple-touch-icon.png">
 
 
   <!-- CSS: implied media="all" -->
@@ -43,13 +44,13 @@
         }
       }
     </style>
-    <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/bootstrap/css/bootstrap.min.css">
-    <link href="<?php echo DEFAULT_THEME_URL; ?>/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo DEFAULT_THEME_URL; ?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo ADMIN_THEME_URL; ?>/css/style.css">
-  <?php include_once(SITEPATH.ADMIN_THEME_URL.'/inc/css.php'); ?>
+    <link rel="stylesheet" href="<?php echo $theme_url; ?>/css/style.css">
+  <?php include_once(SITEPATH.DEFAULT_THEME_URL.'/inc/css.php'); ?>
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>

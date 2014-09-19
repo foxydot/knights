@@ -1,4 +1,4 @@
-<?php global $org_id,$site_title; ?>
+<?php global $org_id,$site_title,$theme_url; ?>
 <!doctype html>
 <html lang="en">	
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -19,8 +19,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="<?php echo THEME_URL ?>/img/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php echo THEME_URL ?>/apple-touch-icon.png">
+  <link rel="shortcut icon" href="<?php echo $theme_url ?>/img/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo $theme_url ?>/apple-touch-icon.png">
 
 
  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -30,9 +30,9 @@
 	    
   <!-- CSS: implied media="all" -->	    
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="<?php echo THEME_URL ?>/css/style.css" rel="stylesheet">
+  <link href="<?php echo $theme_url ?>/css/style.css" rel="stylesheet">
   <!--[if IE]>
-	<link href="<?php echo THEME_URL ?>/css/ie.css" rel="stylesheet">
+	<link href="<?php echo $theme_url ?>/css/ie.css" rel="stylesheet">
   <![endif]-->
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -41,12 +41,13 @@
 <?php print isset($page_css)?page_css($page_css):''; ?>
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="<?php echo THEME_URL ?>/js/modernizr.js"></script>
+  <script src="<?php echo DEFAULT_THEME_URL ?>/js/modernizr.js"></script>
 <?php print isset($page_js)?page_js($page_js):''; ?>
 
 </head>
 
 
 <body<?php print isset($body_class)?body_class($body_class):''; ?>>
+
 <?php print $this->session->flashdata('err')?'<div class="error">'.$this->session->flashdata('err').'</div>':''; ?>
 <?php print $this->session->flashdata('msg')?'<div class="message">'.$this->session->flashdata('msg').'</div>':''; ?>

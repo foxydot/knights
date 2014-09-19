@@ -29,7 +29,7 @@
 			theme : "modern",
 
 			// Example content CSS (should be your site CSS)
-			content_css : "<?php echo ADMIN_THEME_URL; ?>/css/content.css",
+			content_css : "<?php echo DEFAULT_THEME_URL; ?>/css/content.css",
 
 		});
 </script>
