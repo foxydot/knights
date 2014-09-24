@@ -85,13 +85,24 @@ class Post extends CI_Controller {
 		if($this->input->post()){
 			$the_user = $this->Users->get_user($this->session->userdata['ID']);
             if(isset($the_user->meta['use_paypal']) && isset($the_user->meta['paypal'])){
-    			if($the_user->meta['use_paypal']->meta_value != 'no' && $the_user->meta['paypal']->meta_value==''){
-    				$this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
+    			if($the_user->meta['use_paypal']->meta_value != 'no' && $the_user->meta['paypal']->meta_value==''){               
+                $msg[] = array(
+                    'type' => 'warning',
+                    'text' => 'Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.',
+                );
     			}
-			} else {
-			    $this->session->set_flashdata('err','Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.');
+			} else {               
+                $msg[] = array(
+                    'type' => 'warning',
+                    'text' => 'Please visit your user setting to set your Paypal address or decline using Paypal to accept payment.',
+                );
 			}
-
+            if(!$this->input->post('cat')){               
+                $msg[] = array(
+                    'type' => 'danger',
+                    'text' => 'Error: Your post cannot appear publicly until you select at least one category for your post.',
+                );
+            }
 			$db_data = $this->input->post();
             $tags = explode(',',$db_data['tags']);
             array_walk($tags, create_function('&$val', '$val = trim($val);')); 
@@ -116,10 +127,12 @@ class Post extends CI_Controller {
                 }
                 $this->Tags->post_to_tag(array('post_id' => $post_id,'tag_id' => $tag_id));
             }
-            foreach($this->input->post('cat') AS $cat_id){
-				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
-                $this->Posts->notify_cat_subs(array('post_id' => $post_id,'cat_id' => $cat_id));
-			}
+            if($this->input->post('cat')){
+                foreach($this->input->post('cat') AS $cat_id){
+    				$this->Posts->post_to_cat(array('post_id' => $post_id,'cat_id' => $cat_id));
+                    $this->Posts->notify_cat_subs(array('post_id' => $post_id,'cat_id' => $cat_id));
+    			}
+            }
 			if($attachment_url){
 				$db_data = array(
 						'attachment_url'=>'attachment_url',
@@ -140,11 +153,9 @@ class Post extends CI_Controller {
                 $this->load->model('Invoices');
                 $this->Invoices->create_invoice($post);
             }
-            $msg = array(
-                array(
-                    'type' => 'success',
-                    'text' => 'Your post has been added.',
-                )
+            $msg[] = array(
+                'type' => 'success',
+                'text' => 'Your post has been added.',
             );
             $this->session->set_flashdata('editmsg', $msg);
 			$this->load->helper('url');
@@ -177,6 +188,12 @@ class Post extends CI_Controller {
             $data['msg'] = $this->session->flashdata('editmsg');
         }
 		if($this->input->post()){
+            if(!$this->input->post('cat')){               
+                $msg[] = array(
+                    'type' => 'danger',
+                    'text' => 'Error: Please select at least one category for your post.',
+                );
+            }
 			$db_data = $this->input->post();
             $tags = explode(',',$db_data['tags']);
             array_walk($tags, create_function('&$val', '$val = trim($val);')); 
@@ -223,11 +240,9 @@ class Post extends CI_Controller {
 				$this->Posts->attachment_to_post($db_data);
 			}
 			
-            $msg = array(
-                array(
+            $msg[] = array(
                     'type' => 'success',
                     'text' => 'Your changes have been saved.',
-                )
             );
             $this->session->set_flashdata('editmsg', $msg);
 			$this->load->helper('url');

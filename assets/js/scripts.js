@@ -82,6 +82,9 @@ $(document).ready(function($) {
 	$('.edit form').submit(function(){
 	    $('#save-msg').modal('show');
 	});
+	$('.edit #submit').click(function(){
+	    //do some validation here?
+	});
 	$('.edit #delete_btn').click(function(){
 	    var r=confirm("Are you sure you want to delete this post?");
         if (r==true)

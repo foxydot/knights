@@ -47,13 +47,16 @@
 	setlocale(LC_MONETARY, 'en_US');
 		$CI =& get_instance();
 		$postcats = '';
-        if(isset($post->categories)){
+        if(isset($post->categories) && count($post->categories)>0){
+            $warn = ' stripe';
     		foreach($post->categories AS $cat){
     			$postcats .= '<li>'.$cat->catpath.'</li>';
     		}
+        } else {
+            $warn = ' bg-danger';
         }
 				$display .= '
-		<div class="stripe post clicky row" href="/post/view/'.$post->post_id.'">
+		<div class="post clicky row'.$warn.'" href="/post/view/'.$post->post_id.'">
 			<div class="col-md-1 id">
 				'.str_pad((string)$post->post_id,8,'0',STR_PAD_LEFT).'
 			</div>

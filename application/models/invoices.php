@@ -29,9 +29,6 @@ class Invoices extends CI_Model {
         $this->common->get_org_info_from_subdomain();
         //prep email
         switch($invoice->type){
-            case 'product':
-                $email = $this->Orgs->get_org_emails($invoice->org_id,'product-invoice');
-                break;
             case 'service':
             case 'student-service':
             case 'request':
@@ -42,6 +39,10 @@ class Invoices extends CI_Model {
             case 'businesses-personal':
             case 'businesses-professional':
                 $email = $this->Orgs->get_org_emails($invoice->org_id,'service-invoice');
+                break;
+            case 'product':
+            default:
+                $email = $this->Orgs->get_org_emails($invoice->org_id,'product-invoice');
                 break;
         }
         

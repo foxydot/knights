@@ -84,7 +84,8 @@ Class Posts extends CI_Model {
 		foreach($posts AS $post){
 			$posts[$i]->categories = $this->Cats->get_post_cats($post->post_id);
             if(count($orgs)>0 && count($posts[$i]->categories)<1){
-                unset($posts[$i]);
+                //this wasn't doing what I intended anyway. Show the posts with no categories.
+                //unset($posts[$i]);
             }
 			$i++;
 		}

@@ -2,13 +2,13 @@
 	<div class="row">
  
 		<?php print form_open_multipart($action,array('id'=>'post','class'=>'smallform col-md-6 col-md-offset-3')); ?>
-		<?php if($msg){ 
-		    foreach($msg AS $m) { ?>
-		    <div class="alert alert-<?php print $m['type'] ?>">
+        <?php if($msg){ 
+            foreach($msg AS $m) { ?>
+            <div class="alert alert-<?php print $m['type'] ?>">
                 <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
                 <?php print $m['text']; ?>
             </div>
-		<?php  }
+        <?php  }
         } ?>
 		<div class="alert alert-info">
             <button href="#" type="button" class="close" data-dismiss="alert">&times;</button>
