@@ -43,6 +43,8 @@ class Org extends CI_Controller {
 				$db_data = $this->input->post();
                 $org_meta = $db_data['meta'];
                 unset($db_data['meta']);
+                $copy = $db_data['copy'];
+                unset($db_data['copy']);
 				unset($db_data['change_img']);
 				$ID = $this->Orgs->add_org($db_data);
 				
@@ -81,6 +83,12 @@ class Org extends CI_Controller {
                             'meta_value' => is_array($v)?serialize($v):$v
                             );
                         $this->Orgs->edit_org_meta($meta_data);
+                    }
+                }
+                foreach($copy as $k=>$v){
+                    if($v > 0){
+                        //TODO: figure out which thing we are copying and pass to a function to handle the copying.
+                        $this->Orgs->copy_feature($ID,$v,$k);
                     }
                 }
 				$this->load->helper('url');

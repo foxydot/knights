@@ -59,7 +59,7 @@ class Organizations extends CI_Model {
 	    
 	    function add_org($db_data){
 	    	unset($db_data['ID']);
-	    	unset($db_data['submit_btn']);
+            unset($db_data['submit_btn']);
 	    	$slug = $this->common->increment_slug(post_slug($db_data['name']),'organization');
 	    	$db_data['slug'] = $slug;
 	    	$db_data['dateadded'] = time();
