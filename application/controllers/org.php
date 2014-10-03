@@ -49,14 +49,21 @@ class Org extends CI_Controller {
 				$ID = $this->Orgs->add_org($db_data);
 				
 				$db_data['org'] = $this->Orgs->get_org($ID);
-                if(isset($_FILES['logo_url'])){
+                if(isset($_FILES['logo_url']['tmp_name'])){
                     $this->load->model('Administration','Admin');
                     $logo_url = $this->Admin->upload($db_data,'logo_url');
                 }
-                if(isset($_FILES['background_url'])){
+                if(isset($_FILES['background_url']['tmp_name'])){
                     $this->load->model('Administration','Admin');
                     $background_url = $this->Admin->upload($db_data,'background_url');
                 }
+                if(isset($_FILES['test_csv']['tmp_name'])){
+                    $this->load->model('Administration','Admin');
+                    $test_csv = $this->Admin->upload($db_data,'test_csv');
+                }
+                unset($db_data['logo_url']);
+                unset($db_data['background_url']);
+                unset($db_data['test_csv']);
                 if($logo_url){
                     $db_data = array(
                             'org_id'=>$ID,
@@ -120,15 +127,15 @@ class Org extends CI_Controller {
                 unset($db_data['copy']);
 				unset($db_data['change_img']);
 				$db_data['org'] = $this->Orgs->get_org($ID);
-                if(isset($_FILES['logo_url'])){
+                if(isset($_FILES['logo_url']['tmp_name'])){
                     $this->load->model('Administration','Admin');
                     $logo_url = $this->Admin->upload($db_data,'logo_url');
                 }
-                if(isset($_FILES['background_url'])){
+                if(isset($_FILES['background_url']['tmp_name'])){
                     $this->load->model('Administration','Admin');
                     $background_url = $this->Admin->upload($db_data,'background_url');
                 }
-                if(isset($_FILES['test_csv'])){
+                if(isset($_FILES['test_csv']['tmp_name'])){
                     $this->load->model('Administration','Admin');
                     $test_csv = $this->Admin->upload($db_data,'test_csv');
                 }
