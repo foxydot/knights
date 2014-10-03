@@ -49,15 +49,17 @@ class Org extends CI_Controller {
 				$ID = $this->Orgs->add_org($db_data);
 				
 				$db_data['org'] = $this->Orgs->get_org($ID);
-                if(isset($_FILES['logo_url']['tmp_name'])){
+                
+                $logo_url = $background_url = $test_csv = FALSE;
+                if($_FILES['logo_url']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $logo_url = $this->Admin->upload($db_data,'logo_url');
                 }
-                if(isset($_FILES['background_url']['tmp_name'])){
+                if($_FILES['background_url']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $background_url = $this->Admin->upload($db_data,'background_url');
                 }
-                if(isset($_FILES['test_csv']['tmp_name'])){
+                if($_FILES['test_csv']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $test_csv = $this->Admin->upload($db_data,'test_csv');
                 }
@@ -99,7 +101,7 @@ class Org extends CI_Controller {
                     }
                 }
 				$this->load->helper('url');
-				redirect('/org');
+				redirect('/org/edit/'.$ID);
 			}
 		
 			$this->load->view('default.tpl.php',$data);
@@ -127,15 +129,16 @@ class Org extends CI_Controller {
                 unset($db_data['copy']);
 				unset($db_data['change_img']);
 				$db_data['org'] = $this->Orgs->get_org($ID);
-                if(isset($_FILES['logo_url']['tmp_name'])){
+                $logo_url = $background_url = $test_csv = FALSE;
+                if($_FILES['logo_url']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $logo_url = $this->Admin->upload($db_data,'logo_url');
                 }
-                if(isset($_FILES['background_url']['tmp_name'])){
+                if($_FILES['background_url']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $background_url = $this->Admin->upload($db_data,'background_url');
                 }
-                if(isset($_FILES['test_csv']['tmp_name'])){
+                if($_FILES['test_csv']['tmp_name']!=''){
                     $this->load->model('Administration','Admin');
                     $test_csv = $this->Admin->upload($db_data,'test_csv');
                 }
@@ -203,8 +206,8 @@ class Org extends CI_Controller {
                         $this->Orgs->copy_feature($ID,$v,$k);
                     }
                 }
-				$this->load->helper('url');
-				redirect('/org');
+				//$this->load->helper('url');
+				//redirect('/org');
 			}
 		
 			$this->load->view('default.tpl.php',$data);
