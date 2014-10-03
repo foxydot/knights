@@ -20,7 +20,7 @@
                     }*/
                     $display .= '
 				<div class="panel-heading">
-					<h5 class="heading"><a class="panel-group-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="fa fa-chevron-circle-down fa-lg pull-left"></i> '.$article->title.'</a>
+					<h5 class="heading"><a class="panel-group-toggle" data-toggle="collapse" data-parent="#help-list" href="#'.$article->slug.'-posts"><i class="fa fa-chevron-circle-down fa-lg pull-left"></i> '.wildcard_replacements($article->title).'</a>
 				';
 					if($admin){
 						$display .= '
@@ -34,7 +34,7 @@
 				<div id="'.$article->slug.'-posts" class="panel-collapse collapse">';
 				$display .= '
 		<div class="stripe post panel-body">
-		'.$article->content.'
+		'.wildcard_replacements($article->content).'
 		</div>';
 			$display .= '
 				</div>

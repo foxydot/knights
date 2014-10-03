@@ -63,3 +63,21 @@ function preg_replacement_quote($str) {
     return preg_replace('/(\$|\\\\)(?=\d)/', '\\\\\1', $str);
 }
 }
+
+if(!function_exists('wildcard_replacements'))
+{
+function wildcard_replacements($str) {
+        global $org_id,$org_name,$site_title,$site_logo,$theme_url;
+        $pattern = array(
+            '/__ORGANIZATION_LOGO__/',
+            '/__ORGANIZATION_NAME__/',
+            '/__SITE_TITLE__/',
+        );
+        $replacement = array(
+            preg_replacement_quote($site_logo),
+            preg_replacement_quote($org_name),
+            preg_replacement_quote($site_title),
+        );
+        return(preg_replace($pattern, $replacement, $str));
+}
+}

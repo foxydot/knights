@@ -54,7 +54,7 @@ Class Common extends CI_Model {
     }
     
     function get_org_info_from_subdomain(){
-        global $org_id,$site_title,$site_logo,$theme_url;
+        global $org_id,$org_name,$site_title,$site_logo,$theme_url;
         $subdomain_arr = explode('.', $_SERVER['HTTP_HOST'], 2); //creates the various parts  
         $subdomain = $subdomain_arr[0]; //assigns the first part  
         $query = $this->db->get_where('org_meta',array('meta_key' => 'subdomain','meta_value' => $subdomain),1);
@@ -86,6 +86,10 @@ Class Common extends CI_Model {
         if(!defined('SITENAME')){
             define('SITENAME', $site_title);
         }
+        
+        $query = $this->db->get_where('organization',array('ID' => $org_id),1);
+        $result = $query->result();
+        $org_name = $query->num_rows() > 0?$result[0]->name:'Your Community';
         return $org_id;
     }
 	
