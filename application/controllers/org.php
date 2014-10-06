@@ -109,18 +109,6 @@ class Org extends CI_Controller {
 
 		function edit($ID)
 		{
-			$data = array(
-					'page_title' => SITENAME.' Edit Organization',
-					'body_class' => 'edit org-edit',
-					'user' => $this->session->userdata,
-					'org' => $this->Orgs->get_org($ID),
-					'orgs' => $this->Orgs->get_orgs(),
-					'dashboard' => 'default/org/edit',
-					'action' => 'org/edit/'.$ID,
-					'is_edit' => TRUE,
-                    'page_css' => array('../../../colorpicker/css/colorpicker','../../../colorpicker/css/layout'),
-                    'footer_js' => array('../colorpicker/js/colorpicker','../colorpicker/js/eye','../colorpicker/js/utils','../colorpicker/js/layout'),
-			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
                 $org_meta = $db_data['meta'];
@@ -209,6 +197,18 @@ class Org extends CI_Controller {
 				//$this->load->helper('url');
 				//redirect('/org');
 			}
+            $data = array(
+                    'page_title' => SITENAME.' Edit Organization',
+                    'body_class' => 'edit org-edit',
+                    'user' => $this->session->userdata,
+                    'org' => $this->Orgs->get_org($ID),
+                    'orgs' => $this->Orgs->get_orgs(),
+                    'dashboard' => 'default/org/edit',
+                    'action' => 'org/edit/'.$ID,
+                    'is_edit' => TRUE,
+                    'page_css' => array('../../../colorpicker/css/colorpicker','../../../colorpicker/css/layout'),
+                    'footer_js' => array('../colorpicker/js/colorpicker','../colorpicker/js/eye','../colorpicker/js/utils','../colorpicker/js/layout'),
+            );
 		
 			$this->load->view('default.tpl.php',$data);
 		}	
