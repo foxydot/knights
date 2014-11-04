@@ -15,6 +15,7 @@ Class Users extends CI_Model {
 	 	$this->db->select('user.ID AS ID,email,firstname,lastname,user.accesslevel AS accesslevel,user.dateadded AS dateadded,user.dateremoved AS dateremoved,user_group.name AS group_name,user_group.accesslevel AS group_accesslevel,user.terms_accepted');
 		$this->db->from('user');
 		$this->db->join('user_group','user.group_id=user_group.ID','left');
+        $this->db->order_by('lastname');
 		if(!$suspended){
 			$this->db->where('user.dateremoved <=',0);
 		}
