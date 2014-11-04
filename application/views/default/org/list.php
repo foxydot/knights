@@ -28,10 +28,10 @@
                     <h6 class="sub"><?php print date("F j, Y",$org->dateadded); ?></h6>
                 </div>
                 <div class="col-md-1">
-                    <h6 class="sub"><a href="http://<?php print $org->meta['subdomain']->meta_value; ?>.msdlab3.com" class="pull-right btn btn-sm btn-default">Visit</a></h6>
+                    <h6 class="sub"><a href="http://<?php print $org->meta['subdomain']->meta_value; ?>.msdlab3.com" class="pull-right btn btn-sm btn-default" target="_blank">Visit</a></h6>
                 </div>
                 <div class="col-md-1">
-                    <h6 class="sub"><a href="http://<?php print $org->meta['subdomain']->meta_value; ?>.msdlab3.com" class="pull-right btn btn-sm btn-default">Manage</a></h6>
+                    <h6 class="sub"><a href="http://<?php print $org->meta['subdomain']->meta_value; ?>.msdlab3.com" class="pull-right btn btn-sm btn-default" target="_blank">Manage</a></h6>
                 </div>				
 			</div>
 			<?php } //end orgs ?>
