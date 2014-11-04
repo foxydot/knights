@@ -33,6 +33,11 @@ class Organizations extends CI_Model {
 	    	}
 	    	$query = $this->db->get();
 	    	$result = $query->result();
+            $i = 0;
+            foreach($result AS $r){
+                $result[$i]->meta = $this->get_org_meta($r->ID);
+                $i++;
+            }
 	    	return $result;
 	    }
 	    
