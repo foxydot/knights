@@ -95,13 +95,15 @@ $(document).ready(function($) {
           }		
 	});
 	$('.buy #payment_option_paypal,.invoice #payment_option_paypal').click(function(){
+	    console.log('paypal option');
 			$('.payment_info').slideUp();
-			$('#paypal_info').slideDown();
+			$('#paypal_info').slideDown().removeClass('hidden');
 			$('#buyform').attr('action',$('#paypal_action').val());
 	});
 	$('.buy #payment_option_check,.invoice #payment_option_check').click(function(){
+        console.log('check option');
 			$('.payment_info').slideUp();
-			$('#check_info').slideDown();
+			$('#check_info').slideDown().removeClass('hidden');
             $('#buyform').attr('action',$('#check_action').val());
 	});
     $('.cheatsheet-trigger').click(function(){
