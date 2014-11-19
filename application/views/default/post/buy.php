@@ -33,7 +33,7 @@ if(isset($seller->meta['paypal'])){
 		<div class="row payment_options">
 			<label>Payment Options</label>
 			<input type="radio" name="payment_option" id="payment_option_paypal" value="PayPal"> Pay securely with PayPal <br/>
-    			<div class="row payment_info hide" id="paypal_info">
+    			<div class="row payment_info hidden" id="paypal_info">
                     <input type="hidden" name="cmd" value="_xclick">
                     <input type="hidden" name="business" value="<?php print $paypal; ?>">
                     <input type="hidden" name="lc" value="US">
@@ -54,7 +54,7 @@ if(isset($seller->meta['paypal'])){
                     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </div>
 			<input type="radio" name="payment_option" id="payment_option_check" value="Cash/Check"> Pay by cash or check 
-        		<div class="row payment_info hide" id="check_info">
+        		<div class="row payment_info hidden" id="check_info">
         			You have elected to pay via cash or check. Please make arrangements with the seller to exchange goods and funds using the message box below.
         
                     <label>Send message to seller</label>

@@ -82,7 +82,7 @@
 	</div>
 </div>
 
-<div class="modal hide fade" id="save-msg">
+<div class="modal hidden fade" id="save-msg">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h3>Please Wait</h3>
