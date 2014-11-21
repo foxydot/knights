@@ -22,7 +22,7 @@ if(!function_exists('get_the_fee'))
 {
 function get_the_fee($post){
         switch($post->type){
-            case 'business-professional':
+            /*case 'business-professional':
             case 'businesses-professional':
                 $fee = 250;
                 break;
@@ -39,9 +39,8 @@ function get_the_fee($post){
             case 'student-services':
             case 'request':
                 $fee = 5;
-                break;
+                break;*/
             case 'product':
-            default:
                 $cost = (float) $post->cost;
                 if($cost<=10){
                     $fee = 0;
@@ -52,6 +51,9 @@ function get_the_fee($post){
                 } else {
                     $fee = (.02*($cost-1000))+55;
                 }
+                break;
+            default: //temporary xmas promotion.
+                $fee = 0;
                 break;
         }
         return $fee;
