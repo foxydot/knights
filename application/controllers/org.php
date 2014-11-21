@@ -226,10 +226,11 @@ class Org extends CI_Controller {
 			);
 			if($this->input->post()){
 				$db_data = $this->input->post();
-				unset($db_data['change_img']);
-                unset($db_data['logo_url']);
-                unset($db_data['background_url']);
-				$db_data['dateremoved'] = time();
+                $org_id = $db_data['ID'];
+                $db_data = array(
+                    'ID' => $org_id,
+                    'dateremoved' => time()
+                );
 				$this->Orgs->edit_org($db_data);
 				
 				$this->load->helper('url');

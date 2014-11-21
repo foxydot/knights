@@ -253,7 +253,7 @@
         <div class="row">
             <input name="submit_btn" id="submit_btn" type="submit" value="Submit" />
             <?php if($this->authenticate->check_auth('administrators')){ ?>
-                <input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Delete" />
+                <input name="delete_btn" id="delete_btn" type="button" class="btn btn-danger" value="Disable" />
             <?php } ?>
         </div>
         <?php
