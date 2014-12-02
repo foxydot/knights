@@ -138,14 +138,12 @@ class Login extends CI_Controller {
                             $pattern = array(
                                 '/__ORGANIZATION_LOGO__/',
                                 '/__ORGANIZATION_NAME__/',
-                                '/__INVOICE_URL__/',
                                 '/__SITE_TITLE__/',
                                 '/__CODE_LINK__/'
                             );
                             $replacement = array(
                                 preg_replacement_quote($organization->meta['logo_url']->meta_value),
                                 preg_replacement_quote($organization->name),
-                                preg_replacement_quote(site_url('invoice/view/'.$invoice_id)),
                                 preg_replacement_quote(str_pad((string)SITENAME,8,'0',STR_PAD_LEFT)),
                                 $codelink
                             );
@@ -163,9 +161,11 @@ class Login extends CI_Controller {
 							$this->email->initialize($config);
 							$this->email->from($org_email, $organization->meta['site_title']->meta_value);
 							$this->email->to($username);
-
-							$this->email->subject('Reset Password');
-							$this->email->message($body);
+                            
+                            $this->email->subject($message_subject);
+                            $this->email->message($message_html);
+                            $this->email->set_alt_message($message_plaintext);
+                            
 							if(!$this->email->send()){
 								$data['error'] = 'There was an error sending an email reset. Please contact your representative.';								$data['buttontxt'] = 'Return to Login';
 								$data['buttontxt'] = 'Return to Login';
