@@ -1,7 +1,9 @@
 <div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'article','class'=>'smallform col-md-6 col-md-offset-3')); ?>
-		<h1><?php print $is_edit?'Edit':'New'; ?> Help Article<i class="fa fa-question-circle pull-right cheatsheet-trigger"></i></h1>
+		<h1><?php print $is_edit?'Edit':'New'; ?> Help Article<a class="btn btn-default btn-sm cheatsheet-trigger pull-right">
+            <i class="fa fa-magic"></i>
+            </a></h1>
 		<div class="row cheatsheet hidden">
 		    <?php print get_cheatsheet(); ?>
 		</div>

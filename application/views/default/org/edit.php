@@ -1,7 +1,12 @@
 <div class="container-fluid form">
 	<div class="row">
 		<?php print form_open_multipart($action,array('id'=>'organization','class'=>'smallform col-md-6 col-md-offset-3')); ?>
-		<h1><?php print $is_edit?'Edit':'New'; ?> Organization Information</h1>
+		<h1><?php print $is_edit?'Edit':'New'; ?> Organization Information<a class="btn btn-default btn-sm cheatsheet-trigger pull-right">
+		    <i class="fa fa-magic"></i>
+		    </a></h1>
+        <div class="row cheatsheet hidden">
+            <?php print get_cheatsheet(); ?>
+        </div>
 		<!-- Nav tabs -->
         <ul class="nav nav-pills">
           <li class="active"><a href="#info" data-toggle="tab">Basic Info</a></li>
@@ -182,10 +187,7 @@
                     'service-invoice' => 'Service Invoice',
                 );
                 print form_fieldset();?>
-                <h1>Emails<i class="fa fa-question-circle pull-right cheatsheet-trigger"></i></h1>
-        <div class="row cheatsheet hidden">
-            <?php print get_cheatsheet(); ?>
-        </div>
+                <h1>Emails</h1>
                 <?php
                 foreach($email_types AS $key => $value){
                     //TODO: Add javascript to make the full email panel show/hide on default use

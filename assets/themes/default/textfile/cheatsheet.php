@@ -1,16 +1,79 @@
 <h2>Replacement Cheat Sheet</h2>
-<p>Use the following keys for replacement:
-    <ul style="list-style: none outside none;">
-        <li>__SITE_TITLE__</li>
-        <li>__ORGANIZATION_NAME__</li>
-        <li>__ORGANIZATION_LOGO__</li>
-        <li>__POST_TITLE__</li>
-        <li>__BUYER_FIRSTNAME__</li>
-        <li>__BUYER_LASTNAME__</li>
-        <li>__SELLER_FIRSTNAME__</li>
-        <li>__SELLER_LASTNAME__</li>
-        <li>__INVOICE_URL__</li>
-        <li>__LISTING_FEE__</li>
-        <li>__LISTING_CODE__</li>
-    </ul>
-</p>
+    <table class="table">
+        <tr>
+            <th>Key</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>__SITE_TITLE__</td>
+            <td>Knight's List</td>
+        </tr>
+        <tr>
+            <td>__ORG_NAME__</td>
+            <td>Summit Country Day School</td>
+        </tr>
+        <tr>
+            <td>__ORG_NAME_SHORT</td>
+            <td>Summit</td>
+        </tr>
+        <tr>
+            <td>__ORG_NAME_ABBREV__</td>
+            <td>SCDS</td>
+        </tr>
+        <tr>
+            <td>__ORG_LOGO__</td>
+            <td>Image</td>
+        </tr>
+        <tr>
+            <td>__ORG_EMAIL__</td>
+            <td>knights@communitylist.us</td>
+        </tr>
+        <tr>
+            <td>__ORG_WEBSITE__</td>
+            <td>http://www.summitcds.org/</td>
+        </tr>
+        <tr>
+            <td>__INSTITUTION__</td>
+            <td>school</td>
+        </tr>
+        <tr>
+            <td>__COMMITTEE_NAME__</td>
+            <td>Summit Parent's Association</td>
+        </tr>
+        <tr>
+            <td>__COMMITTEE_NAME_ABBREV__</td>
+            <td>SPA</td>
+        </tr>
+        <tr>
+            <td>__POST_TITLE__</td>
+            <td>NWT Nike Gym Shorts Size 6</td>
+        </tr>
+        <tr>
+            <td>__LISTING_CODE__</td>
+            <td>00324</td>
+        </tr>
+        <tr>
+            <td>__SELLER_FIRSTNAME__</td>
+            <td>Jane</td>
+        </tr>
+        <tr>
+            <td>__SELLER_LASTNAME__</td>
+            <td>Austen</td>
+        </tr>
+        <tr>
+            <td>__BUYER_FIRSTNAME__</td>
+            <td>Charles</td>
+        </tr>
+        <tr>
+            <td>__BUYER_LASTNAME__</td>
+            <td>Dickens</td>
+        </tr>
+        <tr>
+            <td>__INVOICE_URL__</td>
+            <td>http://knights.communitylist.us/invoice/view/113</td>
+        </tr>
+        <tr>
+            <td>__LISTING_FEE__</td>
+            <td>Calculated fee</td>
+        </tr>
+    </table>
