@@ -103,6 +103,8 @@ class Login extends CI_Controller {
 
 
 	function forgot(){
+	    global $org_id;
+        
 		$data['infosent'] = false;
 		$data['form_inner'] = false;
 		$data['page_css'] = 'login';
@@ -125,14 +127,41 @@ class Login extends CI_Controller {
 							$codelink .= $_SERVER['SERVER_NAME'];
 							$codelink .= $_SERVER['SERVER_PORT']!=='80' ? ':'.$_SERVER['SERVER_PORT'] : '';
 							$codelink .= '/login/resetpass/'.$reset_key;
-
-							//$body = file_get_contents('application/assets/emails/forgot.html');
-							//$body = preg_replace('/\*\*\*CODELINK\*\*\*/i',$codelink,$body);
-							$body = $codelink;
+                            
+                            $codelink = '<a href="'.$codelink.'">'.$codelink.'</a>';
+                            //get the org
+                            $this->load->model('Organizations','Orgs');
+                            $this->common->get_org_info_from_subdomain();
+                            $organization = $this->Orgs->get_org($org_id);
+                            $email = $this->Orgs->get_org_emails($org_id,'password-reset');
+                            
+                            $pattern = array(
+                                '/__ORGANIZATION_LOGO__/',
+                                '/__ORGANIZATION_NAME__/',
+                                '/__INVOICE_URL__/',
+                                '/__SITE_TITLE__/',
+                                '/__CODE_LINK__/'
+                            );
+                            $replacement = array(
+                                preg_replacement_quote($organization->meta['logo_url']->meta_value),
+                                preg_replacement_quote($organization->name),
+                                preg_replacement_quote(site_url('invoice/view/'.$invoice_id)),
+                                preg_replacement_quote(str_pad((string)SITENAME,8,'0',STR_PAD_LEFT)),
+                                $codelink
+                            );
+                            //TODO: set this up to grab the info out of hte array
+                            $message_subject = preg_replace($pattern, $replacement, $email['subject']);
+                            $message_plaintext = preg_replace($pattern, $replacement, $email['text']);
+                            $message_html = preg_replace($pattern, $replacement, $email['html']);
+                            
+							$body = preg_replace('/\*\*\*CODELINK\*\*\*/i',$codelink,$email);
+                            
+                            $org_email = $organization->meta['org_email']->meta_value != ''?$organization->meta['org_email']->meta_value:'knights@communitylist.us';
+                            
 							$config['mailtype'] = 'html';
 							$this->load->library('email');
 							$this->email->initialize($config);
-							$this->email->from('noreply@msdlab.com', 'Website');
+							$this->email->from($org_email, $organization->meta['site_title']->meta_value);
 							$this->email->to($username);
 
 							$this->email->subject('Reset Password');

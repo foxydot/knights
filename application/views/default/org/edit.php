@@ -26,6 +26,10 @@
                     <input class="col-md-12" name="name" id="name" type="text" title="Organization Name" placeholder="Organization Name"<?php print $is_edit?'value="'.$org->name.'"':''; ?> />
                 </div>
                 <div class="row">
+                    <label>Organization Admin Email</label>
+                    <input class="col-md-12" name="meta[org_email]" id="org_email" type="text" title="Organization Admin Email" placeholder="Organization Admin Email"<?php print $is_edit && isset($org->meta['org_email']->meta_value)?'value="'.$org->meta['org_email']->meta_value.'"':''; ?> />
+                </div>
+                <div class="row">
                     <label>Organization Description</label>
                     <textarea class="col-md-12 tinymce" name="description" id="description" placeholder="Organization description"><?php print $is_edit?$org->description:''; ?></textarea>
                 </div>
@@ -185,12 +189,14 @@
                 $email_types = array(
                     'product-invoice' => 'Product Invoice',
                     'service-invoice' => 'Service Invoice',
+                    'password-reset' => 'Password Reset',
                 );
                 print form_fieldset();?>
                 <h1>Emails</h1>
                 <?php
                 foreach($email_types AS $key => $value){
                     //TODO: Add javascript to make the full email panel show/hide on default use
+                    if(!isset($email[$key])){$email[$key] = array('default' => 1,'subject'=>FALSE,'html'=>FALSE,'text'=>FALSE);}
               ?>
                 <div class="row">
                     <h3 class="col-md-6"><?php print $value; ?></h3>
