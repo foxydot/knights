@@ -1,3 +1,3 @@
       <footer>
-        <p>&copy;<?php echo SITENAME; ?> 2013</p>
+        <p>&copy;<?php print SITENAME; ?> <?php print date("Y"); ?></p>
       </footer>

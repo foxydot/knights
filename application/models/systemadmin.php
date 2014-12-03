@@ -1139,6 +1139,51 @@ Class Systemadmin extends CI_Model {
         );
         $this->db->update('system_info',$db_data);
     }
+    
+    function reset_org_id($old_id,$new_id){
+        $tables = $this->db->list_tables();
+        //do all the tables
+        $this->db->start_cache();
+        $this->db->where('org_id',$old_id);
+        $this->db->stop_cache();
+        $db_data = array(
+            'org_id' => $new_id
+        );
+        foreach($tables as $table){
+            if ($this->db->field_exists('org_id', $table)){
+                $this->db->update($table,$db_data);
+                print $this->db->last_query()."\n<br>";
+            }
+        }
+        $this->db->flush_cache();
+        //now do the org id base
+        $this->db->where('ID',$old_id);
+        $db_data = array(
+            'ID' => $new_id
+        );
+        $this->db->update('organization',$db_data);
+        print $this->db->last_query()."\n<br>";
+    }
+
+    function force_new_site($org_id){
+        //check to make sure the id doesn't exist       
+        $this->load->model('Organizations','Orgs');
+        $organization = $this->Orgs->get_org($org_id);
+        if($organization){
+            die('site id in use');
+        }
+        $db_data = array(
+            'ID' => $org_id,
+            'name' => 'New Site',
+            'description' => 'New site',
+            'dateadded' => time()
+        );
+        if($this->db->insert('organization',$db_data)){
+            die('done');
+        } else {
+            die('error');
+        }
+    }
 }
 
 /* End of file install.php */

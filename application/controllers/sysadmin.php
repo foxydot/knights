@@ -60,6 +60,17 @@ class Sysadmin extends CI_Controller {
             );
             $this->load->view('default.tpl.php',$data);
     }
+    
+    public function reset_org_id($old_id,$new_id){
+        $this->authenticate->check_auth('super-administrators',true);
+        $this->sysadmin->reset_org_id($old_id,$new_id);
+        die('done');
+    }
+    
+    public function force_new_site($org_id){
+        $this->authenticate->check_auth('super-administrators',true);
+        $this->sysadmin->force_new_site($org_id);
+    }
 }
 
 /* End of file sysadmin.php */

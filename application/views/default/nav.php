@@ -1,4 +1,4 @@
-<?php if($this->authenticate->check_auth('users')): ?>
+<?php if($this->authenticate->check_auth('users') && isset($user)): ?>
     <?php 
         global $org_id,$org_name,$site_title,$site_logo,$theme_url;
      ?>

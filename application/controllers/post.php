@@ -3,18 +3,30 @@
 class Post extends CI_Controller {
 	public function __construct()
        {
+            global $org_id;
             parent::__construct();
        		if(!$this->common->checkinstallation()){
 				$this->load->helper('url');
 				redirect('/install');
 			}
+            $this->common->get_org_info_from_subdomain();
 			$this->authenticate->check_auth('users',true);
 			$this->load->model('Posts');
-            $this->common->get_org_info_from_subdomain();
        }
        
 	function index(){
 	    global $org_id;
+        if($org_id == 1){
+            $this->load->model('Organizations','Orgs');
+            $data = array(
+                    'page_title' => 'Welcome to '.SITENAME,
+                    'body_class' => 'information',
+                    'dashboard' => 'default/utility/site-information.php',
+                    'organization' => $this->Orgs->get_org($org_id),
+            );
+            $this->load->view('default.tpl.php',$data);
+            return true;
+        }
 		$data = array(
 				'page_title' => 'Welcome to '.SITENAME,
 				'body_class' => 'list dashboard',

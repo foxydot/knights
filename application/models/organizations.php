@@ -31,6 +31,7 @@ class Organizations extends CI_Model {
 	    	if(!$archive){
 	    		$this->db->where('dateremoved <=',0);
 	    	}
+            $this->db->order_by('ID');
 	    	$query = $this->db->get();
 	    	$result = $query->result();
             $i = 0;
@@ -63,6 +64,7 @@ class Organizations extends CI_Model {
 	    }
 	    
 	    function add_org($db_data){
+	        ts_data($db_data);
 	    	unset($db_data['ID']);
             unset($db_data['submit_btn']);
 	    	$slug = $this->common->increment_slug(post_slug($db_data['name']),'organization');

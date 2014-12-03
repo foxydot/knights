@@ -118,6 +118,10 @@ Class Authenticate extends CI_Model {
 	 * 
 	 */
 	function check_auth($level = 1,$redirect = FALSE){
+	    global $org_id;
+        if($org_id == 1){
+            return true;
+        }
 		$access = $this->levelinfo($level);
 		if($redirect){
 			$this->load->helper('url');
