@@ -1,4 +1,7 @@
 <?php if($this->authenticate->check_auth('users')): ?>
+    <?php 
+        global $org_id,$org_name,$site_title,$site_logo,$theme_url;
+     ?>
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- mobile display -->
@@ -23,13 +26,17 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Administrate <b class="caret"></b></a>
                     <ul class="dropdown-menu fa-ul">
                         <?php if($this->authenticate->check_auth('super-administrators')){ ?>
+                        <li><a href="/sysadmin">System Administration</a></li>
+                        <li class="divider"></li>
                         <li><a href="/org">Organizations</a></li>
                         <li><a href="/org/add"><i class="fa fa-plus-square"></i> Add New</a></li>
+                        <?php } else { ?>
+                        <li><a href="/org/edit/<?php print $org_id; ?>">Edit <?php print $site_title; ?> Settings</a></li>
+                        <?php } ?>
                         <li class="divider"></li>
                         <li><a href="/help">Help</a></li>
                         <li><a href="/help/add"><i class="fa fa-plus-square"></i> Add New</a></li>
                         <li class="divider"></li>
-                        <?php } ?>
                         <li><a href="/category">Categories</a></li>
                         <li><a href="/category/add"><i class="fa fa-plus-square"></i> Add New</a></li>
                         <li class="divider"></li>

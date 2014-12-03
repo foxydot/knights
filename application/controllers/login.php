@@ -232,7 +232,7 @@ class Login extends CI_Controller {
 				$data['buttontxt'] = 'Reset Password';
 			} else {
 				$data['infosent'] = true;
-				$data['error'] = 'There was an error resetting your password. Please contact your representative.';
+				$data['error'] = 'Code not found. There was an error resetting your password. Please contact your representative.';
 				$data['buttontxt'] = 'Return to Login';
 			}
 		}
