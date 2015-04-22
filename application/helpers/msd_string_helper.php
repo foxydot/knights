@@ -53,6 +53,7 @@ function get_the_fee($post){
                     $fee = (.02*($cost-1000))+55;
                 }
                 break;
+            }
         return $fee;
     }
 }
