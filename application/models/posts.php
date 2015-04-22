@@ -314,15 +314,16 @@ Class Posts extends CI_Model {
             $subscribers = $this->Users->get_all_users_subscribed_to_cat($cat_id);
             foreach($subscribers AS $subscriber){
                 $user = $this->Users->get_user($subscriber);
-                
-                $this->email->initialize($config);
-            
-                $this->email->to($user->email);
-                $this->email->from('knights@communitylist.us', $org->meta['site_title']->meta_value);
-                $this->email->subject($message_subject);
-                $this->email->message($message_html);
-                $this->email->set_alt_message($message_plaintext);
-                $this->email->send();
+                //test to make sure the user is active
+                if(is_object($user)){
+                    $this->email->initialize($config);
+                    $this->email->to($user->email);
+                    $this->email->from('knights@communitylist.us', $org->meta['site_title']->meta_value);
+                    $this->email->subject($message_subject);
+                    $this->email->message($message_html);
+                    $this->email->set_alt_message($message_plaintext);
+                    $this->email->send();
+                }
             }
         }
     }

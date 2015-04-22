@@ -72,6 +72,7 @@ Class Users extends CI_Model {
 		if($query->num_rows() == 1){
 			$result = $query->result();
 			if($result[0]->dateremoved > 0){
+			    //TODO: refactor to test for empty object in output and change this here to (empty object)
 				return 'Account Suspended';
 			}
 			$result[0]->meta = $this->get_user_metas($uid);
@@ -195,13 +196,16 @@ Class Users extends CI_Model {
      }
      
      function get_all_users_subscribed_to_cat($cat_id){
-         //this is a crummy method, but it works for now.
+         //this is a crummy method, but it works for now. 
+         //No, no, it doesn't.
+         //TODO: Make less crummy.
         $this->db->select('user_id');
         $this->db->from('user_meta');
         $this->db->where('meta_key','subscribe');
         $this->db->like('meta_value','"'.$cat_id.'"');
         $this->db->where('dateremoved',0);
         $query = $this->db->get();
+        
         $result = $query->result();
         if($result){
             foreach($result AS $r){
