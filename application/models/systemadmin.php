@@ -1091,6 +1091,8 @@ Class Systemadmin extends CI_Model {
                 $this->dbforge->add_key('ID',TRUE);
                 $this->dbforge->create_table('post2tag',TRUE);
                 $this->set_version('0.8');
+            case '0.8':
+                $this->set_version('0.9');
 			default:
 				//redirect to home page
 				$this->load->helper('url');

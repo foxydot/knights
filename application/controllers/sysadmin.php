@@ -61,6 +61,18 @@ class Sysadmin extends CI_Controller {
             $this->load->view('default.tpl.php',$data);
     }
     
+    public function force_nullsubdomain_site(){
+        $this->authenticate->check_auth('super-administrators',true);
+        $orgs = array_reverse($this->Orgs->get_orgs(true));
+        foreach($orgs AS $org){
+            $old_id = $org->ID;
+            $new_id = $old_id+1;
+            $this->sysadmin->reset_org_id($old_id,$new_id);
+        }
+        $this->sysadmin->force_new_site(1);
+        die('done');
+    }    
+    
     public function reset_org_id($old_id,$new_id){
         $this->authenticate->check_auth('super-administrators',true);
         $this->sysadmin->reset_org_id($old_id,$new_id);
