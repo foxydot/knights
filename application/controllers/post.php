@@ -114,6 +114,7 @@ class Post extends CI_Controller {
                     'type' => 'danger',
                     'text' => 'Error: Your post cannot appear publicly until you select at least one category for your post.',
                 );
+                log_message('error', 'Your post cannot appear publicly until you select at least one category for your post.');
             }
 			$db_data = $this->input->post();
             $tags = explode(',',$db_data['tags']);
@@ -161,16 +162,19 @@ class Post extends CI_Controller {
 			}
             //Invoice
             $post = $this->Posts->get_post($post_id);
+            /* Invoices temporarily disabled
             if(stripos($post->type,'product')===FALSE){
                 $this->load->model('Invoices');
                 $this->Invoices->create_invoice($post);
             }
+             * */
             $msg[] = array(
                 'type' => 'success',
                 'text' => 'Your post has been added.',
             );
             $this->session->set_flashdata('editmsg', $msg);
 			$this->load->helper('url');
+            log_message('error','ready to redirect');
 			redirect('/post/edit/'.$post_id);
 		}
 		$this->load->view('default.tpl.php',$data);
@@ -299,10 +303,12 @@ class Post extends CI_Controller {
 			$this->Posts->edit_post($db_data);
             $this->Posts->clear_post_to_cats($db_data['ID']);
             $this->Tags->clear_post_to_tags($db_data['ID']);
-			if(stripos($post->type,'product')!==FALSE){
+			/* Invoices disabled
+            if(stripos($post->type,'product')!==FALSE){
 			    $this->load->model('Invoices');
                 $this->Invoices->create_invoice($post);
 			}
+             * */
             	
 			$this->load->helper('url');
 			redirect('/post');
