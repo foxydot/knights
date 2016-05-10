@@ -260,7 +260,7 @@ class Login extends CI_Controller {
 			//array('field'=>'studentfirstname','label'=>'Student First Name','rules'=>'required|min_length[2]|max_length[20]'),
 			//array('field'=>'studentlastname','label'=>'Student Last Name','rules'=>'required|min_length[2]|max_length[20]'),						
 			);//validation rules
-			$this->form_validation->set_message('is_unique', '%s is already in use. Did you <a href="http://knights.local/login/forgot">forget your password?</a>');
+			$this->form_validation->set_message('is_unique', '%s is already in use. Did you <a href="/login/forgot">forget your password?</a>');
 			$this->form_validation->set_rules($rules);//Setting the validation rules inside the validation function
 			if($this->form_validation->run() == FALSE){ //Checks whether the form is properly sent
 				$data['form'] = 'login/register';
