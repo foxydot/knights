@@ -32,7 +32,11 @@ Class Administration extends CI_Model {
 			}
 		} 
 		foreach($users AS $user){
-			mail($user->email,$subject,$message);
+			if(mail($user->email,$subject,$message)){
+			    
+			} else {
+			    ts_data($user->email.' mail not sent');
+			}
 		}
 	}
 	
