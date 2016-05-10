@@ -23,9 +23,10 @@ Class Administration extends CI_Model {
 			$subject = "Message from ".SITENAME;
 		}
 		$users = $this->Users->get_users_by_level('administrators');
+        
 		if($superadmin){
 			if(is_array($users)){
-				array_push($users, $this->Users->get_users_by_level(1));
+				$users = array_merge($users, $this->Users->get_users_by_level(1));
 			} else {
 				$users = $this->Users->get_users_by_level(1);
 			}
