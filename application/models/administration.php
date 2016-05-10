@@ -35,7 +35,7 @@ Class Administration extends CI_Model {
 			if(mail($user->email,$subject,$message)){
 			    
 			} else {
-			    ts_data($user->email.' mail not sent');
+			    ts_data($user->email.' mail not sent'.$subject.$message);
 			}
 		}
 	}
