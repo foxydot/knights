@@ -54,7 +54,7 @@ Class Administration extends CI_Model {
                 if($this->email->send()){
                     
                 } else {
-                    ts_data('email failed to '.$user->email);
+                    log_message('error', 'Admin notification email failed to '.$user->email);
                 }
             }
 		}
