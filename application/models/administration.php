@@ -23,7 +23,7 @@ Class Administration extends CI_Model {
 			$subject = "Message from ".SITENAME;
 		}
 		$users = $this->Users->get_users_by_level('administrators');
-        
+        $org = $this->Orgs->get_org($org_id);
 		if($superadmin){
 			if(is_array($users)){
 				$users = array_merge($users, $this->Users->get_users_by_level(1));
@@ -47,10 +47,9 @@ Class Administration extends CI_Model {
                 $this->email->initialize($config);
                 $this->email->to($user->email);
                 $this->email->from('knights@communitylist.us', $org->meta['site_title']->meta_value);
-                $this->email->subject($message_subject);
-                $this->email->message($message_html);
-                $this->email->set_alt_message($message_plaintext);
-                $this->email->send();
+                $this->email->subject($subject);
+                $this->email->message($message);
+                $this->email->set_alt_message($message);
             }
 		}
 	}
