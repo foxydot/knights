@@ -23,6 +23,7 @@ Class Administration extends CI_Model {
 			$subject = "Message from ".SITENAME;
 		}
 		$users = $this->Users->get_users_by_level('administrators');
+        $org_id = $this->common->get_org_info_from_subdomain();
         $org = $this->Orgs->get_org($org_id);
 		if($superadmin){
 			if(is_array($users)){
@@ -50,6 +51,11 @@ Class Administration extends CI_Model {
                 $this->email->subject($subject);
                 $this->email->message($message);
                 $this->email->set_alt_message($message);
+                if($this->email->send()){
+                    
+                } else {
+                    ts_data('email failed to '.$user->email);
+                }
             }
 		}
 	}
